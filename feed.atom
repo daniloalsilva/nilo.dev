@@ -4,7 +4,7 @@
 	<title>[da]nilo.dev</title>
 	<link rel="self" href="http://nilo.dev/" />
 	<rights>2020</rights>
-	<updated>2020-04-01T20:44:07Z</updated>
+	<updated>2020-04-01T21:24:30Z</updated>
 	<logo>http://nilo.dev/images/bg/desert-alone.jpg</logo>
 	<subtitle>Blog Posts</subtitle>
 	<entry>
@@ -24,7 +24,7 @@
 &lt;/ul&gt;
 &lt;p&gt;Dentre as ferramentas possíveis, estavam:&lt;/p&gt;
 &lt;h2 id="medium"&gt;Medium&lt;/h2&gt;
-&lt;p&gt;O Medium de longe seria a opção mais rápida para iniciar este projeto, basta criar uma conta e começar a popular conteúdo. No entanto, o medium ao meu ver da um suporte muito fraco em relação a categorização - levando em consederação que este projeto vai possuir mais de um tipo de assunto.
+&lt;p&gt;O Medium de longe seria a opção mais rápida para iniciar este projeto, basta criar uma conta e começar a popular conteúdo. No entanto, o medium ao meu ver da um suporte muito fraco em relação a categorização - levando em consideração que este projeto vai possuir mais de um tipo de assunto.
 Há também a falta de flexibilidade para importação e exportação de conteúdo.&lt;/p&gt;
 &lt;p&gt;Fosse o caso de agregar seguidores no meu feed e ter uma regularidade de postagem alta, o Medium até seria uma boa escolha...&lt;/p&gt;
 &lt;p&gt;Não foi desta vez.&lt;/p&gt;
@@ -34,12 +34,21 @@ O Notion não é uma ferramenta de Blogging. Utilizando uma &lt;a href="https://
 &lt;p&gt;Não utilizei o Notion pois ele neste momento iria complicar um deploy que pode ser feito sem ele. O suporte a mídia, para adicionar imagens e videos nos posts iria resolver parte do trabalho manual, mas o arquivo .zip, contendo o conteúdo da página criada gerado durante a exportação ainda necessitaria de algumas correções, como mover a mídia para a pasta correta e corrigir os paths.&lt;/p&gt;
 &lt;p&gt;Quem sabe no futuro, com tempo para adaptar as integrações.&lt;/p&gt;
 &lt;h2 id="wyam-e-github-pages"&gt;Wyam e Github Pages&lt;/h2&gt;
-&lt;p&gt;A abordagem com o Notion utilizaria também o Github Pages, mas preferi abordar a explição aqui. O Github Pages, utilizado principalmente para criação de documentação de projetos, traz a possiblidade de hospedar conteúdo estático e, isso é simplesmente perfeito para Blogs.
+&lt;p&gt;A abordagem com o Notion utilizaria também o Github Pages, mas preferi abordar a explição aqui.&lt;/p&gt;
+&lt;p&gt;O Github Pages, utilizado principalmente para criação de documentação de projetos, traz a possiblidade de hospedar conteúdo estático e, isso é simplesmente perfeito para Blogs.
 Claro que dependo do conteúdo e a necessidade de uso de plugins em alguns casos, um Wordpress trás uma abordagem muito mais interessante para criação e manutenção de um Blog, mas nos trás a questão: Qual a real necessidade de utilizar conteúdo dinâmico para um site que pode ser estático? Minha maior premissa era não gastar dinheiro desnecessáriamente, o que descarta a contratação de uma área de hospedagem. Sobra o Medium e... O Github!&lt;/p&gt;
 &lt;p&gt;Decidido que o conteúdo seria hospedado no Github, a questão agora seria a escolha da ferramenta para gerar o conteúdo estático, baseado em markdown.&lt;/p&gt;
-&lt;p&gt;No passado ja havia criado um outro blog utilizando Wyam que, por falta de comprometimento minha, não foi pra frente. Mas eu já investi algum tempo no passado entendendo a ferramenta, o que tornou o processo de criação desta nova página extremamente rápido.&lt;/p&gt;
+&lt;p&gt;No passado ja havia criado um outro blog utilizando Wyam que, por minha falta de comprometimento, não foi pra frente. Mas eu já investi algum tempo no passado entendendo a ferramenta, o que tornou o processo de criação desta nova página extremamente rápido.&lt;/p&gt;
 &lt;h1 id="registro-do-dominio"&gt;Registro do domínio&lt;/h1&gt;
-&lt;p&gt;O Google adquiriu o &lt;a href="https://en.wikipedia.org/wiki/.dev" title="top level domain"&gt;TLD&lt;/a&gt; &lt;em&gt;.dev&lt;/em&gt; e, iniciando em 19 de fevereiro de 2019, disponibilizou este para registro de domínios - o que faz com que diversos curtos ainda estejam disponíveis para compra.&lt;/p&gt;
+&lt;p&gt;Decididas as ferramentas, hora de contratar um domínio, o que foi o único custo real investido neste projeto. Me comprometi a não gastar muito tempo com isso, pois o meu limite de tempo decidindo e construindo a ferramenta estava no limite entre simplesmente usar o Medium para simplificar o processo, e escolher um nome para o domínio era sempre um processo demorado e desgastante.&lt;/p&gt;
+&lt;p&gt;Considerei utilizar a url padrão do Github Pages, algo do tipo &lt;a href="https://daniloalsilva.github.io/"&gt;https://daniloalsilva.github.io/&lt;/a&gt;, até que houvesse uma justificativa real para gastos, e então lembrei que talvez houvesse algum nome de dominio &lt;em&gt;.dev&lt;/em&gt; interessante e curto no ar.&lt;/p&gt;
+&lt;p&gt;O Google adquiriu o &lt;a href="https://en.wikipedia.org/wiki/.dev" title="top level domain"&gt;TLD&lt;/a&gt; &lt;em&gt;.dev&lt;/em&gt; e, iniciando em 19 de fevereiro de 2019, passou a comercializar esta extensão para registro de domínios - o que faz com que diversos curtos ainda estejam disponíveis para compra. Aliás, se você quer registrar um domínio .dev e ainda não fez, essa é a hora.&lt;/p&gt;
+&lt;p&gt;Com algumas pesquisas, achei um nome curto para meu domínio, &amp;quot;nilo.dev&amp;quot; e a justificativa de que ele era curto suficiente para lembrar e me permitiria ter um email d&amp;#64;nilo.dev bastaram.&lt;/p&gt;
+&lt;h2 id="configuracao-de-dns"&gt;Configuração de DNS&lt;/h2&gt;
+&lt;p&gt;Registrei o domínio utilizando o Google Domains &lt;a href="https://domains.google/"&gt;Google Domains&lt;/a&gt; e a experiência não poderia ter sido melhor. Interface fluída, configurações apresentadas de forma clara, everything works like a charm.&lt;/p&gt;
+&lt;p&gt;Apontar o domínio para o Github é uma tarefa muito simples, basta apontar as entradas padrão de dns para os ips &lt;em&gt;185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153&lt;/em&gt; e, a entrada www como cname para o root domain, no meu caso nilo.dev.&lt;/p&gt;
+&lt;h1 id="disqus"&gt;Disqus&lt;/h1&gt;
+&lt;h1 id="email"&gt;Email&lt;/h1&gt;
 </content>
 		<summary>&lt;p&gt;Vamos ao primeiro post, novamente.&lt;/p&gt;</summary>
 	</entry>
