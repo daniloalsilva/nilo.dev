@@ -1,24 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://winops.com.br/</id>
-	<title>WINOPS</title>
+	<title>NILO.DEV</title>
 	<link rel="self" href="http://winops.com.br/" />
 	<rights>2020</rights>
-	<updated>2020-04-01T02:30:23Z</updated>
-	<logo>http://winops.com.br/images/windows-keyboard.jpg</logo>
-	<subtitle>WINOPS</subtitle>
-	<entry>
-		<id>http://winops.com.br/post/o-primeiro-post</id>
-		<title>VERSIONANDO SEU CURRICULO</title>
-		<link href="http://winops.com.br/post/o-primeiro-post" />
-		<link rel="enclosure" type="image" href="http://winops.com.br/images/bg/desert-alone.jpg" />
-		<updated>2019-09-10T00:00:00Z</updated>
-		<content>&lt;p&gt;&lt;em&gt;Um ano após o primeiro post, postar um artigo com uma frequencia relativamente alta já pode ser comparado com aquela ida sem volta na academia para renovar o plano.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;A pouco tempo atrás após o contato de uma empresa que não aceitava somente o perfil do Linkedin como curriculo, me ví obrigado a atualizar meu CV num documento do Word/PDF - o que sinceramente me fez pensar se valia o trabalho. Quem nunca deixou passar uma vaga após um &amp;quot;_você precisa preencher o cadastro no nosso portal&amp;quot; ou &amp;quot;_nos envie seu curriculo atualizado&amp;quot;? A primeira opção ainda contínua sem solução, mas vamos facilitar um pouco a vida em relação a este curriculo atualizado...&lt;/p&gt;
-&lt;p&gt;Já que eu ia me dar ao trabalho de atualizar o curriculo e não somente baixar a versão em pdf do Linkedin (seu perfil &amp;gt; &amp;quot;Mais...&amp;quot; &amp;gt; &amp;quot;Salvar como PDF&amp;quot;), e o conceito de versionamento se aplica para um currículo, porque não criar uma versão do curriculo usando LaTeX/markdown? Como quase tudo na vida, após uma pequena pesquisa no Google percebi que a ideia não era tão original quanto eu pensava (e você pode ler o post que inspirou a continuação deste &lt;a href="https://mszep.github.io/pandoc_resume/"&gt;aqui&lt;/a&gt;).&lt;/p&gt;
-</content>
-		<summary>&lt;p&gt;&lt;em&gt;Um ano após o primeiro post, postar um artigo com uma frequencia relativamente alta já pode ser comparado com aquela ida sem volta na academia para renovar o plano.&lt;/em&gt;&lt;/p&gt;</summary>
-	</entry>
+	<updated>2020-04-01T03:30:09Z</updated>
+	<logo>http://winops.com.br/images/bg/desert-alone.jpg</logo>
+	<subtitle>[da]nilo.dev</subtitle>
 	<entry>
 		<id>http://winops.com.br/post/o-primeiro-post</id>
 		<title>O PRIMEIRO POST</title>
