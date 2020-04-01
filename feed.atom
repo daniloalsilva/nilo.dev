@@ -4,7 +4,7 @@
 	<title>[da]nilo.dev</title>
 	<link rel="self" href="http://nilo.dev/" />
 	<rights>2020</rights>
-	<updated>2020-04-01T22:31:37Z</updated>
+	<updated>2020-04-01T23:22:36Z</updated>
 	<logo>http://nilo.dev/images/bg/desert-alone.jpg</logo>
 	<subtitle>Blog Posts</subtitle>
 	<entry>
@@ -49,7 +49,7 @@ Claro que dependo do conteúdo e a necessidade de uso de plugins em alguns casos
 &lt;h2 id="configuracao-de-dns"&gt;Configuração de DNS&lt;/h2&gt;
 &lt;p&gt;Registrei o domínio utilizando o Google Domains &lt;a href="https://domains.google/"&gt;Google Domains&lt;/a&gt; e a experiência não poderia ter sido melhor. Interface fluída, configurações apresentadas de forma clara, everything works like a charm.&lt;/p&gt;
 &lt;p&gt;Apontar o domínio para o Github é uma tarefa muito simples, basta em &amp;quot;Registros de recurso personalizados&amp;quot; apontar as entradas padrão de dns para os ips &lt;em&gt;185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153&lt;/em&gt; e, a entrada www como cname para o root domain, no meu caso nilo.dev.&lt;/p&gt;
-&lt;p&gt;&lt;img src="/criando-um-blog/google-dns.jpg" class="img-fluid" alt="google-dns" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/posts/2020/google-dns.jpg" class="img-fluid" alt="google-dns" /&gt;&lt;/p&gt;
 &lt;h1 id="disqus"&gt;Disqus&lt;/h1&gt;
 &lt;h1 id="email"&gt;Email&lt;/h1&gt;
 </content>
