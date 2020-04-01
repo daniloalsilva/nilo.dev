@@ -1,47 +1,46 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-	<id>http://winops.com.br/</id>
-	<title>NILO.DEV</title>
-	<link rel="self" href="http://winops.com.br/" />
+	<id>http://nilo.dev/</id>
+	<title>[da]nilo.dev</title>
+	<link rel="self" href="http://nilo.dev/" />
 	<rights>2020</rights>
-	<updated>2020-04-01T03:31:59Z</updated>
-	<logo>http://winops.com.br/images/bg/desert-alone.jpg</logo>
-	<subtitle>[da]nilo.dev</subtitle>
+	<updated>2020-04-01T19:50:41Z</updated>
+	<logo>http://nilo.dev/images/bg/desert-alone.jpg</logo>
+	<subtitle>Blog Posts</subtitle>
 	<entry>
-		<id>http://winops.com.br/post/o-primeiro-post</id>
-		<title>O PRIMEIRO POST</title>
-		<link href="http://winops.com.br/post/o-primeiro-post" />
-		<link rel="enclosure" type="image" href="http://winops.com.br/images/bg/desert-alone.jpg" />
-		<updated>2018-09-23T00:00:00Z</updated>
-		<content>&lt;p&gt;&lt;strong&gt;TL;DR.&lt;/strong&gt; Este é o primeiro post, mas não a minha primeira tentativa de manter um &lt;a href="http://danilos.com.br"&gt;Blog&lt;/a&gt; - so may it be eternal while it lasts. Ah, antes que eu esqueça: Vamos falar sobre DevOps em Windows.&lt;/p&gt;
-&lt;p&gt;Tempos atrás (lá por volta de 2013), eu tentei manter um Blog no ar, mas logo após os dois primeiros posts, eu desanimei totalmente. Tanto pela minha desculpa na época sobre a falta de tempo - que hoje percebo ter sido muito mais uma falta de organização que tempo - quanto pelo hype de oversharing.&lt;/p&gt;
-&lt;p&gt;Eu não queria publicar conteudo para ganhar visibilidade, disputar &amp;quot;meu lugar&amp;quot; na internet ou algo do gênero, e sim compartilhar conteúdo que pudesse ser útil para outras pessoas.&lt;/p&gt;
-&lt;p&gt;E não me entenda mal, ainda com todo o oversharing da época, existia conteúdo com muita qualidade sendo publicado.&lt;/p&gt;
-&lt;h1 id="motivacoes"&gt;Motivações&lt;/h1&gt;
-&lt;p&gt;Antes de continuar, é preciso ter algum contexto.&lt;/p&gt;
-&lt;p&gt;Vou tentar não me prolongar nesta parte, pois o post é sobre a criação desse Blog é não sobre minha vida profissional - quem sabe num post futuro.&lt;/p&gt;
-&lt;p&gt;Eu trabalhei na &lt;a href="https://www.locaweb.com.br/"&gt;Locaweb&lt;/a&gt; entre 2009 e 2018. Dentre os diversos serviços que a empresa oferece, seu carro chefe era a hospedagem de sites.&lt;/p&gt;
-&lt;p&gt;Desde a minha entrada na empresa eu trabalhei com Windows, o que nem sempre foi uma tarefa fácil. Olhando para trás, teria sido muito mais fácil e prático trabalhar com Linux, onde a automação de tarefas já era algo bem mais simples que em Windows - automação essa, essencial para conseguir lidar com as tarefas do dia a dia para a quantidade enorme (e crescendo) de servidores que precisavam ser gerenciados.&lt;/p&gt;
-&lt;p&gt;Não é que fosse impossível automatizar ambientes Windows, só era complicado demais (nos Windows 2008+ a coisa começava a ficar mais fácil, mas tinhamos muitos servidores Windows 2003 - uma virada/migração de OS não era nada fácil, especialmente com o nível de customização que tinhamos). Se algum sysadmin Windows que estiver lendo esse post já automatizou a instalação de features num Windows 2003 com sysocmgr para ambientes em produção, sabe que é um treco que dá calafrios.&lt;/p&gt;
-&lt;div style="width:100%;height:0;padding-bottom:69%;position:relative;"&gt;&lt;iframe src="https://giphy.com/embed/3o7TKwgqwdlrxaEy40" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen&gt;&lt;/iframe&gt;&lt;/div&gt;
-&lt;br /&gt;
-&lt;p&gt;Em contraponto, a comunidade open-source crescia cada vez mais, com conteúdo em grande parte bem formatado, com ferramentas para gestão de configuração muito mais práticas, já voltadas para IaC que o SCCM, GPO e afins.&lt;/p&gt;
-&lt;p&gt;A questão é que, nós automatizavamos tudo que podíamos no gerenciamento do ambiente, e as pessoas precisavam saber que, mesmo com a dificuldade da época em relação a ferramentas e scripting, nem só de GUI vive o Windows.&lt;/p&gt;
-&lt;blockquote class="blockquote"&gt;
-&lt;p&gt;Mais recentemente, o principal motivo por ter postergado a criação deste blog foi a escolha da plataforma para hospedar o conteúdo. Sem querer, acabei focando muito mais no que não era essencial para realizar o que era realmente importante - começar a escrever conteúdo (a escolha da plataforma vale um post dedicado ao assunto).&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id="criacao-do-winops"&gt;Criação do WinOps&lt;/h2&gt;
-&lt;p&gt;Apenas um parenteses: o WinOps não foi criado para ser uma página exclusiva minha, a ideia é que haja colaboração de outros profissionais sobre os temas abordados aqui. Se em algum momento se fizer necessário, o conteúdo mais informal (como esse post) pode ser migrado para outro local.&lt;/p&gt;
-&lt;p&gt;A ideia de criar o WinOps surgiu de uma certa frustração com a falta de conteúdo disponível sobre automação e DevOps em Windows. Uma busca rápida sobre DevOps hoje vai te levar a paginas, cursos e afins sobre softwares voltados quase que exclusivamente para Linux.&lt;/p&gt;
-&lt;p&gt;Até mesmo a busca por ferramentas equivalentes em Windows acaba se tornando um problema - eu sempre uso como exemplo a ferramenta &lt;strong&gt;lartc&lt;/strong&gt; (Linux Advanced Routing and Traffic Control), que contabiliza muito bem o uso de banda por processo, mas só existe em Linux (é bem provável que exista um contador de performance ou wmi no Windows para isso, mas eu ainda não encontrei).&lt;/p&gt;
-&lt;p&gt;Esse é um cenário que precisa mudar. Há muito espaço para se trabalhar com DevOps em Windows, mas é preciso saber automatizar as tarefas da forma correta, e não simplesmente com ports de aplicações que Linux para Windows. Se anos atrás era importante divulgar conteúdo sobre automação de ambiente Windows, hoje é essencial.&lt;/p&gt;
-&lt;blockquote class="blockquote"&gt;
-&lt;p&gt;É muito provável que nas próximas publicações haja implementações usando Linux como parte de alguma stack. Não é o fato de o intuíto principal da página ser &lt;strong&gt;DevOps em Windows&lt;/strong&gt; que as stacks demonstradas devam ter componentes somente Windows. Não existe bala de prata em tecnologia, amiguinho.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Acho que está bom para um primeiro post, não?!&lt;/p&gt;
-&lt;p&gt;Se você teve saco para ler até aqui, obrigado, pode esperar que vem conteúdo interessante por aí!&lt;/p&gt;
-&lt;p&gt;Talvez.&lt;/p&gt;
+		<id>http://nilo.dev/post/criando-um-blog</id>
+		<title>CRIANDO UM BLOG</title>
+		<link href="http://nilo.dev/post/criando-um-blog" />
+		<link rel="enclosure" type="image" href="http://nilo.dev/images/bg/desert-alone.jpg" />
+		<updated>2020-04-01T00:00:00Z</updated>
+		<content>&lt;p&gt;Vamos ao primeiro post, novamente.&lt;/p&gt;
+&lt;p&gt;Este projeto não é nada ambicioso, eu precisava somente de um lugar onde pudesse escrever, que sirva como tracking quando eu ou outra pessoa quiser consultar algum conteúdo disponível aqui. Fiz algumas tentativas com outras ferramentas no passado, mas escrever com &lt;em&gt;markdown&lt;/em&gt; e manter o conteúdo no Github tem sido a melhor experiência.&lt;/p&gt;
+&lt;h1 id="escolha-do-wyam-com-github-pages"&gt;Escolha do Wyam com Github Pages&lt;/h1&gt;
+&lt;p&gt;As premissas para a escolha de uma ferramenta de blogging eram:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Possibilidade de categorização por tags;&lt;/li&gt;
+&lt;li&gt;Facilidade de recuperar o conteúdo e reorganiza-lo para outras plataformas;&lt;/li&gt;
+&lt;li&gt;Hosting Free;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Dentre as ferramentas possíveis, estavam:&lt;/p&gt;
+&lt;h2 id="medium"&gt;Medium&lt;/h2&gt;
+&lt;p&gt;O Medium de longe seria a opção mais rápida para iniciar este projeto, basta criar uma conta e começar a popular conteúdo. No entanto, o medium ao meu ver da um suporte muito fraco em relação a categorização - levando em consederação que este projeto vai possuir mais de um tipo de assunto.
+Há também a falta de flexibilidade para importação e exportação de conteúdo.&lt;/p&gt;
+&lt;p&gt;Fosse o caso de agregar seguidores no meu feed e ter uma regularidade de postagem alta, o Medium até seria uma boa escolha...&lt;/p&gt;
+&lt;p&gt;Não foi desta vez.&lt;/p&gt;
+&lt;h2 id="notion"&gt;Notion&lt;/h2&gt;
+&lt;p&gt;Venho utilizando o Notion para documentações de projetos pessoais e ele vem se provado uma ótima ferramenta. Possui templates para diversos tipos de documentos, suporte a media com copy/paste de imagens e videos no corpo da página e até a criação de table as dinâmicas e kanbans.
+O Notion não é uma ferramenta de Blogging. Utilizando uma &lt;a href="https://github.com/kjk/notionapi"&gt;lib não oficial&lt;/a&gt;, é possível exportar os conteúdos em markdown, que adicionando os headers corretos deixa o conteúdo exportável para o Github Pages tranquilamente, utilizando em conjunto uma ferramenta como o Jekkyl ou Wyam.&lt;/p&gt;
+&lt;p&gt;Não utilizei o Notion pois ele neste momento iria complicar um deploy que pode ser feito sem ele. O suporte a mídia, para adicionar imagens e videos nos posts iria resolver parte do trabalho manual, mas o arquivo .zip, contendo o conteúdo da página criada gerado durante a exportação ainda necessitaria de algumas correções, como mover a mídia para a pasta correta e corrigir os paths.&lt;/p&gt;
+&lt;p&gt;Quem sabe no futuro, com tempo para adaptar as integrações.&lt;/p&gt;
+&lt;h2 id="wyam-e-github-pages"&gt;Wyam e Github Pages&lt;/h2&gt;
+&lt;p&gt;A abordagem com o Notion utilizaria também o Github Pages, mas preferi abordar a explição aqui. O Github Pages, utilizado principalmente para criação de documentação de projetos, traz a possiblidade de hospedar conteúdo estático e, isso é simplesmente perfeito para Blogs.
+Claro que dependo do conteúdo e a necessidade de uso de plugins em alguns casos, um Wordpress trás uma abordagem muito mais interessante para criação e manutenção de um Blog, mas nos trás a questão: Qual a real necessidade de utilizar conteúdo dinâmico para um site que pode ser estático? Minha maior premissa era não gastar dinheiro desnecessáriamente, o que descarta a contratação de uma área de hospedagem. Sobra o Medium e... O Github!&lt;/p&gt;
+&lt;p&gt;Decidido que o conteúdo seria hospedado no Github, a questão agora seria a escolha da ferramenta para gerar o conteúdo estático, baseado em markdown.&lt;/p&gt;
+&lt;p&gt;No passado ja havia criado um outro blog utilizando Wyam que, por falta de comprometimento minha, não foi pra frente. Mas eu já investi algum tempo no passado entendendo a ferramenta, o que tornou o processo de criação desta nova página extremamente rápido.&lt;/p&gt;
+&lt;h1 id="registro-do-dominio"&gt;Registro do domínio&lt;/h1&gt;
+&lt;p&gt;O Google adquiriu o &lt;a href="https://en.wikipedia.org/wiki/.dev" title="top level domain"&gt;TLD&lt;/a&gt; &lt;em&gt;.dev&lt;/em&gt; e, iniciando em 19 de fevereiro de 2019, disponibilizou este para registro de domínios - o que faz com que diversos curtos ainda estejam disponíveis para compra.&lt;/p&gt;
 </content>
-		<summary>&lt;p&gt;&lt;strong&gt;TL;DR.&lt;/strong&gt; Este é o primeiro post, mas não a minha primeira tentativa de manter um &lt;a href="http://danilos.com.br"&gt;Blog&lt;/a&gt; - so may it be eternal while it lasts. Ah, antes que eu esqueça: Vamos falar sobre DevOps em Windows.&lt;/p&gt;</summary>
+		<summary>&lt;p&gt;Vamos ao primeiro post, novamente.&lt;/p&gt;</summary>
 	</entry>
 </feed>
