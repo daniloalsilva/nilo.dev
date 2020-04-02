@@ -4,7 +4,7 @@
 	<title>[da]nilo.dev</title>
 	<link rel="self" href="http://nilo.dev/" />
 	<rights>2020</rights>
-	<updated>2020-04-02T02:13:04Z</updated>
+	<updated>2020-04-02T02:17:07Z</updated>
 	<logo>http://nilo.dev/images/bg/desert-alone.jpg</logo>
 	<subtitle>Blog Posts</subtitle>
 	<entry>
@@ -171,7 +171,7 @@ cd ..
 rm $localFolder -rec -force
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Depois de tudo isso, rodar os comandos &lt;code&gt;cake; publish.ps1 'commit message';&lt;/code&gt; num console de powershell basta para fazer o build e publicar o conteúdo no github.&lt;/p&gt;
-&lt;iframe src="https://giphy.com/embed/YFFPjL7iCNNBppy49S" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen&gt;&lt;/iframe&gt;&lt;p&gt;&lt;a href="https://giphy.com/gifs/high-quality-highqualitygifs-YFFPjL7iCNNBppy49S"&gt;via GIPHY&lt;/a&gt;&lt;/p&gt;
+&lt;iframe src="https://giphy.com/embed/YFFPjL7iCNNBppy49S" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen&gt;&lt;/iframe&gt;
 &lt;p&gt;Outras configurações como Disqus para comentários e de um email para o domínio ainda podem ser feitas, mas estes itens podem ser discutidos num próximo post ou adicionados nesse post gigante posteriormente.&lt;/p&gt;
 &lt;p&gt;Enjoy!&lt;/p&gt;
 </content>
