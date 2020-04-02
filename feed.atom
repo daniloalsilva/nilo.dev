@@ -4,7 +4,7 @@
 	<title>[da]nilo.dev</title>
 	<link rel="self" href="http://nilo.dev/" />
 	<rights>2020</rights>
-	<updated>2020-04-02T01:41:14Z</updated>
+	<updated>2020-04-02T01:44:12Z</updated>
 	<logo>http://nilo.dev/images/bg/desert-alone.jpg</logo>
 	<subtitle>Blog Posts</subtitle>
 	<entry>
@@ -167,8 +167,9 @@ git push
 cd ..
 rm $localFolder -rec -force
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;E depois de tudo isso, rodar os comandos &lt;code&gt;cake; publish.ps1 'commit message';&lt;/code&gt; num console de powershell basta para fazer o build e publicar o conteúdo no github.&lt;/p&gt;
-&lt;p&gt;Feito tudo isso, ainda há a configuração do Disqus e de um email para o domínio, mas estes podem ser discutidos num próximo post ou adicionados aqui posteriormente.&lt;/p&gt;
+&lt;p&gt;Depois de tudo isso, rodar os comandos &lt;code&gt;cake; publish.ps1 'commit message';&lt;/code&gt; num console de powershell basta para fazer o build e publicar o conteúdo no github.&lt;/p&gt;
+&lt;div style="width:100%;height:0;padding-bottom:75%;position:relative;"&gt;&lt;iframe src="https://giphy.com/embed/YFFPjL7iCNNBppy49S" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;p&gt;&lt;a href="https://giphy.com/gifs/high-quality-highqualitygifs-YFFPjL7iCNNBppy49S"&gt;via GIPHY&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Outras configurações como Disqus para comentários e de um email para o domínio ainda podem ser feitas, mas estes podem itens ser discutidos num próximo post ou adicionados nesse post gigante posteriormente.&lt;/p&gt;
 &lt;p&gt;Enjoy!&lt;/p&gt;
 </content>
 		<summary>&lt;p&gt;Este projeto não é nada ambicioso, eu precisava somente de um lugar onde pudesse escrever, que sirva como tracking quando eu ou outra pessoa quiser consultar algum conteúdo disponível aqui. Queria observar se tive algum progresso na parte de desenho e animação e não fazia sentido pra mim fazer isso através de uma rede social.&lt;/p&gt;</summary>
