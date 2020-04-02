@@ -159,7 +159,98 @@ wyam build --recipe Blog --theme CleanBlog -p
 <pre><code>Preview server listening at http://localhost:5080 and serving from path file:///C:/Users/danil/Projects/new_blog/output
 Hit Ctrl-C to exit
 </code></pre>
+<p>Os arquivos que devem ser enviados para o Github neste ponto estão na pasta &quot;/project_root/output&quot; e são eles que precisamos enviar para o Github.</p>
 <h1 id="enviando-o-conteudo-para-o-github-pages">Enviando o conteúdo para o Github Pages</h1>
+<p>No Github,</p>
+<ul>
+<li>Crie um novo repositório - inicie ele com um README;</li>
+<li>Na aba &quot;settings&quot; na seção &quot;Github Pages&quot;, em <strong>source</strong> selecione &quot;master branch&quot; e em custom domain adicione o endereço de seu domínio</li>
+</ul>
+<p><img src="/images/posts/2020/github-pages.jpg" class="img-fluid" alt="github-pages" /></p>
+<blockquote class="blockquote">
+<p>Devido domínios .dev possuírem utilização restrita a HTTPS, o Github pode demorar um pouco para gerar o certificado com Lets Encrypt, no meu caso demorou uns 5~10 minutos - sim a geração de certificado acontece de forma automatica!</p>
+</blockquote>
+<p>Instale o Git, caso não tenha o mesmo instalado:</p>
+<pre><code class="language-powershell">choco install git -y
+</code></pre>
+<p>Para testar o funcionamento antes de automatizar o processo, eu preferi apenas commitar o output para o repositório e, em seguida testar o funcionamento de forma automática utilizando o Cake e alguns scripts em powershell.</p>
+<p>Clone, cópia e envio dos arquivos para o Github:</p>
+<pre><code class="language-powershell">git clone git&#64;github.com:daniloalsilva/nilo.dev.git
+cp C:\Users\danil\Projects\new_blog\output\* nilo.dev -recurse -force
+git add .
+git commit -m 'first commit'
+git push
+</code></pre>
+<p>E com isso a página <a href="https://nilo.dev/">https://nilo.dev/</a> passou a funcionar!</p>
+<blockquote class="blockquote">
+<p>Eu deliberadamente não segui boas práticas com o versionamento de código do input que gera a página, pois isso me daria o trabalho de criar mais um repositório e fazer o CI/CD com a instalação de todas essas ferramentas acima, além da autorização do Github numa plataforma como o Netlify ou AppVeyor. Provávelmente eu faça isso, mas não hoje.</p>
+</blockquote>
+<p>Agora, para facilitar o build do projeto, é necessário adicionar um arquivo &quot;build.cake&quot; na raiz do projeto, com o seguinte conteúdo:</p>
+<p>build.cake:</p>
+<pre><code class="language-powershell">#tool nuget:?package=Wyam
+#addin nuget:?package=Cake.Wyam
+
+var target = Argument(&quot;target&quot;, &quot;Default&quot;);
+
+Task(&quot;Build&quot;)
+   .Does(() =&gt;
+   {
+       Wyam(new WyamSettings
+       {
+           Recipe = &quot;Blog&quot;,
+           Theme = &quot;CleanBlog&quot;,
+           UpdatePackages = true
+       });
+   });
+   
+Task(&quot;Preview&quot;)
+   .Does(() =&gt;
+   {
+       Wyam(new WyamSettings
+       {
+           Recipe = &quot;Blog&quot;,
+           Theme = &quot;CleanBlog&quot;,
+           UpdatePackages = true,
+           Preview = true,
+           Watch = true
+       });        
+   });
+
+Task(&quot;Default&quot;)
+   .IsDependentOn(&quot;Build&quot;);    
+   
+RunTarget(target);
+</code></pre>
+<p>O script acima é uma adaptação do script de build disponibilizado na <a href="https://wyam.io/docs/deployment/cake">documentação oficial do Wyam</a>, com a adição dos atributos utilizados como theme e recipe para o Blog.</p>
+<p>Agora para o build do projeto, basta executarmos o comando &quot;cake&quot; a partir da raiz do projeto.</p>
+<p>Para publicar o conteúdo, eu criei um script que baixa o projeto do github, apaga todo seu conteúdo, copia o output do Wyam para a pasta de publicação e envia o novo conteúdo. Até daria para adicionar esse script no Cake, mas prefiro ter um script a parte para publishing no caso de uma integração futura com CI/CD - e nesse ponto eu já fiquei preguiçoso.</p>
+<p>publish.ps1</p>
+<pre><code class="language-powershell">Param (
+    [Parameter(Mandatory=$true)]
+    $commitMessage
+)
+
+# clone repo
+$localFolder = &quot;publish&quot;
+$repo = &quot;https://github.com/daniloalsilva/nilo.dev.git&quot;
+git clone $repo --branch=master $localFolder
+
+# clean publish folder
+ls $localFolder | ? {$_.name -ne '.git'} | % {rm $_.FullName -rec -force}
+
+# copy output itens to publish
+Copy-Item &quot;output\*&quot; $localFolder -recurse -force
+
+cd $localFolder
+git add .
+git commit -m $commitMessage
+git push
+
+cd ..
+rm $localFolder -rec -force
+</code></pre>
+<p>E depois de tudo isso, rodar os comandos <code>cake; publish.ps1 'commit message';</code> num console de powershell basta para fazer o build e publicar o conteúdo no github.</p>
+<p>Ainda não acabamos.</p>
 <h1 id="disqus">Disqus</h1>
 <h1 id="email">Email</h1>
 

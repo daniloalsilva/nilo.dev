@@ -4,7 +4,7 @@
 	<title>[da]nilo.dev</title>
 	<link rel="self" href="http://nilo.dev/" />
 	<rights>2020</rights>
-	<updated>2020-04-02T00:25:14Z</updated>
+	<updated>2020-04-02T01:07:11Z</updated>
 	<logo>http://nilo.dev/images/bg/desert-alone.jpg</logo>
 	<subtitle>Blog Posts</subtitle>
 	<entry>
@@ -78,7 +78,98 @@ wyam build --recipe Blog --theme CleanBlog -p
 &lt;pre&gt;&lt;code&gt;Preview server listening at http://localhost:5080 and serving from path file:///C:/Users/danil/Projects/new_blog/output
 Hit Ctrl-C to exit
 &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Os arquivos que devem ser enviados para o Github neste ponto estão na pasta &amp;quot;/project_root/output&amp;quot; e são eles que precisamos enviar para o Github.&lt;/p&gt;
 &lt;h1 id="enviando-o-conteudo-para-o-github-pages"&gt;Enviando o conteúdo para o Github Pages&lt;/h1&gt;
+&lt;p&gt;No Github,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Crie um novo repositório - inicie ele com um README;&lt;/li&gt;
+&lt;li&gt;Na aba &amp;quot;settings&amp;quot; na seção &amp;quot;Github Pages&amp;quot;, em &lt;strong&gt;source&lt;/strong&gt; selecione &amp;quot;master branch&amp;quot; e em custom domain adicione o endereço de seu domínio&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src="/images/posts/2020/github-pages.jpg" class="img-fluid" alt="github-pages" /&gt;&lt;/p&gt;
+&lt;blockquote class="blockquote"&gt;
+&lt;p&gt;Devido domínios .dev possuírem utilização restrita a HTTPS, o Github pode demorar um pouco para gerar o certificado com Lets Encrypt, no meu caso demorou uns 5~10 minutos - sim a geração de certificado acontece de forma automatica!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Instale o Git, caso não tenha o mesmo instalado:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-powershell"&gt;choco install git -y
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Para testar o funcionamento antes de automatizar o processo, eu preferi apenas commitar o output para o repositório e, em seguida testar o funcionamento de forma automática utilizando o Cake e alguns scripts em powershell.&lt;/p&gt;
+&lt;p&gt;Clone, cópia e envio dos arquivos para o Github:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-powershell"&gt;git clone git&amp;#64;github.com:daniloalsilva/nilo.dev.git
+cp C:\Users\danil\Projects\new_blog\output\* nilo.dev -recurse -force
+git add .
+git commit -m 'first commit'
+git push
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;E com isso a página &lt;a href="https://nilo.dev/"&gt;https://nilo.dev/&lt;/a&gt; passou a funcionar!&lt;/p&gt;
+&lt;blockquote class="blockquote"&gt;
+&lt;p&gt;Eu deliberadamente não segui boas práticas com o versionamento de código do input que gera a página, pois isso me daria o trabalho de criar mais um repositório e fazer o CI/CD com a instalação de todas essas ferramentas acima, além da autorização do Github numa plataforma como o Netlify ou AppVeyor. Provávelmente eu faça isso, mas não hoje.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Agora, para facilitar o build do projeto, é necessário adicionar um arquivo &amp;quot;build.cake&amp;quot; na raiz do projeto, com o seguinte conteúdo:&lt;/p&gt;
+&lt;p&gt;build.cake:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-powershell"&gt;#tool nuget:?package=Wyam
+#addin nuget:?package=Cake.Wyam
+
+var target = Argument(&amp;quot;target&amp;quot;, &amp;quot;Default&amp;quot;);
+
+Task(&amp;quot;Build&amp;quot;)
+   .Does(() =&amp;gt;
+   {
+       Wyam(new WyamSettings
+       {
+           Recipe = &amp;quot;Blog&amp;quot;,
+           Theme = &amp;quot;CleanBlog&amp;quot;,
+           UpdatePackages = true
+       });
+   });
+   
+Task(&amp;quot;Preview&amp;quot;)
+   .Does(() =&amp;gt;
+   {
+       Wyam(new WyamSettings
+       {
+           Recipe = &amp;quot;Blog&amp;quot;,
+           Theme = &amp;quot;CleanBlog&amp;quot;,
+           UpdatePackages = true,
+           Preview = true,
+           Watch = true
+       });        
+   });
+
+Task(&amp;quot;Default&amp;quot;)
+   .IsDependentOn(&amp;quot;Build&amp;quot;);    
+   
+RunTarget(target);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;O script acima é uma adaptação do script de build disponibilizado na &lt;a href="https://wyam.io/docs/deployment/cake"&gt;documentação oficial do Wyam&lt;/a&gt;, com a adição dos atributos utilizados como theme e recipe para o Blog.&lt;/p&gt;
+&lt;p&gt;Agora para o build do projeto, basta executarmos o comando &amp;quot;cake&amp;quot; a partir da raiz do projeto.&lt;/p&gt;
+&lt;p&gt;Para publicar o conteúdo, eu criei um script que baixa o projeto do github, apaga todo seu conteúdo, copia o output do Wyam para a pasta de publicação e envia o novo conteúdo. Até daria para adicionar esse script no Cake, mas prefiro ter um script a parte para publishing no caso de uma integração futura com CI/CD - e nesse ponto eu já fiquei preguiçoso.&lt;/p&gt;
+&lt;p&gt;publish.ps1&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-powershell"&gt;Param (
+    [Parameter(Mandatory=$true)]
+    $commitMessage
+)
+
+# clone repo
+$localFolder = &amp;quot;publish&amp;quot;
+$repo = &amp;quot;https://github.com/daniloalsilva/nilo.dev.git&amp;quot;
+git clone $repo --branch=master $localFolder
+
+# clean publish folder
+ls $localFolder | ? {$_.name -ne '.git'} | % {rm $_.FullName -rec -force}
+
+# copy output itens to publish
+Copy-Item &amp;quot;output\*&amp;quot; $localFolder -recurse -force
+
+cd $localFolder
+git add .
+git commit -m $commitMessage
+git push
+
+cd ..
+rm $localFolder -rec -force
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;E depois de tudo isso, rodar os comandos &lt;code&gt;cake; publish.ps1 'commit message';&lt;/code&gt; num console de powershell basta para fazer o build e publicar o conteúdo no github.&lt;/p&gt;
+&lt;p&gt;Ainda não acabamos.&lt;/p&gt;
 &lt;h1 id="disqus"&gt;Disqus&lt;/h1&gt;
 &lt;h1 id="email"&gt;Email&lt;/h1&gt;
 </content>
