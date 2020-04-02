@@ -4,7 +4,7 @@
 	<title>[da]nilo.dev</title>
 	<link rel="self" href="http://nilo.dev/" />
 	<rights>2020</rights>
-	<updated>2020-04-02T00:05:32Z</updated>
+	<updated>2020-04-02T00:12:01Z</updated>
 	<logo>http://nilo.dev/images/bg/desert-alone.jpg</logo>
 	<subtitle>Blog Posts</subtitle>
 	<entry>
@@ -70,6 +70,15 @@ choco install dotnetcore --version=2.1.0 --sidebyside -y
 &lt;p&gt;E por ultimo, o Cake para automatizar o submit dos posts:&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-powershell"&gt;choco install cake.portable -y
 &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Feito isso, já é possível testar o Wyam localmente. Crie uma pasta raiz para o projeto e execute os comandos:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-powershell"&gt;wyam new --recipe Blog
+wyam build --recipe Blog --theme CleanBlog -p
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Com isso, se tudo deu certo uma mensagem semelhante a abaixo será exibida no console e a página http://localhost:5080 vai estar disponível para acesso local:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Preview server listening at http://localhost:5080 and serving from path file:///C:/Users/danil/Projects/new_blog/output
+Hit Ctrl-C to exit
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id="enviando-o-conteudo-para-o-github-pages"&gt;Enviando o conteúdo para o Github Pages&lt;/h1&gt;
 &lt;h1 id="disqus"&gt;Disqus&lt;/h1&gt;
 &lt;h1 id="email"&gt;Email&lt;/h1&gt;
 </content>

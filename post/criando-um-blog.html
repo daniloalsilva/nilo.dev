@@ -151,6 +151,15 @@ choco install dotnetcore --version=2.1.0 --sidebyside -y
 <p>E por ultimo, o Cake para automatizar o submit dos posts:</p>
 <pre><code class="language-powershell">choco install cake.portable -y
 </code></pre>
+<p>Feito isso, já é possível testar o Wyam localmente. Crie uma pasta raiz para o projeto e execute os comandos:</p>
+<pre><code class="language-powershell">wyam new --recipe Blog
+wyam build --recipe Blog --theme CleanBlog -p
+</code></pre>
+<p>Com isso, se tudo deu certo uma mensagem semelhante a abaixo será exibida no console e a página http://localhost:5080 vai estar disponível para acesso local:</p>
+<pre><code>Preview server listening at http://localhost:5080 and serving from path file:///C:/Users/danil/Projects/new_blog/output
+Hit Ctrl-C to exit
+</code></pre>
+<h1 id="enviando-o-conteudo-para-o-github-pages">Enviando o conteúdo para o Github Pages</h1>
 <h1 id="disqus">Disqus</h1>
 <h1 id="email">Email</h1>
 
