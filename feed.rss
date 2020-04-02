@@ -5,8 +5,8 @@
 		<link>http://nilo.dev/</link>
 		<description>Blog Posts</description>
 		<copyright>2020</copyright>
-		<pubDate>Thu, 02 Apr 2020 14:34:31 GMT</pubDate>
-		<lastBuildDate>Thu, 02 Apr 2020 14:34:31 GMT</lastBuildDate>
+		<pubDate>Thu, 02 Apr 2020 14:50:29 GMT</pubDate>
+		<lastBuildDate>Thu, 02 Apr 2020 14:50:29 GMT</lastBuildDate>
 		<item>
 			<title>Criando um blog com Wyam e Github Pages</title>
 			<link>http://nilo.dev/post/criando-um-blog-com-wyam-github-pages</link>
@@ -31,8 +31,8 @@ Há também a falta de flexibilidade para importação e exportação de conteú
 &lt;p&gt;Fosse o caso de agregar seguidores no meu feed e ter uma regularidade de postagem alta, o Medium até seria uma boa escolha... Não é o meu caso.&lt;/p&gt;
 &lt;p&gt;Não foi desta vez Medium.&lt;/p&gt;
 &lt;h2 id="notion"&gt;Notion&lt;/h2&gt;
-&lt;p&gt;Venho utilizando o Notion para documentações de projetos pessoais e ele vem se provado uma ótima ferramenta. Possui templates para diversos tipos de documentos, suporte a media com copy/paste de imagens e videos no corpo da página e até a criação de table as dinâmicas e kanbans.
-O Notion não é uma ferramenta de Blogging. Utilizando uma &lt;a href="https://github.com/kjk/notionapi"&gt;lib não oficial&lt;/a&gt;, é possível exportar os conteúdos em markdown, que adicionando os headers corretos deixa o conteúdo exportável para o Github Pages tranquilamente, utilizando em conjunto uma ferramenta como o Jekyll ou Wyam.&lt;/p&gt;
+&lt;p&gt;Venho utilizando o Notion para documentações de projetos pessoais e ele vem se provado uma ótima ferramenta. Possui templates para diversos tipos de documentos, suporte a media com copy/paste de imagens e videos no corpo da página e até a criação de tabelas dinâmicas e kanbans.&lt;/p&gt;
+&lt;p&gt;Dito isso, o Notion não é uma ferramenta de Blogging. Utilizando uma &lt;a href="https://github.com/kjk/notionapi"&gt;lib não oficial&lt;/a&gt;, até é possível exportar os conteúdos em markdown, que adicionando os headers corretos deixa o conteúdo exportável para o Github Pages tranquilamente, utilizando em conjunto uma ferramenta como o Jekyll ou Wyam.&lt;/p&gt;
 &lt;p&gt;Não utilizei o Notion pois ele neste momento iria complicar um deploy que pode ser feito sem ele. O suporte a mídia, para adicionar imagens e videos nos posts iria resolver parte do trabalho manual, mas o arquivo .zip, contendo o conteúdo da página criada gerado durante a exportação ainda necessitaria de algumas correções, como mover a mídia para a pasta correta e corrigir os paths.&lt;/p&gt;
 &lt;p&gt;Quem sabe no futuro, com tempo para adaptar as integrações.&lt;/p&gt;
 &lt;h2 id="wyam-e-github-pages"&gt;Wyam e Github Pages&lt;/h2&gt;
