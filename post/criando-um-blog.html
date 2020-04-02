@@ -188,7 +188,8 @@ git push
 <blockquote class="blockquote">
 <p>Eu deliberadamente não segui boas práticas com o versionamento de código do input que gera a página, pois isso me daria o trabalho de criar mais um repositório e fazer o CI/CD com a instalação de todas essas ferramentas acima, além da autorização do Github numa plataforma como o Netlify ou AppVeyor. Provávelmente eu faça isso, mas não hoje.</p>
 </blockquote>
-<p>Agora, para facilitar o build do projeto, é necessário adicionar um arquivo &quot;build.cake&quot; na raiz do projeto, com o seguinte conteúdo:</p>
+<h2 id="automatizando-o-build-com-cake">Automatizando o Build com Cake</h2>
+<p>Para facilitar o build do projeto, é necessário adicionar um arquivo &quot;build.cake&quot; na raiz do projeto, com o seguinte conteúdo:</p>
 <p>build.cake:</p>
 <pre><code class="language-powershell">#tool nuget:?package=Wyam
 #addin nuget:?package=Cake.Wyam

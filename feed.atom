@@ -4,7 +4,7 @@
 	<title>[da]nilo.dev</title>
 	<link rel="self" href="http://nilo.dev/" />
 	<rights>2020</rights>
-	<updated>2020-04-02T02:07:47Z</updated>
+	<updated>2020-04-02T02:13:04Z</updated>
 	<logo>http://nilo.dev/images/bg/desert-alone.jpg</logo>
 	<subtitle>Blog Posts</subtitle>
 	<entry>
@@ -105,7 +105,8 @@ git push
 &lt;blockquote class="blockquote"&gt;
 &lt;p&gt;Eu deliberadamente não segui boas práticas com o versionamento de código do input que gera a página, pois isso me daria o trabalho de criar mais um repositório e fazer o CI/CD com a instalação de todas essas ferramentas acima, além da autorização do Github numa plataforma como o Netlify ou AppVeyor. Provávelmente eu faça isso, mas não hoje.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Agora, para facilitar o build do projeto, é necessário adicionar um arquivo &amp;quot;build.cake&amp;quot; na raiz do projeto, com o seguinte conteúdo:&lt;/p&gt;
+&lt;h2 id="automatizando-o-build-com-cake"&gt;Automatizando o Build com Cake&lt;/h2&gt;
+&lt;p&gt;Para facilitar o build do projeto, é necessário adicionar um arquivo &amp;quot;build.cake&amp;quot; na raiz do projeto, com o seguinte conteúdo:&lt;/p&gt;
 &lt;p&gt;build.cake:&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-powershell"&gt;#tool nuget:?package=Wyam
 #addin nuget:?package=Cake.Wyam
