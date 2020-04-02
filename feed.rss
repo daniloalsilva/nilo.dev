@@ -5,8 +5,8 @@
 		<link>http://nilo.dev/</link>
 		<description>Blog Posts</description>
 		<copyright>2020</copyright>
-		<pubDate>Thu, 02 Apr 2020 01:39:23 GMT</pubDate>
-		<lastBuildDate>Thu, 02 Apr 2020 01:39:23 GMT</lastBuildDate>
+		<pubDate>Thu, 02 Apr 2020 01:41:14 GMT</pubDate>
+		<lastBuildDate>Thu, 02 Apr 2020 01:41:14 GMT</lastBuildDate>
 		<item>
 			<title>CRIANDO UM BLOG</title>
 			<link>http://nilo.dev/post/criando-um-blog</link>
@@ -35,7 +35,6 @@ Há também a falta de flexibilidade para importação e exportação de conteú
 O Notion não é uma ferramenta de Blogging. Utilizando uma &lt;a href="https://github.com/kjk/notionapi"&gt;lib não oficial&lt;/a&gt;, é possível exportar os conteúdos em markdown, que adicionando os headers corretos deixa o conteúdo exportável para o Github Pages tranquilamente, utilizando em conjunto uma ferramenta como o Jekyll ou Wyam.&lt;/p&gt;
 &lt;p&gt;Não utilizei o Notion pois ele neste momento iria complicar um deploy que pode ser feito sem ele. O suporte a mídia, para adicionar imagens e videos nos posts iria resolver parte do trabalho manual, mas o arquivo .zip, contendo o conteúdo da página criada gerado durante a exportação ainda necessitaria de algumas correções, como mover a mídia para a pasta correta e corrigir os paths.&lt;/p&gt;
 &lt;p&gt;Quem sabe no futuro, com tempo para adaptar as integrações.&lt;/p&gt;
-&lt;h2 id="jekyll"&gt;Jekyll&lt;/h2&gt;
 &lt;h2 id="wyam-e-github-pages"&gt;Wyam e Github Pages&lt;/h2&gt;
 &lt;p&gt;A abordagem com o Notion utilizaria também o Github Pages, mas preferi abordar a explição aqui.&lt;/p&gt;
 &lt;p&gt;O Github Pages, utilizado principalmente para criação de documentação de projetos, traz a possiblidade de hospedar conteúdo estático e, isso é simplesmente perfeito para Blogs.
