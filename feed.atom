@@ -4,7 +4,7 @@
 	<title>[da]nilo.dev</title>
 	<link rel="self" href="http://nilo.dev/" />
 	<rights>2020</rights>
-	<updated>2020-04-02T18:52:55Z</updated>
+	<updated>2020-04-02T19:00:05Z</updated>
 	<logo>http://nilo.dev/images/bg/desert-alone.jpg</logo>
 	<subtitle>Blog Posts</subtitle>
 	<entry>
@@ -48,8 +48,8 @@ Claro que dependo do conteúdo e a necessidade de uso de plugins em alguns casos
 &lt;h2 id="configuracao-de-dns"&gt;Configuração de DNS&lt;/h2&gt;
 &lt;p&gt;Registrei o domínio utilizando o &lt;a href="https://domains.google/"&gt;Google Domains&lt;/a&gt; e a experiência não poderia ter sido melhor. Interface fluída, configurações apresentadas de forma clara, everything works like a charm.&lt;/p&gt;
 &lt;p&gt;Configurar o domínio com o Github Pages é uma tarefa fácil, basta em &amp;quot;Registros de recurso personalizados&amp;quot; apontar as entradas padrão de dns para os ips &lt;em&gt;185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153&lt;/em&gt; e, a entrada www como cname para o root domain, no meu caso nilo.dev.&lt;/p&gt;
-&lt;p&gt;&lt;img src="/images/posts/2020/google-dns.jpg" class="img-fluid" alt="google-dns" /&gt;
-painel de configuração do Google Domains&lt;/p&gt;
+&lt;p&gt;Painel de configuração do Google Domains
+&lt;img src="/images/posts/2020/google-dns.jpg" class="img-fluid" alt="google-dns" /&gt;&lt;/p&gt;
 &lt;h1 id="criando-o-conteudo-estatico-com-wyam"&gt;Criando o conteúdo estático com Wyam&lt;/h1&gt;
 &lt;p&gt;O Wyam é uma ferramenta extremamente simples, tanto referente sua instalação quanto customização para o blog. Os exemplos abaixo foram feitos na minha maquina Windows mas o Wyam foi desenvolvido em dotnetcore 2.1.0, que deve rodar tranquilamente em Linux também com algumas adaptações nos comandos executados. Estou executando eles de uma maquina recém instalada, o que me forçou a instalar o dotnetcore e a IDE.&lt;/p&gt;
 &lt;p&gt;Instalando o instalador de pacotes (chocolatey):&lt;/p&gt;
