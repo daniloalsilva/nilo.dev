@@ -5,8 +5,8 @@
 		<link>http://nilo.dev/</link>
 		<description>Blog Posts</description>
 		<copyright>2020</copyright>
-		<pubDate>Thu, 02 Apr 2020 02:04:38 GMT</pubDate>
-		<lastBuildDate>Thu, 02 Apr 2020 02:04:38 GMT</lastBuildDate>
+		<pubDate>Thu, 02 Apr 2020 02:07:47 GMT</pubDate>
+		<lastBuildDate>Thu, 02 Apr 2020 02:07:47 GMT</lastBuildDate>
 		<item>
 			<title>CRIANDO UM BLOG</title>
 			<link>http://nilo.dev/post/criando-um-blog</link>
@@ -59,7 +59,7 @@ painel de configuração do Google Domains&lt;/p&gt;
 &lt;p&gt;Instalando o Visual Studio Code&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-powershell"&gt;choco install vscode -y
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;O vscode é bem opcional dentre os itens abordados aqui, mas foi ele o utilizado durante todo o processo para escrever este post, sendo possível sem instalar nenhum addon visualizar o conteúdo (mídia inclusive) escrito utilizando markdown.&lt;/p&gt;
+&lt;p&gt;O vscode é bem opcional dentre os itens abordados aqui, mas foi ele o utilizado durante todo o processo para escrever este post, sendo possível sem instalar nenhum addon visualizar o conteúdo (mídia inclusive) escrito utilizando markdown com code highlighting e um preview side-by-side.&lt;/p&gt;
 &lt;p&gt;&lt;img src="/images/posts/2020/nilodev-vscode.jpg" class="img-fluid" alt="nilodev-vscode" /&gt;&lt;/p&gt;
 &lt;p&gt;Instalando o dotnetcore, versões &amp;quot;lastest&amp;quot; e &amp;quot;2.1.0&amp;quot;, esta última utilizada no Wyam.&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-powershell"&gt;choco install dotnetcore -y
