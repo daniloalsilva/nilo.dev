@@ -4,7 +4,7 @@
 	<title>[da]nilo.dev</title>
 	<link rel="self" href="http://nilo.dev/" />
 	<rights>2020</rights>
-	<updated>2020-04-02T02:17:07Z</updated>
+	<updated>2020-04-02T02:40:25Z</updated>
 	<logo>http://nilo.dev/images/bg/desert-alone.jpg</logo>
 	<subtitle>Blog Posts</subtitle>
 	<entry>
@@ -79,7 +79,7 @@ wyam build --recipe Blog --theme CleanBlog -p
 &lt;pre&gt;&lt;code&gt;Preview server listening at http://localhost:5080 and serving from path file:///C:/Users/danil/Projects/new_blog/output
 Hit Ctrl-C to exit
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Os arquivos que devem ser enviados para o Github neste ponto estão na pasta &amp;quot;/project_root/output&amp;quot; e são eles que precisamos enviar para o Github.&lt;/p&gt;
+&lt;p&gt;Os arquivos que devem ser enviados para o Github neste ponto estão na pasta &amp;quot;/project_root/output&amp;quot;.&lt;/p&gt;
 &lt;h1 id="enviando-o-conteudo-para-o-github-pages"&gt;Enviando o conteúdo para o Github Pages&lt;/h1&gt;
 &lt;p&gt;No Github,&lt;/p&gt;
 &lt;ul&gt;
