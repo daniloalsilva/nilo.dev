@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
 
-        <title>[da]nilo.dev - CRIANDO UM BLOG</title>
+        <title>[da]nilo.dev - Criando um blog com Wyam e Github Pages</title>
         <meta name="description" content="Blog Posts" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">        
 
@@ -28,9 +28,9 @@
         <meta name="msapplication-tooltip" content="[da]nilo.dev" />
         <meta name="msapplication-starturl" content="/" />
 
-        <meta property="og:title" content="[da]nilo.dev - CRIANDO UM BLOG" />
+        <meta property="og:title" content="[da]nilo.dev - Criando um blog com Wyam e Github Pages" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="http://nilo.dev/post/criando-um-blog" />
+        <meta property="og:url" content="http://nilo.dev/post/criando-um-blog-com-wyam-github-pages" />
         <!-- TODO: More social graph meta tags -->
 
         
@@ -74,7 +74,7 @@
 
     
 <div class="post-heading">
-    <h1>CRIANDO UM BLOG</h1>
+    <h1>Criando um blog com Wyam e Github Pages</h1>
     <div class="meta">        
 Published on Wednesday, April 1, 2020<br>    </div>
         <div class="tags">
@@ -124,13 +124,13 @@ Claro que dependo do conteúdo e a necessidade de uso de plugins em alguns casos
 <p>Decidido que o conteúdo seria hospedado no Github, a questão agora seria a escolha da ferramenta para gerar o conteúdo estático, baseado em markdown.</p>
 <p>No passado ja havia criado um outro blog utilizando Wyam que, por minha falta de comprometimento, não foi pra frente. Mas eu já investi algum tempo no passado entendendo a ferramenta, o que tornou o processo de criação desta nova página extremamente rápido.</p>
 <h1 id="registro-do-dominio">Registro do domínio</h1>
-<p>Decididas as ferramentas, hora de contratar um domínio, o que foi o único custo real investido neste projeto. Me comprometi a não gastar muito tempo com isso, pois o meu limite de tempo decidindo e construindo a ferramenta estava no limite entre simplesmente usar o Medium para simplificar o processo, e escolher um nome para o domínio era sempre um processo demorado e desgastante.</p>
-<p>Considerei utilizar a url padrão do Github Pages, algo do tipo <a href="https://daniloalsilva.github.io/">https://daniloalsilva.github.io/</a>, até que houvesse uma justificativa real para gastos, e então lembrei que talvez houvesse algum nome de dominio <em>.dev</em> interessante e curto no ar.</p>
-<p>O Google adquiriu o <a href="https://en.wikipedia.org/wiki/.dev" title="top level domain">TLD</a> <em>.dev</em> e, iniciando em 19 de fevereiro de 2019, passou a comercializar esta extensão para registro de domínios - o que faz com que diversos curtos ainda estejam disponíveis para compra. Aliás, se você quer registrar um domínio .dev e ainda não fez, essa é a hora.</p>
+<p>Decididas as ferramentas, hora de contratar um domínio, o que foi o único custo real investido neste projeto. Me comprometi a não gastar muito tempo escolhendo um nome de domínio pois já tinha gasto tempo demais decidindo que ferramentas utilizar e eu estava chegando no limite onde seria mais interessante simplesmente usar o Medium para simplificar o processo. Escolher um nome para o domínio era sempre um processo demorado e desgastante.</p>
+<p>Considerei utilizar a url padrão do Github Pages, algo do tipo <a href="https://daniloalsilva.github.io/">https://daniloalsilva.github.io/</a>, até que houvesse uma justificativa real para gastos, e então lembrei que talvez houvesse algum nome de dominio <em>.dev</em> interessante e curto ainda disponivel para contratação.</p>
+<p>O Google adquiriu o <a href="https://en.wikipedia.org/wiki/.dev" title="top level domain">TLD</a> <em>.dev</em> e, iniciando em 19 de fevereiro de 2019, passou a comercializar esta extensão para registro de domínios - hoje o dominio tem mais ou menos 1 ano e dois meses sendo comercializado, tempo relativamente curto se comparado com o tempo de vida de outras extensões, o que trás a possibilidade de encontrar nomes de domínio curtos ainda disponíveis para compra. Aliás, se você quer registrar um domínio .dev e ainda não fez, essa é a hora.</p>
 <p>Com algumas pesquisas, achei um nome curto para meu domínio, &quot;nilo.dev&quot; e a justificativa de que ele era curto suficiente para lembrar e me permitiria ter um email d&#64;nilo.dev bastaram.</p>
 <h2 id="configuracao-de-dns">Configuração de DNS</h2>
-<p>Registrei o domínio utilizando o Google Domains <a href="https://domains.google/">Google Domains</a> e a experiência não poderia ter sido melhor. Interface fluída, configurações apresentadas de forma clara, everything works like a charm.</p>
-<p>Utilizar o domínio com o Github Pages é uma tarefa muito simples, basta em &quot;Registros de recurso personalizados&quot; apontar as entradas padrão de dns para os ips <em>185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153</em> e, a entrada www como cname para o root domain, no meu caso nilo.dev.</p>
+<p>Registrei o domínio utilizando o <a href="https://domains.google/">Google Domains</a> e a experiência não poderia ter sido melhor. Interface fluída, configurações apresentadas de forma clara, everything works like a charm.</p>
+<p>Configurar o domínio com o Github Pages é uma tarefa fácil, basta em &quot;Registros de recurso personalizados&quot; apontar as entradas padrão de dns para os ips <em>185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153</em> e, a entrada www como cname para o root domain, no meu caso nilo.dev.</p>
 <p><img src="/images/posts/2020/google-dns.jpg" class="img-fluid" alt="google-dns" />
 painel de configuração do Google Domains</p>
 <h1 id="criando-o-conteudo-estatico-com-wyam">Criando o conteúdo estático com Wyam</h1>
@@ -264,9 +264,9 @@ rm $localFolder -rec -force
     
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
     var disqus_shortname = 'nilo-dev';
-    var disqus_identifier = 'criando-um-blog';
-    var disqus_title = 'CRIANDO UM BLOG';
-    var disqus_url = 'http://nilo.dev/post/criando-um-blog';
+    var disqus_identifier = 'criando-um-blog-com-wyam-github-pages';
+    var disqus_title = 'Criando um blog com Wyam e Github Pages';
+    var disqus_url = 'http://nilo.dev/post/criando-um-blog-com-wyam-github-pages';
 
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {
