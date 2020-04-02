@@ -4,7 +4,7 @@
 	<title>[da]nilo.dev</title>
 	<link rel="self" href="http://nilo.dev/" />
 	<rights>2020</rights>
-	<updated>2020-04-02T01:07:11Z</updated>
+	<updated>2020-04-02T01:28:33Z</updated>
 	<logo>http://nilo.dev/images/bg/desert-alone.jpg</logo>
 	<subtitle>Blog Posts</subtitle>
 	<entry>
@@ -169,9 +169,8 @@ cd ..
 rm $localFolder -rec -force
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;E depois de tudo isso, rodar os comandos &lt;code&gt;cake; publish.ps1 'commit message';&lt;/code&gt; num console de powershell basta para fazer o build e publicar o conteúdo no github.&lt;/p&gt;
-&lt;p&gt;Ainda não acabamos.&lt;/p&gt;
-&lt;h1 id="disqus"&gt;Disqus&lt;/h1&gt;
-&lt;h1 id="email"&gt;Email&lt;/h1&gt;
+&lt;p&gt;Feito tudo isso, ainda há a configuração do Disqus e de um email para o domínio, mas estes podem ser discutidos num próximo post ou adicionados aqui posteriormente.&lt;/p&gt;
+&lt;p&gt;Enjoy!&lt;/p&gt;
 </content>
 		<summary>&lt;p&gt;Este projeto não é nada ambicioso, eu precisava somente de um lugar onde pudesse escrever, que sirva como tracking quando eu ou outra pessoa quiser consultar algum conteúdo disponível aqui. Queria observar se tive algum progresso na parte de desenho e animação e não fazia sentido pra mim fazer isso através de uma rede social.&lt;/p&gt;</summary>
 	</entry>

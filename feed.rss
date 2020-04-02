@@ -5,8 +5,8 @@
 		<link>http://nilo.dev/</link>
 		<description>Blog Posts</description>
 		<copyright>2020</copyright>
-		<pubDate>Thu, 02 Apr 2020 01:07:11 GMT</pubDate>
-		<lastBuildDate>Thu, 02 Apr 2020 01:07:11 GMT</lastBuildDate>
+		<pubDate>Thu, 02 Apr 2020 01:28:33 GMT</pubDate>
+		<lastBuildDate>Thu, 02 Apr 2020 01:28:33 GMT</lastBuildDate>
 		<item>
 			<title>CRIANDO UM BLOG</title>
 			<link>http://nilo.dev/post/criando-um-blog</link>
@@ -170,9 +170,8 @@ cd ..
 rm $localFolder -rec -force
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;E depois de tudo isso, rodar os comandos &lt;code&gt;cake; publish.ps1 'commit message';&lt;/code&gt; num console de powershell basta para fazer o build e publicar o conteúdo no github.&lt;/p&gt;
-&lt;p&gt;Ainda não acabamos.&lt;/p&gt;
-&lt;h1 id="disqus"&gt;Disqus&lt;/h1&gt;
-&lt;h1 id="email"&gt;Email&lt;/h1&gt;
+&lt;p&gt;Feito tudo isso, ainda há a configuração do Disqus e de um email para o domínio, mas estes podem ser discutidos num próximo post ou adicionados aqui posteriormente.&lt;/p&gt;
+&lt;p&gt;Enjoy!&lt;/p&gt;
 </content:encoded>
 		</item>
 	</channel>
