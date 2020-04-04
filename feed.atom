@@ -4,9 +4,59 @@
 	<title>[da]nilo.dev</title>
 	<link rel="self" href="http://nilo.dev/" />
 	<rights>2020</rights>
-	<updated>2020-04-02T19:00:05Z</updated>
+	<updated>2020-04-04T17:31:20Z</updated>
 	<logo>http://nilo.dev/images/bg/desert-alone.jpg</logo>
 	<subtitle>Blog Posts</subtitle>
+	<entry>
+		<id>http://nilo.dev/post/emails-personalizados-gmail-google-domains</id>
+		<title>Emails personalizados com Gmail e Google Domains</title>
+		<link href="http://nilo.dev/post/emails-personalizados-gmail-google-domains" />
+		<link rel="enclosure" type="image" href="http://nilo.dev/images/bg/desert-alone.jpg" />
+		<updated>2020-04-02T00:00:00Z</updated>
+		<content>&lt;p&gt;Continuando o assunto do &lt;a href="https://nilo.dev/post/criando-um-blog-com-wyam-github-pages"&gt;post anterior&lt;/a&gt;, hora de criar emails para o domínio &lt;strong&gt;nilo.dev&lt;/strong&gt;. Logo após a contratação do domínio, um box no painel de controle do Google já oferece o uso do GSuite, com um período de gratuidade de 14 dias, mas sabemos como isso funciona. Passado este período, R$24.30/mês por conta de email criada - claro que o GSuite possui outros serviços, mas já uso serviços semelhantes em outras plataformas e as premissas de não ter custos neste projeto continuam valendo.&lt;/p&gt;
+&lt;p&gt;Oferta no painel de controle do Google Domains:&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/posts/2020/google-gsuite.jpg" class="img-fluid" alt="google-gsuite" /&gt;&lt;/p&gt;
+&lt;p&gt;Eu não tenho necessidade de uma conta nova de email então vou apenas utilizar minha conta atual, mas para que o processo funcione é necessário ter uma conta de email criada previamente - e neste caso específicamente uma conta do Gmail. Não passaremos pelos passos de criação da conta aqui.&lt;/p&gt;
+&lt;h1 id="configurando-alias-e-encaminhamento-de-emails"&gt;Configurando alias e encaminhamento de emails&lt;/h1&gt;
+&lt;p&gt;Com a conta no gmail previamente criada, vamos criar um redirecionamento de emails no painel do Google Domains para esta conta. Após clicar na guia &amp;quot;E-mail&amp;quot;, configure os alias de email que deseja utilizar - no meu caso configurei o endereçco &lt;em&gt;d&amp;#64;nilo.dev&lt;/em&gt; explicitamente e um wildcard &amp;quot;*&amp;quot; para receber qualquer email enviado para contas do domínio &amp;quot;&amp;#64;nilo.dev&amp;quot;.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/posts/2020/google-mail-forward.jpg" class="img-fluid" alt="google-mail-forward" /&gt;&lt;/p&gt;
+&lt;p&gt;Com a configuração de encaminhamento de emails, já é possível fazer um teste de recebimento, o teste precisa ser feito de uma segunda caixa postal - testar o funcionamento utilizando para enviar a própria conta que recebe o encaminhamento fará com que a mensagem não seja recebida, conforme a &lt;a href="https://support.google.com/domains/answer/6328726?hl=en"&gt;FAQ do Google Domains&lt;/a&gt;. Enviando um email de outra conta do gmail que não seja a daniloalsilva&amp;#64;gmail.com, para d&amp;#64;nilo.dev foi suficiente para testar o funcionamento.&lt;/p&gt;
+&lt;h1 id="habilitando-o-envio-de-emails"&gt;Habilitando o envio de emails&lt;/h1&gt;
+&lt;p&gt;Após realizado o teste, é necessário habilitar o endereço de email para envio através do Gmail.&lt;/p&gt;
+&lt;p&gt;Não configuramos diretamente os servidores MX do domínio para utilizar o serviço de emails do Google pois ele já possui configuração inicial padrão com os endereços MX de DNS do Google. É possível checar essa informação através das guias DNS &amp;gt; Registros sintéticos &amp;gt; Encaminhamento de e-mail:&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/posts/2020/google-mail-dns.jpg" class="img-fluid" alt="google-mail-forward" /&gt;&lt;/p&gt;
+&lt;p&gt;Também é possível checar essa informação com um nslookup da sua maquina local:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;C:\&amp;gt;nslookup -q=mx nilo.dev 8.8.8.8
+Servidor:  dns.google
+Address:  8.8.8.8
+
+Não é resposta autoritativa:
+nilo.dev        MX preference = 5, mail exchanger = gmr-smtp-in.l.google.com
+nilo.dev        MX preference = 10, mail exchanger = alt1.gmr-smtp-in.l.google.com
+nilo.dev        MX preference = 20, mail exchanger = alt2.gmr-smtp-in.l.google.com
+nilo.dev        MX preference = 30, mail exchanger = alt3.gmr-smtp-in.l.google.com
+nilo.dev        MX preference = 40, mail exchanger = alt4.gmr-smtp-in.l.google.com
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Aqui os passos podem ser ligeiramente diferentes, dependendo das configurações de segurança da conta de email em questão. Tenho habilitado para minha conta a &amp;quot;Verificação em duas etapas&amp;quot; e os passos a seguir descrevem a configuração com essa opção já habilitada. Nas configurações da conta do Google (não do Gmail) já com a verificação em duas etapas habilitada, na guia Segurança, clique em &amp;quot;Senhas de app&amp;quot; e crie uma nova senha - para ter uma identificação de onde a senha é utilizada eu utilizei a opção &amp;quot;Outro (nome personalizado)&amp;quot; em Selecionar app e adicionei o nome d&amp;#64;nilo.dev. Uma senha com 16 caracteres deve ser gerada - anote por enquanto.&lt;/p&gt;
+&lt;p&gt;Nas configurações do Gmail, em Contas e Importação &amp;gt; Enviar mensagens como, clique em &amp;quot;Adicionar outro endereço de e-mail&amp;quot;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/posts/2020/google-mail-import0.jpg" class="img-fluid" alt="google-mail-forward" /&gt;&lt;/p&gt;
+&lt;p&gt;Neste ponto, adicionamos o alias criado no Google Domains &amp;quot;d&amp;#64;nilo.dev&amp;quot; e em seguida o endereço do gmail e a senha recém gerada para autenticar a conta:&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/posts/2020/google-mail-import1.jpg" class="img-fluid" alt="google-mail-forward" /&gt;
+&lt;img src="/images/posts/2020/google-mail-import2.jpg" class="img-fluid" alt="google-mail-forward" /&gt;&lt;/p&gt;
+&lt;p&gt;Feito isso, um email é enviado para a conta d&amp;#64;nilo.dev e recebido na minha conta do gmail devido ao encaminhamento configurado no Google Domains, com conteúdo semelhante ao abaixo:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Você solicitou que d&amp;#64;nilo.dev fosse adicionado à sua conta do Gmail.
+Código de confirmação: *********
+
+Antes de enviar e-mails de d&amp;#64;nilo.dev usando sua conta do Gmail
+(daniloalsilva&amp;#64;gmail.com), clique no link abaixo para confirmar sua solicitação:
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote class="blockquote"&gt;
+&lt;p&gt;Se você concluiu esta parte da configuração, significa que não há mais necessidade de armazenar aquela senha gerada para o aplicativo, apague de onde tiver anotado. Se precisar novamente no futuro, uma nova senha pode ser gerada.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;E após a confirmação, o endereço &lt;strong&gt;d&amp;#64;nilo.dev&lt;/strong&gt; já está apto para envio e recebimento com uma conta simples do Gmail e com a economia de R$24,30/mês!&lt;/p&gt;
+</content>
+		<summary>&lt;p&gt;Continuando o assunto do &lt;a href="https://nilo.dev/post/criando-um-blog-com-wyam-github-pages"&gt;post anterior&lt;/a&gt;, hora de criar emails para o domínio &lt;strong&gt;nilo.dev&lt;/strong&gt;. Logo após a contratação do domínio, um box no painel de controle do Google já oferece o uso do GSuite, com um período de gratuidade de 14 dias, mas sabemos como isso funciona. Passado este período, R$24.30/mês por conta de email criada - claro que o GSuite possui outros serviços, mas já uso serviços semelhantes em outras plataformas e as premissas de não ter custos neste projeto continuam valendo.&lt;/p&gt;</summary>
+	</entry>
 	<entry>
 		<id>http://nilo.dev/post/criando-um-blog-com-wyam-github-pages</id>
 		<title>Criando um blog com Wyam e Github Pages</title>

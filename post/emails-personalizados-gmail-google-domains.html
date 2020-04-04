@@ -1,0 +1,247 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+
+        <title>[da]nilo.dev - Emails personalizados com Gmail e Google Domains</title>
+        <meta name="description" content="Blog Posts" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">        
+
+        <link type="application/rss+xml" rel="alternate" title="[da]nilo.dev" href="/feed.rss" />
+                <link type="application/atom+xml" rel="alternate" title="[da]nilo.dev" href="/feed.atom" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+        <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="/assets/css/highlight.css" rel="stylesheet">
+        <link href="/assets/css/clean-blog.css" rel="stylesheet" />
+        <link href="/assets/css/master.css" rel="stylesheet" />
+        <link href="/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+        <link href="/assets/css/override.css" rel="stylesheet" />
+
+
+        <meta name="application-name" content="[da]nilo.dev" />
+        <meta name="msapplication-tooltip" content="[da]nilo.dev" />
+        <meta name="msapplication-starturl" content="/" />
+
+        <meta property="og:title" content="[da]nilo.dev - Emails personalizados com Gmail e Google Domains" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://nilo.dev/post/emails-personalizados-gmail-google-domains" />
+        <!-- TODO: More social graph meta tags -->
+
+        
+
+
+        </head>
+        <body>
+                
+                <!-- Navigation -->
+                <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+                        <div class="container-fluid">
+                                <!-- Brand and toggle get grouped for better mobile display -->
+                                <div class="navbar-header page-scroll">
+                                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        </button>
+                                        <a class="navbar-brand" href="/">[da]nilo.dev</a>
+                                </div>
+                        
+                                <!-- Collect the nav links, forms, and other content for toggling -->
+                                <div class="collapse navbar-collapse" id="navbar-collapse">
+                                        <ul class="nav navbar-nav navbar-right">
+                                                        <li><a href="/post">Archive</a></li>
+        <li><a href="/tags">Tags</a></li>
+ 
+                                        </ul>
+                                </div>
+                                <!-- /.navbar-collapse -->
+                        </div>
+                        <!-- /.container -->
+                </nav>
+                
+                <!-- Page Header -->
+                <header class="intro-header" id="intro-header" style="background-image: url(&quot;/images/bg/desert-alone.jpg&quot;)">
+                        <div class="container">
+                                <div class="row">
+                                        <div class="col-md-12">
+
+    
+<div class="post-heading">
+    <h1>Emails personalizados com Gmail e Google Domains</h1>
+    <div class="meta">        
+Published on Thursday, April 2, 2020<br>    </div>
+        <div class="tags">
+                    <a role="button" href="/tags/email" class="btn btn-default btn-xs">email</a>
+                    <a role="button" href="/tags/gmail" class="btn btn-default btn-xs">gmail</a>
+                    <a role="button" href="/tags/googledomains" class="btn btn-default btn-xs">googledomains</a>
+        </div>     
+</div>
+
+                                        </div>
+                                </div>
+                        </div>
+                </header>
+                
+                <!-- Main Content -->
+                <div class="container">
+                        <div class="row">
+                                <div id="content" class="col-md-12">
+                                        
+
+<p>Continuando o assunto do <a href="https://nilo.dev/post/criando-um-blog-com-wyam-github-pages">post anterior</a>, hora de criar emails para o domínio <strong>nilo.dev</strong>. Logo após a contratação do domínio, um box no painel de controle do Google já oferece o uso do GSuite, com um período de gratuidade de 14 dias, mas sabemos como isso funciona. Passado este período, R$24.30/mês por conta de email criada - claro que o GSuite possui outros serviços, mas já uso serviços semelhantes em outras plataformas e as premissas de não ter custos neste projeto continuam valendo.</p>
+<p>Oferta no painel de controle do Google Domains:</p>
+<p><img src="/images/posts/2020/google-gsuite.jpg" class="img-fluid" alt="google-gsuite" /></p>
+<p>Eu não tenho necessidade de uma conta nova de email então vou apenas utilizar minha conta atual, mas para que o processo funcione é necessário ter uma conta de email criada previamente - e neste caso específicamente uma conta do Gmail. Não passaremos pelos passos de criação da conta aqui.</p>
+<h1 id="configurando-alias-e-encaminhamento-de-emails">Configurando alias e encaminhamento de emails</h1>
+<p>Com a conta no gmail previamente criada, vamos criar um redirecionamento de emails no painel do Google Domains para esta conta. Após clicar na guia &quot;E-mail&quot;, configure os alias de email que deseja utilizar - no meu caso configurei o endereçco <em>d&#64;nilo.dev</em> explicitamente e um wildcard &quot;*&quot; para receber qualquer email enviado para contas do domínio &quot;&#64;nilo.dev&quot;.</p>
+<p><img src="/images/posts/2020/google-mail-forward.jpg" class="img-fluid" alt="google-mail-forward" /></p>
+<p>Com a configuração de encaminhamento de emails, já é possível fazer um teste de recebimento, o teste precisa ser feito de uma segunda caixa postal - testar o funcionamento utilizando para enviar a própria conta que recebe o encaminhamento fará com que a mensagem não seja recebida, conforme a <a href="https://support.google.com/domains/answer/6328726?hl=en">FAQ do Google Domains</a>. Enviando um email de outra conta do gmail que não seja a daniloalsilva&#64;gmail.com, para d&#64;nilo.dev foi suficiente para testar o funcionamento.</p>
+<h1 id="habilitando-o-envio-de-emails">Habilitando o envio de emails</h1>
+<p>Após realizado o teste, é necessário habilitar o endereço de email para envio através do Gmail.</p>
+<p>Não configuramos diretamente os servidores MX do domínio para utilizar o serviço de emails do Google pois ele já possui configuração inicial padrão com os endereços MX de DNS do Google. É possível checar essa informação através das guias DNS &gt; Registros sintéticos &gt; Encaminhamento de e-mail:</p>
+<p><img src="/images/posts/2020/google-mail-dns.jpg" class="img-fluid" alt="google-mail-forward" /></p>
+<p>Também é possível checar essa informação com um nslookup da sua maquina local:</p>
+<pre><code>C:\&gt;nslookup -q=mx nilo.dev 8.8.8.8
+Servidor:  dns.google
+Address:  8.8.8.8
+
+Não é resposta autoritativa:
+nilo.dev        MX preference = 5, mail exchanger = gmr-smtp-in.l.google.com
+nilo.dev        MX preference = 10, mail exchanger = alt1.gmr-smtp-in.l.google.com
+nilo.dev        MX preference = 20, mail exchanger = alt2.gmr-smtp-in.l.google.com
+nilo.dev        MX preference = 30, mail exchanger = alt3.gmr-smtp-in.l.google.com
+nilo.dev        MX preference = 40, mail exchanger = alt4.gmr-smtp-in.l.google.com
+</code></pre>
+<p>Aqui os passos podem ser ligeiramente diferentes, dependendo das configurações de segurança da conta de email em questão. Tenho habilitado para minha conta a &quot;Verificação em duas etapas&quot; e os passos a seguir descrevem a configuração com essa opção já habilitada. Nas configurações da conta do Google (não do Gmail) já com a verificação em duas etapas habilitada, na guia Segurança, clique em &quot;Senhas de app&quot; e crie uma nova senha - para ter uma identificação de onde a senha é utilizada eu utilizei a opção &quot;Outro (nome personalizado)&quot; em Selecionar app e adicionei o nome d&#64;nilo.dev. Uma senha com 16 caracteres deve ser gerada - anote por enquanto.</p>
+<p>Nas configurações do Gmail, em Contas e Importação &gt; Enviar mensagens como, clique em &quot;Adicionar outro endereço de e-mail&quot;</p>
+<p><img src="/images/posts/2020/google-mail-import0.jpg" class="img-fluid" alt="google-mail-forward" /></p>
+<p>Neste ponto, adicionamos o alias criado no Google Domains &quot;d&#64;nilo.dev&quot; e em seguida o endereço do gmail e a senha recém gerada para autenticar a conta:</p>
+<p><img src="/images/posts/2020/google-mail-import1.jpg" class="img-fluid" alt="google-mail-forward" />
+<img src="/images/posts/2020/google-mail-import2.jpg" class="img-fluid" alt="google-mail-forward" /></p>
+<p>Feito isso, um email é enviado para a conta d&#64;nilo.dev e recebido na minha conta do gmail devido ao encaminhamento configurado no Google Domains, com conteúdo semelhante ao abaixo:</p>
+<pre><code>Você solicitou que d&#64;nilo.dev fosse adicionado à sua conta do Gmail.
+Código de confirmação: *********
+
+Antes de enviar e-mails de d&#64;nilo.dev usando sua conta do Gmail
+(daniloalsilva&#64;gmail.com), clique no link abaixo para confirmar sua solicitação:
+</code></pre>
+<blockquote class="blockquote">
+<p>Se você concluiu esta parte da configuração, significa que não há mais necessidade de armazenar aquela senha gerada para o aplicativo, apague de onde tiver anotado. Se precisar novamente no futuro, uma nova senha pode ser gerada.</p>
+</blockquote>
+<p>E após a confirmação, o endereço <strong>d&#64;nilo.dev</strong> já está apto para envio e recebimento com uma conta simples do Gmail e com a economia de R$24,30/mês!</p>
+
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'nilo-dev';
+    var disqus_identifier = 'emails-personalizados-gmail-google-domains';
+    var disqus_title = 'Emails personalizados com Gmail e Google Domains';
+    var disqus_url = 'http://nilo.dev/post/emails-personalizados-gmail-google-domains';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                                </div>
+                        </div>
+                </div>
+                
+                <hr>
+                
+                <!-- Footer -->
+                <footer>
+                        <div class="container">
+        <div class="row">
+                <div class="col-md-12">
+                <ul class="list-inline text-center">
+                        <li>
+                        <a href="https://twitter.com/_sdanilo">
+                                <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="https://github.com/daniloalsilva">
+                                <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="https://www.linkedin.com/in/sdanilo">
+                                <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                                </span>
+                        </a>
+                        </li>
+                </ul>
+                <p class="copyright text-muted">
+                        Copyright � 2020 by Danilo Silva. All rights reserved. 
+                        <br />
+                        <a href="/feed.rss"><i class="fa fa-rss"></i> RSS Feed</a> | <a href="/feed.atom"><i class="fa fa-rss"></i> Atom Feed</a>
+                        <br />
+                        <a href="https://github.com/daniloalsilva/nilo.dev"><i class="fa fa-github"></i> This Site on GitHub</a>
+                        <br />
+                        <strong><a href="https://wyam.io">Generated by Wyam</a></strong>
+                </p>
+                </div>
+        </div>
+</div>
+                </footer> 
+
+                <script src="/assets/js/jquery.min.js"></script>
+                <script src="/assets/js/bootstrap.min.js"></script>     
+                <script src="/assets/js/highlight.pack.js"></script>   
+                <script src="/assets/js/clean-blog.js"></script>
+                <script src="/assets/js/d3.v3.min.js"></script>
+                <script src="/assets/js/trianglify.min.js"></script>
+                <script src="/assets/js/Please-compressed.js"></script>
+                <script src="/assets/js/background-check.min.js"></script>
+
+                <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+                <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+                <!--[if lt IE 9]>
+                        <script src="/assets/js/html5shiv.js"></script>
+                        <script src="/assets/js/respond.min.js"></script>
+                <![endif]-->
+                
+                
+                <script>hljs.initHighlightingOnLoad();</script>
+
+
+                <script>
+                        BackgroundCheck.init({
+                                targets: '.intro-header,.navbar',
+                                images: '.intro-header'
+                        });
+                </script>
+        </body>
+</html>
+
