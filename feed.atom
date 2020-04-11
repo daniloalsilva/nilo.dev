@@ -4,7 +4,7 @@
 	<title>[da]nilo.dev</title>
 	<link rel="self" href="http://nilo.dev/" />
 	<rights>2020</rights>
-	<updated>2020-04-11T03:26:12Z</updated>
+	<updated>2020-04-11T17:17:05Z</updated>
 	<logo>http://nilo.dev/images/bg/desert-alone.jpg</logo>
 	<subtitle>Blog Posts</subtitle>
 	<entry>
@@ -36,6 +36,7 @@
 &lt;p&gt;Referências:
 &lt;a href="https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/utility/download-secure-file?view=azure-devops"&gt;https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/utility/download-secure-file?view=azure-devops&lt;/a&gt;
 &lt;a href="https://cloudblogs.microsoft.com/opensource/2019/04/05/publishing-github-pages-from-azure-pipelines/"&gt;https://cloudblogs.microsoft.com/opensource/2019/04/05/publishing-github-pages-from-azure-pipelines/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://stackoverflow.com/questions/58674639/azure-pipelines-status-badge-not-getting-displayed-in-markdown"&gt;https://stackoverflow.com/questions/58674639/azure-pipelines-status-badge-not-getting-displayed-in-markdown&lt;/a&gt;&lt;/p&gt;
 </content>
 		<summary>&lt;p&gt;** DRAFT **&lt;/p&gt;</summary>
 	</entry>

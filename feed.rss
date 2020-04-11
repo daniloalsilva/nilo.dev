@@ -5,8 +5,8 @@
 		<link>http://nilo.dev/</link>
 		<description>Blog Posts</description>
 		<copyright>2020</copyright>
-		<pubDate>Sat, 11 Apr 2020 03:26:12 GMT</pubDate>
-		<lastBuildDate>Sat, 11 Apr 2020 03:26:12 GMT</lastBuildDate>
+		<pubDate>Sat, 11 Apr 2020 17:17:05 GMT</pubDate>
+		<lastBuildDate>Sat, 11 Apr 2020 17:17:05 GMT</lastBuildDate>
 		<item>
 			<title>Criando CI/CD do blog com Wyam, Azure Devops e Github Pages</title>
 			<link>http://nilo.dev/post/criando-cicd-do-blog-com-wyam-azure-devops-e-github-pages</link>
@@ -37,6 +37,7 @@
 &lt;p&gt;Referências:
 &lt;a href="https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/utility/download-secure-file?view=azure-devops"&gt;https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/utility/download-secure-file?view=azure-devops&lt;/a&gt;
 &lt;a href="https://cloudblogs.microsoft.com/opensource/2019/04/05/publishing-github-pages-from-azure-pipelines/"&gt;https://cloudblogs.microsoft.com/opensource/2019/04/05/publishing-github-pages-from-azure-pipelines/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://stackoverflow.com/questions/58674639/azure-pipelines-status-badge-not-getting-displayed-in-markdown"&gt;https://stackoverflow.com/questions/58674639/azure-pipelines-status-badge-not-getting-displayed-in-markdown&lt;/a&gt;&lt;/p&gt;
 </content:encoded>
 		</item>
 		<item>
