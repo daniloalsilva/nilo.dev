@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
 
-        <title>[da]nilo.dev - All Tags</title>
+        <title>[da]nilo.dev - Criando CI/CD do blog com Wyam, Azure Devops e Github Pages</title>
         <meta name="description" content="Blog Posts" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">        
 
@@ -28,9 +28,9 @@
         <meta name="msapplication-tooltip" content="[da]nilo.dev" />
         <meta name="msapplication-starturl" content="/" />
 
-        <meta property="og:title" content="[da]nilo.dev - All Tags" />
+        <meta property="og:title" content="[da]nilo.dev - Criando CI/CD do blog com Wyam, Azure Devops e Github Pages" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="http://nilo.dev/_Tags.cshtml" />
+        <meta property="og:url" content="http://nilo.dev/post/criando-cicd-do-blog-com-wyam-azure-devops-e-github-pages" />
         <!-- TODO: More social graph meta tags -->
 
         
@@ -71,9 +71,20 @@
                         <div class="container">
                                 <div class="row">
                                         <div class="col-md-12">
-<div class="site-heading">
-    <h1>All Tags</h1>
-</div>                                            </div>
+
+    
+<div class="post-heading">
+    <h1>Criando CI/CD do blog com Wyam, Azure Devops e Github Pages</h1>
+    <div class="meta">        
+Published on Friday, April 10, 2020<br>    </div>
+        <div class="tags">
+                    <a role="button" href="/tags/azuredevops" class="btn btn-default btn-xs">azuredevops</a>
+                    <a role="button" href="/tags/githubpages" class="btn btn-default btn-xs">githubpages</a>
+                    <a role="button" href="/tags/wyam" class="btn btn-default btn-xs">wyam</a>
+        </div>     
+</div>
+
+                                        </div>
                                 </div>
                         </div>
                 </header>
@@ -82,19 +93,60 @@
                 <div class="container">
                         <div class="row">
                                 <div id="content" class="col-md-12">
-                                        <div class="container-sm-height">
-    <div class="row row-sm-height">		
-        <div class="col-sm-12 col-sm-height">            
-                <a role="button" href="/tags/githubpages" class="btn btn-default btn-sm"> githubpages (2)</a>
-                <a role="button" href="/tags/wyam" class="btn btn-default btn-sm"> wyam (2)</a>
-                <a role="button" href="/tags/googledomains" class="btn btn-default btn-sm"> googledomains (2)</a>
-                <a role="button" href="/tags/email" class="btn btn-default btn-sm"> email (1)</a>
-                <a role="button" href="/tags/azuredevops" class="btn btn-default btn-sm"> azuredevops (1)</a>
-                <a role="button" href="/tags/choco" class="btn btn-default btn-sm"> choco (1)</a>
-                <a role="button" href="/tags/gmail" class="btn btn-default btn-sm"> gmail (1)</a>
-        </div>
-    </div>
-</div>
+                                        
+
+<p>** DRAFT **</p>
+<p>Este post não foi tão rapido de escrever mas a execução dele deve ser a partir de agora.</p>
+<p>Eu vinha mantendo os inputs do Blog na minha maquina e sem versionamento, mas comecei a usar um outro notebook e pensar em copiar/colar o conteúdo prebuild do blog pra conseguir postar conteúdo era a motivação que eu precisava para fazer o CI/CD.</p>
+<p>Neste post vamos abordar a criação de um CI/CD, commitando os inputs do blog em um repositório, criando a trigger de commit no master para popular o conteúdo em outro repositório também do Github. É uma implementação que não segue muitos padrões/não muito convencional, já que nosso ponto de publicação é um repositório do git.</p>
+<p><a href="https://nilo.dev/post/criando-um-blog-com-wyam-github-pages">post anterior 1</a>
+<a href="https://nilo.dev/post/emails-personalizados-gmail-google-domains">post anterior 2</a></p>
+<p>Passos:</p>
+<ul>
+<li>criar chave de deployment no projeto</li>
+<li>criar pipeline no azure devops</li>
+<li>adicionar a chave em secure files na library do azure devops</li>
+<li>conectar pipeline no repositório de inputs</li>
+<li>criar script de build</li>
+<li>dar permissão no secure file após commit na origem</li>
+</ul>
+<p>git commit -am &quot;[new post] azuredevops integration&quot;; git push</p>
+<p>Preocupações:</p>
+<ul>
+<li>Tamanho do repositório</li>
+</ul>
+<p>Referências:
+<a href="https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/utility/download-secure-file?view=azure-devops">https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/utility/download-secure-file?view=azure-devops</a>
+<a href="https://cloudblogs.microsoft.com/opensource/2019/04/05/publishing-github-pages-from-azure-pipelines/">https://cloudblogs.microsoft.com/opensource/2019/04/05/publishing-github-pages-from-azure-pipelines/</a></p>
+
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'nilo-dev';
+    var disqus_identifier = 'criando-cicd-do-blog-com-wyam-azure-devops-e-github-pages';
+    var disqus_title = 'Criando CI/CD do blog com Wyam, Azure Devops e Github Pages';
+    var disqus_url = 'http://nilo.dev/post/criando-cicd-do-blog-com-wyam-azure-devops-e-github-pages';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
                                 </div>
                         </div>
                 </div>

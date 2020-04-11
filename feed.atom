@@ -4,9 +4,41 @@
 	<title>[da]nilo.dev</title>
 	<link rel="self" href="http://nilo.dev/" />
 	<rights>2020</rights>
-	<updated>2020-04-11T03:14:03Z</updated>
+	<updated>2020-04-11T03:15:16Z</updated>
 	<logo>http://nilo.dev/images/bg/desert-alone.jpg</logo>
 	<subtitle>Blog Posts</subtitle>
+	<entry>
+		<id>http://nilo.dev/post/criando-cicd-do-blog-com-wyam-azure-devops-e-github-pages</id>
+		<title>Criando CI/CD do blog com Wyam, Azure Devops e Github Pages</title>
+		<link href="http://nilo.dev/post/criando-cicd-do-blog-com-wyam-azure-devops-e-github-pages" />
+		<link rel="enclosure" type="image" href="http://nilo.dev/images/bg/desert-alone.jpg" />
+		<updated>2020-04-10T00:00:00Z</updated>
+		<content>&lt;p&gt;** DRAFT **&lt;/p&gt;
+&lt;p&gt;Este post não foi tão rapido de escrever mas a execução dele deve ser a partir de agora.&lt;/p&gt;
+&lt;p&gt;Eu vinha mantendo os inputs do Blog na minha maquina e sem versionamento, mas comecei a usar um outro notebook e pensar em copiar/colar o conteúdo prebuild do blog pra conseguir postar conteúdo era a motivação que eu precisava para fazer o CI/CD.&lt;/p&gt;
+&lt;p&gt;Neste post vamos abordar a criação de um CI/CD, commitando os inputs do blog em um repositório, criando a trigger de commit no master para popular o conteúdo em outro repositório também do Github. É uma implementação que não segue muitos padrões/não muito convencional, já que nosso ponto de publicação é um repositório do git.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://nilo.dev/post/criando-um-blog-com-wyam-github-pages"&gt;post anterior 1&lt;/a&gt;
+&lt;a href="https://nilo.dev/post/emails-personalizados-gmail-google-domains"&gt;post anterior 2&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Passos:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;criar chave de deployment no projeto&lt;/li&gt;
+&lt;li&gt;criar pipeline no azure devops&lt;/li&gt;
+&lt;li&gt;adicionar a chave em secure files na library do azure devops&lt;/li&gt;
+&lt;li&gt;conectar pipeline no repositório de inputs&lt;/li&gt;
+&lt;li&gt;criar script de build&lt;/li&gt;
+&lt;li&gt;dar permissão no secure file após commit na origem&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;git commit -am &amp;quot;[new post] azuredevops integration&amp;quot;; git push&lt;/p&gt;
+&lt;p&gt;Preocupações:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Tamanho do repositório&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Referências:
+&lt;a href="https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/utility/download-secure-file?view=azure-devops"&gt;https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/utility/download-secure-file?view=azure-devops&lt;/a&gt;
+&lt;a href="https://cloudblogs.microsoft.com/opensource/2019/04/05/publishing-github-pages-from-azure-pipelines/"&gt;https://cloudblogs.microsoft.com/opensource/2019/04/05/publishing-github-pages-from-azure-pipelines/&lt;/a&gt;&lt;/p&gt;
+</content>
+		<summary>&lt;p&gt;** DRAFT **&lt;/p&gt;</summary>
+	</entry>
 	<entry>
 		<id>http://nilo.dev/post/emails-personalizados-gmail-google-domains</id>
 		<title>Emails personalizados com Gmail e Google Domains</title>
