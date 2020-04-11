@@ -5,30 +5,8 @@
 		<link>http://nilo.dev/</link>
 		<description>Blog Posts</description>
 		<copyright>2020</copyright>
-		<pubDate>Sat, 11 Apr 2020 02:54:49 GMT</pubDate>
-		<lastBuildDate>Sat, 11 Apr 2020 02:54:49 GMT</lastBuildDate>
-		<item>
-			<title>Emails personalizados com Gmail e Google Domains</title>
-			<link>http://nilo.dev/post/cicd</link>
-			<description>&lt;p&gt;Este post deve ser rápido.&lt;/p&gt;</description>
-			<enclosure url="http://nilo.dev/images/bg/desert-alone.jpg" length="0" type="image" />
-			<guid>http://nilo.dev/post/cicd</guid>
-			<pubDate>Fri, 10 Apr 2020 00:00:00 GMT</pubDate>
-			<content:encoded>&lt;p&gt;Este post deve ser rápido.&lt;/p&gt;
-&lt;p&gt;Eu vinha mantendo os inputs do Blog na minha maquina e sem versionamento, mas comecei a usar um outro notebook e ficar copiando/colando o conteúdo prebuild já me fez mudar de ideia.
-Neste post vamos abordar a criação de um CI/CD, commitando os inputs do blog em um repositório, criando a trigger de commit no master para popular o conteúdo em outro repositório também do Github.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://nilo.dev/post/emails-personalizados-gmail-google-domains"&gt;post anterior&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;criar chave de deployment no projeto&lt;/li&gt;
-&lt;li&gt;criar pipeline no azure devops&lt;/li&gt;
-&lt;li&gt;adicionar a chave em secure files na library do azure devops&lt;/li&gt;
-&lt;li&gt;conectar pipeline no repositório de inputs&lt;/li&gt;
-&lt;li&gt;dar permissão no arquivo&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a href="https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/utility/download-secure-file?view=azure-devops"&gt;https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/utility/download-secure-file?view=azure-devops&lt;/a&gt;
-&lt;a href="https://cloudblogs.microsoft.com/opensource/2019/04/05/publishing-github-pages-from-azure-pipelines/"&gt;https://cloudblogs.microsoft.com/opensource/2019/04/05/publishing-github-pages-from-azure-pipelines/&lt;/a&gt;&lt;/p&gt;
-</content:encoded>
-		</item>
+		<pubDate>Sat, 11 Apr 2020 03:14:03 GMT</pubDate>
+		<lastBuildDate>Sat, 11 Apr 2020 03:14:03 GMT</lastBuildDate>
 		<item>
 			<title>Emails personalizados com Gmail e Google Domains</title>
 			<link>http://nilo.dev/post/emails-personalizados-gmail-google-domains</link>
