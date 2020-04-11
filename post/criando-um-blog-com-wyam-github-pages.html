@@ -1,0 +1,368 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+
+        <title>[da]nilo.dev - Criando um blog com Wyam e Github Pages</title>
+        <meta name="description" content="Blog Posts" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">        
+
+        <link type="application/rss+xml" rel="alternate" title="[da]nilo.dev" href="/feed.rss" />
+                <link type="application/atom+xml" rel="alternate" title="[da]nilo.dev" href="/feed.atom" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+        <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="/assets/css/highlight.css" rel="stylesheet">
+        <link href="/assets/css/clean-blog.css" rel="stylesheet" />
+        <link href="/assets/css/master.css" rel="stylesheet" />
+        <link href="/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+        <link href="/assets/css/override.css" rel="stylesheet" />
+
+
+        <meta name="application-name" content="[da]nilo.dev" />
+        <meta name="msapplication-tooltip" content="[da]nilo.dev" />
+        <meta name="msapplication-starturl" content="/" />
+
+        <meta property="og:title" content="[da]nilo.dev - Criando um blog com Wyam e Github Pages" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://nilo.dev/post/criando-um-blog-com-wyam-github-pages" />
+        <!-- TODO: More social graph meta tags -->
+
+        
+
+
+        </head>
+        <body>
+                
+                <!-- Navigation -->
+                <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+                        <div class="container-fluid">
+                                <!-- Brand and toggle get grouped for better mobile display -->
+                                <div class="navbar-header page-scroll">
+                                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        </button>
+                                        <a class="navbar-brand" href="/">[da]nilo.dev</a>
+                                </div>
+                        
+                                <!-- Collect the nav links, forms, and other content for toggling -->
+                                <div class="collapse navbar-collapse" id="navbar-collapse">
+                                        <ul class="nav navbar-nav navbar-right">
+                                                        <li><a href="/post">Archive</a></li>
+        <li><a href="/tags">Tags</a></li>
+ 
+                                        </ul>
+                                </div>
+                                <!-- /.navbar-collapse -->
+                        </div>
+                        <!-- /.container -->
+                </nav>
+                
+                <!-- Page Header -->
+                <header class="intro-header" id="intro-header" style="background-image: url(&quot;/images/bg/desert-alone.jpg&quot;)">
+                        <div class="container">
+                                <div class="row">
+                                        <div class="col-md-12">
+
+    
+<div class="post-heading">
+    <h1>Criando um blog com Wyam e Github Pages</h1>
+    <div class="meta">        
+Published on Wednesday, April 1, 2020<br>    </div>
+        <div class="tags">
+                    <a role="button" href="/tags/choco" class="btn btn-default btn-xs">choco</a>
+                    <a role="button" href="/tags/githubpages" class="btn btn-default btn-xs">githubpages</a>
+                    <a role="button" href="/tags/googledomains" class="btn btn-default btn-xs">googledomains</a>
+                    <a role="button" href="/tags/wyam" class="btn btn-default btn-xs">wyam</a>
+        </div>     
+</div>
+
+                                        </div>
+                                </div>
+                        </div>
+                </header>
+                
+                <!-- Main Content -->
+                <div class="container">
+                        <div class="row">
+                                <div id="content" class="col-md-12">
+                                        
+
+<h1 id="vamos-ao-primeiro-post-novamente">Vamos ao primeiro post, novamente.</h1>
+<p>Este projeto não é nada ambicioso, eu precisava somente de um lugar onde pudesse escrever, que sirva como tracking quando eu ou outra pessoa quiser consultar algum conteúdo disponível aqui. Queria observar se tive algum progresso na parte de desenho e animação que estou estudando e não fazia sentido pra mim fazer isso através de uma rede social.</p>
+<p>Fiz algumas tentativas no passado, de uso com outras ferramentas para blogging, mas escrever com <em>markdown</em> e manter o conteúdo no Github tem se mostrado a melhor experiência.</p>
+<h1 id="escolha-do-wyam-com-github-pages">Escolha do Wyam com Github Pages</h1>
+<p>As premissas para a escolha de uma ferramenta de blogging eram:</p>
+<ul>
+<li>Possibilidade de categorização por tags;</li>
+<li>Facilidade de recuperar o conteúdo e reorganiza-lo para outras plataformas;</li>
+<li>Hosting Free;</li>
+</ul>
+<p>Dentre as ferramentas possíveis, estavam:</p>
+<h2 id="medium">Medium</h2>
+<p>O Medium de longe seria a opção mais rápida para iniciar este projeto, basta criar uma conta e começar a popular conteúdo. No entanto, o medium ao meu ver da um suporte muito fraco em relação a categorização - levando em consideração que este projeto vai possuir mais de um tipo de assunto.
+Há também a falta de flexibilidade para importação e exportação de conteúdo.</p>
+<p>Fosse o caso de agregar seguidores no meu feed e ter uma regularidade de postagem alta, o Medium até seria uma boa escolha... Não é o meu caso.</p>
+<p>Não foi desta vez Medium.</p>
+<h2 id="notion">Notion</h2>
+<p>Venho utilizando o Notion para documentações de projetos pessoais e ele vem se provado uma ótima ferramenta. Possui templates para diversos tipos de documentos, suporte a media com copy/paste de imagens e videos no corpo da página e até a criação de tabelas dinâmicas e kanbans.</p>
+<p>Dito isso, o Notion não é uma ferramenta de Blogging. Utilizando uma <a href="https://github.com/kjk/notionapi">lib não oficial</a>, até é possível exportar os conteúdos em markdown, que adicionando os headers corretos deixa o conteúdo exportável para o Github Pages tranquilamente, utilizando em conjunto uma ferramenta como o Jekyll ou Wyam.</p>
+<p>Não utilizei o Notion pois ele neste momento iria complicar um deploy que pode ser feito sem ele. O suporte a mídia, para adicionar imagens e videos nos posts iria resolver parte do trabalho manual, mas o arquivo .zip, contendo o conteúdo da página criada gerado durante a exportação ainda necessitaria de algumas correções, como mover a mídia para a pasta correta e corrigir os paths.</p>
+<p>Quem sabe no futuro, com tempo para adaptar as integrações.</p>
+<h2 id="wyam-e-github-pages">Wyam e Github Pages</h2>
+<p>A abordagem com o Notion utilizaria também o Github Pages, mas preferi abordar a explição aqui.</p>
+<p>O Github Pages, utilizado principalmente para criação de documentação de projetos, traz a possiblidade de hospedar conteúdo estático e, isso é simplesmente perfeito para Blogs.
+Claro que dependo do conteúdo e a necessidade de uso de plugins em alguns casos, um Wordpress trás uma abordagem muito mais interessante para criação e manutenção de um Blog, mas nos trás a questão: Qual a real necessidade de utilizar conteúdo dinâmico para um site que pode ser estático? Minha maior premissa era não gastar dinheiro desnecessáriamente, o que descarta a contratação de uma área de hospedagem. Sobra o Medium e... O Github!</p>
+<p>Decidido que o conteúdo seria hospedado no Github, a questão agora seria a escolha da ferramenta para gerar o conteúdo estático, baseado em markdown.</p>
+<p>No passado ja havia criado um outro blog utilizando Wyam que, por minha falta de comprometimento, não foi pra frente. Mas eu já investi algum tempo no passado entendendo a ferramenta, o que tornou o processo de criação desta nova página extremamente rápido.</p>
+<h1 id="registro-do-dominio">Registro do domínio</h1>
+<p>Decididas as ferramentas, hora de contratar um domínio, o que foi o único custo real investido neste projeto. Me comprometi a não gastar muito tempo escolhendo um nome de domínio pois já tinha gasto tempo demais decidindo que ferramentas utilizar e eu estava chegando no limite onde seria mais interessante simplesmente usar o Medium para simplificar o processo. Escolher um nome para o domínio era sempre um processo demorado e desgastante.</p>
+<p>Considerei utilizar a url padrão do Github Pages, algo do tipo <a href="https://daniloalsilva.github.io/">https://daniloalsilva.github.io/</a>, até que houvesse uma justificativa real para gastos, e então lembrei que talvez houvesse algum nome de dominio <em>.dev</em> interessante e curto ainda disponivel para contratação.</p>
+<p>O Google adquiriu o <a href="https://en.wikipedia.org/wiki/.dev" title="top level domain">TLD</a> <em>.dev</em> e, iniciando em 19 de fevereiro de 2019, passou a comercializar esta extensão para registro de domínios - hoje o dominio tem mais ou menos 1 ano e dois meses sendo comercializado, tempo relativamente curto se comparado com o tempo de vida de outras extensões, o que trás a possibilidade de encontrar nomes de domínio curtos ainda disponíveis para compra. Aliás, se você quer registrar um domínio .dev e ainda não fez, essa é a hora.</p>
+<p>Com algumas pesquisas, achei um nome curto para meu domínio, &quot;nilo.dev&quot; e a justificativa de que ele era curto suficiente para lembrar e me permitiria ter um email d&#64;nilo.dev bastaram.</p>
+<h2 id="configuracao-de-dns">Configuração de DNS</h2>
+<p>Registrei o domínio utilizando o <a href="https://domains.google/">Google Domains</a> e a experiência não poderia ter sido melhor. Interface fluída, configurações apresentadas de forma clara, everything works like a charm.</p>
+<p>Configurar o domínio com o Github Pages é uma tarefa fácil, basta em &quot;Registros de recurso personalizados&quot; apontar as entradas padrão de dns para os ips <em>185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153</em> e, a entrada www como cname para o root domain, no meu caso nilo.dev.</p>
+<p>Painel de configuração do Google Domains
+<img src="/images/posts/2020/google-dns.jpg" class="img-fluid" alt="google-dns" /></p>
+<h1 id="criando-o-conteudo-estatico-com-wyam">Criando o conteúdo estático com Wyam</h1>
+<p>O Wyam é uma ferramenta extremamente simples, tanto referente sua instalação quanto customização para o blog. Os exemplos abaixo foram feitos na minha maquina Windows mas o Wyam foi desenvolvido em dotnetcore 2.1.0, que deve rodar tranquilamente em Linux também com algumas adaptações nos comandos executados. Estou executando eles de uma maquina recém instalada, o que me forçou a instalar o dotnetcore e a IDE.</p>
+<p>Instalando o instalador de pacotes (chocolatey):</p>
+<pre><code class="language-powershell">Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+</code></pre>
+<p>Instalando o Visual Studio Code</p>
+<pre><code class="language-powershell">choco install vscode -y
+</code></pre>
+<p>O vscode é bem opcional dentre os itens abordados aqui, mas foi ele o utilizado durante todo o processo para escrever este post, sendo possível sem instalar nenhum addon visualizar o conteúdo (mídia inclusive) escrito utilizando markdown com code highlighting e um preview side-by-side.</p>
+<p><img src="/images/posts/2020/nilodev-vscode.jpg" class="img-fluid" alt="nilodev-vscode" /></p>
+<p>Instalando o dotnetcore, versões &quot;lastest&quot; e &quot;2.1.0&quot;, esta última utilizada no Wyam.</p>
+<pre><code class="language-powershell">choco install dotnetcore -y
+choco install dotnetcore-sdk -y
+choco install dotnetcore --version=2.1.0 --sidebyside -y
+</code></pre>
+<p>Instalando o Wyam</p>
+<pre><code class="language-powershell">dotnet tool install -g Wyam.Tool
+</code></pre>
+<p>E por ultimo, o Cake para automatizar o submit dos posts:</p>
+<pre><code class="language-powershell">choco install cake.portable -y
+</code></pre>
+<p>Feito isso, já é possível testar o Wyam localmente. Crie uma pasta raiz para o projeto e execute os comandos:</p>
+<pre><code class="language-powershell">wyam new --recipe Blog
+wyam build --recipe Blog --theme CleanBlog -p
+</code></pre>
+<p>Com isso, se tudo deu certo uma mensagem semelhante a abaixo será exibida no console e a página http://localhost:5080 vai estar disponível para acesso local:</p>
+<pre><code>Preview server listening at http://localhost:5080 and serving from path file:///C:/Users/danil/Projects/new_blog/output
+Hit Ctrl-C to exit
+</code></pre>
+<p>Os arquivos que devem ser enviados para o Github neste ponto estão na pasta &quot;/project_root/output&quot;.</p>
+<h1 id="enviando-o-conteudo-para-o-github-pages">Enviando o conteúdo para o Github Pages</h1>
+<p>No Github,</p>
+<ul>
+<li>Crie um novo repositório - inicie ele com um README;</li>
+<li>Na aba &quot;settings&quot; na seção &quot;Github Pages&quot;, em <strong>source</strong> selecione &quot;master branch&quot; e em custom domain adicione o endereço de seu domínio</li>
+</ul>
+<p><img src="/images/posts/2020/github-pages.jpg" class="img-fluid" alt="github-pages" /></p>
+<blockquote class="blockquote">
+<p>Devido domínios .dev possuírem utilização restrita a HTTPS, o Github pode demorar um pouco para gerar o certificado com Lets Encrypt, no meu caso demorou uns 5~10 minutos - sim a geração de certificado acontece de forma automatica!</p>
+</blockquote>
+<p>Instale o Git, caso não tenha o mesmo instalado:</p>
+<pre><code class="language-powershell">choco install git -y
+</code></pre>
+<p>Para testar o funcionamento antes de automatizar o processo, eu preferi apenas commitar o output para o repositório e, em seguida testar o funcionamento de forma automática utilizando o Cake e alguns scripts em powershell.</p>
+<p>Clone, cópia e envio dos arquivos para o Github:</p>
+<pre><code class="language-powershell">git clone git&#64;github.com:daniloalsilva/nilo.dev.git
+cp C:\Users\danil\Projects\new_blog\output\* nilo.dev -recurse -force
+git add .
+git commit -m 'first commit'
+git push
+</code></pre>
+<p>E com isso a página <a href="https://nilo.dev/">https://nilo.dev/</a> passou a funcionar!</p>
+<blockquote class="blockquote">
+<p>Eu deliberadamente não segui boas práticas com o versionamento de código do input que gera a página, pois isso me daria o trabalho de criar mais um repositório e fazer o CI/CD com a instalação de todas essas ferramentas acima, além da autorização do Github numa plataforma como o Netlify ou AppVeyor. Provávelmente eu faça isso, mas não hoje.</p>
+</blockquote>
+<h2 id="automatizando-o-build-com-cake">Automatizando o Build com Cake</h2>
+<p>Para facilitar o build do projeto, é necessário adicionar um arquivo &quot;build.cake&quot; na raiz do projeto, com o seguinte conteúdo:</p>
+<p>build.cake:</p>
+<pre><code class="language-powershell">#tool nuget:?package=Wyam
+#addin nuget:?package=Cake.Wyam
+
+var target = Argument(&quot;target&quot;, &quot;Default&quot;);
+
+Task(&quot;Build&quot;)
+   .Does(() =&gt;
+   {
+       Wyam(new WyamSettings
+       {
+           Recipe = &quot;Blog&quot;,
+           Theme = &quot;CleanBlog&quot;,
+           UpdatePackages = true
+       });
+   });
+   
+Task(&quot;Preview&quot;)
+   .Does(() =&gt;
+   {
+       Wyam(new WyamSettings
+       {
+           Recipe = &quot;Blog&quot;,
+           Theme = &quot;CleanBlog&quot;,
+           UpdatePackages = true,
+           Preview = true,
+           Watch = true
+       });        
+   });
+
+Task(&quot;Default&quot;)
+   .IsDependentOn(&quot;Build&quot;);    
+   
+RunTarget(target);
+</code></pre>
+<p>O script acima é uma adaptação do script de build disponibilizado na <a href="https://wyam.io/docs/deployment/cake">documentação oficial do Wyam</a>, com a adição dos atributos utilizados como theme e recipe para o Blog.</p>
+<p>Agora para o build do projeto, basta executarmos o comando &quot;cake&quot; a partir da raiz do projeto.</p>
+<p>Para publicar o conteúdo, eu criei um script que baixa o projeto do github, apaga todo seu conteúdo, copia o output do Wyam para a pasta de publicação e envia o novo conteúdo. Até daria para adicionar esse script no Cake, mas prefiro ter um script a parte para publishing no caso de uma integração futura com CI/CD - e nesse ponto eu já fiquei preguiçoso.</p>
+<p>publish.ps1</p>
+<pre><code class="language-powershell">Param (
+    [Parameter(Mandatory=$true)]
+    $commitMessage
+)
+
+# clone repo
+$localFolder = &quot;publish&quot;
+$repo = &quot;https://github.com/daniloalsilva/nilo.dev.git&quot;
+git clone $repo --branch=master $localFolder
+
+# clean publish folder
+ls $localFolder | ? {$_.name -ne '.git'} | % {rm $_.FullName -rec -force}
+
+# copy output itens to publish
+Copy-Item &quot;output\*&quot; $localFolder -recurse -force
+
+cd $localFolder
+git add .
+git commit -m $commitMessage
+git push
+
+cd ..
+rm $localFolder -rec -force
+</code></pre>
+<p>Depois de tudo isso, rodar os comandos <code>cake; publish.ps1 'commit message';</code> num console de powershell basta para fazer o build e publicar o conteúdo no github.</p>
+<iframe src="https://giphy.com/embed/YFFPjL7iCNNBppy49S" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+<p>Outras configurações como Disqus para comentários e de um email para o domínio ainda podem ser feitas, mas estes itens podem ser discutidos num próximo post ou adicionados nesse post gigante posteriormente.</p>
+<p>Enjoy!</p>
+
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'nilo-dev';
+    var disqus_identifier = 'criando-um-blog-com-wyam-github-pages';
+    var disqus_title = 'Criando um blog com Wyam e Github Pages';
+    var disqus_url = 'http://nilo.dev/post/criando-um-blog-com-wyam-github-pages';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                                </div>
+                        </div>
+                </div>
+                
+                <hr>
+                
+                <!-- Footer -->
+                <footer>
+                        <div class="container">
+        <div class="row">
+                <div class="col-md-12">
+                <ul class="list-inline text-center">
+                        <li>
+                        <a href="https://twitter.com/_sdanilo">
+                                <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="https://github.com/daniloalsilva">
+                                <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="https://www.linkedin.com/in/sdanilo">
+                                <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                                </span>
+                        </a>
+                        </li>
+                </ul>
+                <p class="copyright text-muted">
+                        Copyright � 2020 by Danilo Silva. All rights reserved. 
+                        <br />
+                        <a href="/feed.rss"><i class="fa fa-rss"></i> RSS Feed</a> | <a href="/feed.atom"><i class="fa fa-rss"></i> Atom Feed</a>
+                        <br />
+                        <a href="https://github.com/daniloalsilva/nilo.dev"><i class="fa fa-github"></i> This Site on GitHub</a>
+                        <br />
+                        <strong><a href="https://wyam.io">Generated by Wyam</a></strong>
+                </p>
+                </div>
+        </div>
+</div>
+                </footer> 
+
+                <script src="/assets/js/jquery.min.js"></script>
+                <script src="/assets/js/bootstrap.min.js"></script>     
+                <script src="/assets/js/highlight.pack.js"></script>   
+                <script src="/assets/js/clean-blog.js"></script>
+                <script src="/assets/js/d3.v3.min.js"></script>
+                <script src="/assets/js/trianglify.min.js"></script>
+                <script src="/assets/js/Please-compressed.js"></script>
+                <script src="/assets/js/background-check.min.js"></script>
+
+                <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+                <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+                <!--[if lt IE 9]>
+                        <script src="/assets/js/html5shiv.js"></script>
+                        <script src="/assets/js/respond.min.js"></script>
+                <![endif]-->
+                
+                
+                <script>hljs.initHighlightingOnLoad();</script>
+
+
+                <script>
+                        BackgroundCheck.init({
+                                targets: '.intro-header,.navbar',
+                                images: '.intro-header'
+                        });
+                </script>
+        </body>
+</html>
+
