@@ -4,7 +4,7 @@
 	<title>[da]nilo.dev</title>
 	<link rel="self" href="http://nilo.dev/" />
 	<rights>2020</rights>
-	<updated>2020-04-12T01:17:35Z</updated>
+	<updated>2020-04-12T01:24:07Z</updated>
 	<logo>http://nilo.dev/images/bg/desert-alone.jpg</logo>
 	<subtitle>Blog Posts</subtitle>
 	<entry>
@@ -13,8 +13,7 @@
 		<link href="http://nilo.dev/post/criando-cicd-do-blog-com-wyam-azure-devops-e-github-pages" />
 		<link rel="enclosure" type="image" href="http://nilo.dev/images/bg/desert-alone.jpg" />
 		<updated>2020-04-10T00:00:00Z</updated>
-		<content>&lt;p&gt;** DRAFT **&lt;/p&gt;
-&lt;p&gt;Este post não foi tão rapido de escrever mas a execução dele deve ser a partir de agora.&lt;/p&gt;
+		<content>&lt;p&gt;Este post não foi tão rapido de escrever mas a execução dele deve ser a partir de agora.&lt;/p&gt;
 &lt;p&gt;Eu vinha mantendo os inputs do Blog na minha maquina e sem versionamento, mas comecei a usar um outro notebook e pensar em copiar/colar o conteúdo prebuild do blog pra conseguir escrever novos artigos era a motivação que eu precisava para fazer o CI/CD.&lt;/p&gt;
 &lt;p&gt;Neste post vamos abordar a criação de um CI/CD, commitando os inputs do blog em um repositório, criando a trigger de commit no master para popular o conteúdo em outro repositório também do Github. É uma implementação que não segue muitos padrões/não muito convencional, já que nosso ponto de publicação é um repositório do git.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://nilo.dev/post/criando-um-blog-com-wyam-github-pages"&gt;post anterior 1&lt;/a&gt;
@@ -135,7 +134,7 @@ steps:
 &lt;li&gt;&lt;a href="https://help.github.com/pt/github/managing-large-files/what-is-my-disk-quota"&gt;https://help.github.com/pt/github/managing-large-files/what-is-my-disk-quota&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
-		<summary>&lt;p&gt;** DRAFT **&lt;/p&gt;</summary>
+		<summary>&lt;p&gt;Este post não foi tão rapido de escrever mas a execução dele deve ser a partir de agora.&lt;/p&gt;</summary>
 	</entry>
 	<entry>
 		<id>http://nilo.dev/post/emails-personalizados-gmail-google-domains</id>
