@@ -97,28 +97,125 @@ Published on Friday, April 10, 2020<br>    </div>
 
 <p>** DRAFT **</p>
 <p>Este post não foi tão rapido de escrever mas a execução dele deve ser a partir de agora.</p>
-<p>Eu vinha mantendo os inputs do Blog na minha maquina e sem versionamento, mas comecei a usar um outro notebook e pensar em copiar/colar o conteúdo prebuild do blog pra conseguir postar conteúdo era a motivação que eu precisava para fazer o CI/CD.</p>
+<p>Eu vinha mantendo os inputs do Blog na minha maquina e sem versionamento, mas comecei a usar um outro notebook e pensar em copiar/colar o conteúdo prebuild do blog pra conseguir escrever novos artigos era a motivação que eu precisava para fazer o CI/CD.</p>
 <p>Neste post vamos abordar a criação de um CI/CD, commitando os inputs do blog em um repositório, criando a trigger de commit no master para popular o conteúdo em outro repositório também do Github. É uma implementação que não segue muitos padrões/não muito convencional, já que nosso ponto de publicação é um repositório do git.</p>
 <p><a href="https://nilo.dev/post/criando-um-blog-com-wyam-github-pages">post anterior 1</a>
 <a href="https://nilo.dev/post/emails-personalizados-gmail-google-domains">post anterior 2</a></p>
-<p>Passos:</p>
+<p>Apenas para dar contexto, se você chegou até aqui e não está familiariado com o termo CI/CD, de forma bem grosseira, CI trata a compilação, testes e geração do artefato válido do projeto (para o nosso caso há somente a compilação para geração do html) e o CD o deployment (que no nosso caso é o envio dos arquivos compilados para o Github Pages). O assunto é extenso, abordado num <a href="https://www.amazon.com.br/Continuous-Delivery-Deployment-Automation-Addison-Wesley-ebook/dp/B003YMNVC0/">livro</a> dedicado para esse assunto e abordado de forma muito mais didadica em <a href="https://www.redhat.com/pt-br/topics/devops/what-is-ci-cd">artigos</a> na internet.</p>
+<h1 id="escolha-da-ferramenta-de-cicd">Escolha da ferramenta de CI/CD</h1>
+<p>No passado explorei um pouco as possibilidades de integração para hosting de páginas estáticas e há uma grande variedade de ferramentas que podem ser utilizadas, então eu tinha uma noção das possibilidades aqui. Os critérios de decisão de ferramentas foram:</p>
 <ul>
-<li>criar chave de deployment no projeto</li>
-<li>criar pipeline no azure devops</li>
-<li>adicionar a chave em secure files na library do azure devops</li>
-<li>conectar pipeline no repositório de inputs</li>
-<li>criar script de build</li>
-<li>dar permissão no secure file após commit na origem</li>
+<li>Ferramenta de uso gratuito;</li>
+<li>Sem necessidade de hosting para a ferramenta</li>
+<li>Integração simples e possível via arquivos de configuração alocados no repositório de inputs do projeto;</li>
 </ul>
-<p>git commit -am &quot;[new post] azuredevops integration&quot;; git push</p>
-<p>Preocupações:</p>
+<p>E de cara pensei em utilizar o AppVeyor.</p>
+<h2 id="appveyor">AppVeyor</h2>
+<p>O AppVeyor é a primeira opção na lista de ferramentas para <a href="https://wyam.io/docs/deployment/appveyor">deployment do Wyam</a> na documentação da propria ferramenta. O AppVeyor no passado me chamou a atenção por disponibilizar CI/CD com build-hosts rodando Windows e de graça - não estendi minha pesquisa sobre serviços de build para projetos Windows pois não era o tópico, mas num passado antes da Microsoft entrar nessa briga, ao que eu me lembro esses caras eram os únicos a disponibilizarem um serviço gratuito para builds de projetos Windows.</p>
+<p>A ferramenta possui configuração simples, o script utilizado para build pode ficar no repositório do projeto e o uso é gratuito, mas com um porém: o repositório de git utilizado no build precisa ser público. Bom, isso me trouxe uma sensação de incomodo, pois eu precisaria deixar público meus drafts e backlogs, mas não era um bloqueio para utilizar a ferramenta.</p>
+<p>Outro ponto é o exemplo na documentação do Wyam, que expõe o token utilizado para escrever no repositório no script de build... Isso trás a necessidade de armazenar/obter o token de um local diferente do próprio repositório para evitar o problema de segurança de ter uma chave com permissionamento de escrita aberta no github.</p>
+<p>Com certeza esse problema teria um contorno relativamente fácil como armazenar o token como variável de ambiente nas configurações de build, mas decidi explorar outras ferramentas antes de voltar a olhar para o AppVeyor.</p>
+<h2 id="azure-devops">Azure Devops</h2>
+<p>Lembrei que, atualmente ao criar projetos no Github, lá estava aquela mensagem de integração com o <strong>Azure Pipelines</strong> e, desde que a Microsoft adquiriu o Github, a integração para build deve ter melhorado bastante - em 2018 não era possível escrever o arquivo de build, somente exportá-lo após passar pela interface do serviço, mas parece que as coisas haviam melhorado.</p>
+<p>O Azure Devops me surpreendeu positivamente, a interface está muito mais limpa que no passado e conseguiu de alguma forma manter o modelo de organização utilizado anteriormente - que diga-se de passagem era o ponto positivo de utilizar o VSTS antes desse se tornar o Azure Devops.</p>
+<p>Dei uma pesquisada rápida para ter uma ideia se eu ia ter muito trabalho para fazer tudo que eu precisava e encontrei um artigo parecido com o que eu queria, com a diferença que neste exemplo os arquivos de input e output ficavam no mesmo repositório. Não gosto muito dessa abordagem pois deixa os commits ilegíveis, mas simplifica a implementação. Para quem quiser consultar o artigo do Matt Cooper está disponível <a href="https://cloudblogs.microsoft.com/opensource/2019/04/05/publishing-github-pages-from-azure-pipelines/">aqui</a>.</p>
+<p>Bom, o que era para ser um teste de funcionamento acabou virando o serviço que já está em funcionamento para publicação do Blog - então daqui para frente, vamos falar de como implementar o CI/CD.</p>
+<h1 id="criando-a-pipeline-no-azure-devops">Criando a pipeline no Azure Devops</h1>
+<p>Antes de iniciar as configurações, precisamos de um novo repositório do github, para armazenar os arquivos de markdown utilizados antes do build do Wyam - lembre que o repositório atual contém os arquivos de output já &quot;compilados&quot;. Não vamos passar por todo o processo de criação do repositório aqui, crie um repositório no github, clone-o para sua maquina, copie os arquivos da raiz do seu projeto para a pasta do repositório.</p>
+<p>Só tome o cuidado de não enviar arquivos desnecessários para o repositório, o arquivo <strong>.gitignore</strong> que eu utilizo fica configurado da seguinte forma:</p>
+<pre><code>[Pp]ackages/
+[Tt]ools/*
+[Oo]utput/
+nuget.exe
+*.zip
+/debug.log
+/*.packages.xml
+/*.wyam.hash
+/*.wyam.dll
+</code></pre>
+<p>Logo de cara, criei um projeto privado no <a href="https://dev.azure.com/">Azure Devops</a> com as configurações padrões. Em <strong>Pipelines</strong> criei um nova pipeline e linkei minha conta do Github ao Azure Devops. Na próxima tela já estava disponível minha lista de repositórios, selecionei o repositório de inputs do blog e na próxima tela já estava disponível o arquivo <strong>azure-pipelines.yml</strong> para configuração do build. Adicionei apenas o step de build do Wyam, <strong>Save and run</strong> e o arquivo azure-pipelines.yml já foi commitado para o repositório no github, assim como a build do projeto iniciou. Pipeline finalizou com sucesso e, apesar de não gerarmos um artefato, era somente isso que precisavamos para a parte de CI.</p>
+<p>Eu realmente não me lembro de ter uma experiência tão fluída assim com a Microsoft no passado...</p>
+<p>Com o CI configurado, precisamos configurar o CD.</p>
+<h2 id="criacao-da-chave-de-deployment">Criação da chave de deployment</h2>
+<p>Como agora temos mais componentes, é interessante ter uma ideia do desenho que queremos como estado final quando terminarmos a configuração (e desculpem os garranchos):
+<img src="/images/posts/2020/nilodev-cicd.jpg" class="img-fluid" alt="nilodev-cicd" /></p>
+<p>O projeto atual no Azure Devops possui acesso somente ao repositório <strong>nilo.dev-inputs</strong> e precisamos habilitar um acesso com permissão de escrita no repositório <strong>nilo.dev</strong>. Para isso, vamos criar uma chave de deployment no projeto. Na página do projeto no Github, em Settings, acesse Deploy Keys &gt; Add deploy key:
+<img src="/images/posts/2020/github-deploykey.jpg" class="img-fluid" alt="github-deploykey" /></p>
+<p>Gere uma chave <a href="https://help.github.com/pt/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">executando um ssh-keygen</a> (desde 2018 o Windows possui OpenSSH nativo, não precisa baixar nada se não estiver usando linux), nomeie a chave como &quot;deploy_key&quot;, copie o conteúdo da chave publica (deploy_key.pub) e cole no Github.</p>
+<p>De volta na página do projeto no Azure Devops, em Pipelines &gt; Library &gt; Secure Files &gt; &quot;+ Secure File&quot; e faça o upload da sua chave privada gerada anteriormente - pode deletar a chave de seu computador local.
+<img src="/images/posts/2020/azuredevops-securefile.jpg" class="img-fluid" alt="azuredevops-securefile" /></p>
+<blockquote class="blockquote">
+<p>Iremos utilizar o nome da chave no script de build, se por acaso mudar o nome dela no Secure Files, lembre-se de alterar o script de build utilizando o novo nome;</p>
+</blockquote>
+<p>Feito isso, iremos alterar a pipeline de build. Poderíamos criar uma pipeline com o release ou segmentar o build em mais de uma pipeline, o que eu acho uma complexidade desnecessária para um projeto tão pequeno. Você não precisa concordar comigo, altere o projeto como preferir.</p>
+<p>Em Pipelines, clique na única pipeline existente, clique em &quot;Edit&quot; e adicione o script abaixo - altere o endereço do repositório no código conforme a necessidade - clique em &quot;Save and run&quot; e veja a magica acontecer:</p>
+<pre><code>trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: DotNetCoreInstaller&#64;0
+  displayName: Install .NET Core SDK
+  name: install_dotnetcore_sdk
+  enabled: true
+  inputs:
+    packageType: 'sdk'
+    version: '2.2.101'
+
+- script: dotnet tool install -g Wyam.Tool
+  displayName: Install Wyam
+
+- script: wyam
+  displayName: Build Site 
+
+- task: DownloadSecureFile&#64;1
+  name: deployKey
+  displayName: 'Get the deploy key'
+  inputs:
+    secureFile: deploy_key
+
+- script: |
+    echo Installing deployment key $(deployKey.secureFilePath) ...
+    mkdir ~/.ssh &amp;&amp; mv $(deployKey.secureFilePath) ~/.ssh/id_rsa
+    chmod 700 ~/.ssh &amp;&amp; chmod 600 ~/.ssh/id_rsa
+    ssh-keyscan -t rsa github.com &gt;&gt; ~/.ssh/known_hosts
+  displayName: 'Install SSH key '
+
+- script: |
+    rm -rf .git
+    git clone git&#64;github.com:daniloalsilva/nilo.dev.git --branch=master publish
+    cp -R publish/.git output/
+    cd output
+    git config --local user.name &quot;Azure Pipelines&quot;
+    git config --local user.email &quot;azuredevops&#64;microsoft.com&quot;
+    git add .
+    git commit -m &quot;Publishing GitHub Pages&quot;
+    git push origin HEAD:master
+  displayName: 'Publish GitHub Pages'
+</code></pre>
+<blockquote class="blockquote">
+<p>Um alerta deve aparecer na página seguinte, solicitando o acesso da Pipeline ao arquivo deploy_key que está na Library, este alerta aparece uma única vez;</p>
+</blockquote>
+<p>E é isso, o Azure Devops já fez seu primeiro deploy e a partir de agora, a cada commit na branch master, o Blog [nilo.dev] será atualizado automáticamente!</p>
+<h2 id="extras">Extras</h2>
+<p>Para deixar o projeto no Azure Devops mais &quot;limpo&quot;, eu prefiro desativar os itens do projeto que não são utilizados, como Boards, Repos, Test Plans e Artifacts. Basta nas configurações do projeto (UX está horrível pra isso no azure devops e eu tive que pesquisar no Google pra achar o botão... A opção está no canto lateral esquerdo, na página do projeto) e desativar os itens não utilizados.</p>
+<p>E você pode tambêm adicionar uma badge da pipeline no seu repositório do Github ou no seu Blog informando se a ultima build do blog funcionou ou falhou, basta pegar o link da badge nas opções da pipeline:
+<img src="/images/posts/2020/azuredevops-badge.jpg" class="img-fluid" alt="azuredevops-badge" /></p>
+<p>E ativar a visualização de badges se seu projeto for privado:
+<img src="/images/posts/2020/azuredevops-badgesettings.jpg" class="img-fluid" alt="azuredevops-badgesettings" /></p>
+<h2 id="preocupacoes">Preocupações</h2>
+<p>Ainda não sei se, quando o repositório crescer em quantidade de conteúdo, vai haver perda de performance no push ou erros no build. O Github limita cada repositório individualmente à 100GB e recomenda o uso inferior a 1GB para que haja boa performance.</p>
+<p>Vamos descobrir se/quando chegarmos lá!</p>
+<hr />
+<p>Referências:</p>
 <ul>
-<li>Tamanho do repositório</li>
+<li><a href="https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/utility/download-secure-file?view=azure-devops">https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/utility/download-secure-file?view=azure-devops</a></li>
+<li><a href="https://cloudblogs.microsoft.com/opensource/2019/04/05/publishing-github-pages-from-azure-pipelines/">https://cloudblogs.microsoft.com/opensource/2019/04/05/publishing-github-pages-from-azure-pipelines/</a></li>
+<li><a href="https://stackoverflow.com/questions/58674639/azure-pipelines-status-badge-not-getting-displayed-in-markdown">https://stackoverflow.com/questions/58674639/azure-pipelines-status-badge-not-getting-displayed-in-markdown</a></li>
+<li><a href="https://help.github.com/pt/github/managing-large-files/what-is-my-disk-quota">https://help.github.com/pt/github/managing-large-files/what-is-my-disk-quota</a></li>
 </ul>
-<p>Referências:
-<a href="https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/utility/download-secure-file?view=azure-devops">https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/utility/download-secure-file?view=azure-devops</a>
-<a href="https://cloudblogs.microsoft.com/opensource/2019/04/05/publishing-github-pages-from-azure-pipelines/">https://cloudblogs.microsoft.com/opensource/2019/04/05/publishing-github-pages-from-azure-pipelines/</a></p>
-<p><a href="https://stackoverflow.com/questions/58674639/azure-pipelines-status-badge-not-getting-displayed-in-markdown">https://stackoverflow.com/questions/58674639/azure-pipelines-status-badge-not-getting-displayed-in-markdown</a></p>
 
 
 <div id="disqus_thread"></div>
