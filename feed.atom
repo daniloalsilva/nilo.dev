@@ -4,7 +4,7 @@
 	<title>[da]nilo.dev</title>
 	<link rel="self" href="http://nilo.dev/" />
 	<rights>2020</rights>
-	<updated>2020-04-13T03:13:49Z</updated>
+	<updated>2020-04-13T20:15:39Z</updated>
 	<logo>http://nilo.dev/images/bg/desert-alone.jpg</logo>
 	<subtitle>Blog Posts</subtitle>
 	<entry>
@@ -13,33 +13,34 @@
 		<link href="http://nilo.dev/post/criando-cicd-do-blog-com-wyam-azure-devops-e-github-pages" />
 		<link rel="enclosure" type="image" href="http://nilo.dev/images/bg/desert-alone.jpg" />
 		<updated>2020-04-10T00:00:00Z</updated>
-		<content>&lt;p&gt;Este post não foi tão rapido de escrever mas a execução dele deve ser a partir de agora.&lt;/p&gt;
-&lt;p&gt;Eu vinha mantendo os inputs do Blog na minha maquina e sem versionamento, mas comecei a usar um outro notebook e pensar em copiar/colar o conteúdo prebuild do blog pra conseguir escrever novos artigos era a motivação que eu precisava para fazer o CI/CD.&lt;/p&gt;
-&lt;p&gt;Neste post vamos abordar a criação de um CI/CD, commitando os inputs do blog em um repositório, criando a trigger de commit no master para popular o conteúdo em outro repositório também do Github. É uma implementação que não segue muitos padrões/não muito convencional, já que nosso ponto de publicação é um repositório do git.&lt;/p&gt;
+		<content>&lt;p&gt;Eu vinha mantendo os inputs do Blog na minha maquina e sem versionamento, mas comecei a usar um outro notebook e pensar em copiar/colar o conteúdo prebuild do blog pra conseguir escrever novos artigos era a motivação que eu precisava para fazer o CI/CD.&lt;/p&gt;
+&lt;p&gt;Neste post vamos abordar a criação de um CI/CD, commitando os inputs do blog em um repositório, criando a trigger de commit no master para popular o conteúdo em outro repositório também do Github. É uma implementação não muito convencional, já que nosso ponto de publicação é um repositório do git.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://nilo.dev/post/criando-um-blog-com-wyam-github-pages"&gt;post anterior 1&lt;/a&gt;
 &lt;a href="https://nilo.dev/post/emails-personalizados-gmail-google-domains"&gt;post anterior 2&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Apenas para dar contexto, se você chegou até aqui e não está familiariado com o termo CI/CD, de forma bem grosseira, CI trata a compilação, testes e geração do artefato válido do projeto (para o nosso caso há somente a compilação para geração do html) e o CD o deployment (que no nosso caso é o envio dos arquivos compilados para o Github Pages). O assunto é extenso, abordado num &lt;a href="https://www.amazon.com.br/Continuous-Delivery-Deployment-Automation-Addison-Wesley-ebook/dp/B003YMNVC0/"&gt;livro&lt;/a&gt; dedicado para esse assunto e abordado de forma muito mais didadica em &lt;a href="https://www.redhat.com/pt-br/topics/devops/what-is-ci-cd"&gt;artigos&lt;/a&gt; na internet.&lt;/p&gt;
-&lt;h1 id="escolha-da-ferramenta-de-cicd"&gt;Escolha da ferramenta de CI/CD&lt;/h1&gt;
-&lt;p&gt;No passado explorei um pouco as possibilidades de integração para hosting de páginas estáticas e há uma grande variedade de ferramentas que podem ser utilizadas, então eu tinha uma noção das possibilidades aqui. Os critérios de decisão de ferramentas foram:&lt;/p&gt;
+&lt;p&gt;Apenas para dar contexto, se você chegou até aqui e não está familiariado com o termo CI/CD, de forma bem grosseira, CI trata a compilação, testes e geração do artefato válido do projeto (para o nosso caso há somente a compilação para geração do html) e o CD o deployment (que no nosso caso é o envio dos arquivos compilados para o Github Pages). O assunto é extenso, abordado num &lt;a href="https://www.amazon.com.br/Continuous-Delivery-Deployment-Automation-Addison-Wesley-ebook/dp/B003YMNVC0/"&gt;livro&lt;/a&gt; dedicado para esse assunto e também abordado de forma muito mais didatica em &lt;a href="https://www.redhat.com/pt-br/topics/devops/what-is-ci-cd"&gt;artigos&lt;/a&gt; na internet.&lt;/p&gt;
+&lt;h1 id="escolha-do-servico-de-cicd"&gt;Escolha do serviço de CI/CD&lt;/h1&gt;
+&lt;p&gt;No passado explorei um pouco as possibilidades de integração para hosting de páginas estáticas e há uma grande variedade de ferramentas e serviços que podem ser utilizadas, então eu tinha uma noção das possibilidades aqui. Os critérios de decisão foram:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Ferramenta de uso gratuito;&lt;/li&gt;
-&lt;li&gt;Sem necessidade de hosting para a ferramenta&lt;/li&gt;
+&lt;li&gt;Serviço de uso gratuito;&lt;/li&gt;
+&lt;li&gt;Sem necessidade de hosting para o serviço em si;&lt;/li&gt;
 &lt;li&gt;Integração simples e possível via arquivos de configuração alocados no repositório de inputs do projeto;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;E de cara pensei em utilizar o AppVeyor.&lt;/p&gt;
 &lt;h2 id="appveyor"&gt;AppVeyor&lt;/h2&gt;
-&lt;p&gt;O AppVeyor é a primeira opção na lista de ferramentas para &lt;a href="https://wyam.io/docs/deployment/appveyor"&gt;deployment do Wyam&lt;/a&gt; na documentação da propria ferramenta. O AppVeyor no passado me chamou a atenção por disponibilizar CI/CD com build-hosts rodando Windows e de graça - não estendi minha pesquisa sobre serviços de build para projetos Windows pois não era o tópico, mas num passado antes da Microsoft entrar nessa briga, ao que eu me lembro esses caras eram os únicos a disponibilizarem um serviço gratuito para builds de projetos Windows.&lt;/p&gt;
+&lt;p&gt;O AppVeyor é a primeira opção na lista de ferramentas para &lt;a href="https://wyam.io/docs/deployment/appveyor"&gt;deployment do Wyam&lt;/a&gt; na documentação da propria ferramenta. O AppVeyor no passado me chamou a atenção por disponibilizar CI/CD com build-hosts rodando Windows e de graça - não estendi minha pesquisa sobre serviços de build para projetos Windows nos dias de hoje pois não era o tópico, mas num passado antes da Microsoft entrar nessa briga com VSTS online, ao que eu me lembro esses caras eram os únicos a disponibilizarem um serviço gratuito para builds de projetos Windows.&lt;/p&gt;
 &lt;p&gt;A ferramenta possui configuração simples, o script utilizado para build pode ficar no repositório do projeto e o uso é gratuito, mas com um porém: o repositório de git utilizado no build precisa ser público. Bom, isso me trouxe uma sensação de incomodo, pois eu precisaria deixar público meus drafts e backlogs, mas não era um bloqueio para utilizar a ferramenta.&lt;/p&gt;
 &lt;p&gt;Outro ponto é o exemplo na documentação do Wyam, que expõe o token utilizado para escrever no repositório no script de build... Isso trás a necessidade de armazenar/obter o token de um local diferente do próprio repositório para evitar o problema de segurança de ter uma chave com permissionamento de escrita aberta no github.&lt;/p&gt;
-&lt;p&gt;Com certeza esse problema teria um contorno relativamente fácil como armazenar o token como variável de ambiente nas configurações de build, mas decidi explorar outras ferramentas antes de voltar a olhar para o AppVeyor.&lt;/p&gt;
+&lt;p&gt;Com certeza esse problema teria um contorno relativamente fácil como armazenar o token como variável de ambiente nas configurações de build, mas eu queria fazer essa integração da forma mais simples possível e decidi explorar outras ferramentas antes de voltar a olhar para o AppVeyor.&lt;/p&gt;
 &lt;h2 id="azure-devops"&gt;Azure Devops&lt;/h2&gt;
-&lt;p&gt;Lembrei que, atualmente ao criar projetos no Github, lá estava aquela mensagem de integração com o &lt;strong&gt;Azure Pipelines&lt;/strong&gt; e, desde que a Microsoft adquiriu o Github, a integração para build deve ter melhorado bastante - em 2018 não era possível escrever o arquivo de build, somente exportá-lo após passar pela interface do serviço, mas parece que as coisas haviam melhorado.&lt;/p&gt;
-&lt;p&gt;O Azure Devops me surpreendeu positivamente, a interface está muito mais limpa que no passado e conseguiu de alguma forma manter o modelo de organização utilizado anteriormente - que diga-se de passagem era o ponto positivo de utilizar o VSTS antes desse se tornar o Azure Devops.&lt;/p&gt;
-&lt;p&gt;Dei uma pesquisada rápida para ter uma ideia se eu ia ter muito trabalho para fazer tudo que eu precisava e encontrei um artigo parecido com o que eu queria, com a diferença que neste exemplo os arquivos de input e output ficavam no mesmo repositório. Não gosto muito dessa abordagem pois deixa os commits ilegíveis, mas simplifica a implementação. Para quem quiser consultar o artigo do Matt Cooper está disponível &lt;a href="https://cloudblogs.microsoft.com/opensource/2019/04/05/publishing-github-pages-from-azure-pipelines/"&gt;aqui&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Azure Devops, antigamente chamado de VSTS.&lt;/p&gt;
+&lt;p&gt;Lembrei que, atualmente ao criar projetos no Github, lá estava aquela mensagem de integração com o &lt;strong&gt;Azure Pipelines&lt;/strong&gt; e, desde que a Microsoft adquiriu o Github, a integração para build deveria ter melhorado bastante - em 2018 não era possível escrever o arquivo de build, somente exportá-lo após passar pela interface com configuração toda visual no VSTS. Parece que as coisas haviam melhorado.&lt;/p&gt;
+&lt;p&gt;O Azure Devops me surpreendeu positivamente, a interface está muito mais limpa que era no passado e conseguiu de alguma forma manter o modelo de organização utilizado anteriormente - que diga-se de passagem era um dos únicos pontos positivos de utilizar o VSTS em relação a outras ferramentas, antes do VSTS se tornar o Azure Devops.&lt;/p&gt;
+&lt;p&gt;Dei uma pesquisada rápida para ter uma ideia se eu ia ter muito trabalho para fazer tudo que eu precisava e encontrei um artigo parecido com o que eu queria, com a diferença que neste exemplo os arquivos de input e output ficavam no mesmo repositório. Não gosto muito dessa abordagem pois deixa os commits ilegíveis (após um commit do código do blog ou a inserção de um novo arquivo de markdown, o CI/CD faria um novo commit no mesmo repositório, com o código compilado...), mas simplifica a implementação. Para quem quiser consultar o artigo do Matt Cooper, que eu me espelhei para esta implementação, ele está disponível &lt;a href="https://cloudblogs.microsoft.com/opensource/2019/04/05/publishing-github-pages-from-azure-pipelines/"&gt;aqui&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Bom, o que era para ser um teste de funcionamento acabou virando o serviço que já está em funcionamento para publicação do Blog - então daqui para frente, vamos falar de como implementar o CI/CD.&lt;/p&gt;
 &lt;h1 id="criando-a-pipeline-no-azure-devops"&gt;Criando a pipeline no Azure Devops&lt;/h1&gt;
-&lt;p&gt;Antes de iniciar as configurações, precisamos de um novo repositório do github, para armazenar os arquivos de markdown utilizados antes do build do Wyam - lembre que o repositório atual contém os arquivos de output já &amp;quot;compilados&amp;quot;. Não vamos passar por todo o processo de criação do repositório aqui, crie um repositório no github, clone-o para sua maquina, copie os arquivos da raiz do seu projeto para a pasta do repositório.&lt;/p&gt;
-&lt;p&gt;Só tome o cuidado de não enviar arquivos desnecessários para o repositório, o arquivo &lt;strong&gt;.gitignore&lt;/strong&gt; que eu utilizo fica configurado da seguinte forma:&lt;/p&gt;
+&lt;p&gt;Antes de iniciar as configurações, precisamos de um novo repositório do github, para armazenar os arquivos de markdown utilizados antes do build do Wyam - lembre que o repositório atual contém os arquivos de output já &amp;quot;compilados&amp;quot;. Não vamos passar por todo o processo de criação do repositório aqui, crie um repositório no github - no meu caso criei o projeto &lt;strong&gt;nilo-dev-inputs&lt;/strong&gt; - clone-o para sua maquina, copie os arquivos da raiz do seu projeto utilizado com o Wyam para a pasta do repositório e envie os arquivos para o repositório.&lt;/p&gt;
+&lt;p&gt;Se rolar alguma dúvida sobre como enviar os arquivos... Google. Acaba sendo muito mais produtivo para fixar conteúdo aprendido, pesquisar do que copiar e colar tudo de um tutorial.&lt;/p&gt;
+&lt;p&gt;Só tome o cuidado de não enviar arquivos desnecessários para o repositório, o arquivo &lt;strong&gt;.gitignore&lt;/strong&gt; que eu utilizo fica configurado da seguinte forma (e novamente, não sabe o funcionamento do .gitignore? Google it):&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;[Pp]ackages/
 [Tt]ools/*
 [Oo]utput/
@@ -50,7 +51,7 @@ nuget.exe
 /*.wyam.hash
 /*.wyam.dll
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Logo de cara, criei um projeto privado no &lt;a href="https://dev.azure.com/"&gt;Azure Devops&lt;/a&gt; com as configurações padrões. Em &lt;strong&gt;Pipelines&lt;/strong&gt; criei um nova pipeline e linkei minha conta do Github ao Azure Devops. Na próxima tela já estava disponível minha lista de repositórios, selecionei o repositório de inputs do blog e na próxima tela já estava disponível o arquivo &lt;strong&gt;azure-pipelines.yml&lt;/strong&gt; para configuração do build. Adicionei apenas o step de build do Wyam, &lt;strong&gt;Save and run&lt;/strong&gt; e o arquivo azure-pipelines.yml já foi commitado para o repositório no github, assim como a build do projeto iniciou. Pipeline finalizou com sucesso e, apesar de não gerarmos um artefato, era somente isso que precisavamos para a parte de CI.&lt;/p&gt;
+&lt;p&gt;Logo de cara, criei um projeto privado no &lt;a href="https://dev.azure.com/"&gt;Azure Devops&lt;/a&gt; com as configurações padrões. Em &lt;strong&gt;Pipelines&lt;/strong&gt; criei um nova pipeline e linkei minha conta do Github ao Azure Devops. Na próxima tela já estava disponível minha lista de repositórios, selecionei o repositório de inputs do blog e na próxima tela já estava disponível o arquivo &lt;strong&gt;azure-pipelines.yml&lt;/strong&gt; para configuração do build. Adicionei apenas o step de build do Wyam, &lt;strong&gt;Save and run&lt;/strong&gt; e o arquivo azure-pipelines.yml já foi commitado para o repositório no github, assim como a build do projeto iniciou. A execução da Pipeline finalizou com sucesso e, apesar de não gerar um artefato, era somente isso que precisavamos para a parte de CI.&lt;/p&gt;
 &lt;p&gt;Eu realmente não me lembro de ter uma experiência tão fluída assim com a Microsoft no passado...&lt;/p&gt;
 &lt;p&gt;Com o CI configurado, precisamos configurar o CD.&lt;/p&gt;
 &lt;h2 id="criacao-da-chave-de-deployment"&gt;Criação da chave de deployment&lt;/h2&gt;
@@ -59,7 +60,7 @@ nuget.exe
 &lt;p&gt;O projeto atual no Azure Devops possui acesso somente ao repositório &lt;strong&gt;nilo.dev-inputs&lt;/strong&gt; e precisamos habilitar um acesso com permissão de escrita no repositório &lt;strong&gt;nilo.dev&lt;/strong&gt;. Para isso, vamos criar uma chave de deployment no projeto. Na página do projeto no Github, em Settings, acesse Deploy Keys &amp;gt; Add deploy key:
 &lt;img src="/images/posts/2020/github-deploykey.jpg" class="img-fluid" alt="github-deploykey" /&gt;&lt;/p&gt;
 &lt;p&gt;Gere uma chave &lt;a href="https://help.github.com/pt/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent"&gt;executando um ssh-keygen&lt;/a&gt; (desde 2018 o Windows possui OpenSSH nativo, não precisa baixar nada se não estiver usando linux), nomeie a chave como &amp;quot;deploy_key&amp;quot;, copie o conteúdo da chave publica (deploy_key.pub) e cole no Github.&lt;/p&gt;
-&lt;p&gt;De volta na página do projeto no Azure Devops, em Pipelines &amp;gt; Library &amp;gt; Secure Files &amp;gt; &amp;quot;+ Secure File&amp;quot; e faça o upload da sua chave privada gerada anteriormente - pode deletar a chave de seu computador local.
+&lt;p&gt;De volta na página do projeto no Azure Devops, em Pipelines &amp;gt; Library &amp;gt; Secure Files &amp;gt; &amp;quot;+ Secure File&amp;quot; e faça o upload da sua chave privada gerada anteriormente - pode deletar a chave de seu computador local após o upload.
 &lt;img src="/images/posts/2020/azuredevops-securefile.jpg" class="img-fluid" alt="azuredevops-securefile" /&gt;&lt;/p&gt;
 &lt;blockquote class="blockquote"&gt;
 &lt;p&gt;Iremos utilizar o nome da chave no script de build, se por acaso mudar o nome dela no Secure Files, lembre-se de alterar o script de build utilizando o novo nome;&lt;/p&gt;
@@ -134,7 +135,7 @@ steps:
 &lt;li&gt;&lt;a href="https://help.github.com/pt/github/managing-large-files/what-is-my-disk-quota"&gt;https://help.github.com/pt/github/managing-large-files/what-is-my-disk-quota&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
-		<summary>&lt;p&gt;Este post não foi tão rapido de escrever mas a execução dele deve ser a partir de agora.&lt;/p&gt;</summary>
+		<summary>&lt;p&gt;Eu vinha mantendo os inputs do Blog na minha maquina e sem versionamento, mas comecei a usar um outro notebook e pensar em copiar/colar o conteúdo prebuild do blog pra conseguir escrever novos artigos era a motivação que eu precisava para fazer o CI/CD.&lt;/p&gt;</summary>
 	</entry>
 	<entry>
 		<id>http://nilo.dev/post/emails-personalizados-gmail-google-domains</id>
