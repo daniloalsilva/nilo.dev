@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
 
-        <title>[da]nilo.dev - Archive</title>
+        <title>[da]nilo.dev - About me</title>
         <meta name="description" content="Blog Posts" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">        
 
@@ -28,9 +28,9 @@
         <meta name="msapplication-tooltip" content="[da]nilo.dev" />
         <meta name="msapplication-starturl" content="/" />
 
-        <meta property="og:title" content="[da]nilo.dev - Archive" />
+        <meta property="og:title" content="[da]nilo.dev - About me" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="http://nilo.dev/post" />
+        <meta property="og:url" content="http://nilo.dev/about.md" />
         <!-- TODO: More social graph meta tags -->
 
         
@@ -74,7 +74,7 @@
                                 <div class="row">
                                         <div class="col-md-12">
 <div class="site-heading">
-    <h1>Archive</h1>
+    <h1>About me</h1>
 </div>                                            </div>
                                 </div>
                         </div>
@@ -85,34 +85,6 @@
                         <div class="row">
                                 <div id="content" class="col-md-12">
                                         
-        <h1>2020</h1>
-        <hr />
-
-        <div class="post-list">
-            <a href="/post/criando-cicd-do-blog-com-wyam-azure-devops-e-github-pages">
-                <h3 class="post-title">Criando CI/CD do blog com Wyam, Azure Devops e Github Pages</h3>
-            </a>
-            <p class="post-meta">Posted on Friday, April 10, 2020</p>      
-        </div>   
-        <div class="post-list">
-            <a href="/post/emails-personalizados-gmail-google-domains">
-                <h3 class="post-title">Emails personalizados com Gmail e Google Domains</h3>
-            </a>
-            <p class="post-meta">Posted on Thursday, April 2, 2020</p>      
-        </div>   
-        <div class="post-list">
-            <a href="/post/criando-um-blog-com-wyam-github-pages">
-                <h3 class="post-title">Criando um blog com Wyam e Github Pages</h3>
-            </a>
-            <p class="post-meta">Posted on Wednesday, April 1, 2020</p>      
-        </div>   
-    <ul class="pager">
-        <li class="previous">                
-        </li>
-        <li class="next">
-        </li>
-    </ul>
-
                                 </div>
                         </div>
                 </div>
