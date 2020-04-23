@@ -4,7 +4,7 @@
 	<title>[da]nilo.dev</title>
 	<link rel="self" href="http://nilo.dev/" />
 	<rights>2020</rights>
-	<updated>2020-04-23T04:16:22Z</updated>
+	<updated>2020-04-23T04:23:57Z</updated>
 	<logo>http://nilo.dev/images/bg/desert-alone.jpg</logo>
 	<subtitle>Blog Posts</subtitle>
 	<entry>
@@ -13,7 +13,8 @@
 		<link href="http://nilo.dev/post/versionando-curriculo-github-pandoc" />
 		<link rel="enclosure" type="image" href="http://nilo.dev/images/bg/desert-alone.jpg" />
 		<updated>2020-04-23T00:00:00Z</updated>
-		<content>&lt;h1 id="tudo-e-uma-copia-de-uma-copia-de-uma-copia"&gt;Tudo é uma cópia, de uma cópia, de uma cópia&lt;/h1&gt;
+		<content>&lt;p&gt;[draft]&lt;/p&gt;
+&lt;h1 id="tudo-e-uma-copia-de-uma-copia-de-uma-copia"&gt;Tudo é uma cópia, de uma cópia, de uma cópia&lt;/h1&gt;
 &lt;p&gt;Antes de começar, os créditos deste post vão para um cara chamado &lt;a href="https://github.com/mszep"&gt;Mark Szepieniec&lt;/a&gt;, o que eu fiz foi apenas portar para Windows o modelo de gerar o resume. Se você usa Linux como seu OS principal, eu recomendo conferir &lt;a href="https://github.com/mszep/pandoc_resume"&gt;o post original&lt;/a&gt; (Mark se inspirou num &lt;a href="https://blog.chmd.fr/editing-a-cv-in-markdown-with-pandoc.html"&gt;post de outro cara&lt;/a&gt; chamado &lt;a href="https://github.com/chmduquesne"&gt;Christophe-Marie Duquesne&lt;/a&gt;).&lt;/p&gt;
 &lt;p&gt;Dados os devidos créditos, podemos começar.&lt;/p&gt;
 &lt;h1 id="a-entediante-tarefa-de-formatar-um-curriculo"&gt;A entediante tarefa de formatar um curriculo&lt;/h1&gt;
@@ -21,9 +22,10 @@
 &lt;p&gt;Minha experiência anterior a esta durou 9 anos, então fazia um bom tempo que eu não tinha que atualizar um currículo e eu não estava nada animado para começar. Não sei vocês, mas eu tenho uma preguiça monstruosa de ficar formatando texto no Word.&lt;/p&gt;
 &lt;p&gt;Então lembrei de uma conversa que tive com o &lt;a href="https://www.linkedin.com/in/matheusnogueira/"&gt;Matheus&lt;/a&gt; onde ele me disse que tinha usado &lt;a href="https://pt.wikipedia.org/wiki/LaTeX"&gt;LaTeX&lt;/a&gt; para escrever seu TCC e o trabalho tinha sido extremamente menos cansativo do que ter que formatá-lo em ABNT utilizando ferramentas de edição como Word (e eu quis muito ter conhecido o LaTeX na época do meu TCC). Era uma luz no fim do túnel.&lt;/p&gt;
 &lt;p&gt;O problema é que &lt;strong&gt;LaTeX&lt;/strong&gt; tem toda uma sintaxe própria e não valia o esforço me adaptar apenas para atualizar um currículo. Não é possível que ninguém na internet não havia pensado numa maneira mais limpa para atualizar um &lt;strong&gt;currículo&lt;/strong&gt; (ou &lt;strong&gt;resume&lt;/strong&gt;), tarefa extremamente chata, utilizando por exemplo &lt;strong&gt;markdown&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;E assim eu tinha todas as palavras-chave necessárias para pesquisar um trabalho semelhante de conversão de texto e, com algumas pesquisas e um pouco de sorte eu encontrei um artigo que fazia exatamente a conversão em markdown de um CV para diversos outros formatos&lt;/p&gt;
+&lt;p&gt;E assim eu tinha todas as palavras-chave necessárias para pesquisar um trabalho semelhante de conversão de texto e, com algumas pesquisas e um pouco de sorte eu encontrei um artigo que fazia exatamente a conversão de um CV em markdown para diversos outros formatos, incluíndo TeX, pdf, html e docx!&lt;/p&gt;
+&lt;p&gt;[draft]&lt;/p&gt;
 </content>
-		<summary>&lt;p&gt;Antes de começar, os créditos deste post vão para um cara chamado &lt;a href="https://github.com/mszep"&gt;Mark Szepieniec&lt;/a&gt;, o que eu fiz foi apenas portar para Windows o modelo de gerar o resume. Se você usa Linux como seu OS principal, eu recomendo conferir &lt;a href="https://github.com/mszep/pandoc_resume"&gt;o post original&lt;/a&gt; (Mark se inspirou num &lt;a href="https://blog.chmd.fr/editing-a-cv-in-markdown-with-pandoc.html"&gt;post de outro cara&lt;/a&gt; chamado &lt;a href="https://github.com/chmduquesne"&gt;Christophe-Marie Duquesne&lt;/a&gt;).&lt;/p&gt;</summary>
+		<summary>&lt;p&gt;[draft]&lt;/p&gt;</summary>
 	</entry>
 	<entry>
 		<id>http://nilo.dev/post/criando-cicd-do-blog-com-wyam-azure-devops-e-github-pages</id>
