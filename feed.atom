@@ -4,7 +4,7 @@
 	<title>[da]nilo.dev</title>
 	<link rel="self" href="http://nilo.dev/" />
 	<rights>2020</rights>
-	<updated>2020-04-24T01:13:04Z</updated>
+	<updated>2020-04-24T03:47:39Z</updated>
 	<logo>http://nilo.dev/images/bg/desert-alone.jpg</logo>
 	<subtitle>Blog Posts</subtitle>
 	<entry>
@@ -24,6 +24,95 @@
 &lt;p&gt;O problema é que &lt;strong&gt;LaTeX&lt;/strong&gt; tem toda uma sintaxe própria e não valia o esforço me adaptar apenas para atualizar um currículo. Não é possível que ninguém na internet não havia pensado numa maneira mais limpa para atualizar um &lt;strong&gt;currículo&lt;/strong&gt; (ou &lt;strong&gt;resume&lt;/strong&gt;), tarefa extremamente chata, utilizando por exemplo &lt;strong&gt;markdown&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;E assim eu tinha todas as palavras-chave necessárias para pesquisar um trabalho semelhante de conversão de texto e, com algumas pesquisas e um pouco de sorte eu encontrei um artigo que fazia exatamente a conversão de um CV em markdown para diversos outros formatos, incluíndo TeX, pdf, html e docx!&lt;/p&gt;
 &lt;h1 id="escrevendo-seu-curriculo-em-markdown"&gt;Escrevendo seu curriculo em Markdown&lt;/h1&gt;
+&lt;p&gt;Não há muito o que se falar sobre markdown. Os posts desse blog são escritos usando markdown.&lt;/p&gt;
+&lt;p&gt;Separei abaixo alguns documentos de referência, use o que lhe agradar mais enquanto estiver escrevendo:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;From Github&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf"&gt;https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Mais completo&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.markdownguide.org/cheat-sheet/"&gt;https://www.markdownguide.org/cheat-sheet/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.markdownguide.org/extended-syntax"&gt;https://www.markdownguide.org/extended-syntax&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Mais compacto
+&lt;a href="https://www.code2bits.com/assets/cheat-sheets/cheatsheet-markdown.pdf"&gt;https://www.code2bits.com/assets/cheat-sheets/cheatsheet-markdown.pdf&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Mais visual&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://commonmark.org/help/"&gt;https://commonmark.org/help/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table class="table"&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Syntax&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Header&lt;/td&gt;
+&lt;td&gt;Title&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Paragraph&lt;/td&gt;
+&lt;td&gt;Text&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div&gt;
+    &lt;div style="display: inline-block;"&gt;
+        &lt;h2&gt;Good&lt;/h2&gt;
+        &lt;pre&gt;&lt;code class="language-c"&gt;int foo (void) 
+{
+    int i;
+}
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+    &lt;div style="display: inline-block;"&gt;
+        &lt;h2&gt;Bad&lt;/h2&gt;
+        &lt;pre&gt;&lt;code class="language-c"&gt;int foo (void) {
+    int i;
+}
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row"&gt;
+  &lt;div class="col-md-8" markdown="1"&gt;
+# no markdown here
+  &lt;/div&gt;
+  &lt;div class="col-md-4" markdown="1"&gt;
+# no markdown here
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Here's a simple footnote,&lt;a id="fnref:1" href="#fn:1" class="footnote-ref"&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; and here's a longer one.&lt;a id="fnref:2" href="#fn:2" class="footnote-ref"&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;====&lt;/p&gt;
+&lt;p&gt;Gone camping! :tent: Be back soon.&lt;/p&gt;
+&lt;p&gt;That is so funny! :joy:&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;I could use some help...&lt;/summary&gt;
+&lt;p&gt;
+&lt;pre&gt;&lt;code class="language-c#"&gt;public class Order
+{
+    public int OrderId { get; set; }
+    public int CustomerId { get; set; }
+
+    public List&amp;lt;int&amp;gt; Products { get; set; }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/p&gt;
+&lt;/details&gt;
 &lt;pre&gt;&lt;code class="language-markdown"&gt;Johnny Coder
 ============
 
@@ -126,6 +215,20 @@ Extra Section, Call it Whatever You Want
 &amp;gt; address - Mytown, Mycountry
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;[draft]&lt;/p&gt;
+&lt;div class="footnotes"&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;This is the first footnote.&lt;a href="#fnref:1" class="footnote-back-ref"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:2"&gt;
+&lt;p&gt;Here's one with multiple paragraphs and code.&lt;/p&gt;
+&lt;p&gt;Indent paragraphs to include them in the footnote.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;{ my code }&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Add as many paragraphs as you like.&lt;a href="#fnref:2" class="footnote-back-ref"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
 </content>
 		<summary>&lt;p&gt;[draft]&lt;/p&gt;</summary>
 	</entry>
