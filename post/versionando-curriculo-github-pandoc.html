@@ -107,6 +107,108 @@ Published on Thursday, April 23, 2020<br>    </div>
 <p>Então lembrei de uma conversa que tive com o <a href="https://www.linkedin.com/in/matheusnogueira/">Matheus</a> onde ele me disse que tinha usado <a href="https://pt.wikipedia.org/wiki/LaTeX">LaTeX</a> para escrever seu TCC e o trabalho tinha sido extremamente menos cansativo do que ter que formatá-lo em ABNT utilizando ferramentas de edição como Word (e eu quis muito ter conhecido o LaTeX na época do meu TCC). Era uma luz no fim do túnel.</p>
 <p>O problema é que <strong>LaTeX</strong> tem toda uma sintaxe própria e não valia o esforço me adaptar apenas para atualizar um currículo. Não é possível que ninguém na internet não havia pensado numa maneira mais limpa para atualizar um <strong>currículo</strong> (ou <strong>resume</strong>), tarefa extremamente chata, utilizando por exemplo <strong>markdown</strong>.</p>
 <p>E assim eu tinha todas as palavras-chave necessárias para pesquisar um trabalho semelhante de conversão de texto e, com algumas pesquisas e um pouco de sorte eu encontrei um artigo que fazia exatamente a conversão de um CV em markdown para diversos outros formatos, incluíndo TeX, pdf, html e docx!</p>
+<h1 id="escrevendo-seu-curriculo-em-markdown">Escrevendo seu curriculo em Markdown</h1>
+<pre><code class="language-markdown">Johnny Coder
+============
+
+----
+
+&gt;  In this style, the resume starts with a blockquote, where
+&gt;  you can briefly list your specialties, or include a salient
+&gt;  quote. Ending a line with a backslash forces a line break.
+
+----
+
+Education
+---------
+
+2010-2014 (expected)
+:   **PhD, Computer Science**; Awesome University (MyTown)
+
+    *Thesis title: Deep Learning Approaches to the Self-Awesomeness
+     Estimation Problem*
+
+2007-2010
+:   **BSc, Computer Science and Electrical Engineering**; University of
+    HomeTown (HomeTown)
+
+    *Minor: Awesomeology*
+
+Experience
+----------
+
+**Your Most Recent Work Experience:**
+
+Short text containing the type of work done, results obtained,
+lessons learned and other remarks. Can also include lists and
+links:
+
+* First item
+
+* Item with [link](http://www.example.com). Links will work both in
+  the html and pdf versions.
+
+**That Other Job You Had**
+
+Also with a short description.
+
+Technical Experience
+--------------------
+
+My Cool Side Project
+:   For items which don't have a clear time ordering, a definition
+    list can be used to have named items.
+
+    * These items can also contain lists, but you need to mind the
+      indentation levels in the markdown source.
+    * Second item.
+
+Open Source
+:   List open source contributions here, perhaps placing emphasis on
+    the project names, for example the **Linux Kernel**, where you
+    implemented multithreading over a long weekend, or **node.js**
+    (with [link](http://nodejs.org)) which was actually totally
+    your idea...
+
+Programming Languages
+:   **first-lang:** Here, we have an itemization, where we only want
+    to add descriptions to the first few items, but still want to
+    mention some others together at the end. A format that works well
+    here is a description list where the first few items have their
+    first word emphasized, and the last item contains the final few
+    emphasized terms. Notice the reasonably nice page break in the pdf
+    version, which wouldn't happen if we generated the pdf via html.
+
+:   **second-lang:** Description of your experience with second-lang,
+    perhaps again including a [link] [ref], this time placing the url
+    reference elsewhere in the document to reduce clutter (see source
+    file). 
+
+:   **obscure-but-impressive-lang:** We both know this one's pushing
+    it.
+
+:   Basic knowledge of **C**, **x86 assembly**, **forth**, **Common Lisp**
+
+[ref]: https://github.com/githubuser/superlongprojectname
+
+Extra Section, Call it Whatever You Want
+----------------------------------------
+
+* Human Languages:
+
+     * English (native speaker)
+     * ???
+     * This is what a nested list looks like.
+
+* Random tidbit
+
+* Other sort of impressive-sounding thing you did
+
+----
+
+&gt; &lt;email&#64;example.com&gt; • +00 (0)00 000 0000 • XX years old\
+&gt; address - Mytown, Mycountry
+</code></pre>
 <p>[draft]</p>
 
 

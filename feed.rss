@@ -5,8 +5,8 @@
 		<link>http://nilo.dev/</link>
 		<description>Blog Posts</description>
 		<copyright>2020</copyright>
-		<pubDate>Thu, 23 Apr 2020 04:23:57 GMT</pubDate>
-		<lastBuildDate>Thu, 23 Apr 2020 04:23:57 GMT</lastBuildDate>
+		<pubDate>Fri, 24 Apr 2020 01:13:04 GMT</pubDate>
+		<lastBuildDate>Fri, 24 Apr 2020 01:13:04 GMT</lastBuildDate>
 		<item>
 			<title>Versionando seu curriculo no Github com Markdown</title>
 			<link>http://nilo.dev/post/versionando-curriculo-github-pandoc</link>
@@ -24,6 +24,108 @@
 &lt;p&gt;Então lembrei de uma conversa que tive com o &lt;a href="https://www.linkedin.com/in/matheusnogueira/"&gt;Matheus&lt;/a&gt; onde ele me disse que tinha usado &lt;a href="https://pt.wikipedia.org/wiki/LaTeX"&gt;LaTeX&lt;/a&gt; para escrever seu TCC e o trabalho tinha sido extremamente menos cansativo do que ter que formatá-lo em ABNT utilizando ferramentas de edição como Word (e eu quis muito ter conhecido o LaTeX na época do meu TCC). Era uma luz no fim do túnel.&lt;/p&gt;
 &lt;p&gt;O problema é que &lt;strong&gt;LaTeX&lt;/strong&gt; tem toda uma sintaxe própria e não valia o esforço me adaptar apenas para atualizar um currículo. Não é possível que ninguém na internet não havia pensado numa maneira mais limpa para atualizar um &lt;strong&gt;currículo&lt;/strong&gt; (ou &lt;strong&gt;resume&lt;/strong&gt;), tarefa extremamente chata, utilizando por exemplo &lt;strong&gt;markdown&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;E assim eu tinha todas as palavras-chave necessárias para pesquisar um trabalho semelhante de conversão de texto e, com algumas pesquisas e um pouco de sorte eu encontrei um artigo que fazia exatamente a conversão de um CV em markdown para diversos outros formatos, incluíndo TeX, pdf, html e docx!&lt;/p&gt;
+&lt;h1 id="escrevendo-seu-curriculo-em-markdown"&gt;Escrevendo seu curriculo em Markdown&lt;/h1&gt;
+&lt;pre&gt;&lt;code class="language-markdown"&gt;Johnny Coder
+============
+
+----
+
+&amp;gt;  In this style, the resume starts with a blockquote, where
+&amp;gt;  you can briefly list your specialties, or include a salient
+&amp;gt;  quote. Ending a line with a backslash forces a line break.
+
+----
+
+Education
+---------
+
+2010-2014 (expected)
+:   **PhD, Computer Science**; Awesome University (MyTown)
+
+    *Thesis title: Deep Learning Approaches to the Self-Awesomeness
+     Estimation Problem*
+
+2007-2010
+:   **BSc, Computer Science and Electrical Engineering**; University of
+    HomeTown (HomeTown)
+
+    *Minor: Awesomeology*
+
+Experience
+----------
+
+**Your Most Recent Work Experience:**
+
+Short text containing the type of work done, results obtained,
+lessons learned and other remarks. Can also include lists and
+links:
+
+* First item
+
+* Item with [link](http://www.example.com). Links will work both in
+  the html and pdf versions.
+
+**That Other Job You Had**
+
+Also with a short description.
+
+Technical Experience
+--------------------
+
+My Cool Side Project
+:   For items which don't have a clear time ordering, a definition
+    list can be used to have named items.
+
+    * These items can also contain lists, but you need to mind the
+      indentation levels in the markdown source.
+    * Second item.
+
+Open Source
+:   List open source contributions here, perhaps placing emphasis on
+    the project names, for example the **Linux Kernel**, where you
+    implemented multithreading over a long weekend, or **node.js**
+    (with [link](http://nodejs.org)) which was actually totally
+    your idea...
+
+Programming Languages
+:   **first-lang:** Here, we have an itemization, where we only want
+    to add descriptions to the first few items, but still want to
+    mention some others together at the end. A format that works well
+    here is a description list where the first few items have their
+    first word emphasized, and the last item contains the final few
+    emphasized terms. Notice the reasonably nice page break in the pdf
+    version, which wouldn't happen if we generated the pdf via html.
+
+:   **second-lang:** Description of your experience with second-lang,
+    perhaps again including a [link] [ref], this time placing the url
+    reference elsewhere in the document to reduce clutter (see source
+    file). 
+
+:   **obscure-but-impressive-lang:** We both know this one's pushing
+    it.
+
+:   Basic knowledge of **C**, **x86 assembly**, **forth**, **Common Lisp**
+
+[ref]: https://github.com/githubuser/superlongprojectname
+
+Extra Section, Call it Whatever You Want
+----------------------------------------
+
+* Human Languages:
+
+     * English (native speaker)
+     * ???
+     * This is what a nested list looks like.
+
+* Random tidbit
+
+* Other sort of impressive-sounding thing you did
+
+----
+
+&amp;gt; &amp;lt;email&amp;#64;example.com&amp;gt; • +00 (0)00 000 0000 • XX years old\
+&amp;gt; address - Mytown, Mycountry
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;[draft]&lt;/p&gt;
 </content:encoded>
 		</item>
