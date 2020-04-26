@@ -5,8 +5,8 @@
 		<link>http://nilo.dev/</link>
 		<description>Blog Posts</description>
 		<copyright>2020</copyright>
-		<pubDate>Sun, 26 Apr 2020 19:06:17 GMT</pubDate>
-		<lastBuildDate>Sun, 26 Apr 2020 19:06:17 GMT</lastBuildDate>
+		<pubDate>Sun, 26 Apr 2020 20:14:21 GMT</pubDate>
+		<lastBuildDate>Sun, 26 Apr 2020 20:14:21 GMT</lastBuildDate>
 		<item>
 			<title>Versionando seu curriculo no Github com Markdown</title>
 			<link>http://nilo.dev/post/versionando-curriculo-github-pandoc</link>
@@ -15,6 +15,11 @@
 			<guid>http://nilo.dev/post/versionando-curriculo-github-pandoc</guid>
 			<pubDate>Thu, 23 Apr 2020 00:00:00 GMT</pubDate>
 			<content:encoded>&lt;p&gt;[draft]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;créditos&lt;/li&gt;
+&lt;li&gt;motivação&lt;/li&gt;
+&lt;li&gt;Como fazer&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h1 id="tudo-e-uma-copia-de-uma-copia-de-uma-copia"&gt;Tudo é uma cópia, de uma cópia, de uma cópia&lt;/h1&gt;
 &lt;p&gt;Antes de começar, os créditos deste post vão para um cara chamado &lt;a href="https://github.com/mszep"&gt;Mark Szepieniec&lt;/a&gt;, o que eu fiz foi apenas portar para Windows o modelo de gerar o resume. Se você usa Linux como seu OS principal, eu recomendo conferir &lt;a href="https://github.com/mszep/pandoc_resume"&gt;o post original&lt;/a&gt; (Mark se inspirou num &lt;a href="https://blog.chmd.fr/editing-a-cv-in-markdown-with-pandoc.html"&gt;post de outro cara&lt;/a&gt; chamado &lt;a href="https://github.com/chmduquesne"&gt;Christophe-Marie Duquesne&lt;/a&gt;).&lt;/p&gt;
 &lt;p&gt;Dados os devidos créditos, podemos começar.&lt;/p&gt;
@@ -25,7 +30,7 @@
 &lt;p&gt;O problema é que &lt;strong&gt;LaTeX&lt;/strong&gt; tem toda uma sintaxe própria e não valia o esforço me adaptar apenas para atualizar um currículo. Não é possível que ninguém na internet não havia pensado numa maneira mais limpa para atualizar um &lt;strong&gt;currículo&lt;/strong&gt; (ou &lt;strong&gt;resume&lt;/strong&gt;), tarefa extremamente chata, utilizando por exemplo &lt;strong&gt;markdown&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;E assim eu tinha todas as palavras-chave necessárias para pesquisar um trabalho semelhante de conversão de texto e, com algumas pesquisas e um pouco de sorte eu encontrei um artigo que fazia exatamente a conversão de um CV em markdown para diversos outros formatos, incluíndo TeX, pdf, html e docx!&lt;/p&gt;
 &lt;h1 id="escrevendo-seu-curriculo-em-markdown"&gt;Escrevendo seu curriculo em Markdown&lt;/h1&gt;
-&lt;p&gt;Não há muito o que se falar sobre markdown. Os posts desse blog são escritos usando markdown.&lt;/p&gt;
+&lt;p&gt;Não há muito o que se falar sobre markdown. Os posts desse blog são escritos usando markdown e a marcação de texto acaba sendo natural.&lt;/p&gt;
 &lt;p&gt;Separei abaixo alguns documentos de referência, use o que lhe agradar mais enquanto estiver escrevendo:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;From Github&lt;/li&gt;
