@@ -5,8 +5,8 @@
 		<link>http://nilo.dev/</link>
 		<description>Blog Posts</description>
 		<copyright>2020</copyright>
-		<pubDate>Sat, 02 May 2020 22:40:17 GMT</pubDate>
-		<lastBuildDate>Sat, 02 May 2020 22:40:17 GMT</lastBuildDate>
+		<pubDate>Sat, 02 May 2020 22:51:15 GMT</pubDate>
+		<lastBuildDate>Sat, 02 May 2020 22:51:15 GMT</lastBuildDate>
 		<item>
 			<title>Comprando um novo monitor</title>
 			<link>http://nilo.dev/post/comprando-novo-monitor</link>
@@ -36,15 +36,87 @@
 &lt;a href="https://www.zoom.com.br/monitor/qhd"&gt;https://www.zoom.com.br/monitor/qhd&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Tabela de comparação entre monitores:
-| Monitor | Tamanho | Resolução | Tela | Preço | Observações |
-| -------- | -------- | -------- | -------- | -------- | -------- |
-| &lt;a href="https://www.samsung.com/br/support/model/LS22E310HYMZD/"&gt;Monitor Full HD LED Samsung 22&amp;quot; S22E310 - HDMI&lt;/a&gt; | 21.5 | 1920x1080 | TN | | Meu monitor atual |
-| &lt;a href="https://www.lg.com/br/monitores/lg-34UM68-P"&gt;Monitor LED IPS 34&amp;quot; Ultrawide Full HD 34UM68 - LG&lt;/a&gt; | 34 | 2560x1080 | IPS | R$ 2.099,99 | HDMI 1.4 - 4k 30fps |
-| &lt;a href="https://www.lg.com/br/monitores/lg-34WK650-W"&gt;Monitor LED IPS 34&amp;quot; Ultrawide HDR10 Full HD 34WK650 - LG&lt;/a&gt; | 34 | 2560x1080 | IPS | R$ 2.399,99 | |
-| &lt;a href="https://www.philips.com.br/c-p/276E8VJSB_57/monitor-lcd-ultra-hd-4k"&gt;Monitor Philips 27&amp;quot; 276E8VJSB&lt;/a&gt; | 27 | 3840x2160 | IPS | R$ 1.500,99 | Sem regulagem de altura |
-| &lt;a href="https://www.samsung.com/br/monitors/curved-c32f391/"&gt;Monitor LED 32&amp;quot; Samsung LC32F391FDLXZD Full HD Curvo Branco&lt;/a&gt; | 32 | 1920x1080 | VA | R$ 1.534,24 | Sem regulagem de altura |
-| &lt;a href="https://www.lg.com/br/monitores/lg-27UL500-W"&gt;Monitor LED 27&amp;quot; LG 27UL500 IPS UltraHD 4k HDR 10&lt;/a&gt; | 27 | 3840x2160 | IPS | R$ 1.994,99 | Sem regulagem de altura |&lt;/p&gt;
+&lt;p&gt;Tabela de comparação entre monitores:&lt;/p&gt;
+&lt;table class="table"&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Monitor&lt;/th&gt;
+&lt;th&gt;Tamanho&lt;/th&gt;
+&lt;th&gt;Resolução&lt;/th&gt;
+&lt;th&gt;Tela&lt;/th&gt;
+&lt;th&gt;Preço&lt;/th&gt;
+&lt;th&gt;Observações&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://www.samsung.com/br/support/model/LS22E310HYMZD/"&gt;Monitor Full HD LED Samsung 22&amp;quot; S22E310 - HDMI&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;21.5&lt;/td&gt;
+&lt;td&gt;1920x1080&lt;/td&gt;
+&lt;td&gt;TN&lt;/td&gt;
+&lt;td&gt;-----------&lt;/td&gt;
+&lt;td&gt;Meu monitor atual&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://www.lg.com/br/monitores/lg-34UM68-P"&gt;Monitor LED IPS 34&amp;quot; Ultrawide Full HD 34UM68 - LG&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;34&lt;/td&gt;
+&lt;td&gt;2560x1080&lt;/td&gt;
+&lt;td&gt;IPS&lt;/td&gt;
+&lt;td&gt;R$ 2.099,99&lt;/td&gt;
+&lt;td&gt;HDMI 1.4 - 4k 30fps&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://www.lg.com/br/monitores/lg-34WK650-W"&gt;Monitor LED IPS 34&amp;quot; Ultrawide HDR10 Full HD 34WK650 - LG&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;34&lt;/td&gt;
+&lt;td&gt;2560x1080&lt;/td&gt;
+&lt;td&gt;IPS&lt;/td&gt;
+&lt;td&gt;R$ 2.399,99&lt;/td&gt;
+&lt;td&gt;-----------&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://www.philips.com.br/c-p/276E8VJSB_57/monitor-lcd-ultra-hd-4k"&gt;Monitor Philips 27&amp;quot; 276E8VJSB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;27&lt;/td&gt;
+&lt;td&gt;3840x2160&lt;/td&gt;
+&lt;td&gt;IPS&lt;/td&gt;
+&lt;td&gt;R$ 1.500,99&lt;/td&gt;
+&lt;td&gt;Sem regulagem de altura&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://www.samsung.com/br/monitors/curved-c32f391/"&gt;Monitor LED 32&amp;quot; Samsung LC32F391FDLXZD Full HD Curvo Branco&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;32&lt;/td&gt;
+&lt;td&gt;1920x1080&lt;/td&gt;
+&lt;td&gt;VA&lt;/td&gt;
+&lt;td&gt;R$ 1.534,24&lt;/td&gt;
+&lt;td&gt;Sem regulagem de altura&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://www.lg.com/br/monitores/lg-27UL500-W"&gt;Monitor LED 27&amp;quot; LG 27UL500 IPS UltraHD 4k HDR 10&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;27&lt;/td&gt;
+&lt;td&gt;3840x2160&lt;/td&gt;
+&lt;td&gt;IPS&lt;/td&gt;
+&lt;td&gt;R$ 1.994,99&lt;/td&gt;
+&lt;td&gt;Sem regulagem de altura&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="table"&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Syntax&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Header&lt;/td&gt;
+&lt;td&gt;Title&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Paragraph&lt;/td&gt;
+&lt;td&gt;Text&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 </content:encoded>
 		</item>
 		<item>
@@ -101,6 +173,12 @@
 &lt;li&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://commonmark.org/help/"&gt;https://commonmark.org/help/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Exemplo de Markdown no Wyam&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.digitaltapestry.net/posts/markdig-cheat-sheet"&gt;https://www.digitaltapestry.net/posts/markdig-cheat-sheet&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
