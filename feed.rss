@@ -5,8 +5,8 @@
 		<link>http://nilo.dev/</link>
 		<description>Blog Posts</description>
 		<copyright>2020</copyright>
-		<pubDate>Sat, 02 May 2020 22:51:15 GMT</pubDate>
-		<lastBuildDate>Sat, 02 May 2020 22:51:15 GMT</lastBuildDate>
+		<pubDate>Sat, 02 May 2020 22:54:48 GMT</pubDate>
+		<lastBuildDate>Sat, 02 May 2020 22:54:48 GMT</lastBuildDate>
 		<item>
 			<title>Comprando um novo monitor</title>
 			<link>http://nilo.dev/post/comprando-novo-monitor</link>
@@ -54,7 +54,7 @@
 &lt;td&gt;21.5&lt;/td&gt;
 &lt;td&gt;1920x1080&lt;/td&gt;
 &lt;td&gt;TN&lt;/td&gt;
-&lt;td&gt;-----------&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;td&gt;Meu monitor atual&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -71,7 +71,7 @@
 &lt;td&gt;2560x1080&lt;/td&gt;
 &lt;td&gt;IPS&lt;/td&gt;
 &lt;td&gt;R$ 2.399,99&lt;/td&gt;
-&lt;td&gt;-----------&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;a href="https://www.philips.com.br/c-p/276E8VJSB_57/monitor-lcd-ultra-hd-4k"&gt;Monitor Philips 27&amp;quot; 276E8VJSB&lt;/a&gt;&lt;/td&gt;
@@ -96,24 +96,6 @@
 &lt;td&gt;IPS&lt;/td&gt;
 &lt;td&gt;R$ 1.994,99&lt;/td&gt;
 &lt;td&gt;Sem regulagem de altura&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;table class="table"&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Syntax&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Header&lt;/td&gt;
-&lt;td&gt;Title&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Paragraph&lt;/td&gt;
-&lt;td&gt;Text&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;

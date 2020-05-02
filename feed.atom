@@ -4,7 +4,7 @@
 	<title>[da]nilo.dev</title>
 	<link rel="self" href="http://nilo.dev/" />
 	<rights>2020</rights>
-	<updated>2020-05-02T22:51:15Z</updated>
+	<updated>2020-05-02T22:54:48Z</updated>
 	<logo>http://nilo.dev/images/bg/desert-alone.jpg</logo>
 	<subtitle>Blog Posts</subtitle>
 	<entry>
@@ -53,7 +53,7 @@
 &lt;td&gt;21.5&lt;/td&gt;
 &lt;td&gt;1920x1080&lt;/td&gt;
 &lt;td&gt;TN&lt;/td&gt;
-&lt;td&gt;-----------&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;td&gt;Meu monitor atual&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -70,7 +70,7 @@
 &lt;td&gt;2560x1080&lt;/td&gt;
 &lt;td&gt;IPS&lt;/td&gt;
 &lt;td&gt;R$ 2.399,99&lt;/td&gt;
-&lt;td&gt;-----------&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;a href="https://www.philips.com.br/c-p/276E8VJSB_57/monitor-lcd-ultra-hd-4k"&gt;Monitor Philips 27&amp;quot; 276E8VJSB&lt;/a&gt;&lt;/td&gt;
@@ -95,24 +95,6 @@
 &lt;td&gt;IPS&lt;/td&gt;
 &lt;td&gt;R$ 1.994,99&lt;/td&gt;
 &lt;td&gt;Sem regulagem de altura&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;table class="table"&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Syntax&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Header&lt;/td&gt;
-&lt;td&gt;Title&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Paragraph&lt;/td&gt;
-&lt;td&gt;Text&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
