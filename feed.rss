@@ -5,8 +5,8 @@
 		<link>http://nilo.dev/</link>
 		<description>Blog Posts</description>
 		<copyright>2020</copyright>
-		<pubDate>Sun, 03 May 2020 02:44:10 GMT</pubDate>
-		<lastBuildDate>Sun, 03 May 2020 02:44:10 GMT</lastBuildDate>
+		<pubDate>Sun, 03 May 2020 04:04:57 GMT</pubDate>
+		<lastBuildDate>Sun, 03 May 2020 04:04:57 GMT</lastBuildDate>
 		<item>
 			<title>Comprando um novo monitor</title>
 			<link>http://nilo.dev/post/comprando-novo-monitor</link>
@@ -122,29 +122,56 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;Dois monitores me chamaram bastante a atenção em relação aos demais, já que além de serem 4k, estavam com preço semelhante a monitores menores e com resolução também menor. Os monitores estão listados abaixo com seus prós e contras:&lt;/p&gt;
-&lt;p&gt;| Monitor Ultra HD 4K 31,5” LG com HDR10 e 3000:01:00 de Contraste | Monitor 32” Samsung LCD com 3000:1 de Contraste - LU32J590UQLXZD |
-| ----------- | ----------- |
-| Header
-header
-header
-header | Title
-Title
-Title
-Title |&lt;/p&gt;
-&lt;h1 id="lu32j590uqlxzd"&gt;LU32J590UQLXZD&lt;/h1&gt;
-&lt;p&gt;&lt;a href="https://www.youtube.com/watch?v=8nkEOquz6Yg&amp;amp;t"&gt;https://www.youtube.com/watch?v=8nkEOquz6Yg&amp;amp;t&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id="uk550"&gt;32UK550&lt;/h1&gt;
-&lt;p&gt;Prós&lt;/p&gt;
+&lt;details&gt;
+  &lt;summary&gt;Clique aqui para expandir a comparação completa...&lt;/summary&gt;
+  &lt;p&gt;
+&lt;p&gt;&lt;a href="https://www.displayspecifications.com/en/comparison/862375528"&gt;&lt;img src="/images/posts/2020/32-monitors-comparison.png" class="img-fluid" alt="32-monitors-comparison" /&gt;&lt;/a&gt;&lt;/p&gt;
+  &lt;/p&gt;
+&lt;/details&gt;
+&lt;h2 id="samsung"&gt;Samsung:&lt;/h2&gt;
+&lt;p&gt;Pros:
+Cons:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Não possui audio&lt;/li&gt;
+&lt;li&gt;Painel VA&lt;/li&gt;
+&lt;li&gt;Não possui ajuste de altura&lt;/li&gt;
+&lt;li&gt;Reviews:&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=kvstGmXrG5g"&gt;https://www.youtube.com/watch?v=kvstGmXrG5g&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=8nkEOquz6Yg"&gt;https://www.youtube.com/watch?v=8nkEOquz6Yg&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="lg"&gt;LG:&lt;/h2&gt;
+&lt;p&gt;Pros&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Ajuste de altura e inclinação&lt;/li&gt;
 &lt;li&gt;Tempo de Resposta	4ms&lt;/li&gt;
-&lt;li&gt;Até 60hz para nvidia,
-Contras:&lt;/li&gt;
-&lt;li&gt;Tela VA - ruim em angulos diferentes&lt;/li&gt;
+&lt;li&gt;Até 60hz para nvidia
+Cons:&lt;/li&gt;
+&lt;li&gt;Painel VA
+Reviews:&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=iMeVpc6HeE4"&gt;https://www.youtube.com/watch?v=iMeVpc6HeE4&lt;/a&gt; (o video é sobre o monitor &lt;a href="https://www.displayspecifications.com/en/comparison/7d087536e"&gt;32UD59-B&lt;/a&gt;, muito semelhante ao citado)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;a href="https://www.youtube.com/watch?v=JqJ2OQ3KYkc"&gt;https://www.youtube.com/watch?v=JqJ2OQ3KYkc&lt;/a&gt;
-&lt;a href="https://www.youtube.com/watch?v=iMeVpc6HeE4"&gt;https://www.youtube.com/watch?v=iMeVpc6HeE4&lt;/a&gt; 32UD59-B
-&lt;a href="https://www.displayspecifications.com/en/comparison/7d087536e"&gt;https://www.displayspecifications.com/en/comparison/7d087536e&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=JqJ2OQ3KYkc"&gt;https://www.youtube.com/watch?v=JqJ2OQ3KYkc&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=URd-dRgTetQ"&gt;https://www.youtube.com/watch?v=URd-dRgTetQ&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 </content:encoded>
 		</item>
 		<item>
