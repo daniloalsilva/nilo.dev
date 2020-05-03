@@ -4,7 +4,7 @@
 	<title>[da]nilo.dev</title>
 	<link rel="self" href="http://nilo.dev/" />
 	<rights>2020</rights>
-	<updated>2020-05-02T22:54:48Z</updated>
+	<updated>2020-05-03T01:57:16Z</updated>
 	<logo>http://nilo.dev/images/bg/desert-alone.jpg</logo>
 	<subtitle>Blog Posts</subtitle>
 	<entry>
@@ -16,24 +16,21 @@
 		<content>&lt;p&gt;Depois de um pouco mais de um mês de quarentena por conta do COVID-19 decidir trocar meu monitor.&lt;/p&gt;
 &lt;p&gt;Eu atualmente uso um monitor &lt;a href="https://www.soubarato.com.br/produto/124284017/monitor-led-21-5-samsung-wide-s22e310-full-hd-hdmi-preto"&gt;21.5' da Samsung&lt;/a&gt; que comprei numa pechincha por R$299 em 2018.&lt;/p&gt;
 &lt;p&gt;Estava de olho em monitores a alguns meses e acabei perdendo uma promoção excelente em dezembro onde um ultrawide de 29 estava entre &lt;a href="https://www.lg.com/br/monitores/lg-29WK500-P"&gt;R$850&lt;/a&gt; e &lt;a href="https://www.lg.com/br/monitores/lg-29WK600-W"&gt;R$1050&lt;/a&gt;. Com a quarentena que estamos passando, esses mesmo monitores hoje estão R$1.300 e R$1.600 respectivamente - e esse último disponível somente em market places. Lei da oferta e procura...&lt;/p&gt;
-&lt;p&gt;Voltando as buscas após 5 meses, eu tinha a esperança que fosse ter menos trabalho para escolher um monitor decente, mas não foi bem o que aconteceu... Os monitores de 29 polegadas estão muito mais caros que a alguns meses atrás e, acaba não sendo nem um upgrade tão bom para as minhas necessidades. Eu preciso atualmente de mais espaço de tela para programar e/ou organizar as janelas lado a lado - meu monitor atual é pelo menos full hd, então percebi que eu precisava mesmo de uma resolução maior.&lt;/p&gt;
 &lt;p&gt;Itens que precisam ser atendidos:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Tela maior ou igual a 27&amp;quot;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Resolução maior que 1920x1080&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Preço até R$2500&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Fontes de pesquisa
+&lt;li&gt;Tela maior ou igual a 27&amp;quot;&lt;/li&gt;
+&lt;li&gt;Resolução maior que 1920x1080&lt;/li&gt;
+&lt;li&gt;Preço até R$2500&lt;/li&gt;
+&lt;li&gt;Altura ajustável se possível&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Voltando as buscas após 5 meses, eu tinha a esperança que fosse ter menos trabalho para escolher um monitor decente, mas não foi bem o que aconteceu... Os monitores de 29 polegadas estão muito mais caros que a alguns meses atrás e, acaba não sendo nem um upgrade tão bom para as minhas necessidades. Eu preciso atualmente de mais espaço de tela para programar e/ou organizar as janelas lado a lado - meu monitor atual é pelo menos full hd, o que me permite ter uma noção do espaço para trabalho em vertical dos monitores UW, então percebi que eu precisava mesmo de uma resolução maior que 1080 se eu optasse por um monitor ultrawide.&lt;/p&gt;
+&lt;p&gt;A partir daí, foram horas e horas de pesquisa de monitores ultrawide e widescreen com diversas configurações, além dos reviews sobre o uso parecido com o que eu teria - programar e jogos eventualmente.&lt;/p&gt;
+&lt;p&gt;Encontrei algumas threads muito boas sobre o assunto no Reddit e, trazendo&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Fontes de pesquisa
 &lt;a href="https://www.reddit.com/r/webdev/comments/3gc7q5/webdevs_4k_vs_1440p_vs_ultrawide_for_a_new_monitor/"&gt;https://www.reddit.com/r/webdev/comments/3gc7q5/webdevs_4k_vs_1440p_vs_ultrawide_for_a_new_monitor/&lt;/a&gt;
 &lt;a href="https://www.reddit.com/r/ultrawidemasterrace/comments/8kvgbc/ultrawide_for_programming/"&gt;https://www.reddit.com/r/ultrawidemasterrace/comments/8kvgbc/ultrawide_for_programming/&lt;/a&gt;
-&lt;a href="https://www.reddit.com/r/Monitors/comments/50w94q/4k_vs_219_for_programmingwriting_with_retinalike/"&gt;https://www.reddit.com/r/Monitors/comments/50w94q/4k_vs_219_for_programmingwriting_with_retinalike/&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Evolução de preços
-&lt;a href="https://www.zoom.com.br/monitor/ultrawide"&gt;https://www.zoom.com.br/monitor/ultrawide&lt;/a&gt;
-&lt;a href="https://www.zoom.com.br/monitor/qhd"&gt;https://www.zoom.com.br/monitor/qhd&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
+&lt;a href="https://www.reddit.com/r/Monitors/comments/50w94q/4k_vs_219_for_programmingwriting_with_retinalike/"&gt;https://www.reddit.com/r/Monitors/comments/50w94q/4k_vs_219_for_programmingwriting_with_retinalike/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Tabela de comparação entre monitores:&lt;/p&gt;
 &lt;table class="table"&gt;
@@ -96,8 +93,46 @@
 &lt;td&gt;R$ 1.994,99&lt;/td&gt;
 &lt;td&gt;Sem regulagem de altura&lt;/td&gt;
 &lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://www.lg.com/br/monitores/lg-32UK550-B"&gt;Monitor Ultra HD 4K 31,5” LG com HDR10 e 3000:01:00 de Contraste - 32UK550&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;31.5&lt;/td&gt;
+&lt;td&gt;3840x2160&lt;/td&gt;
+&lt;td&gt;VA&lt;/td&gt;
+&lt;td&gt;R$ 2.499,00&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://www.lg.com/br/monitores/lg-27UL650-W"&gt;Monitor Ultra HD 4K 27” LG IPS com HDR400 e 1000:01:00 de Contraste - 27UL650&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;27&lt;/td&gt;
+&lt;td&gt;3840x2160&lt;/td&gt;
+&lt;td&gt;IPS&lt;/td&gt;
+&lt;td&gt;R$ 2.462,91&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="https://www.samsung.com/br/monitors/u32j59/"&gt;Monitor 32” Samsung LCD com 3000:1 de Contraste - LU32J590UQLXZD&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;31.5&lt;/td&gt;
+&lt;td&gt;3840 x 2160&lt;/td&gt;
+&lt;td&gt;VA&lt;/td&gt;
+&lt;td&gt;R$ 2.083,86&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;h1 id="lu32j590uqlxzd"&gt;LU32J590UQLXZD&lt;/h1&gt;
+&lt;p&gt;&lt;a href="https://www.youtube.com/watch?v=8nkEOquz6Yg&amp;amp;t"&gt;https://www.youtube.com/watch?v=8nkEOquz6Yg&amp;amp;t&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id="uk550"&gt;32UK550&lt;/h1&gt;
+&lt;p&gt;Prós&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ajuste de altura e inclinação&lt;/li&gt;
+&lt;li&gt;Tempo de Resposta	4ms&lt;/li&gt;
+&lt;li&gt;Até 60hz para nvidia,
+Contras:&lt;/li&gt;
+&lt;li&gt;Tela VA - ruim em angulos diferentes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href="https://www.youtube.com/watch?v=JqJ2OQ3KYkc"&gt;https://www.youtube.com/watch?v=JqJ2OQ3KYkc&lt;/a&gt;
+&lt;a href="https://www.youtube.com/watch?v=iMeVpc6HeE4"&gt;https://www.youtube.com/watch?v=iMeVpc6HeE4&lt;/a&gt; 32UD59-B
+&lt;a href="https://www.displayspecifications.com/en/comparison/7d087536e"&gt;https://www.displayspecifications.com/en/comparison/7d087536e&lt;/a&gt;&lt;/p&gt;
 </content>
 		<summary>&lt;p&gt;Depois de um pouco mais de um mês de quarentena por conta do COVID-19 decidir trocar meu monitor.&lt;/p&gt;</summary>
 	</entry>
