@@ -4,7 +4,7 @@
 	<title>[da]nilo.dev</title>
 	<link rel="self" href="http://nilo.dev/" />
 	<rights>2020</rights>
-	<updated>2020-05-05T04:02:06Z</updated>
+	<updated>2020-05-05T04:13:03Z</updated>
 	<logo>http://nilo.dev/images/bg/desert-alone.jpg</logo>
 	<subtitle>Blog Posts</subtitle>
 	<entry>
@@ -227,18 +227,18 @@ Apesar dos R$500 a mais em comparação com o Samsung, o monitor possui regulage
 &lt;p&gt;A questão da regulagem de altura pode ser resolvida com um suporte vesa e é provável que eu use um futuramente, mas... Com tantas semelhanças o fator de decisão também envolve gosto pessoal e eu estou muito mais a fim do LG!&lt;/p&gt;
 &lt;p&gt;Fontes / Referencias:&lt;/p&gt;
 &lt;h2 id="reddit"&gt;reddit&lt;/h2&gt;
-&lt;p&gt;&lt;a href="https://www.reddit.com/r/webdev/comments/3gc7q5/webdevs_4k_vs_1440p_vs_ultrawide_for_a_new_monitor/"&gt;https://www.reddit.com/r/webdev/comments/3gc7q5/webdevs_4k_vs_1440p_vs_ultrawide_for_a_new_monitor/&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote class="blockquote"&gt;
-&lt;p&gt;I moved a way from an ultrawide monitor. Because of the 1080 pixel vertical resolutions. Yes I know there are ultra wide monitors that are 1440 high but these are to expensive. (mind you, most time I'm at work anyways) I also don't think 4K at 25&amp;quot;~30&amp;quot; is a good idea. I don't have glasses right now and I want to keep it that way. So I agree with everyone else that for this reason alone 4K isn't the best option. (again, if price wouldn't be a problem I'd probably try a much bigger 4K screen. But too bad it is.)&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.reddit.com/r/webdev/comments/3gc7q5/webdevs_4k_vs_1440p_vs_ultrawide_for_a_new_monitor/"&gt;https://www.reddit.com/r/webdev/comments/3gc7q5/webdevs_4k_vs_1440p_vs_ultrawide_for_a_new_monitor/&lt;/a&gt;
+I moved a way from an ultrawide monitor. Because of the 1080 pixel vertical resolutions. Yes I know there are ultra wide monitors that are 1440 high but these are to expensive. (mind you, most time I'm at work anyways) I also don't think 4K at 25&amp;quot;~30&amp;quot; is a good idea. I don't have glasses right now and I want to keep it that way. So I agree with everyone else that for this reason alone 4K isn't the best option. (again, if price wouldn't be a problem I'd probably try a much bigger 4K screen. But too bad it is.)&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;a href="https://www.reddit.com/r/ultrawidemasterrace/comments/8kvgbc/ultrawide_for_programming/"&gt;https://www.reddit.com/r/ultrawidemasterrace/comments/8kvgbc/ultrawide_for_programming/&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote class="blockquote"&gt;
-&lt;p&gt;I'd go with the 1440p personally. You will have more vertical real estate to work with. You may want to consider a dual monitor set up though if programming is your main focus. I love coding on my UW, but it's a 34 inch 1440p one.
+&lt;p&gt;&lt;a href="https://www.reddit.com/r/ultrawidemasterrace/comments/8kvgbc/ultrawide_for_programming/"&gt;https://www.reddit.com/r/ultrawidemasterrace/comments/8kvgbc/ultrawide_for_programming/&lt;/a&gt;
+I'd go with the 1440p personally. You will have more vertical real estate to work with. You may want to consider a dual monitor set up though if programming is your main focus. I love coding on my UW, but it's a 34 inch 1440p one.
 34&amp;quot; 3840x1440 I've been running ultra wide LG on my mac for a few years now. I love it and hate going to the office and working without it. On my laptop screen, I typically run 3-4 virtual desktops. On my ultra wide I run one virtual desktop and will turn on the laptop screen during debugging sessions.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;a href="https://www.reddit.com/r/Monitors/comments/50w94q/4k_vs_219_for_programmingwriting_with_retinalike/"&gt;https://www.reddit.com/r/Monitors/comments/50w94q/4k_vs_219_for_programmingwriting_with_retinalike/&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote class="blockquote"&gt;
-&lt;p&gt;I would definitely recommend trying out the 1440p version (2k, also referred to as WQHD) unless you plan on moving into the upper 30 inch monitors. 4k on anything under 34 inches (imo) is going to cause eye strain, especially for those of us staring at IDE's all day. 1440p seems to be the sweet spot for 27-34 inch (again, keeping in mind that we stare at small text all day).&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.reddit.com/r/Monitors/comments/50w94q/4k_vs_219_for_programmingwriting_with_retinalike/"&gt;https://www.reddit.com/r/Monitors/comments/50w94q/4k_vs_219_for_programmingwriting_with_retinalike/&lt;/a&gt;
+I would definitely recommend trying out the 1440p version (2k, also referred to as WQHD) unless you plan on moving into the upper 30 inch monitors. 4k on anything under 34 inches (imo) is going to cause eye strain, especially for those of us staring at IDE's all day. 1440p seems to be the sweet spot for 27-34 inch (again, keeping in mind that we stare at small text all day).&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id="side-by-side-comparison"&gt;side by side comparison&lt;/h2&gt;
 &lt;p&gt;Monitor LG IPS vs Samsung VA
@@ -263,9 +263,36 @@ Apesar dos R$500 a mais em comparação com o Samsung, o monitor possui regulage
 &lt;blockquote class="blockquote"&gt;
 &lt;p&gt;Rounding this part out, 27” for 1440p gaming monitors works so well because of ideal pixel density. It’s largely agreed human sight is best adjusted for a pixel density of 100-120 pixels per inch (PPI). Less than that and graphics look overblown, smudgy, or lacking in detail. Extreme screen density makes everything look tiny and cramped, like too much has been forced on screen. That’s why 4K works best on 32” monitors, while QHD shines on 27”. Both form factors maintain optimal pixel density.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;| Rule | 24&amp;quot; | 27&amp;quot; | 32&amp;quot; |
-| THX | 2.4ft (73cm) | 2.7ft (82cm) | 3.2ft (98cm) |
-| SMPTE | 3.2ft (98cm) | 3.6ft (110cm) | 4.3ft (130cm) |&lt;/p&gt;
+&lt;table class="table"&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Rule&lt;/td&gt;
+&lt;td&gt;24&amp;quot;&lt;/td&gt;
+&lt;td&gt;27&amp;quot;&lt;/td&gt;
+&lt;td&gt;32&amp;quot;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;THX&lt;/td&gt;
+&lt;td&gt;2.4ft (73cm)&lt;/td&gt;
+&lt;td&gt;2.7ft (82cm)&lt;/td&gt;
+&lt;td&gt;3.2ft (98cm)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;SMPTE&lt;/td&gt;
+&lt;td&gt;3.2ft (98cm)&lt;/td&gt;
+&lt;td&gt;3.6ft (110cm)&lt;/td&gt;
+&lt;td&gt;4.3ft (130cm)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 &lt;p&gt;22 inch 16x9 display vs 32 inch 16x9 display
 &lt;a href="http://www.displaywars.com/22-inch-16x9-vs-32-inch-16x9"&gt;http://www.displaywars.com/22-inch-16x9-vs-32-inch-16x9&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;What is the right size for a 4K monitor? (24 vs 27 vs 32 inch)
@@ -274,9 +301,9 @@ Apesar dos R$500 a mais em comparação com o Samsung, o monitor possui regulage
 &lt;a href="https://www.youtube.com/watch?v=SMWwTp1xcdE"&gt;https://www.youtube.com/watch?v=SMWwTp1xcdE&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The Monitor Buying Guide - What You Need to Know! | The Tech Chap
 &lt;a href="https://www.youtube.com/watch?v=9ZwCDBBwSdU"&gt;https://www.youtube.com/watch?v=9ZwCDBBwSdU&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://forum.pcmonitors.info/topic/lg-32uk550-b-vs-lg-27uk650-w-need-expert-input/"&gt;https://forum.pcmonitors.info/topic/lg-32uk550-b-vs-lg-27uk650-w-need-expert-input/&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote class="blockquote"&gt;
-&lt;p&gt;Let me crush your romanticised notions about the 32UK550, based on highly misleading specifications. The monitor uses a variation of the InnoLux M315DJJ AAS (VA-type) panel which is also used in the AOC U3277PWQU, Philips 328P6VUBREB and most other VA models with this screen size and resolution. When it comes to colour-critical work, you should always think very carefully about going for a VA model due to the perceived viewing angle related gamma and colour changes (colour consistency) issues we highlight in our reviews and panel types article. As you’ll see from the reviews of those 31.5″ models, even by VA standards the colour consistency is poor.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://forum.pcmonitors.info/topic/lg-32uk550-b-vs-lg-27uk650-w-need-expert-input/"&gt;https://forum.pcmonitors.info/topic/lg-32uk550-b-vs-lg-27uk650-w-need-expert-input/&lt;/a&gt;
+Let me crush your romanticised notions about the 32UK550, based on highly misleading specifications. The monitor uses a variation of the InnoLux M315DJJ AAS (VA-type) panel which is also used in the AOC U3277PWQU, Philips 328P6VUBREB and most other VA models with this screen size and resolution. When it comes to colour-critical work, you should always think very carefully about going for a VA model due to the perceived viewing angle related gamma and colour changes (colour consistency) issues we highlight in our reviews and panel types article. As you’ll see from the reviews of those 31.5″ models, even by VA standards the colour consistency is poor.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Best affordable 4k 32 monitor ?
 &lt;a href="https://www.reddit.com/r/Monitors/comments/cc8ze0/best_affordable_4k_32_monitor/etlgit4/"&gt;https://www.reddit.com/r/Monitors/comments/cc8ze0/best_affordable_4k_32_monitor/etlgit4/&lt;/a&gt;&lt;/p&gt;
