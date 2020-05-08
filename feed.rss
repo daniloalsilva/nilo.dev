@@ -5,8 +5,21 @@
 		<link>http://nilo.dev/</link>
 		<description>Blog Posts</description>
 		<copyright>2020</copyright>
-		<pubDate>Fri, 08 May 2020 15:55:17 GMT</pubDate>
-		<lastBuildDate>Fri, 08 May 2020 15:55:17 GMT</lastBuildDate>
+		<pubDate>Fri, 08 May 2020 16:55:53 GMT</pubDate>
+		<lastBuildDate>Fri, 08 May 2020 16:55:53 GMT</lastBuildDate>
+		<item>
+			<title>Primeiros passos com Visual Studio Code e .Net Core</title>
+			<link>http://nilo.dev/post/primeiros-passos-com-vscode-dotnetcore</link>
+			<description>&lt;p&gt;Fontes:&lt;/p&gt;</description>
+			<enclosure url="http://nilo.dev/images/bg/monitors.jpg" length="0" type="image" />
+			<guid>http://nilo.dev/post/primeiros-passos-com-vscode-dotnetcore</guid>
+			<pubDate>Fri, 08 May 2020 00:00:00 GMT</pubDate>
+			<content:encoded>&lt;p&gt;Fontes:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://hackernoon.com/asp-net-core-razor-pages-vs-mvc-which-will-create-better-web-apps-in-2018-bd137ae0acaa"&gt;https://hackernoon.com/asp-net-core-razor-pages-vs-mvc-which-will-create-better-web-apps-in-2018-bd137ae0acaa&lt;/a&gt;
+&lt;a href="https://www.dotnettricks.com/learn/webapi/difference-between-aspnet-mvc-and-aspnet-web-api"&gt;https://www.dotnettricks.com/learn/webapi/difference-between-aspnet-mvc-and-aspnet-web-api&lt;/a&gt;
+&lt;a href="https://andrewlock.net/comparing-startup-between-the-asp-net-core-3-templates/"&gt;https://andrewlock.net/comparing-startup-between-the-asp-net-core-3-templates/&lt;/a&gt;&lt;/p&gt;
+</content:encoded>
+		</item>
 		<item>
 			<title>Comprando um novo monitor</title>
 			<link>http://nilo.dev/post/comprando-novo-monitor</link>

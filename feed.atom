@@ -4,9 +4,22 @@
 	<title>[da]nilo.dev</title>
 	<link rel="self" href="http://nilo.dev/" />
 	<rights>2020</rights>
-	<updated>2020-05-08T15:55:17Z</updated>
+	<updated>2020-05-08T16:55:53Z</updated>
 	<logo>http://nilo.dev/images/bg/desert-alone.jpg</logo>
 	<subtitle>Blog Posts</subtitle>
+	<entry>
+		<id>http://nilo.dev/post/primeiros-passos-com-vscode-dotnetcore</id>
+		<title>Primeiros passos com Visual Studio Code e .Net Core</title>
+		<link href="http://nilo.dev/post/primeiros-passos-com-vscode-dotnetcore" />
+		<link rel="enclosure" type="image" href="http://nilo.dev/images/bg/monitors.jpg" />
+		<updated>2020-05-08T00:00:00Z</updated>
+		<content>&lt;p&gt;Fontes:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://hackernoon.com/asp-net-core-razor-pages-vs-mvc-which-will-create-better-web-apps-in-2018-bd137ae0acaa"&gt;https://hackernoon.com/asp-net-core-razor-pages-vs-mvc-which-will-create-better-web-apps-in-2018-bd137ae0acaa&lt;/a&gt;
+&lt;a href="https://www.dotnettricks.com/learn/webapi/difference-between-aspnet-mvc-and-aspnet-web-api"&gt;https://www.dotnettricks.com/learn/webapi/difference-between-aspnet-mvc-and-aspnet-web-api&lt;/a&gt;
+&lt;a href="https://andrewlock.net/comparing-startup-between-the-asp-net-core-3-templates/"&gt;https://andrewlock.net/comparing-startup-between-the-asp-net-core-3-templates/&lt;/a&gt;&lt;/p&gt;
+</content>
+		<summary>&lt;p&gt;Fontes:&lt;/p&gt;</summary>
+	</entry>
 	<entry>
 		<id>http://nilo.dev/post/comprando-novo-monitor</id>
 		<title>Comprando um novo monitor</title>
