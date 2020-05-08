@@ -4,7 +4,7 @@
 	<title>[da]nilo.dev</title>
 	<link rel="self" href="http://nilo.dev/" />
 	<rights>2020</rights>
-	<updated>2020-05-08T02:13:53Z</updated>
+	<updated>2020-05-08T15:55:17Z</updated>
 	<logo>http://nilo.dev/images/bg/desert-alone.jpg</logo>
 	<subtitle>Blog Posts</subtitle>
 	<entry>
@@ -13,15 +13,35 @@
 		<link href="http://nilo.dev/post/comprando-novo-monitor" />
 		<link rel="enclosure" type="image" href="http://nilo.dev/images/bg/monitors.jpg" />
 		<updated>2020-05-02T00:00:00Z</updated>
-		<content>&lt;p&gt;Table of contents:&lt;/p&gt;
+		<content>&lt;p&gt;Este post vai ser longo, mas se você está procurando um novo monitor, ele vai te poupar um bom tempo de pesquisas.&lt;/p&gt;
+&lt;p&gt;Table of contents:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="#entendendo-sobre-diferentes-tipos-de-monitores"&gt;Entendendo sobre diferentes tipos de monitores&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#entendendo-sobre-diferentes-tipos-de-monitores-lcd"&gt;Entendendo sobre diferentes tipos de monitores LCD&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#tipos-de-tela"&gt;Tipos de tela&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#resolucoes"&gt;Resoluções&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Depois de um pouco mais de um mês de quarentena por conta do COVID-19 decidir trocar meu monitor.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#monitores-ultra-wide-valem-a-pena"&gt;Monitores Ultrawide valem a pena?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#a-procura-do-monitor-perfeito"&gt;À procura do monitor perfeito&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#27-ou-32"&gt;27-ou-32&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#reviews"&gt;Reviews&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#samsung-monitor-ultra-hd-4k-315-painel-va"&gt;Samsung - Monitor Ultra HD 4K 31,5&amp;quot; Painel VA:&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#lg-monitor-ultra-hd-4k-315-painel-va"&gt;LG - Monitor Ultra HD 4K 31,5&amp;quot; Painel VA:&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#lg-monitor-ultra-hd-4k-27-painel-ips"&gt;LG - Monitor Ultra HD 4K 27&amp;quot; Painel IPS:&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#batendo-o-martelo"&gt;Batendo o martelo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#demais-referencias"&gt;Demais referencias&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;blockquote class="blockquote"&gt;
-&lt;p&gt;00:49 04/05/2020: Após 3 dias estudando que monitor comprar, acho que cheguei num consenso... Acho.&lt;/p&gt;
+&lt;p&gt;00:49 04/05/2020: Após 3 dias e mais de 40 horas estudando que monitor comprar, acho que cheguei num consenso... Acho.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Eu atualmente uso um monitor &lt;a href="https://www.soubarato.com.br/produto/124284017/monitor-led-21-5-samsung-wide-s22e310-full-hd-hdmi-preto"&gt;21.5' da Samsung&lt;/a&gt; que comprei numa pechincha por R$299 em 2018. Não é o melhor monitor para meu uso atual, mas funciona bem e eu não tinha tido a real necessidade de um monitor melhor que esse.&lt;/p&gt;
+&lt;p&gt;Depois de um pouco mais de um mês de quarentena por conta do COVID-19 decidir trocar meu monitor. Eu atualmente uso um monitor &lt;a href="https://www.soubarato.com.br/produto/124284017/monitor-led-21-5-samsung-wide-s22e310-full-hd-hdmi-preto"&gt;21.5' da Samsung&lt;/a&gt; que comprei numa pechincha por R$299 em 2018. Não é o melhor monitor para meu uso atual, mas funciona bem e eu não tinha tido a real necessidade de um monitor melhor que esse.&lt;/p&gt;
 &lt;p&gt;Estava de olho em monitores a alguns meses atrás e acabei perdendo uma promoção excelente em dezembro de 2019, onde um ultrawide de 29 estava entre &lt;a href="https://www.lg.com/br/monitores/lg-29WK500-P"&gt;R$850&lt;/a&gt; e &lt;a href="https://www.lg.com/br/monitores/lg-29WK600-W"&gt;R$1.050&lt;/a&gt;. Na época não pesquisei tanto assim sobre o quão seria útil esses monitores específicamente e provavelmente teria comprado no impulso um monitor que não serviria tão bem assim. Neste momento, com a quarentena que estamos passando, esses mesmo monitores hoje estão R$1.300 e R$1.600 respectivamente - e esse último disponível somente em market places. Lei da oferta e procura...&lt;/p&gt;
 &lt;p&gt;Voltando as buscas após 5 meses, eu tinha a esperança que fosse ter menos trabalho para escolher um monitor decente, afinal, os monitores para uso misto não podem ter tantas diferenças assim um do outro, certo?&lt;/p&gt;
 &lt;p&gt;&lt;img src="/images/posts/2020/achou-errado.gif" class="img-fluid" alt="achou-errado" /&gt;&lt;/p&gt;
@@ -414,7 +434,7 @@ Apesar dos R$500 a mais em comparação com o Samsung, o monitor possui reviews 
 &lt;/tbody&gt;
 &lt;/table&gt;
 </content>
-		<summary>&lt;p&gt;Table of contents:&lt;/p&gt;</summary>
+		<summary>&lt;p&gt;Este post vai ser longo, mas se você está procurando um novo monitor, ele vai te poupar um bom tempo de pesquisas.&lt;/p&gt;</summary>
 	</entry>
 	<entry>
 		<id>http://nilo.dev/post/versionando-curriculo-github-pandoc</id>
