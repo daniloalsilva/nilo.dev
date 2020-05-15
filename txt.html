@@ -93,6 +93,22 @@
 <pre><code class="language-powershell">Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 &quot;Chrome&quot;, &quot;Telegram&quot;, &quot;CLCL&quot;, &quot;Lightshot&quot;, &quot;F.lux&quot;, &quot;Onenote&quot;, &quot;Enpass&quot;, &quot;Vscode&quot;, &quot;7zip&quot; | % { choco install $_ -y }
 </code></pre>
+<p>vscode</p>
+<pre><code class="language-powershell"># install 
+dotnet tool install --global dotnet-aspnet-codegenerator
+
+# auto-complete code for dotnet
+
+code $profile
+
+# PowerShell parameter completion shim for the dotnet CLI
+Register-ArgumentCompleter -Native -CommandName dotnet -ScriptBlock {
+     param($commandName, $wordToComplete, $cursorPosition)
+         dotnet complete --position $cursorPosition &quot;$wordToComplete&quot; | ForEach-Object {
+            [System.Management.Automation.CompletionResult]::new($_, $_, 'ParameterValue', $_)
+         }
+ }
+</code></pre>
 
                                 </div>
                         </div>

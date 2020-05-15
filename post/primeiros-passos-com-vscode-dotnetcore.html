@@ -97,6 +97,19 @@ Published on Friday, May 8, 2020<br>    </div>
                                         
 
 <p>Fontes:</p>
+<p>WebApi (usa controlers de mvc): dotnet new webapi -o project
+Razor: dotnet new webapp -o projectName</p>
+<p>new page inside a Razor project:
+dotnet new page -n Index -o Pages</p>
+<p>Recuperar dados de arquivos de configuração somente via injection ou abrindo o appsettings.json explicitamente via IO
+<a href="https://www.fabiosilvalima.net/6-formas-appsettings-json-aspnet-core/">https://www.fabiosilvalima.net/6-formas-appsettings-json-aspnet-core/</a></p>
+<p><em>retrieving appsettings from class library</em></p>
+<pre><code class="language-csharp">var configurationBuilder = new ConfigurationBuilder();
+var path = Path.Combine(Directory.GetCurrentDirectory(), &quot;appsettings.json&quot;);
+configurationBuilder.AddJsonFile(path, false);
+var root = configurationBuilder.Build();
+Endpoint = root.GetSection(&quot;NasaData:Endpoint&quot;).Value;
+</code></pre>
 <p><a href="https://hackernoon.com/asp-net-core-razor-pages-vs-mvc-which-will-create-better-web-apps-in-2018-bd137ae0acaa">https://hackernoon.com/asp-net-core-razor-pages-vs-mvc-which-will-create-better-web-apps-in-2018-bd137ae0acaa</a>
 <a href="https://www.dotnettricks.com/learn/webapi/difference-between-aspnet-mvc-and-aspnet-web-api">https://www.dotnettricks.com/learn/webapi/difference-between-aspnet-mvc-and-aspnet-web-api</a>
 <a href="https://andrewlock.net/comparing-startup-between-the-asp-net-core-3-templates/">https://andrewlock.net/comparing-startup-between-the-asp-net-core-3-templates/</a></p>
