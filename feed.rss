@@ -5,8 +5,8 @@
 		<link>http://nilo.dev/</link>
 		<description>Blog Posts</description>
 		<copyright>2020</copyright>
-		<pubDate>Thu, 21 May 2020 18:35:21 GMT</pubDate>
-		<lastBuildDate>Thu, 21 May 2020 18:35:21 GMT</lastBuildDate>
+		<pubDate>Thu, 21 May 2020 19:25:12 GMT</pubDate>
+		<lastBuildDate>Thu, 21 May 2020 19:25:12 GMT</lastBuildDate>
 		<item>
 			<title>Primeiros passos com Visual Studio Code e .Net Core</title>
 			<link>http://nilo.dev/post/primeiros-passos-com-vscode-dotnetcore</link>
@@ -14,11 +14,33 @@
 			<enclosure url="http://nilo.dev/images/bg/monitors.jpg" length="0" type="image" />
 			<guid>http://nilo.dev/post/primeiros-passos-com-vscode-dotnetcore</guid>
 			<pubDate>Fri, 08 May 2020 00:00:00 GMT</pubDate>
-			<content:encoded>&lt;p&gt;Já a algum tempo eu queria estudar .Net Core e venho postergando. Confesso que a primeira experiência (a cerca de dois anos) não foi lá das melhores.&lt;/p&gt;
-&lt;pre&gt;&lt;code class="language-powershell"&gt;choco install vscode -y
+			<content:encoded>&lt;ul&gt;
+&lt;li&gt;citar necessidade de escrever ao invés de copiar e colar.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Já a algum tempo eu queria estudar .Net Core e venho postergando. Confesso que a primeira experiência (a cerca de dois anos) não foi lá das melhores.&lt;/p&gt;
+&lt;h1 id="first-things-first"&gt;First things first&lt;/h1&gt;
+&lt;p&gt;Antes de começar, precisamos das ferramentas que são a &lt;a href="https://pt.wikipedia.org/wiki/Ambiente_de_desenvolvimento_integrado"&gt;IDE&lt;/a&gt; - &lt;strong&gt;Visual Studio Code&lt;/strong&gt; e o Framework - &lt;strong&gt;.Net Core&lt;/strong&gt; (atualmente na versão 3.1).&lt;/p&gt;
+&lt;p&gt;A escolha do Visual Studio Code para uso com .Net Core foi um pouco dificil... Hoje, praticamente qualquer curso/livro que você encontra sobre o framework utiliza o Visual Studio Community, que realmente tem seus prós. O Visual Studio Community tem à distância de um click os &lt;a href="https://en.wikipedia.org/wiki/Scaffold_(programming)"&gt;scaffoldings&lt;/a&gt; que no VSCode vai lhe custar escrever os métodos manualmente ou lembrar uma commandline como {{dotnet aspnet-codegenerator &lt;model&gt; &lt;namespace&gt; &lt;etc&gt;}}. Mas como tudo na vida, melhor ou pior, isso depende do ponto de vista e, escrever as classes manualmente (ou quase) vai lhe fazer entender melhor a estrutura do framework e depender menos das coisas criadas automáticamente.&lt;/p&gt;
+&lt;p&gt;Você pode optar por baixar as ferramentas dos respectivos sites ou poupar algum tempo e instalar tudo via commandline:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-powershell"&gt;Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+choco install vscode -y
 choco install dotnetcore -y
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Antes de começar o desenvolvimento, dei uma boa lida sobre os tipos de projeto possíveis de criar utilizando .Net Core e mesmo assim&lt;/p&gt;
+&lt;h1 id="tipos-de-projeto"&gt;Tipos de projeto&lt;/h1&gt;
+&lt;p&gt;Antes de começar o desenvolvimento, dei uma boa lida sobre os tipos de projeto possíveis de criar utilizando .Net Core. No final das contas, o mesmo projeto com algumas modificações pode rodar em conjunto mvc, razor e uma api, então porque se preocupar com o tipo de projeto? Bom, por alguns motivos:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Transformar um projeto iniciado como webapi em razor vai lhe custar algum tempo criando código que vem por padrão na criaçao do projeto;&lt;/li&gt;
+&lt;li&gt;Se sua especialidade é backend e não front (o que é o meu caso), vem bem a calhar ter um layout padrão pronto;&lt;/li&gt;
+&lt;li&gt;Se você pretende criar uma aplicação modular, criar no mesmo projeto (não na mesma &lt;a href="https://docs.microsoft.com/en-us/visualstudio/extensibility/internals/solution-dot-sln-file"&gt;solução&lt;/a&gt;) a API e a parte Web pode não ser uma boa prática.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Dito isso, neste post vamos falar sobre 3 tipos de projeto: mvc, webapi e razor. Caso queira consultar, a lista de tipos de projeto completa está disponível &lt;a href="https://docs.microsoft.com/pt-br/dotnet/core/tools/dotnet-new"&gt;neste link&lt;/a&gt; e também através da commandline {{dotnet new --help}}.&lt;/p&gt;
+&lt;h2 id="mvc-e-razor-principais-diferencas"&gt;MVC e Razor - Principais diferenças&lt;/h2&gt;
+&lt;p&gt;[ASP.NET Core Razor Pages Vs MVC: Which Will Create Better Web Apps in 2018?][hackernoon]
+[Comparing Startup.cs between the ASP.NET Core 3.0 templates][andrewlock]
+[Difference between ASP.NET MVC and ASP.NET Web API][dotnettricks]
+[hackernoon]: https://hackernoon.com/asp-net-core-razor-pages-vs-mvc-which-will-create-better-web-apps-in-2018-bd137ae0acaa
+[andrewlock]: https://andrewlock.net/comparing-startup-between-the-asp-net-core-3-templates/
+[dotnettricks]: https://www.dotnettricks.com/learn/webapi/difference-between-aspnet-mvc-and-aspnet-web-api&lt;/p&gt;
 &lt;p&gt;WebApi (usa controlers de mvc): dotnet new webapi -o project
 Razor: dotnet new webapp -o projectName&lt;/p&gt;
 &lt;p&gt;new page inside a Razor project:
@@ -32,9 +54,7 @@ configurationBuilder.AddJsonFile(path, false);
 var root = configurationBuilder.Build();
 Endpoint = root.GetSection(&amp;quot;NasaData:Endpoint&amp;quot;).Value;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;a href="https://hackernoon.com/asp-net-core-razor-pages-vs-mvc-which-will-create-better-web-apps-in-2018-bd137ae0acaa"&gt;https://hackernoon.com/asp-net-core-razor-pages-vs-mvc-which-will-create-better-web-apps-in-2018-bd137ae0acaa&lt;/a&gt;
-&lt;a href="https://www.dotnettricks.com/learn/webapi/difference-between-aspnet-mvc-and-aspnet-web-api"&gt;https://www.dotnettricks.com/learn/webapi/difference-between-aspnet-mvc-and-aspnet-web-api&lt;/a&gt;
-&lt;a href="https://andrewlock.net/comparing-startup-between-the-asp-net-core-3-templates/"&gt;https://andrewlock.net/comparing-startup-between-the-asp-net-core-3-templates/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://hackernoon.com/asp-net-core-razor-pages-vs-mvc-which-will-create-better-web-apps-in-2018-bd137ae0acaa"&gt;https://hackernoon.com/asp-net-core-razor-pages-vs-mvc-which-will-create-better-web-apps-in-2018-bd137ae0acaa&lt;/a&gt;&lt;/p&gt;
 </content:encoded>
 		</item>
 		<item>

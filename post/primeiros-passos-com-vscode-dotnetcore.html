@@ -96,11 +96,33 @@ Published on Friday, May 8, 2020<br>    </div>
                                 <div id="content" class="col-md-12">
                                         
 
+<ul>
+<li>citar necessidade de escrever ao invés de copiar e colar.</li>
+</ul>
 <p>Já a algum tempo eu queria estudar .Net Core e venho postergando. Confesso que a primeira experiência (a cerca de dois anos) não foi lá das melhores.</p>
-<pre><code class="language-powershell">choco install vscode -y
+<h1 id="first-things-first">First things first</h1>
+<p>Antes de começar, precisamos das ferramentas que são a <a href="https://pt.wikipedia.org/wiki/Ambiente_de_desenvolvimento_integrado">IDE</a> - <strong>Visual Studio Code</strong> e o Framework - <strong>.Net Core</strong> (atualmente na versão 3.1).</p>
+<p>A escolha do Visual Studio Code para uso com .Net Core foi um pouco dificil... Hoje, praticamente qualquer curso/livro que você encontra sobre o framework utiliza o Visual Studio Community, que realmente tem seus prós. O Visual Studio Community tem à distância de um click os <a href="https://en.wikipedia.org/wiki/Scaffold_(programming)">scaffoldings</a> que no VSCode vai lhe custar escrever os métodos manualmente ou lembrar uma commandline como {{dotnet aspnet-codegenerator <model> <namespace> <etc>}}. Mas como tudo na vida, melhor ou pior, isso depende do ponto de vista e, escrever as classes manualmente (ou quase) vai lhe fazer entender melhor a estrutura do framework e depender menos das coisas criadas automáticamente.</p>
+<p>Você pode optar por baixar as ferramentas dos respectivos sites ou poupar algum tempo e instalar tudo via commandline:</p>
+<pre><code class="language-powershell">Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+choco install vscode -y
 choco install dotnetcore -y
 </code></pre>
-<p>Antes de começar o desenvolvimento, dei uma boa lida sobre os tipos de projeto possíveis de criar utilizando .Net Core e mesmo assim</p>
+<h1 id="tipos-de-projeto">Tipos de projeto</h1>
+<p>Antes de começar o desenvolvimento, dei uma boa lida sobre os tipos de projeto possíveis de criar utilizando .Net Core. No final das contas, o mesmo projeto com algumas modificações pode rodar em conjunto mvc, razor e uma api, então porque se preocupar com o tipo de projeto? Bom, por alguns motivos:</p>
+<ul>
+<li>Transformar um projeto iniciado como webapi em razor vai lhe custar algum tempo criando código que vem por padrão na criaçao do projeto;</li>
+<li>Se sua especialidade é backend e não front (o que é o meu caso), vem bem a calhar ter um layout padrão pronto;</li>
+<li>Se você pretende criar uma aplicação modular, criar no mesmo projeto (não na mesma <a href="https://docs.microsoft.com/en-us/visualstudio/extensibility/internals/solution-dot-sln-file">solução</a>) a API e a parte Web pode não ser uma boa prática.</li>
+</ul>
+<p>Dito isso, neste post vamos falar sobre 3 tipos de projeto: mvc, webapi e razor. Caso queira consultar, a lista de tipos de projeto completa está disponível <a href="https://docs.microsoft.com/pt-br/dotnet/core/tools/dotnet-new">neste link</a> e também através da commandline {{dotnet new --help}}.</p>
+<h2 id="mvc-e-razor-principais-diferencas">MVC e Razor - Principais diferenças</h2>
+<p>[ASP.NET Core Razor Pages Vs MVC: Which Will Create Better Web Apps in 2018?][hackernoon]
+[Comparing Startup.cs between the ASP.NET Core 3.0 templates][andrewlock]
+[Difference between ASP.NET MVC and ASP.NET Web API][dotnettricks]
+[hackernoon]: https://hackernoon.com/asp-net-core-razor-pages-vs-mvc-which-will-create-better-web-apps-in-2018-bd137ae0acaa
+[andrewlock]: https://andrewlock.net/comparing-startup-between-the-asp-net-core-3-templates/
+[dotnettricks]: https://www.dotnettricks.com/learn/webapi/difference-between-aspnet-mvc-and-aspnet-web-api</p>
 <p>WebApi (usa controlers de mvc): dotnet new webapi -o project
 Razor: dotnet new webapp -o projectName</p>
 <p>new page inside a Razor project:
@@ -114,9 +136,7 @@ configurationBuilder.AddJsonFile(path, false);
 var root = configurationBuilder.Build();
 Endpoint = root.GetSection(&quot;NasaData:Endpoint&quot;).Value;
 </code></pre>
-<p><a href="https://hackernoon.com/asp-net-core-razor-pages-vs-mvc-which-will-create-better-web-apps-in-2018-bd137ae0acaa">https://hackernoon.com/asp-net-core-razor-pages-vs-mvc-which-will-create-better-web-apps-in-2018-bd137ae0acaa</a>
-<a href="https://www.dotnettricks.com/learn/webapi/difference-between-aspnet-mvc-and-aspnet-web-api">https://www.dotnettricks.com/learn/webapi/difference-between-aspnet-mvc-and-aspnet-web-api</a>
-<a href="https://andrewlock.net/comparing-startup-between-the-asp-net-core-3-templates/">https://andrewlock.net/comparing-startup-between-the-asp-net-core-3-templates/</a></p>
+<p><a href="https://hackernoon.com/asp-net-core-razor-pages-vs-mvc-which-will-create-better-web-apps-in-2018-bd137ae0acaa">https://hackernoon.com/asp-net-core-razor-pages-vs-mvc-which-will-create-better-web-apps-in-2018-bd137ae0acaa</a></p>
 
 
 <div id="disqus_thread"></div>
