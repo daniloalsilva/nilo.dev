@@ -96,35 +96,114 @@ Published on Friday, May 8, 2020<br>    </div>
                                 <div id="content" class="col-md-12">
                                         
 
-<ul>
-<li>citar necessidade de escrever ao invés de copiar e colar.</li>
-</ul>
 <p>Já a algum tempo eu queria estudar .Net Core e venho postergando. Confesso que a primeira experiência (a cerca de dois anos) não foi lá das melhores.</p>
 <h1 id="first-things-first">First things first</h1>
-<p>Antes de começar, precisamos das ferramentas que são a <a href="https://pt.wikipedia.org/wiki/Ambiente_de_desenvolvimento_integrado">IDE</a> - <strong>Visual Studio Code</strong> e o Framework - <strong>.Net Core</strong> (atualmente na versão 3.1).</p>
-<p>A escolha do Visual Studio Code para uso com .Net Core foi um pouco dificil... Hoje, praticamente qualquer curso/livro que você encontra sobre o framework utiliza o Visual Studio Community, que realmente tem seus prós. O Visual Studio Community tem à distância de um click os <a href="https://en.wikipedia.org/wiki/Scaffold_(programming)">scaffoldings</a> que no VSCode vai lhe custar escrever os métodos manualmente ou lembrar uma commandline como {{dotnet aspnet-codegenerator <model> <namespace> <etc>}}. Mas como tudo na vida, melhor ou pior, isso depende do ponto de vista e, escrever as classes manualmente (ou quase) vai lhe fazer entender melhor a estrutura do framework e depender menos das coisas criadas automáticamente.</p>
+<p>Antes de começar, precisamos das ferramentas que são a <a href="https://pt.wikipedia.org/wiki/Ambiente_de_desenvolvimento_integrado">IDE</a> <strong>Visual Studio Code</strong> e o Framework <strong>.Net Core</strong> (atualmente na versão 3.1).</p>
+<p>A escolha do Visual Studio Code para uso com .Net Core foi um pouco dificil... Hoje, praticamente qualquer curso/livro que você encontra sobre o framework, utiliza o Visual Studio Community, que realmente tem seus prós. O Visual Studio Community tem à distância de um click os <a href="https://en.wikipedia.org/wiki/Scaffold_(programming)">scaffoldings</a> que no VSCode vai lhe custar escrever os métodos manualmente ou lembrar uma commandline como <code>dotnet aspnet-codegenerator &lt;model&gt; &lt;namespace&gt; &lt;etc&gt;</code>. Mas como tudo na vida, melhor ou pior, isso depende do ponto de vista e, escrever as classes manualmente (ou quase) vai lhe fazer entender melhor a estrutura do framework e depender menos das coisas criadas automáticamente.</p>
 <p>Você pode optar por baixar as ferramentas dos respectivos sites ou poupar algum tempo e instalar tudo via commandline:</p>
 <pre><code class="language-powershell">Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 choco install vscode -y
 choco install dotnetcore -y
 </code></pre>
 <h1 id="tipos-de-projeto">Tipos de projeto</h1>
-<p>Antes de começar o desenvolvimento, dei uma boa lida sobre os tipos de projeto possíveis de criar utilizando .Net Core. No final das contas, o mesmo projeto com algumas modificações pode rodar em conjunto mvc, razor e uma api, então porque se preocupar com o tipo de projeto? Bom, por alguns motivos:</p>
+<p>Antes de começar o desenvolvimento, dei uma boa lida sobre os tipos de projeto disponíveis utilizando .Net Core. No final das contas, o mesmo projeto com algumas modificações pode rodar em conjunto mvc, razor e uma api, então porque se preocupar com o tipo de projeto? Bom, por alguns motivos:</p>
 <ul>
-<li>Transformar um projeto iniciado como webapi em razor vai lhe custar algum tempo criando código que vem por padrão na criaçao do projeto;</li>
+<li>Transformar um projeto iniciado como webapi em razor vai lhe custar algum tempo criando código que vem por padrão na criação do projeto;</li>
 <li>Se sua especialidade é backend e não front (o que é o meu caso), vem bem a calhar ter um layout padrão pronto;</li>
-<li>Se você pretende criar uma aplicação modular, criar no mesmo projeto (não na mesma <a href="https://docs.microsoft.com/en-us/visualstudio/extensibility/internals/solution-dot-sln-file">solução</a>) a API e a parte Web pode não ser uma boa prática.</li>
+<li>Se você pretende criar uma aplicação modular, criar no mesmo projeto (não na mesma <a href="https://docs.microsoft.com/en-us/visualstudio/extensibility/internals/solution-dot-sln-file">solução</a>) a API e a parte Web pode não ser uma boa prática;</li>
 </ul>
-<p>Dito isso, neste post vamos falar sobre 3 tipos de projeto: mvc, webapi e razor. Caso queira consultar, a lista de tipos de projeto completa está disponível <a href="https://docs.microsoft.com/pt-br/dotnet/core/tools/dotnet-new">neste link</a> e também através da commandline {{dotnet new --help}}.</p>
+<p>Dito isso, neste post vamos falar sobre 3 tipos de projeto: mvc, webapi e razor. Caso queira consultar, a lista de tipos de projeto completa está disponível <a href="https://docs.microsoft.com/pt-br/dotnet/core/tools/dotnet-new">neste link</a> e também através da commandline <code>dotnet new --help</code>.</p>
 <h2 id="mvc-e-razor-principais-diferencas">MVC e Razor - Principais diferenças</h2>
-<p>[ASP.NET Core Razor Pages Vs MVC: Which Will Create Better Web Apps in 2018?][hackernoon]
-[Comparing Startup.cs between the ASP.NET Core 3.0 templates][andrewlock]
-[Difference between ASP.NET MVC and ASP.NET Web API][dotnettricks]
+<p>Em suma, páginas Razor lembram muito mais o formato Windows Forms que páginas MVC. Páginas MVC te forçam a utilizar o padrão da arquitetura, o que por algumas vezes pode trazer uma complexidade desnecessária para um projeto, enquanto páginas Razor possuem estrutura mais simples. Ambos, Razor e MVC tem suas vantagens e desvantagem e a decisão vai depender do tipo/tamanho/complexidade do projeto que você quer desenvolver. Se tiver tempo disponível, estude sobre as duas.</p>
+<p>Artigos sobre o assunto:</p>
+<ul>
+<li>[ASP.NET Core Razor Pages Vs MVC: Which Will Create Better Web Apps in 2018?][hackernoon]</li>
+<li>[Comparing Startup.cs between the ASP.NET Core 3.0 templates][andrewlock]</li>
+<li>[Difference between ASP.NET MVC and ASP.NET Web API][dotnettricks]
 [hackernoon]: https://hackernoon.com/asp-net-core-razor-pages-vs-mvc-which-will-create-better-web-apps-in-2018-bd137ae0acaa
 [andrewlock]: https://andrewlock.net/comparing-startup-between-the-asp-net-core-3-templates/
-[dotnettricks]: https://www.dotnettricks.com/learn/webapi/difference-between-aspnet-mvc-and-aspnet-web-api</p>
-<p>WebApi (usa controlers de mvc): dotnet new webapi -o project
-Razor: dotnet new webapp -o projectName</p>
+[dotnettricks]: https://www.dotnettricks.com/learn/webapi/difference-between-aspnet-mvc-and-aspnet-web-api</li>
+</ul>
+<h1 id="criando-uma-aplicacao-razor">Criando uma aplicação Razor</h1>
+<p>Eu tento normalmente evitar o mouse enquanto programo, então vamos tentar centralizar todo o trabalho no VSCode utilizando commandlines.</p>
+<ul>
+<li>Com o VSCode aberto, acesse o terminal com o comando <code>CTRL + '</code></li>
+<li>No terminal, caso ainda não possua, crie uma pasta para armazenar seus projetos com o comando <code>mkdir ~/Projects</code></li>
+<li>Navegue até a pasta onde você armazena de projetos com o comando <code>cd ~/Projects</code></li>
+<li>Crie um novo projeto Razor com o comando <code>dotnet new webapp -o RazorProject</code></li>
+<li>Carregue a pasta do projeto chamada &quot;RazorProject&quot; com o comando <code>code -r RazorProject</code> ou <code>CRTL + K, CRTL + O</code> (ignore/feche o pop-up de alerta <code>Required assets to build and debug are missing from 'RazorProject'. Add them?</code> por hora)</li>
+<li>Abra o terminal novamente (<code>CTRL + '</code>) e execute o projeto com o comando <code>dotnet run</code></li>
+<li>Leia a mensagem do console, se algo como <code>Now listening on: https://localhost:5001</code> apareceu, teste o acesso a url https://localhost:5001 no seu navegador, e voilà! Sua aplicação está rodando!</li>
+</ul>
+<p><img src="/images/posts/2020/razor-page.png" class="img-fluid" alt="default-razor-page" /></p>
+<p>Bom, quase... Talvez o <a href="https://code.visualstudio.com/docs/editor/intellisense">intelisense</a> ainda não esteja funcionando e nem o debugging, mas já vamos dar uma olhada nesses caveats.</p>
+<blockquote class="blockquote">
+<p>Em ambiente Windows é normal utilizar um backslash <code>&quot;\&quot;</code> enquanto que Linux um slash <code>&quot;/&quot;</code> para o caminho de pastas, mas o acima vai funcionar da mesma forma em Windows se o seu terminal for um console de Powershell - que é o padrão no VSCode.</p>
+</blockquote>
+<h2 id="debugging">Debugging</h2>
+<p>Quando você carregou o projeto no VSCode, provavelmente um popup com o alerta ⚠ <code>Required assets to build and debug are missing from 'RazorProject'. Add them?</code> apareceu. Isso significa que a pasta <code>.vscode</code> com as configurações de build não existem, mas a pasta é criada automaticamente, quando você executa um <code>F5</code> ou <code>Run &gt; Start Debugging</code> e seleciona na lista a opção <code>.Net Core</code>. Teclando <code>F5</code> novamente vai executar a aplicação e você pode tentar debugar a aplicação.</p>
+<blockquote class="blockquote">
+<p>É possível que o <a href="https://github.com/OmniSharp/omnisharp-vscode">Omnisharp</a>, extensão utilizada para desenvolvimento com .Net Core, falhe em carregar alguma DLL e o path do projeto fique mais ou menos assim: <code>${workspaceFolder}/bin/Debug/insert-target-framework-here/insert-project-name-here.dll</code>. Se você tiver esse problema, substitua no caminho <code>insert-target-framework-here</code> por <code>netcoreapp3.1</code> e <code>insert-project-name-here</code> por <code>RazorProject</code>.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Se algum erro aparecer relacionado como o MSBuild apontando alguma DLL faltando e você tem outra versão do Visual Studio instalada, veja se na mensagem de erro o path do msbuild aponta para o executável do Visual Studio Community/Professional. É possível corrigir isso de <a href="https://github.com/OmniSharp/omnisharp-roslyn/issues/1094">algumas formas</a> e eu não lembro como corrigi o meu... Mas nada q alguns minutos no Google não resolvam.</p>
+</blockquote>
+<p>Se você está comigo até aqui e quer deixar o mouse de lado enquanto programa, siga os seguintes passos:</p>
+<ul>
+<li>No VSCode, tecle <code>CTRL SHIFT + E</code>, navegue utilizando os direcionais <code>⬆</code>, <code>⬇</code> e <code>➡</code> (para expandir uma pasta), selecione o arquivo /Pages/Index.cshtml.cs e tecle <code>Enter</code>;</li>
+<li>Navegue para a linha com o código <code>public void OnGet()</code>, você pode utilizar o comando <code>CTRL + G</code> e digitar o número da linha se quiser;</li>
+<li>Crie um breakpoint, teclando <code>F9</code>, feito isso volte ao browser com a página https://localhost:5001 e recarregue a mesma;</li>
+<li>Volte para o VSCode e veja que a IDE está aguardando a continuação, tecle <code>F5</code> para prosseguir</li>
+</ul>
+<p>A princípio, parece trabalho demais lembrar de todos esses comandos para programar e, de fato você pode fazer tudo isso clicando. E você também pode utilizar um alicate para martelar um prego ao invés de um martelo... Essa não é uma verdade universal apesar da brincadeira mas, com o tempo, deixar o mouse de lado te recompensa com uma melhora na produtividade e até com a ergonomia, já que você se movimenta menos não tendo que alcançar o mouse para executar algumas tarefas.</p>
+<p>Debugar não tem nenhum segredo, mas lembrar as teclas de debugging vão melhorar um pouquinho a sua produtividade também. Tente utilizar conforme a necessidade, lembrar todos esses comandos de uma vez só pode fazer você criar aversão por utilizá-los e, se gostar muito quem sabe você não migra para o <a href="https://www.vim.org/">Vim</a>...</p>
+<table class="table">
+<thead>
+<tr>
+<th>Tecla</th>
+<th>Ação</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>F5</code></td>
+<td><code>Continue / Pause</code></td>
+<td>Executa o projeto em Debugging Mode</td>
+</tr>
+<tr>
+<td><code>CTRL + F5</code></td>
+<td><code>Run</code></td>
+<td>Executa o projeto sem Debugging Mode</td>
+</tr>
+<tr>
+<td><code>CTRL SHIFT + F5</code></td>
+<td><code>Restart</code></td>
+<td>Reinicia a execução do projeto</td>
+</tr>
+<tr>
+<td><code>SHIFT + F5</code></td>
+<td><code>Stop</code></td>
+<td>Para a execução do projeto</td>
+</tr>
+<tr>
+<td><code>F10</code></td>
+<td><code>Step Over</code></td>
+<td>Executa a próxima linha de código a partir do ponto de parada atual.</td>
+</tr>
+<tr>
+<td><code>F11</code></td>
+<td><code>Step Into</code></td>
+<td>Executa a próxima linha de código a partir do ponto de parada atual. Se for uma função/método presente no seu código, entra na função e começa a debugar o código da função</td>
+</tr>
+<tr>
+<td><code>SHIFT + F11</code></td>
+<td><code>Step Out</code></td>
+<td>Executa a função atual até o fim, saí da função atual e continua o debugging na próxima linha após termino de execução da função</td>
+</tr>
+</tbody>
+</table>
+<h2 id="arquivos-de-configuracao-appsettings.json">Arquivos de configuração - appsettings.json</h2>
 <p>new page inside a Razor project:
 dotnet new page -n Index -o Pages</p>
 <p>Recuperar dados de arquivos de configuração somente via injection ou abrindo o appsettings.json explicitamente via IO
@@ -136,7 +215,33 @@ configurationBuilder.AddJsonFile(path, false);
 var root = configurationBuilder.Build();
 Endpoint = root.GetSection(&quot;NasaData:Endpoint&quot;).Value;
 </code></pre>
-<p><a href="https://hackernoon.com/asp-net-core-razor-pages-vs-mvc-which-will-create-better-web-apps-in-2018-bd137ae0acaa">https://hackernoon.com/asp-net-core-razor-pages-vs-mvc-which-will-create-better-web-apps-in-2018-bd137ae0acaa</a></p>
+<table class="table">
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Comando</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Razor</td>
+<td><code>dotnet new webapp -o RazorProject</code></td>
+</tr>
+<tr>
+<td>WebApi</td>
+<td><code>dotnet new webapi -o WebApiProject</code></td>
+</tr>
+<tr>
+<td>MVC</td>
+<td><code>dotnet new mvc -o MVCProject</code></td>
+</tr>
+</tbody>
+</table>
+<p>Pendências:</p>
+<ul>
+<li>citar necessidade de escrever ao invés de copiar e colar.</li>
+<li>tabela de comparação entre razor e mvc</li>
+</ul>
 
 
 <div id="disqus_thread"></div>
