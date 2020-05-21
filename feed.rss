@@ -5,16 +5,20 @@
 		<link>http://nilo.dev/</link>
 		<description>Blog Posts</description>
 		<copyright>2020</copyright>
-		<pubDate>Fri, 15 May 2020 03:56:17 GMT</pubDate>
-		<lastBuildDate>Fri, 15 May 2020 03:56:17 GMT</lastBuildDate>
+		<pubDate>Thu, 21 May 2020 18:35:21 GMT</pubDate>
+		<lastBuildDate>Thu, 21 May 2020 18:35:21 GMT</lastBuildDate>
 		<item>
 			<title>Primeiros passos com Visual Studio Code e .Net Core</title>
 			<link>http://nilo.dev/post/primeiros-passos-com-vscode-dotnetcore</link>
-			<description>&lt;p&gt;Fontes:&lt;/p&gt;</description>
+			<description>&lt;p&gt;Já a algum tempo eu queria estudar .Net Core e venho postergando. Confesso que a primeira experiência (a cerca de dois anos) não foi lá das melhores.&lt;/p&gt;</description>
 			<enclosure url="http://nilo.dev/images/bg/monitors.jpg" length="0" type="image" />
 			<guid>http://nilo.dev/post/primeiros-passos-com-vscode-dotnetcore</guid>
 			<pubDate>Fri, 08 May 2020 00:00:00 GMT</pubDate>
-			<content:encoded>&lt;p&gt;Fontes:&lt;/p&gt;
+			<content:encoded>&lt;p&gt;Já a algum tempo eu queria estudar .Net Core e venho postergando. Confesso que a primeira experiência (a cerca de dois anos) não foi lá das melhores.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-powershell"&gt;choco install vscode -y
+choco install dotnetcore -y
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Antes de começar o desenvolvimento, dei uma boa lida sobre os tipos de projeto possíveis de criar utilizando .Net Core e mesmo assim&lt;/p&gt;
 &lt;p&gt;WebApi (usa controlers de mvc): dotnet new webapi -o project
 Razor: dotnet new webapp -o projectName&lt;/p&gt;
 &lt;p&gt;new page inside a Razor project:

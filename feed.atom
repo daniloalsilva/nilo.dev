@@ -4,7 +4,7 @@
 	<title>[da]nilo.dev</title>
 	<link rel="self" href="http://nilo.dev/" />
 	<rights>2020</rights>
-	<updated>2020-05-15T03:56:17Z</updated>
+	<updated>2020-05-21T18:35:21Z</updated>
 	<logo>http://nilo.dev/images/bg/desert-alone.jpg</logo>
 	<subtitle>Blog Posts</subtitle>
 	<entry>
@@ -13,7 +13,11 @@
 		<link href="http://nilo.dev/post/primeiros-passos-com-vscode-dotnetcore" />
 		<link rel="enclosure" type="image" href="http://nilo.dev/images/bg/monitors.jpg" />
 		<updated>2020-05-08T00:00:00Z</updated>
-		<content>&lt;p&gt;Fontes:&lt;/p&gt;
+		<content>&lt;p&gt;Já a algum tempo eu queria estudar .Net Core e venho postergando. Confesso que a primeira experiência (a cerca de dois anos) não foi lá das melhores.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-powershell"&gt;choco install vscode -y
+choco install dotnetcore -y
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Antes de começar o desenvolvimento, dei uma boa lida sobre os tipos de projeto possíveis de criar utilizando .Net Core e mesmo assim&lt;/p&gt;
 &lt;p&gt;WebApi (usa controlers de mvc): dotnet new webapi -o project
 Razor: dotnet new webapp -o projectName&lt;/p&gt;
 &lt;p&gt;new page inside a Razor project:
@@ -31,7 +35,7 @@ Endpoint = root.GetSection(&amp;quot;NasaData:Endpoint&amp;quot;).Value;
 &lt;a href="https://www.dotnettricks.com/learn/webapi/difference-between-aspnet-mvc-and-aspnet-web-api"&gt;https://www.dotnettricks.com/learn/webapi/difference-between-aspnet-mvc-and-aspnet-web-api&lt;/a&gt;
 &lt;a href="https://andrewlock.net/comparing-startup-between-the-asp-net-core-3-templates/"&gt;https://andrewlock.net/comparing-startup-between-the-asp-net-core-3-templates/&lt;/a&gt;&lt;/p&gt;
 </content>
-		<summary>&lt;p&gt;Fontes:&lt;/p&gt;</summary>
+		<summary>&lt;p&gt;Já a algum tempo eu queria estudar .Net Core e venho postergando. Confesso que a primeira experiência (a cerca de dois anos) não foi lá das melhores.&lt;/p&gt;</summary>
 	</entry>
 	<entry>
 		<id>http://nilo.dev/post/comprando-novo-monitor</id>
