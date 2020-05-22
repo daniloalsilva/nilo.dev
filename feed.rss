@@ -5,8 +5,8 @@
 		<link>http://nilo.dev/</link>
 		<description>Blog Posts</description>
 		<copyright>2020</copyright>
-		<pubDate>Fri, 22 May 2020 01:00:00 GMT</pubDate>
-		<lastBuildDate>Fri, 22 May 2020 01:00:00 GMT</lastBuildDate>
+		<pubDate>Fri, 22 May 2020 02:27:49 GMT</pubDate>
+		<lastBuildDate>Fri, 22 May 2020 02:27:49 GMT</lastBuildDate>
 		<item>
 			<title>Primeiros passos com Visual Studio Code e .Net Core</title>
 			<link>http://nilo.dev/post/primeiros-passos-com-vscode-dotnetcore</link>
@@ -34,14 +34,12 @@ choco install dotnetcore -y
 &lt;h2 id="mvc-e-razor-principais-diferencas"&gt;MVC e Razor - Principais diferenças&lt;/h2&gt;
 &lt;p&gt;Em suma, páginas Razor lembram muito mais o formato Windows Forms que páginas MVC. Páginas MVC te forçam a utilizar o padrão da arquitetura, o que por algumas vezes pode trazer uma complexidade desnecessária para um projeto, enquanto páginas Razor possuem estrutura mais simples. Ambos, Razor e MVC tem suas vantagens e desvantagem e a decisão vai depender do tipo/tamanho/complexidade do projeto que você quer desenvolver. Se tiver tempo disponível, estude sobre as duas.&lt;/p&gt;
 &lt;p&gt;Artigos sobre o assunto:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;[ASP.NET Core Razor Pages Vs MVC: Which Will Create Better Web Apps in 2018?][hackernoon]&lt;/li&gt;
-&lt;li&gt;[Comparing Startup.cs between the ASP.NET Core 3.0 templates][andrewlock]&lt;/li&gt;
-&lt;li&gt;[Difference between ASP.NET MVC and ASP.NET Web API][dotnettricks]
+&lt;p&gt;[ASP.NET Core Razor Pages Vs MVC: Which Will Create Better Web Apps in 2018?][hackernoon]
+[Comparing Startup.cs between the ASP.NET Core 3.0 templates][andrewlock]
+[Difference between ASP.NET MVC and ASP.NET Web API][dotnettricks]
 [hackernoon]: https://hackernoon.com/asp-net-core-razor-pages-vs-mvc-which-will-create-better-web-apps-in-2018-bd137ae0acaa
 [andrewlock]: https://andrewlock.net/comparing-startup-between-the-asp-net-core-3-templates/
-[dotnettricks]: https://www.dotnettricks.com/learn/webapi/difference-between-aspnet-mvc-and-aspnet-web-api&lt;/li&gt;
-&lt;/ul&gt;
+[dotnettricks]: https://www.dotnettricks.com/learn/webapi/difference-between-aspnet-mvc-and-aspnet-web-api&lt;/p&gt;
 &lt;h1 id="criando-uma-aplicacao-razor"&gt;Criando uma aplicação Razor&lt;/h1&gt;
 &lt;p&gt;Eu tento normalmente evitar o mouse enquanto programo, então vamos tentar centralizar todo o trabalho no VSCode utilizando commandlines.&lt;/p&gt;
 &lt;ul&gt;
@@ -157,7 +155,7 @@ public void OnGet()
     var endPoint = _config.GetSection(&amp;quot;NasaConfiguration:EndPoint&amp;quot;);
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;E uma abordagem deste modelo, utilizando uma classe para que o acesso as informações seja mais claro é criar um modelo e fazer um bind do modelo para utilizar seus atributos:&lt;/p&gt;
+&lt;p&gt;E uma abordagem deste modelo, que é o que vou usar, utilizando uma classe para que o acesso as informações seja mais claro é criar um modelo e fazer um bind do modelo para utilizar seus atributos:&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-csharp"&gt;public class NasaConfiguration {
 
     public string Endpoint { get; set; } 
@@ -183,6 +181,7 @@ public class IndexModel : PageModel
     }
 }
 &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;As demais formas de carregar configurações estão descritas abaixo, caso você opte por utilizar outro modelo.&lt;/p&gt;
 &lt;h2 id="via-configurationbuilder"&gt;Via ConfigurationBuilder&lt;/h2&gt;
 &lt;p&gt;Com o exemplo anterior, utilizar Dependency Injection não parece tão ruim. O problema fica evidente mesmo quando precisamos usar uma configuração numa classe que passa por algumas funções até chegar no ponto que é feito o Injection. Imagine a seguinte chamada das funções:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;IndexModel(IConfiguration config) &amp;gt; 

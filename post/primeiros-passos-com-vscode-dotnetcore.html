@@ -116,14 +116,12 @@ choco install dotnetcore -y
 <h2 id="mvc-e-razor-principais-diferencas">MVC e Razor - Principais diferenças</h2>
 <p>Em suma, páginas Razor lembram muito mais o formato Windows Forms que páginas MVC. Páginas MVC te forçam a utilizar o padrão da arquitetura, o que por algumas vezes pode trazer uma complexidade desnecessária para um projeto, enquanto páginas Razor possuem estrutura mais simples. Ambos, Razor e MVC tem suas vantagens e desvantagem e a decisão vai depender do tipo/tamanho/complexidade do projeto que você quer desenvolver. Se tiver tempo disponível, estude sobre as duas.</p>
 <p>Artigos sobre o assunto:</p>
-<ul>
-<li>[ASP.NET Core Razor Pages Vs MVC: Which Will Create Better Web Apps in 2018?][hackernoon]</li>
-<li>[Comparing Startup.cs between the ASP.NET Core 3.0 templates][andrewlock]</li>
-<li>[Difference between ASP.NET MVC and ASP.NET Web API][dotnettricks]
+<p>[ASP.NET Core Razor Pages Vs MVC: Which Will Create Better Web Apps in 2018?][hackernoon]
+[Comparing Startup.cs between the ASP.NET Core 3.0 templates][andrewlock]
+[Difference between ASP.NET MVC and ASP.NET Web API][dotnettricks]
 [hackernoon]: https://hackernoon.com/asp-net-core-razor-pages-vs-mvc-which-will-create-better-web-apps-in-2018-bd137ae0acaa
 [andrewlock]: https://andrewlock.net/comparing-startup-between-the-asp-net-core-3-templates/
-[dotnettricks]: https://www.dotnettricks.com/learn/webapi/difference-between-aspnet-mvc-and-aspnet-web-api</li>
-</ul>
+[dotnettricks]: https://www.dotnettricks.com/learn/webapi/difference-between-aspnet-mvc-and-aspnet-web-api</p>
 <h1 id="criando-uma-aplicacao-razor">Criando uma aplicação Razor</h1>
 <p>Eu tento normalmente evitar o mouse enquanto programo, então vamos tentar centralizar todo o trabalho no VSCode utilizando commandlines.</p>
 <ul>
@@ -239,7 +237,7 @@ public void OnGet()
     var endPoint = _config.GetSection(&quot;NasaConfiguration:EndPoint&quot;);
 }
 </code></pre>
-<p>E uma abordagem deste modelo, utilizando uma classe para que o acesso as informações seja mais claro é criar um modelo e fazer um bind do modelo para utilizar seus atributos:</p>
+<p>E uma abordagem deste modelo, que é o que vou usar, utilizando uma classe para que o acesso as informações seja mais claro é criar um modelo e fazer um bind do modelo para utilizar seus atributos:</p>
 <pre><code class="language-csharp">public class NasaConfiguration {
 
     public string Endpoint { get; set; } 
@@ -265,6 +263,7 @@ public class IndexModel : PageModel
     }
 }
 </code></pre>
+<p>As demais formas de carregar configurações estão descritas abaixo, caso você opte por utilizar outro modelo.</p>
 <h2 id="via-configurationbuilder">Via ConfigurationBuilder</h2>
 <p>Com o exemplo anterior, utilizar Dependency Injection não parece tão ruim. O problema fica evidente mesmo quando precisamos usar uma configuração numa classe que passa por algumas funções até chegar no ponto que é feito o Injection. Imagine a seguinte chamada das funções:</p>
 <pre><code>IndexModel(IConfiguration config) &gt; 
