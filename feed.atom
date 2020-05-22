@@ -4,7 +4,7 @@
 	<title>[da]nilo.dev</title>
 	<link rel="self" href="http://nilo.dev/" />
 	<rights>2020</rights>
-	<updated>2020-05-21T22:15:25Z</updated>
+	<updated>2020-05-22T01:00:00Z</updated>
 	<logo>http://nilo.dev/images/bg/desert-alone.jpg</logo>
 	<subtitle>Blog Posts</subtitle>
 	<entry>
@@ -120,10 +120,127 @@ choco install dotnetcore -y
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;p&gt;Bom, já temos o básico para começar e, inspirado num post do &lt;a href="https://medium.com/&amp;#64;renato.groffe/consumo-de-apis-em-net-core-utilizando-apis-rest-da-nasa-7dd6bd407329"&gt;Renato Groffe&lt;/a&gt;, vamos fazer nossa aplicação consultar a API &amp;quot;Astronomy Picture of the Day&amp;quot; da Nasa, com algumas variações do que ele fez lá para explorarmos o framework, então já &lt;a href="https://api.nasa.gov/"&gt;faça seu cadastro&lt;/a&gt; e pegue sua &lt;strong&gt;API Key&lt;/strong&gt;.&lt;/p&gt;
 &lt;h2 id="arquivos-de-configuracao-appsettings.json"&gt;Arquivos de configuração - appsettings.json&lt;/h2&gt;
+&lt;p&gt;Para evitar ter os dados de configuração &lt;a href="https://en.wikipedia.org/wiki/Hard_coding"&gt;hardcoded&lt;/a&gt; na aplicação, o que é uma péssima prática, vamos armazená-los num arquivo de configuração, que no nosso caso é o appsettings.json, substituto do velho &lt;code&gt;Web.Config&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Aqui eu tenho uma crítica. O .Net Core utiliza o padrão de design de software baseado em Dependecy Injection, o que é útil em alguns momentos e permite ter um objeto strong typed como resultado do carregamento das configurações... Mas trouxe uma complexidade desnecessária para recuperar dados de configuração. Talvez essa seja uma tentativa de aplicar o &lt;a href="https://12factor.net/pt_br/config"&gt;Twelve Factors&lt;/a&gt; a risca e forçar o desenvolvedor a utilizar variáveis de ambiente, mas isso não explica outros problemas com complexidade desnecessária do framework, como a classe &lt;strong&gt;HttpClient&lt;/strong&gt; só fazer chamadas async, mesmo quando você não precisa usar async. Poxa, extrair dados de configuração antes era tão simples quanto &lt;code&gt;string userName = System.Configuration.ConfigurationManager.AppSettings[&amp;quot;UserName&amp;quot;];&lt;/code&gt;... Vida que segue.&lt;/p&gt;
+&lt;p&gt;Primeiro, vamos preencher o appsettings.json com os dados para utilizar o endpoint da Nasa. Seu arquivo deve parecer da seguinte forma:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-json"&gt;{
+  &amp;quot;Logging&amp;quot;: {
+    &amp;quot;LogLevel&amp;quot;: {
+      &amp;quot;Default&amp;quot;: &amp;quot;Information&amp;quot;,
+      &amp;quot;Microsoft&amp;quot;: &amp;quot;Warning&amp;quot;,
+      &amp;quot;Microsoft.Hosting.Lifetime&amp;quot;: &amp;quot;Information&amp;quot;
+    }
+  },
+  &amp;quot;AllowedHosts&amp;quot;: &amp;quot;*&amp;quot;,
+  &amp;quot;NasaConfiguration&amp;quot;:{
+    &amp;quot;Endpoint&amp;quot;: &amp;quot;https://api.nasa.gov/planetary/apod?api_key=&amp;quot;,
+    &amp;quot;ApiKey&amp;quot;: &amp;quot;&amp;lt;your_api_key&amp;gt;&amp;quot;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Com isso, precisamos extrair os dados da API para fazer uma chamada HTTP para o endpoint, o que pode ser feito de algumas formas, dependendo do refinamento que você quer para seu código.&lt;/p&gt;
+&lt;h3 id="via-dependency-injection"&gt;Via Dependency Injection&lt;/h3&gt;
+&lt;p&gt;Você pode recuperar os dados passando um parâmetro &lt;strong&gt;IConfiguration config&lt;/strong&gt; no construtor &lt;em&gt;IndexModel&lt;/em&gt; da sua página &lt;strong&gt;Index.cshtml.cs&lt;/strong&gt;, o que vai produzir uma variável de saída &lt;code&gt;&amp;quot;https://api.nasa.gov/planetary/apod?api_key=&amp;quot;&lt;/code&gt;. A classe deve ficar mais ou menos assim (este é só o código dentro de public class &lt;code&gt;IndexModel : PageModel&lt;/code&gt;):&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-csharp"&gt;private readonly ILogger&amp;lt;IndexModel&amp;gt; _logger;
+private readonly IConfiguration _config;
+public IndexModel(ILogger&amp;lt;IndexModel&amp;gt; logger, IConfiguration config)
+{
+    _config = config;
+    _logger = logger;
+}
+
+public void OnGet()
+{
+    var endPoint = _config.GetSection(&amp;quot;NasaConfiguration:EndPoint&amp;quot;);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;E uma abordagem deste modelo, utilizando uma classe para que o acesso as informações seja mais claro é criar um modelo e fazer um bind do modelo para utilizar seus atributos:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-csharp"&gt;public class NasaConfiguration {
+
+    public string Endpoint { get; set; } 
+    public string ApiKey { get; set; } 
+    
+}
+
+public class IndexModel : PageModel
+{
+    private readonly NasaConfiguration _nasa;
+    private readonly ILogger&amp;lt;IndexModel&amp;gt; _logger;
+
+    public IndexModel(ILogger&amp;lt;IndexModel&amp;gt; logger, IConfiguration config)
+    {
+        _nasa = config.GetSection(&amp;quot;NasaConfiguration&amp;quot;).Get&amp;lt;NasaConfiguration&amp;gt;();
+        _logger = logger;
+    }
+
+    public void OnGet()
+    {
+        string endPoint = _nasa.Endpoint;
+        string apiKey = _nasa.ApiKey;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id="via-configurationbuilder"&gt;Via ConfigurationBuilder&lt;/h2&gt;
+&lt;p&gt;Com o exemplo anterior, utilizar Dependency Injection não parece tão ruim. O problema fica evidente mesmo quando precisamos usar uma configuração numa classe que passa por algumas funções até chegar no ponto que é feito o Injection. Imagine a seguinte chamada das funções:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;IndexModel(IConfiguration config) &amp;gt; 
+    Nasa.GetItem(IConfiguration config, &amp;quot;PlanetName&amp;quot;) &amp;gt; 
+    NasaCustomQuery(IConfiguration config, $&amp;quot;Select Name, Location from NasaSQL where Name ='{planetName}'&amp;quot;) &amp;gt;
+    NasaWebRequest(IConfiguration config, string params)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Claro que para uma chamada simples como é o da API da Nasa esse exemplo não requer tanta complexidade, mas vão ter casos onde você vai ter uma complexidade parecida e, trafegar os dados recuperados na primeira função durante 4 chamadas é muita repetição de código desnecessária, se o dado só precisa ser utilizado na função &lt;em&gt;NasaWebRequest&lt;/em&gt;. Sendo assim, criar uma classe auxiliar para carregar uma instância do IConfiguration pode ser a melhor opção:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-csharp"&gt;var configurationBuilder = new ConfigurationBuilder();
+var path = Path.Combine(Directory.GetCurrentDirectory(), &amp;quot;appsettings.json&amp;quot;);
+configurationBuilder.AddJsonFile(path, false);
+var root = configurationBuilder.Build();
+
+string endPoint = root.GetSection(&amp;quot;NasaConfiguration:Endpoint&amp;quot;).Value;
+string apiKey = root.GetSection(&amp;quot;NasaConfiguration:ApiKey&amp;quot;).Value;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;E é possível carregar as configurações através de um arquivo de modelo, da mesma forma que no exemplo anterior:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-csharp"&gt;var configurationBuilder = new ConfigurationBuilder();
+var path = Path.Combine(Directory.GetCurrentDirectory(), &amp;quot;appsettings.json&amp;quot;);
+configurationBuilder.AddJsonFile(path, false);
+var config = configurationBuilder.Build();
+
+var nasa = new NasaConfiguration();
+config.GetSection(&amp;quot;NasaConfiguration&amp;quot;).Bind(nasa);
+
+string endPoint = _nasa.Endpoint;
+string apiKey = _nasa.ApiKey;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Não vamos utilizar esse modelo onde o arquivo &lt;em&gt;appsettings.json&lt;/em&gt; é carregado via &lt;em&gt;ConfigurationBuilder&lt;/em&gt; pois a complexidade do projeto não requer, mas o código está como referência aqui caso você precise futuramente (e a pessoa lendo também pode ser o Eu do futuro).&lt;/p&gt;
+&lt;h2 id="via-ioptions"&gt;Via IOptions&lt;/h2&gt;
+&lt;p&gt;O uso de IOptions demanda configurar o objeto no Startup.cs e carrega-lo utilizando dependency injection no arquivo onde você for utilizar as informações, da mesma forma que o IConfiguration:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Startup.cs&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-csharp"&gt;public void ConfigureServices(IServiceCollection services)
+{
+    services.AddRazorPages();
+    services.Configure&amp;lt;NasaConfiguration&amp;gt;(options =&amp;gt; Configuration.GetSection(&amp;quot;NasaConfiguration&amp;quot;).Bind(options));
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Index.cshtml.cs&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-csharp"&gt;private readonly IOptions&amp;lt;NasaConfiguration&amp;gt; _options;
+private readonly ILogger&amp;lt;IndexModel&amp;gt; _logger;
+
+public IndexModel(ILogger&amp;lt;IndexModel&amp;gt; logger, IOptions&amp;lt;NasaConfiguration&amp;gt; options)
+{
+    _options = options;
+    _logger = logger;
+}
+
+public void OnGet()
+{
+    var options = _options.Value;
+    string endPoint = options.Endpoint;
+    string apiKey = options.ApiKey;
+}
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;new page inside a Razor project:
 dotnet new page -n Index -o Pages&lt;/p&gt;
-&lt;p&gt;Recuperar dados de arquivos de configuração somente via injection ou abrindo o appsettings.json explicitamente via IO
+&lt;p&gt;Recuperar dados de arquivos de configuração somente via injection ou abrindo o appsettings.json explicitamente via IO&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://weblog.west-wind.com/posts/2017/dec/12/easy-configuration-binding-in-aspnet-core-revisited"&gt;https://weblog.west-wind.com/posts/2017/dec/12/easy-configuration-binding-in-aspnet-core-revisited&lt;/a&gt;
 &lt;a href="https://www.fabiosilvalima.net/6-formas-appsettings-json-aspnet-core/"&gt;https://www.fabiosilvalima.net/6-formas-appsettings-json-aspnet-core/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;retrieving appsettings from class library&lt;/em&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-csharp"&gt;var configurationBuilder = new ConfigurationBuilder();
