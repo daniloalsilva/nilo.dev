@@ -4,7 +4,7 @@
 	<title>[da]nilo.dev</title>
 	<link rel="self" href="http://nilo.dev/" />
 	<rights>2020</rights>
-	<updated>2020-05-22T02:27:49Z</updated>
+	<updated>2020-05-22T03:46:23Z</updated>
 	<logo>http://nilo.dev/images/bg/desert-alone.jpg</logo>
 	<subtitle>Blog Posts</subtitle>
 	<entry>
@@ -133,7 +133,7 @@ choco install dotnetcore -y
   },
   &amp;quot;AllowedHosts&amp;quot;: &amp;quot;*&amp;quot;,
   &amp;quot;NasaConfiguration&amp;quot;:{
-    &amp;quot;Endpoint&amp;quot;: &amp;quot;https://api.nasa.gov/planetary/apod?api_key=&amp;quot;,
+    &amp;quot;Endpoint&amp;quot;: &amp;quot;https://api.nasa.gov/planetary/apod&amp;quot;,
     &amp;quot;ApiKey&amp;quot;: &amp;quot;&amp;lt;your_api_key&amp;gt;&amp;quot;
   }
 }
@@ -236,18 +236,64 @@ public void OnGet()
     string apiKey = options.ApiKey;
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;new page inside a Razor project:
-dotnet new page -n Index -o Pages&lt;/p&gt;
-&lt;p&gt;Recuperar dados de arquivos de configuração somente via injection ou abrindo o appsettings.json explicitamente via IO&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://weblog.west-wind.com/posts/2017/dec/12/easy-configuration-binding-in-aspnet-core-revisited"&gt;https://weblog.west-wind.com/posts/2017/dec/12/easy-configuration-binding-in-aspnet-core-revisited&lt;/a&gt;
-&lt;a href="https://www.fabiosilvalima.net/6-formas-appsettings-json-aspnet-core/"&gt;https://www.fabiosilvalima.net/6-formas-appsettings-json-aspnet-core/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;retrieving appsettings from class library&lt;/em&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class="language-csharp"&gt;var configurationBuilder = new ConfigurationBuilder();
-var path = Path.Combine(Directory.GetCurrentDirectory(), &amp;quot;appsettings.json&amp;quot;);
-configurationBuilder.AddJsonFile(path, false);
-var root = configurationBuilder.Build();
-Endpoint = root.GetSection(&amp;quot;NasaData:Endpoint&amp;quot;).Value;
+&lt;p&gt;Ufa, depois de tudo isso só para explicar os arquivos de configuração, vamos voltar ao projeto.&lt;/p&gt;
+&lt;p&gt;Não vou escrever um arquivo de modelo para não alongar mais ainda este post, então vamos usar o tipo dynamic e uma lib para parsing do Json.&lt;/p&gt;
+&lt;p&gt;Execute no terminal &lt;code&gt;dotnet add package NewtonSoft.Json&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Index.cshtml.cs&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-csharp"&gt;public partial class IndexModel : PageModel
+{
+    private readonly NasaConfiguration _nasa;
+    private readonly ILogger&amp;lt;IndexModel&amp;gt; _logger;
+    public IndexModel(ILogger&amp;lt;IndexModel&amp;gt; logger, IConfiguration config)
+    {
+        _nasa = config.GetSection(&amp;quot;NasaConfiguration&amp;quot;).Get&amp;lt;NasaConfiguration&amp;gt;();
+        _logger = logger;
+    }
+
+    public void OnGet()
+    {
+        string endPoint = _nasa.Endpoint;
+        string apiKey = _nasa.ApiKey;
+
+        var uri = new Uri(
+            QueryHelpers.AddQueryString(endPoint,
+                new Dictionary&amp;lt;string, string&amp;gt;(){
+                    {&amp;quot;api_key&amp;quot;, apiKey},
+                    {&amp;quot;date&amp;quot;, DateTime.Now.AddDays(-new Random().Next(365)).ToString(&amp;quot;yyyy-MM-dd&amp;quot;)}
+                }
+            )
+        );
+
+        using (var client = new HttpClient())
+        {
+            var response = client.GetAsync(uri).Result;
+            response.EnsureSuccessStatusCode();
+            TempData[&amp;quot;NasaData&amp;quot;] = JsonConvert.DeserializeObject(
+                response.Content.ReadAsStringAsync().Result
+            );
+        }
+    }
+}
 &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Index.cshtml&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-csharp"&gt;&amp;#64;page
+&amp;#64;model IndexModel
+&amp;#64;{
+    ViewData[&amp;quot;Title&amp;quot;] = &amp;quot;Home page&amp;quot;;
+    string url = ((dynamic)TempData[&amp;quot;NasaData&amp;quot;])[&amp;quot;url&amp;quot;];
+    var date = (DateTime)(((dynamic)TempData[&amp;quot;NasaData&amp;quot;])[&amp;quot;date&amp;quot;]);
+}
+
+&amp;lt;div class=&amp;quot;text-center&amp;quot;&amp;gt;
+    &amp;lt;h1 class=&amp;quot;display-4&amp;quot;&amp;gt;This was Nasa Picture of the day, of date &amp;#64;date.ToShortDateString()&amp;lt;/h1&amp;gt;
+    &amp;#64;foreach (dynamic item in (dynamic)TempData[&amp;quot;NasaData&amp;quot;])
+    {
+        &amp;lt;p&amp;gt;&amp;lt;b&amp;gt;&amp;#64;item.Name&amp;lt;/b&amp;gt; : &amp;#64;item.Value&amp;lt;/p&amp;gt;   
+    }
+    &amp;lt;img src=&amp;quot;&amp;#64;url&amp;quot; /&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Link do projeto no Github: &lt;a href="https://github.com/daniloalsilva/NasaApod"&gt;https://github.com/daniloalsilva/NasaApod&lt;/a&gt;&lt;/p&gt;
 &lt;table class="table"&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -273,8 +319,13 @@ Endpoint = root.GetSection(&amp;quot;NasaData:Endpoint&amp;quot;).Value;
 &lt;p&gt;Pendências:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;citar necessidade de escrever ao invés de copiar e colar.&lt;/li&gt;
-&lt;li&gt;tabela de comparação entre razor e mvc&lt;/li&gt;
+&lt;li&gt;tabela de comparação entre razor e mvc
+new page inside a Razor project:
+dotnet new page -n Index -o Pages&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;&lt;a href="https://weblog.west-wind.com/posts/2017/dec/12/easy-configuration-binding-in-aspnet-core-revisited"&gt;https://weblog.west-wind.com/posts/2017/dec/12/easy-configuration-binding-in-aspnet-core-revisited&lt;/a&gt;
+&lt;a href="https://www.fabiosilvalima.net/6-formas-appsettings-json-aspnet-core/"&gt;https://www.fabiosilvalima.net/6-formas-appsettings-json-aspnet-core/&lt;/a&gt;
+&lt;a href="https://docs.microsoft.com/pt-br/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-3.1&amp;amp;tabs=visual-studio"&gt;https://docs.microsoft.com/pt-br/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-3.1&amp;amp;tabs=visual-studio&lt;/a&gt;&lt;/p&gt;
 </content>
 		<summary>&lt;p&gt;Já a algum tempo eu queria estudar .Net Core e venho postergando. Confesso que a primeira experiência (a cerca de dois anos) não foi lá das melhores.&lt;/p&gt;</summary>
 	</entry>

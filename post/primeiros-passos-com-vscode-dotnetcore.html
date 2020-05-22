@@ -216,7 +216,7 @@ choco install dotnetcore -y
   },
   &quot;AllowedHosts&quot;: &quot;*&quot;,
   &quot;NasaConfiguration&quot;:{
-    &quot;Endpoint&quot;: &quot;https://api.nasa.gov/planetary/apod?api_key=&quot;,
+    &quot;Endpoint&quot;: &quot;https://api.nasa.gov/planetary/apod&quot;,
     &quot;ApiKey&quot;: &quot;&lt;your_api_key&gt;&quot;
   }
 }
@@ -319,18 +319,64 @@ public void OnGet()
     string apiKey = options.ApiKey;
 }
 </code></pre>
-<p>new page inside a Razor project:
-dotnet new page -n Index -o Pages</p>
-<p>Recuperar dados de arquivos de configuração somente via injection ou abrindo o appsettings.json explicitamente via IO</p>
-<p><a href="https://weblog.west-wind.com/posts/2017/dec/12/easy-configuration-binding-in-aspnet-core-revisited">https://weblog.west-wind.com/posts/2017/dec/12/easy-configuration-binding-in-aspnet-core-revisited</a>
-<a href="https://www.fabiosilvalima.net/6-formas-appsettings-json-aspnet-core/">https://www.fabiosilvalima.net/6-formas-appsettings-json-aspnet-core/</a></p>
-<p><em>retrieving appsettings from class library</em></p>
-<pre><code class="language-csharp">var configurationBuilder = new ConfigurationBuilder();
-var path = Path.Combine(Directory.GetCurrentDirectory(), &quot;appsettings.json&quot;);
-configurationBuilder.AddJsonFile(path, false);
-var root = configurationBuilder.Build();
-Endpoint = root.GetSection(&quot;NasaData:Endpoint&quot;).Value;
+<p>Ufa, depois de tudo isso só para explicar os arquivos de configuração, vamos voltar ao projeto.</p>
+<p>Não vou escrever um arquivo de modelo para não alongar mais ainda este post, então vamos usar o tipo dynamic e uma lib para parsing do Json.</p>
+<p>Execute no terminal <code>dotnet add package NewtonSoft.Json</code></p>
+<p><strong>Index.cshtml.cs</strong></p>
+<pre><code class="language-csharp">public partial class IndexModel : PageModel
+{
+    private readonly NasaConfiguration _nasa;
+    private readonly ILogger&lt;IndexModel&gt; _logger;
+    public IndexModel(ILogger&lt;IndexModel&gt; logger, IConfiguration config)
+    {
+        _nasa = config.GetSection(&quot;NasaConfiguration&quot;).Get&lt;NasaConfiguration&gt;();
+        _logger = logger;
+    }
+
+    public void OnGet()
+    {
+        string endPoint = _nasa.Endpoint;
+        string apiKey = _nasa.ApiKey;
+
+        var uri = new Uri(
+            QueryHelpers.AddQueryString(endPoint,
+                new Dictionary&lt;string, string&gt;(){
+                    {&quot;api_key&quot;, apiKey},
+                    {&quot;date&quot;, DateTime.Now.AddDays(-new Random().Next(365)).ToString(&quot;yyyy-MM-dd&quot;)}
+                }
+            )
+        );
+
+        using (var client = new HttpClient())
+        {
+            var response = client.GetAsync(uri).Result;
+            response.EnsureSuccessStatusCode();
+            TempData[&quot;NasaData&quot;] = JsonConvert.DeserializeObject(
+                response.Content.ReadAsStringAsync().Result
+            );
+        }
+    }
+}
 </code></pre>
+<p><strong>Index.cshtml</strong></p>
+<pre><code class="language-csharp">&#64;page
+&#64;model IndexModel
+&#64;{
+    ViewData[&quot;Title&quot;] = &quot;Home page&quot;;
+    string url = ((dynamic)TempData[&quot;NasaData&quot;])[&quot;url&quot;];
+    var date = (DateTime)(((dynamic)TempData[&quot;NasaData&quot;])[&quot;date&quot;]);
+}
+
+&lt;div class=&quot;text-center&quot;&gt;
+    &lt;h1 class=&quot;display-4&quot;&gt;This was Nasa Picture of the day, of date &#64;date.ToShortDateString()&lt;/h1&gt;
+    &#64;foreach (dynamic item in (dynamic)TempData[&quot;NasaData&quot;])
+    {
+        &lt;p&gt;&lt;b&gt;&#64;item.Name&lt;/b&gt; : &#64;item.Value&lt;/p&gt;   
+    }
+    &lt;img src=&quot;&#64;url&quot; /&gt;
+&lt;/div&gt;
+</code></pre>
+<p>Link do projeto no Github: <a href="https://github.com/daniloalsilva/NasaApod">https://github.com/daniloalsilva/NasaApod</a></p>
 <table class="table">
 <thead>
 <tr>
@@ -356,8 +402,13 @@ Endpoint = root.GetSection(&quot;NasaData:Endpoint&quot;).Value;
 <p>Pendências:</p>
 <ul>
 <li>citar necessidade de escrever ao invés de copiar e colar.</li>
-<li>tabela de comparação entre razor e mvc</li>
+<li>tabela de comparação entre razor e mvc
+new page inside a Razor project:
+dotnet new page -n Index -o Pages</li>
 </ul>
+<p><a href="https://weblog.west-wind.com/posts/2017/dec/12/easy-configuration-binding-in-aspnet-core-revisited">https://weblog.west-wind.com/posts/2017/dec/12/easy-configuration-binding-in-aspnet-core-revisited</a>
+<a href="https://www.fabiosilvalima.net/6-formas-appsettings-json-aspnet-core/">https://www.fabiosilvalima.net/6-formas-appsettings-json-aspnet-core/</a>
+<a href="https://docs.microsoft.com/pt-br/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-3.1&amp;tabs=visual-studio">https://docs.microsoft.com/pt-br/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-3.1&amp;tabs=visual-studio</a></p>
 
 
 <div id="disqus_thread"></div>
