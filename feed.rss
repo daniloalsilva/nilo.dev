@@ -5,8 +5,8 @@
 		<link>http://nilo.dev/</link>
 		<description>Blog Posts</description>
 		<copyright>2020</copyright>
-		<pubDate>Fri, 22 May 2020 03:46:23 GMT</pubDate>
-		<lastBuildDate>Fri, 22 May 2020 03:46:23 GMT</lastBuildDate>
+		<pubDate>Fri, 22 May 2020 04:00:58 GMT</pubDate>
+		<lastBuildDate>Fri, 22 May 2020 04:00:58 GMT</lastBuildDate>
 		<item>
 			<title>Primeiros passos com Visual Studio Code e .Net Core</title>
 			<link>http://nilo.dev/post/primeiros-passos-com-vscode-dotnetcore</link>
@@ -238,45 +238,70 @@ public void OnGet()
 }
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Ufa, depois de tudo isso só para explicar os arquivos de configuração, vamos voltar ao projeto.&lt;/p&gt;
-&lt;p&gt;Não vou escrever um arquivo de modelo para não alongar mais ainda este post, então vamos usar o tipo dynamic e uma lib para parsing do Json.&lt;/p&gt;
-&lt;p&gt;Execute no terminal &lt;code&gt;dotnet add package NewtonSoft.Json&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Index.cshtml.cs&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class="language-csharp"&gt;public partial class IndexModel : PageModel
+&lt;h1 id="consumindo-a-api-picture-of-the-day"&gt;Consumindo a API Picture of the day&lt;/h1&gt;
+&lt;p&gt;Bom, só com o conteúdo discutido até agora, já dava pra terminar o post. Então vamos consumir a API a forma mais simples possível para que possamos ter um resultado da aplicação em funcionamento.&lt;/p&gt;
+&lt;p&gt;Por conta disso, não vou escrever um arquivo de modelo de resultado para não alongar mais ainda este post, então vamos usar o tipo dynamic e uma lib para parsing do Json.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;NasaConfiguration.cs&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-csharp"&gt;namespace RazorProject
 {
-    private readonly NasaConfiguration _nasa;
-    private readonly ILogger&amp;lt;IndexModel&amp;gt; _logger;
-    public IndexModel(ILogger&amp;lt;IndexModel&amp;gt; logger, IConfiguration config)
+    public class NasaConfiguration
     {
-        _nasa = config.GetSection(&amp;quot;NasaConfiguration&amp;quot;).Get&amp;lt;NasaConfiguration&amp;gt;();
-        _logger = logger;
+        public string Endpoint { get; set; }
+        public string ApiKey { get; set; }
     }
+}
 
-    public void OnGet()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Primeiro precisamos de uma lib para tratar o conteúdo em Json retornado pela api. Execute no terminal &lt;code&gt;dotnet add package NewtonSoft.Json&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Após, modifique seu arquivo &lt;strong&gt;/Pages/Index.cshtml.cs&lt;/strong&gt; da seguinte forma:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-csharp"&gt;using System;
+using System.Collections.Generic;
+using System.Net.Http;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.WebUtilities;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
+
+namespace RazorProject.Pages
+{
+    public partial class IndexModel : PageModel
     {
-        string endPoint = _nasa.Endpoint;
-        string apiKey = _nasa.ApiKey;
-
-        var uri = new Uri(
-            QueryHelpers.AddQueryString(endPoint,
-                new Dictionary&amp;lt;string, string&amp;gt;(){
-                    {&amp;quot;api_key&amp;quot;, apiKey},
-                    {&amp;quot;date&amp;quot;, DateTime.Now.AddDays(-new Random().Next(365)).ToString(&amp;quot;yyyy-MM-dd&amp;quot;)}
-                }
-            )
-        );
-
-        using (var client = new HttpClient())
+        private readonly NasaConfiguration _nasa;
+        private readonly ILogger&amp;lt;IndexModel&amp;gt; _logger;
+        public IndexModel(ILogger&amp;lt;IndexModel&amp;gt; logger, IConfiguration config)
         {
-            var response = client.GetAsync(uri).Result;
-            response.EnsureSuccessStatusCode();
-            TempData[&amp;quot;NasaData&amp;quot;] = JsonConvert.DeserializeObject(
-                response.Content.ReadAsStringAsync().Result
+            _nasa = config.GetSection(&amp;quot;NasaConfiguration&amp;quot;).Get&amp;lt;NasaConfiguration&amp;gt;();
+            _logger = logger;
+        }
+
+        public void OnGet()
+        {
+            string endPoint = _nasa.Endpoint;
+            string apiKey = _nasa.ApiKey;
+
+            var uri = new Uri(
+                QueryHelpers.AddQueryString(endPoint,
+                    new Dictionary&amp;lt;string, string&amp;gt;(){
+                        {&amp;quot;api_key&amp;quot;, apiKey},
+                        {&amp;quot;date&amp;quot;, DateTime.Now.AddDays(-new Random().Next(365)).ToString(&amp;quot;yyyy-MM-dd&amp;quot;)}
+                    }
+                )
             );
+
+            using (var client = new HttpClient())
+            {
+                var response = client.GetAsync(uri).Result;
+                response.EnsureSuccessStatusCode();
+                TempData[&amp;quot;NasaData&amp;quot;] = JsonConvert.DeserializeObject(
+                    response.Content.ReadAsStringAsync().Result
+                );
+            }
         }
     }
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;Index.cshtml&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;E o &lt;strong&gt;Index.cshtml&lt;/strong&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-csharp"&gt;&amp;#64;page
 &amp;#64;model IndexModel
 &amp;#64;{
@@ -294,6 +319,8 @@ public void OnGet()
     &amp;lt;img src=&amp;quot;&amp;#64;url&amp;quot; /&amp;gt;
 &amp;lt;/div&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Tecle &lt;code&gt;F5&lt;/code&gt; e, se tudo funcionou, uma pagina semelhante a abaixo deve ser o resultado do projeto:&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/posts/2020/apod.png" class="img-fluid" alt="picture-of-the-day" /&gt;&lt;/p&gt;
 &lt;p&gt;Link do projeto no Github: &lt;a href="https://github.com/daniloalsilva/NasaApod"&gt;https://github.com/daniloalsilva/NasaApod&lt;/a&gt;&lt;/p&gt;
 &lt;table class="table"&gt;
 &lt;thead&gt;
