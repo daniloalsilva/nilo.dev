@@ -5,8 +5,8 @@
 		<link>http://nilo.dev/</link>
 		<description>Blog Posts</description>
 		<copyright>2020</copyright>
-		<pubDate>Fri, 22 May 2020 04:03:08 GMT</pubDate>
-		<lastBuildDate>Fri, 22 May 2020 04:03:08 GMT</lastBuildDate>
+		<pubDate>Fri, 22 May 2020 04:07:19 GMT</pubDate>
+		<lastBuildDate>Fri, 22 May 2020 04:07:19 GMT</lastBuildDate>
 		<item>
 			<title>Primeiros passos com Visual Studio Code e .Net Core</title>
 			<link>http://nilo.dev/post/primeiros-passos-com-vscode-dotnetcore</link>
@@ -347,7 +347,8 @@ namespace RazorProject.Pages
 &lt;p&gt;Pendências:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;citar necessidade de escrever ao invés de copiar e colar.&lt;/li&gt;
-&lt;li&gt;tabela de comparação entre razor e mvc
+&lt;li&gt;tabela de comparação entre razor e mvc&lt;/li&gt;
+&lt;li&gt;finalizar o post de forma decente
 new page inside a Razor project:
 dotnet new page -n Index -o Pages&lt;/li&gt;
 &lt;/ul&gt;

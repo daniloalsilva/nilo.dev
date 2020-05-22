@@ -4,7 +4,7 @@
 	<title>[da]nilo.dev</title>
 	<link rel="self" href="http://nilo.dev/" />
 	<rights>2020</rights>
-	<updated>2020-05-22T04:03:08Z</updated>
+	<updated>2020-05-22T04:07:19Z</updated>
 	<logo>http://nilo.dev/images/bg/desert-alone.jpg</logo>
 	<subtitle>Blog Posts</subtitle>
 	<entry>
@@ -346,7 +346,8 @@ namespace RazorProject.Pages
 &lt;p&gt;Pendências:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;citar necessidade de escrever ao invés de copiar e colar.&lt;/li&gt;
-&lt;li&gt;tabela de comparação entre razor e mvc
+&lt;li&gt;tabela de comparação entre razor e mvc&lt;/li&gt;
+&lt;li&gt;finalizar o post de forma decente
 new page inside a Razor project:
 dotnet new page -n Index -o Pages&lt;/li&gt;
 &lt;/ul&gt;
