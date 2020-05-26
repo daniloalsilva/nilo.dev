@@ -5,8 +5,8 @@
 		<link>http://nilo.dev/</link>
 		<description>Blog Posts</description>
 		<copyright>2020</copyright>
-		<pubDate>Tue, 26 May 2020 02:32:20 GMT</pubDate>
-		<lastBuildDate>Tue, 26 May 2020 02:32:20 GMT</lastBuildDate>
+		<pubDate>Tue, 26 May 2020 14:43:11 GMT</pubDate>
+		<lastBuildDate>Tue, 26 May 2020 14:43:11 GMT</lastBuildDate>
 		<item>
 			<title>Primeiros passos com Visual Studio Code e .Net Core</title>
 			<link>http://nilo.dev/post/primeiros-passos-com-vscode-dotnetcore</link>
@@ -20,7 +20,7 @@
 &lt;p&gt;A escolha do &lt;em&gt;Visual Studio Code&lt;/em&gt; para uso com .Net Core foi um pouco dificil... Hoje, praticamente qualquer curso/livro que você encontra sobre o framework, utiliza o Visual Studio Community, que realmente tem seus prós. O Visual Studio Community tem à distância de um click os &lt;a href="https://en.wikipedia.org/wiki/Scaffold_(programming)"&gt;scaffoldings&lt;/a&gt; que no VSCode vai lhe custar escrever os métodos manualmente ou lembrar uma commandline como &lt;code&gt;dotnet aspnet-codegenerator &amp;lt;model&amp;gt; &amp;lt;namespace&amp;gt; &amp;lt;etc&amp;gt;&lt;/code&gt;. Mas como tudo na vida, melhor ou pior, isso depende do ponto de vista e, escrever as classes manualmente (ou quase) vai lhe fazer entender melhor a estrutura do framework e depender menos das coisas criadas automáticamente.&lt;/p&gt;
 &lt;p&gt;Deixando de lado que algumas tarefas &amp;quot;podem&amp;quot; ser ligeiramente mais trabalhosas, o VSCode é uma IDE extremamente mais leve que sua parente, o que permite ter seu ambiente de desenvolvimento funcionando em praticamente apenas um minuto. A comunidade de desenvolvimento (normalmente mais focada em front-end) vem elogiando bastante a ferramenta e eu acho que vale dar o braço a torcer também para o backend.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Então, mãos a massa!&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Você pode optar por baixar as ferramentas dos respectivos sites ou poupar algum tempo e instalar tudo via commandline:&lt;/p&gt;
+&lt;p&gt;Precisamos do VSCode e do .Net Core instalados para começcar. Você pode optar por baixar as ferramentas dos respectivos sites ou poupar algum tempo e instalar tudo via commandline:&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-powershell"&gt;Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 choco install vscode -y
 choco install dotnetcore -y
@@ -56,12 +56,12 @@ choco install dotnetcore -y
 &lt;p&gt;&lt;img src="/images/posts/2020/razor-page.png" class="img-fluid" alt="default-razor-page" /&gt;&lt;/p&gt;
 &lt;p&gt;Bom, quase... Talvez o &lt;a href="https://code.visualstudio.com/docs/editor/intellisense"&gt;intelisense&lt;/a&gt; ainda não esteja funcionando e nem o debugging, mas já vamos dar uma olhada nesses caveats.&lt;/p&gt;
 &lt;blockquote class="blockquote"&gt;
-&lt;p&gt;Em ambiente Windows é normal utilizar um backslash &lt;code&gt;&amp;quot;\&amp;quot;&lt;/code&gt; enquanto que Linux um slash &lt;code&gt;&amp;quot;/&amp;quot;&lt;/code&gt; para o caminho de pastas, mas o acima vai funcionar da mesma forma em Windows se o seu terminal for um console de Powershell - que é o padrão no VSCode.&lt;/p&gt;
+&lt;p&gt;Em ambiente Windows é normal utilizar um backslash &lt;code&gt;&amp;quot;\&amp;quot;&lt;/code&gt; enquanto que Linux um slash &lt;code&gt;&amp;quot;/&amp;quot;&lt;/code&gt; para o caminho de pastas, mas o exemplo acima vai funcionar da mesma forma em Windows se o seu terminal for um console de Powershell - que é o padrão no VSCode.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id="debugging"&gt;Debugging&lt;/h2&gt;
-&lt;p&gt;Quando você carregou o projeto no VSCode, provavelmente um popup com o alerta ⚠ &lt;code&gt;Required assets to build and debug are missing from 'RazorProject'. Add them?&lt;/code&gt; apareceu. Isso significa que a pasta &lt;code&gt;.vscode&lt;/code&gt; com as configurações de build não existem, mas a pasta é criada automaticamente, quando você executa um &lt;code&gt;F5&lt;/code&gt; ou &lt;code&gt;Run &amp;gt; Start Debugging&lt;/code&gt; e seleciona na lista a opção &lt;code&gt;.Net Core&lt;/code&gt;. Teclando &lt;code&gt;F5&lt;/code&gt; novamente vai executar a aplicação e você pode tentar debugar a aplicação.&lt;/p&gt;
+&lt;p&gt;Quando você carregou o projeto no VSCode, provavelmente um popup com o alerta &lt;code&gt;⚠ Required assets to build and debug are missing from 'RazorProject'. Add them?&lt;/code&gt; apareceu. Isso significa que a pasta &lt;code&gt;.vscode&lt;/code&gt; com as configurações de build não existem, mas a pasta é criada automaticamente, quando você executa um &lt;code&gt;F5&lt;/code&gt; ou &lt;code&gt;Run &amp;gt; Start Debugging&lt;/code&gt; e seleciona na lista a opção &lt;code&gt;.Net Core&lt;/code&gt;. Teclando &lt;code&gt;F5&lt;/code&gt; novamente vai executar a aplicação e você pode tentar debugar a aplicação.&lt;/p&gt;
 &lt;blockquote class="blockquote"&gt;
-&lt;p&gt;É possível que o &lt;a href="https://github.com/OmniSharp/omnisharp-vscode"&gt;Omnisharp&lt;/a&gt;, extensão utilizada para desenvolvimento com .Net Core, falhe em carregar alguma DLL e o path do projeto fique mais ou menos assim: &lt;code&gt;${workspaceFolder}/bin/Debug/insert-target-framework-here/insert-project-name-here.dll&lt;/code&gt;. Se você tiver esse problema, substitua no caminho &lt;code&gt;insert-target-framework-here&lt;/code&gt; por &lt;code&gt;netcoreapp3.1&lt;/code&gt; e &lt;code&gt;insert-project-name-here&lt;/code&gt; por &lt;code&gt;RazorProject&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;É possível que o &lt;a href="https://github.com/OmniSharp/omnisharp-vscode"&gt;Omnisharp&lt;/a&gt; ou o ms-dotnettools.csharp, extensões utilizadas para desenvolvimento com .Net Core, falhem em carregar alguma DLL e o path &lt;code&gt;program&lt;/code&gt; do projeto, no arquivo &lt;code&gt;/.vscode/launch.json&lt;/code&gt; fique mais ou menos assim: &lt;code&gt;${workspaceFolder}/bin/Debug/insert-target-framework-here/insert-project-name-here.dll&lt;/code&gt;. Se você tiver esse problema, substitua no caminho &lt;code&gt;insert-target-framework-here&lt;/code&gt; por &lt;code&gt;netcoreapp3.1&lt;/code&gt; e &lt;code&gt;insert-project-name-here&lt;/code&gt; por &lt;code&gt;RazorProject&lt;/code&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;blockquote class="blockquote"&gt;
 &lt;p&gt;Se algum erro aparecer relacionado como o MSBuild apontando alguma DLL faltando e você tem outra versão do Visual Studio instalada, veja se na mensagem de erro o path do msbuild aponta para o executável do Visual Studio Community/Professional. É possível corrigir isso de &lt;a href="https://github.com/OmniSharp/omnisharp-roslyn/issues/1094"&gt;algumas formas&lt;/a&gt; e eu não lembro como corrigi o meu... Mas nada q alguns minutos no Google não resolvam.&lt;/p&gt;
