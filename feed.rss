@@ -5,8 +5,8 @@
 		<link>http://nilo.dev/</link>
 		<description>Blog Posts</description>
 		<copyright>2020</copyright>
-		<pubDate>Tue, 26 May 2020 02:19:07 GMT</pubDate>
-		<lastBuildDate>Tue, 26 May 2020 02:19:07 GMT</lastBuildDate>
+		<pubDate>Tue, 26 May 2020 02:21:34 GMT</pubDate>
+		<lastBuildDate>Tue, 26 May 2020 02:21:34 GMT</lastBuildDate>
 		<item>
 			<title>Primeiros passos com Visual Studio Code e .Net Core</title>
 			<link>http://nilo.dev/post/primeiros-passos-com-vscode-dotnetcore</link>
@@ -364,6 +364,7 @@ namespace RazorProject.Pages
 &lt;p&gt;&lt;img src="/images/posts/2020/apod.png" class="img-fluid" alt="picture-of-the-day" /&gt;&lt;/p&gt;
 &lt;p&gt;Por enquanto é isso, num próximo post devemos falar sobre testes.&lt;/p&gt;
 &lt;p&gt;Link do projeto no Github: &lt;a href="https://github.com/daniloalsilva/NasaApod"&gt;https://github.com/daniloalsilva/NasaApod&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id="fontes"&gt;Fontes:&lt;/h1&gt;
 &lt;p&gt;&lt;a href="https://weblog.west-wind.com/posts/2017/dec/12/easy-configuration-binding-in-aspnet-core-revisited"&gt;https://weblog.west-wind.com/posts/2017/dec/12/easy-configuration-binding-in-aspnet-core-revisited&lt;/a&gt;
 &lt;a href="https://docs.microsoft.com/pt-br/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-3.1&amp;amp;tabs=visual-studio"&gt;https://docs.microsoft.com/pt-br/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-3.1&amp;amp;tabs=visual-studio&lt;/a&gt;
 &lt;a href="https://softchris.github.io/pages/dotnet-core.html"&gt;https://softchris.github.io/pages/dotnet-core.html&lt;/a&gt;&lt;/p&gt;

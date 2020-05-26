@@ -4,7 +4,7 @@
 	<title>[da]nilo.dev</title>
 	<link rel="self" href="http://nilo.dev/" />
 	<rights>2020</rights>
-	<updated>2020-05-26T02:19:07Z</updated>
+	<updated>2020-05-26T02:21:34Z</updated>
 	<logo>http://nilo.dev/images/bg/desert-alone.jpg</logo>
 	<subtitle>Blog Posts</subtitle>
 	<entry>
@@ -363,6 +363,7 @@ namespace RazorProject.Pages
 &lt;p&gt;&lt;img src="/images/posts/2020/apod.png" class="img-fluid" alt="picture-of-the-day" /&gt;&lt;/p&gt;
 &lt;p&gt;Por enquanto é isso, num próximo post devemos falar sobre testes.&lt;/p&gt;
 &lt;p&gt;Link do projeto no Github: &lt;a href="https://github.com/daniloalsilva/NasaApod"&gt;https://github.com/daniloalsilva/NasaApod&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id="fontes"&gt;Fontes:&lt;/h1&gt;
 &lt;p&gt;&lt;a href="https://weblog.west-wind.com/posts/2017/dec/12/easy-configuration-binding-in-aspnet-core-revisited"&gt;https://weblog.west-wind.com/posts/2017/dec/12/easy-configuration-binding-in-aspnet-core-revisited&lt;/a&gt;
 &lt;a href="https://docs.microsoft.com/pt-br/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-3.1&amp;amp;tabs=visual-studio"&gt;https://docs.microsoft.com/pt-br/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-3.1&amp;amp;tabs=visual-studio&lt;/a&gt;
 &lt;a href="https://softchris.github.io/pages/dotnet-core.html"&gt;https://softchris.github.io/pages/dotnet-core.html&lt;/a&gt;&lt;/p&gt;
