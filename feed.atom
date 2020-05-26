@@ -4,7 +4,7 @@
 	<title>[da]nilo.dev</title>
 	<link rel="self" href="http://nilo.dev/" />
 	<rights>2020</rights>
-	<updated>2020-05-22T04:07:19Z</updated>
+	<updated>2020-05-26T02:19:07Z</updated>
 	<logo>http://nilo.dev/images/bg/desert-alone.jpg</logo>
 	<subtitle>Blog Posts</subtitle>
 	<entry>
@@ -120,8 +120,10 @@ choco install dotnetcore -y
 &lt;/table&gt;
 &lt;p&gt;Bom, já temos o básico para começar e, inspirado num post do &lt;a href="https://medium.com/&amp;#64;renato.groffe/consumo-de-apis-em-net-core-utilizando-apis-rest-da-nasa-7dd6bd407329"&gt;Renato Groffe&lt;/a&gt;, vamos fazer nossa aplicação consultar a API &amp;quot;Astronomy Picture of the Day&amp;quot; da Nasa, com algumas variações do que ele fez lá para explorarmos o framework, então já &lt;a href="https://api.nasa.gov/"&gt;faça seu cadastro&lt;/a&gt; e pegue sua &lt;strong&gt;API Key&lt;/strong&gt;.&lt;/p&gt;
 &lt;h2 id="arquivos-de-configuracao-appsettings.json"&gt;Arquivos de configuração - appsettings.json&lt;/h2&gt;
-&lt;p&gt;Para evitar ter os dados de configuração &lt;a href="https://en.wikipedia.org/wiki/Hard_coding"&gt;hardcoded&lt;/a&gt; na aplicação, o que é uma péssima prática, vamos armazená-los num arquivo de configuração, que no nosso caso é o appsettings.json, substituto do velho &lt;code&gt;Web.Config&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Aqui eu tenho uma crítica. O .Net Core utiliza o padrão de design de software baseado em Dependecy Injection, o que é útil em alguns momentos e permite ter um objeto strong typed como resultado do carregamento das configurações... Mas trouxe uma complexidade desnecessária para recuperar dados de configuração. Talvez essa seja uma tentativa de aplicar o &lt;a href="https://12factor.net/pt_br/config"&gt;Twelve Factors&lt;/a&gt; a risca e forçar o desenvolvedor a utilizar variáveis de ambiente, mas isso não explica outros problemas com complexidade desnecessária do framework, como a classe &lt;strong&gt;HttpClient&lt;/strong&gt; só fazer chamadas async, mesmo quando você não precisa usar async. Poxa, extrair dados de configuração antes era tão simples quanto &lt;code&gt;string userName = System.Configuration.ConfigurationManager.AppSettings[&amp;quot;UserName&amp;quot;];&lt;/code&gt;... Vida que segue.&lt;/p&gt;
+&lt;p&gt;Para evitar ter os dados de configuração &lt;a href="https://en.wikipedia.org/wiki/Hard_coding"&gt;hardcoded&lt;/a&gt; na aplicação, o que é uma péssima prática, vamos armazená-los num arquivo de configuração, que no nosso caso é o appsettings.json, substituto do velho &lt;code&gt;Web.Config&lt;/code&gt; e deve estar na raiz do seu projeto após executar o comando &lt;code&gt;dotnet new webapp&lt;/code&gt;.&lt;/p&gt;
+&lt;blockquote class="blockquote"&gt;
+&lt;p&gt;Aqui eu tenho uma crítica. O .Net Core utiliza o padrão de design de software baseado em Dependecy Injection, que permite ter um objeto strong typed como resultado do carregamento das configurações, o que realmente é ótimo, mas em contra partida trouxe uma complexidade desnecessária para recuperar dados de configuração. Talvez essa seja uma tentativa de aplicar o &lt;a href="https://12factor.net/pt_br/config"&gt;Twelve Factors&lt;/a&gt; a risca e forçar o desenvolvedor a utilizar variáveis de ambiente para determinado tipo de dado, mas isso não explica outros problemas com a complexidade desnecessária do framework, como a classe &lt;strong&gt;HttpClient&lt;/strong&gt; só fazer chamadas async, mesmo quando você não precisa usar async. Poxa, extrair dados sem referenciar diretamente o arquivo de configuração poderia ter sido implementado, dado que antes poderiamos fazer algo do tipo &lt;code&gt;string userName = System.Configuration.ConfigurationManager.AppSettings[&amp;quot;UserName&amp;quot;];&lt;/code&gt;... Vida que segue.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;Primeiro, vamos preencher o appsettings.json com os dados para utilizar o endpoint da Nasa. Seu arquivo deve parecer da seguinte forma:&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-json"&gt;{
   &amp;quot;Logging&amp;quot;: {
@@ -138,9 +140,9 @@ choco install dotnetcore -y
   }
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Com isso, precisamos extrair os dados da API para fazer uma chamada HTTP para o endpoint, o que pode ser feito de algumas formas, dependendo do refinamento que você quer para seu código.&lt;/p&gt;
-&lt;h3 id="via-dependency-injection"&gt;Via Dependency Injection&lt;/h3&gt;
-&lt;p&gt;Você pode recuperar os dados passando um parâmetro &lt;strong&gt;IConfiguration config&lt;/strong&gt; no construtor &lt;em&gt;IndexModel&lt;/em&gt; da sua página &lt;strong&gt;Index.cshtml.cs&lt;/strong&gt;, o que vai produzir uma variável de saída &lt;code&gt;&amp;quot;https://api.nasa.gov/planetary/apod?api_key=&amp;quot;&lt;/code&gt;. A classe deve ficar mais ou menos assim (este é só o código dentro de public class &lt;code&gt;IndexModel : PageModel&lt;/code&gt;):&lt;/p&gt;
+&lt;p&gt;Com isso, precisamos extrair os dados da API do arquivo &lt;strong&gt;appsettings.json&lt;/strong&gt; e fazer uma chamada HTTP para o endpoint, o que pode ser feito de algumas formas, dependendo do refinamento que você quer para seu código.&lt;/p&gt;
+&lt;h3 id="via-dependency-injection-ou-di"&gt;Via Dependency Injection (ou DI)&lt;/h3&gt;
+&lt;p&gt;Você pode recuperar os dados passando um parâmetro &lt;strong&gt;IConfiguration config&lt;/strong&gt; no construtor &lt;em&gt;IndexModel&lt;/em&gt; da sua página &lt;strong&gt;Index.cshtml.cs&lt;/strong&gt;, o que vai produzir uma variável de saída &lt;code&gt;&amp;quot;https://api.nasa.gov/planetary/apod&amp;quot;&lt;/code&gt;. A classe deve ficar mais ou menos assim (este é só o código dentro de public class &lt;code&gt;IndexModel : PageModel&lt;/code&gt;):&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-csharp"&gt;private readonly ILogger&amp;lt;IndexModel&amp;gt; _logger;
 private readonly IConfiguration _config;
 public IndexModel(ILogger&amp;lt;IndexModel&amp;gt; logger, IConfiguration config)
@@ -154,14 +156,19 @@ public void OnGet()
     var endPoint = _config.GetSection(&amp;quot;NasaConfiguration:EndPoint&amp;quot;);
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;E uma abordagem deste modelo, que é o que vou usar, utilizando uma classe para que o acesso as informações seja mais claro é criar um modelo e fazer um bind do modelo para utilizar seus atributos:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="language-csharp"&gt;public class NasaConfiguration {
-
-    public string Endpoint { get; set; } 
-    public string ApiKey { get; set; } 
-    
+&lt;p&gt;O código acima faz com que o resultado seja apenas uma saída de texto criada a partir do conteúdo preenchido no arquivo de configuração.&lt;/p&gt;
+&lt;p&gt;Já para que possamos utilizar melhor a capacidade do IConfiguration, é possível extrair os dados baseado num modelo com atributos pré definidos. Esta é a abordagem que vou utilizar, pois apesar de ambas terem o mesmo efeito como produto final, deixar os atributos visíveis ao recuperar dados de configuração evita que precisemos abrir o arquivo &lt;strong&gt;appsettings.json&lt;/strong&gt; para confirmar o nome das variaveis quando precisarmos utiliza-las.&lt;/p&gt;
+&lt;p&gt;Para criar o arquivo de modelo &lt;strong&gt;NasaConfiguration.cs&lt;/strong&gt;, basta no terminal (&lt;code&gt;CTRL + '&lt;/code&gt;) executar o comando &lt;code&gt;code NasaConfiguration.cs&lt;/code&gt;. Aqui, podemos escrever o arquivo do zero nomeando o namespace e a class, ou se você não curte um mínimo já pré-definido num novo arquivo de classe, há a opção de instalar uma extensão como a &lt;code&gt;jchannon.csharpextensions&lt;/code&gt;. No meu caso, por hora vou seguir com o setup mais limpo possível.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-csharp"&gt;//NasaConfiguration.cs
+namespace RazorProject {
+    public class NasaConfiguration {
+        public string Endpoint { get; set; }
+        public string ApiKey { get; set; }
+    }
 }
-
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;E para nosso Index, vamos utilizar o construtor novamente com DI, mas desta vez vamos atribuir os dadosa nossa variável que possui o modelo do arquivo de configuração. Isso pode ser feito tanto com &lt;code&gt;config.GetSection(&amp;quot;NasaConfiguration&amp;quot;).Get&amp;lt;NasaConfiguration&amp;gt;();&lt;/code&gt; quanto com &lt;code&gt;config.GetSection(&amp;quot;NasaConfiguration&amp;quot;).Bind(&amp;lt;input_variable&amp;gt;);&lt;/code&gt;, sendo que no segundo caso é necessário que a variável utilizada como &lt;em&gt;input_variable&lt;/em&gt; seja previamente instânciada. Veremos num exemplo adiante.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-csharp"&gt;//Index.cshtml.cs
 public class IndexModel : PageModel
 {
     private readonly NasaConfiguration _nasa;
@@ -180,7 +187,7 @@ public class IndexModel : PageModel
     }
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;As demais formas de carregar configurações estão descritas abaixo, caso você opte por utilizar outro modelo.&lt;/p&gt;
+&lt;p&gt;Este modo de uso cobre essencialmente o que precisamos e você pode pular para [a proxima parte][consumindo-a-api picture-of-the-day] se não tiver interesse nos demais modos de carregar dados do arquivo de configuração.&lt;/p&gt;
 &lt;h2 id="via-configurationbuilder"&gt;Via ConfigurationBuilder&lt;/h2&gt;
 &lt;p&gt;Com o exemplo anterior, utilizar Dependency Injection não parece tão ruim. O problema fica evidente mesmo quando precisamos usar uma configuração numa classe que passa por algumas funções até chegar no ponto que é feito o Injection. Imagine a seguinte chamada das funções:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;IndexModel(IConfiguration config) &amp;gt; 
@@ -188,16 +195,18 @@ public class IndexModel : PageModel
     NasaCustomQuery(IConfiguration config, $&amp;quot;Select Name, Location from NasaSQL where Name ='{planetName}'&amp;quot;) &amp;gt;
     NasaWebRequest(IConfiguration config, string params)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Claro que para uma chamada simples como é o da API da Nasa esse exemplo não requer tanta complexidade, mas vão ter casos onde você vai ter uma complexidade parecida e, trafegar os dados recuperados na primeira função durante 4 chamadas é muita repetição de código desnecessária, se o dado só precisa ser utilizado na função &lt;em&gt;NasaWebRequest&lt;/em&gt;. Sendo assim, criar uma classe auxiliar para carregar uma instância do IConfiguration pode ser a melhor opção:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="language-csharp"&gt;var configurationBuilder = new ConfigurationBuilder();
-var path = Path.Combine(Directory.GetCurrentDirectory(), &amp;quot;appsettings.json&amp;quot;);
-configurationBuilder.AddJsonFile(path, false);
-var root = configurationBuilder.Build();
+&lt;p&gt;Claro que para uma chamada simples como é o da API da Nasa, esse exemplo não requer tanta complexidade, mas vão haver casos onde você vai ter uma complexidade parecida e, trafegar os dados recuperados na primeira função durante 4 chamadas é muita repetição de código desnecessária. Se o dado só precisa ser utilizado na função &lt;em&gt;NasaWebRequest&lt;/em&gt; podemos criar uma função auxiliar para carregar uma instância do IConfiguration pode ser a melhor opção:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-csharp"&gt;// configPath = &amp;quot;NasaConfiguration:Endpoint&amp;quot;
+public string RetrieveConfiguration (string configPath){ 
+    var configurationBuilder = new ConfigurationBuilder();
+    var path = Path.Combine(Directory.GetCurrentDirectory(), &amp;quot;appsettings.json&amp;quot;);
+    configurationBuilder.AddJsonFile(path, false);
+    var root = configurationBuilder.Build();
 
-string endPoint = root.GetSection(&amp;quot;NasaConfiguration:Endpoint&amp;quot;).Value;
-string apiKey = root.GetSection(&amp;quot;NasaConfiguration:ApiKey&amp;quot;).Value;
+    return root.GetSection(configPath).Value;
+}
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;E é possível carregar as configurações através de um arquivo de modelo, da mesma forma que no exemplo anterior:&lt;/p&gt;
+&lt;p&gt;E utilizando a classe &lt;code&gt;ConfigurationBuilder&lt;/code&gt; é possível também carregar as configurações através de um modelo, da mesma forma que no exemplo utilizando &lt;strong&gt;DI&lt;/strong&gt;:&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-csharp"&gt;var configurationBuilder = new ConfigurationBuilder();
 var path = Path.Combine(Directory.GetCurrentDirectory(), &amp;quot;appsettings.json&amp;quot;);
 configurationBuilder.AddJsonFile(path, false);
@@ -209,18 +218,17 @@ config.GetSection(&amp;quot;NasaConfiguration&amp;quot;).Bind(nasa);
 string endPoint = _nasa.Endpoint;
 string apiKey = _nasa.ApiKey;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Não vamos utilizar esse modelo onde o arquivo &lt;em&gt;appsettings.json&lt;/em&gt; é carregado via &lt;em&gt;ConfigurationBuilder&lt;/em&gt; pois a complexidade do projeto não requer, mas o código está como referência aqui caso você precise futuramente (e a pessoa lendo também pode ser o Eu do futuro).&lt;/p&gt;
 &lt;h2 id="via-ioptions"&gt;Via IOptions&lt;/h2&gt;
-&lt;p&gt;O uso de IOptions demanda configurar o objeto no Startup.cs e carrega-lo utilizando dependency injection no arquivo onde você for utilizar as informações, da mesma forma que o IConfiguration:&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Startup.cs&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class="language-csharp"&gt;public void ConfigureServices(IServiceCollection services)
+&lt;p&gt;O uso de IOptions demanda configurar o Startup.cs e carregar o objeto utilizando dependency injection no arquivo onde você for utilizar as informações, da mesma forma que o IConfiguration:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-csharp"&gt;//Startup.cs
+public void ConfigureServices(IServiceCollection services)
 {
     services.AddRazorPages();
     services.Configure&amp;lt;NasaConfiguration&amp;gt;(options =&amp;gt; Configuration.GetSection(&amp;quot;NasaConfiguration&amp;quot;).Bind(options));
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Index.cshtml.cs&lt;/p&gt;
-&lt;pre&gt;&lt;code class="language-csharp"&gt;private readonly IOptions&amp;lt;NasaConfiguration&amp;gt; _options;
+&lt;pre&gt;&lt;code class="language-csharp"&gt;//Index.cshtml.cs
+private readonly IOptions&amp;lt;NasaConfiguration&amp;gt; _options;
 private readonly ILogger&amp;lt;IndexModel&amp;gt; _logger;
 
 public IndexModel(ILogger&amp;lt;IndexModel&amp;gt; logger, IOptions&amp;lt;NasaConfiguration&amp;gt; options)
@@ -236,24 +244,55 @@ public void OnGet()
     string apiKey = options.ApiKey;
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Ufa, depois de tudo isso só para explicar os arquivos de configuração, vamos voltar ao projeto.&lt;/p&gt;
+&lt;p&gt;Particularmente, eu acho desnecessário utilizar IOptions que, apesar de possuir algumas diferenças em relação ao IConfiguration (como por exemplo, detectar mudanças no arquivo de configuração e recarregar as mesmas), acaba fazendo o mesmo papel que o IConfiguration.&lt;/p&gt;
+&lt;p&gt;Ufa! Depois de tudo isso só para explicar os arquivos de configuração, hora de voltar ao projeto.&lt;/p&gt;
 &lt;h1 id="consumindo-a-api-picture-of-the-day"&gt;Consumindo a API Picture of the day&lt;/h1&gt;
-&lt;p&gt;Bom, só com o conteúdo discutido até agora, já dava pra terminar o post. Então vamos consumir a API a forma mais simples possível para que possamos ter um resultado da aplicação em funcionamento.&lt;/p&gt;
-&lt;p&gt;Por conta disso, não vou escrever um arquivo de modelo de resultado para não alongar mais ainda este post, então vamos usar o tipo dynamic e uma lib para parsing do Json.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;NasaConfiguration.cs&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class="language-csharp"&gt;namespace RazorProject
-{
-    public class NasaConfiguration
-    {
-        public string Endpoint { get; set; }
-        public string ApiKey { get; set; }
-    }
+&lt;p&gt;Como este post já está bem extenso, vamos consumir a API a forma mais simples possível para que possamos ter um resultado da aplicação em funcionamento.&lt;/p&gt;
+&lt;p&gt;Numa situação normal (o que é o caso da API da Nasa), os dados retornados possuem nomes de atributos bem definidos e não dinâmicos, o que permite criar um modelo da mesma forma que fizemos com nosso arquivo de configuração. Contudo, eu vou abordar aqui uma forma mais dinâmica onde não vamos utilizar um modelo e vamos expor todos os dados retornados da API. Você pode checar abaixo um exemplo de resultado da API ou neste link: &lt;a href="https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY"&gt;https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&lt;/a&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-json"&gt;{
+  &amp;quot;date&amp;quot;: &amp;quot;yyyy-MM-dd&amp;quot;,
+  &amp;quot;explanation&amp;quot;: &amp;quot;&amp;quot;,
+  &amp;quot;hdurl&amp;quot;: &amp;quot;https://apod.nasa.gov/apod/image/yyyy/file.jpg&amp;quot;,
+  &amp;quot;media_type&amp;quot;: &amp;quot;image&amp;quot;,
+  &amp;quot;service_version&amp;quot;: &amp;quot;v1&amp;quot;,
+  &amp;quot;title&amp;quot;: &amp;quot;Mystic Mountain Monster being Destroyed&amp;quot;,
+  &amp;quot;url&amp;quot;:  &amp;quot;https://apod.nasa.gov/apod/image/yyyy/file.jpg&amp;quot;
 }
-
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Primeiro precisamos de uma lib para tratar o conteúdo em Json retornado pela api. Execute no terminal &lt;code&gt;dotnet add package NewtonSoft.Json&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Após, modifique seu arquivo &lt;strong&gt;/Pages/Index.cshtml.cs&lt;/strong&gt; da seguinte forma:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="language-csharp"&gt;using System;
+&lt;p&gt;Aqui, precisamos de uma lib para tratar o conteúdo em Json retornado pela api. Execute no terminal &lt;code&gt;dotnet add package NewtonSoft.Json&lt;/code&gt;. Terminada a importação, configurar a URL para onde precisamos enviar nossas requisições, no arquivo &lt;strong&gt;/Pages/Index.cshtml.cs&lt;/strong&gt;, adicionando o seguinte código no método &lt;strong&gt;OnGet()&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-csharp"&gt;string endPoint = _nasa.Endpoint;
+string apiKey = _nasa.ApiKey;
+
+//uri = &amp;quot;https://api.nasa.gov/planetary/apod?api_key=&amp;lt;your_api_key&amp;gt;&amp;amp;date=2019-08-01&amp;quot;
+var uri = new Uri(
+    QueryHelpers.AddQueryString(endPoint,
+        new Dictionary&amp;lt;string, string&amp;gt;(){
+            {&amp;quot;api_key&amp;quot;, apiKey},
+            {&amp;quot;date&amp;quot;, DateTime.Now.AddDays(-new Random().Next(365)).ToString(&amp;quot;yyyy-MM-dd&amp;quot;)}
+        }
+    )
+);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Aqui &lt;code&gt;-new Random().Next(365)).ToString(&amp;quot;yyyy-MM-dd&amp;quot;)&lt;/code&gt;, estamos gerando um número negativo, randômico, entre 0 e 365 e subtraíndo este dos dias a contar da data atual e formatando este dado para o padrão aceito pela API, então na nossa página iremos exibir a foto de um dia aleatório de até um ano atrás. Utilizar o método &lt;code&gt;QueryHelpers.AddQueryString&lt;/code&gt; é opcional, mas deixa o código mais organizado para trabalhar com parâmetros no .Net.&lt;/p&gt;
+&lt;blockquote class="blockquote"&gt;
+&lt;p&gt;Para utilizar o QueryHelpers, é necessário utilizar o namespace &lt;code&gt;Microsoft.AspNetCore.WebUtilities&lt;/code&gt;. Para facilitar a importação, quando digitar &lt;code&gt;QueryHelpers&lt;/code&gt;, caso uma mensagem de erro &lt;code&gt;O nome &amp;quot;QueryHelpers&amp;quot; não existe no contexto atual [RazorProject]csharp(CS0103)&lt;/code&gt; apareça, tecle &lt;code&gt;CTRL  + .&lt;/code&gt; e selecione a opção &lt;code&gt;using Microsoft.AspNetCore.WebUtilities;&lt;/code&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Aqui vale uma dica: Evite copiar código.&lt;/p&gt;
+&lt;p&gt;Copiando código e colando no seu projeto, a única coisa que você está exercitando é sua habilidade de copiar e colar. Escrever o código, mesmo que exatamente igual ao que você está consultando aqui ou em outro momento no Google/StackOverflow vai exercitar sua memória e, provávelmente na próxima vez que você precisar usar essa informação, não vai ter que consultar externamente. Talvez essa seja a informação mais importante de todo o post.&lt;/p&gt;
+&lt;p&gt;Após gerar a URL, vamos fazer uma chamada HTTP, utilizando o seguinte código (ainda em &lt;strong&gt;/Pages/Index.cshtml.cs&lt;/strong&gt;, no método &lt;strong&gt;OnGet()&lt;/strong&gt;:):&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-csharp"&gt;using (var client = new HttpClient()){
+    var response = client.GetAsync(uri).Result;
+    response.EnsureSuccessStatusCode();
+    TempData[&amp;quot;NasaData&amp;quot;] = JsonConvert.DeserializeObject(
+        response.Content.ReadAsStringAsync().Result
+    );
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Da mesma forma que com o &lt;code&gt;QueryHelpers&lt;/code&gt;, é preciso uma biblioteca para utilizar o método &lt;code&gt;JsonConvert&lt;/code&gt;, mas a essa altura, você já sabe como fazer isso.&lt;/p&gt;
+&lt;p&gt;Aqui, é importante notar a variável &lt;code&gt;TempData&lt;/code&gt;. Essa variável é storage container e seus dados estarão disponíveis mesmo fora de nosso arquivo &lt;strong&gt;/Pages/Index.cshtml.cs&lt;/strong&gt;, vamos utilizar essa capacidade mais a seguir. Se quiser saber mais sobre TempData: &lt;a href="https://www.learnrazorpages.com/razor-pages/tempdata"&gt;https://www.learnrazorpages.com/razor-pages/tempdata&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;No fim, nosso arquivo &lt;strong&gt;/Pages/Index.cshtml.cs&lt;/strong&gt; ficou assim:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-csharp"&gt;//Pages/Index.cshtml.cs:
+using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -300,8 +339,9 @@ namespace RazorProject.Pages
     }
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;E o &lt;strong&gt;Index.cshtml&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class="language-csharp"&gt;&amp;#64;page
+&lt;p&gt;Neste momento, caso você execute a aplicação, o request na API já deve funcionar e você pode colocar alguns pontos de parada no código para entender melhor o funcionamento. E se tudo deu certo até aqui, podemos seguir para a ultima parte: Exibir os dados resultados da consulta na API.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-csharp"&gt;// /Pages/Index.cshtml
+&amp;#64;page
 &amp;#64;model IndexModel
 &amp;#64;{
     ViewData[&amp;quot;Title&amp;quot;] = &amp;quot;Home page&amp;quot;;
@@ -318,42 +358,14 @@ namespace RazorProject.Pages
     &amp;lt;img src=&amp;quot;&amp;#64;url&amp;quot; /&amp;gt;
 &amp;lt;/div&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;No exemplo acima, estamos convertendo implicitamente a variavel &lt;code&gt;TempData&lt;/code&gt; para &lt;code&gt;dynamic&lt;/code&gt; e utilizando os dados retornados pela API. Esta parte é bem auto-explicativa e, repare que além dos atributos &lt;strong&gt;url&lt;/strong&gt; e &lt;strong&gt;date&lt;/strong&gt;, estamos deixando que todos os atributos coletados sejam exibidos, enquanto percorremos os atributos da variável &lt;code&gt;(dynamic)TempData[&amp;quot;NasaData&amp;quot;]&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Tecle &lt;code&gt;F5&lt;/code&gt; e, se tudo funcionou, uma pagina semelhante a abaixo deve ser o resultado do projeto:&lt;/p&gt;
 &lt;p&gt;&lt;img src="/images/posts/2020/apod.png" class="img-fluid" alt="picture-of-the-day" /&gt;&lt;/p&gt;
+&lt;p&gt;Por enquanto é isso, num próximo post devemos falar sobre testes.&lt;/p&gt;
 &lt;p&gt;Link do projeto no Github: &lt;a href="https://github.com/daniloalsilva/NasaApod"&gt;https://github.com/daniloalsilva/NasaApod&lt;/a&gt;&lt;/p&gt;
-&lt;table class="table"&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Tipo&lt;/th&gt;
-&lt;th&gt;Comando&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Razor&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;dotnet new webapp -o RazorProject&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;WebApi&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;dotnet new webapi -o WebApiProject&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;MVC&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;dotnet new mvc -o MVCProject&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;Pendências:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;citar necessidade de escrever ao invés de copiar e colar.&lt;/li&gt;
-&lt;li&gt;tabela de comparação entre razor e mvc&lt;/li&gt;
-&lt;li&gt;finalizar o post de forma decente
-new page inside a Razor project:
-dotnet new page -n Index -o Pages&lt;/li&gt;
-&lt;/ul&gt;
 &lt;p&gt;&lt;a href="https://weblog.west-wind.com/posts/2017/dec/12/easy-configuration-binding-in-aspnet-core-revisited"&gt;https://weblog.west-wind.com/posts/2017/dec/12/easy-configuration-binding-in-aspnet-core-revisited&lt;/a&gt;
-&lt;a href="https://www.fabiosilvalima.net/6-formas-appsettings-json-aspnet-core/"&gt;https://www.fabiosilvalima.net/6-formas-appsettings-json-aspnet-core/&lt;/a&gt;
-&lt;a href="https://docs.microsoft.com/pt-br/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-3.1&amp;amp;tabs=visual-studio"&gt;https://docs.microsoft.com/pt-br/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-3.1&amp;amp;tabs=visual-studio&lt;/a&gt;&lt;/p&gt;
+&lt;a href="https://docs.microsoft.com/pt-br/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-3.1&amp;amp;tabs=visual-studio"&gt;https://docs.microsoft.com/pt-br/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-3.1&amp;amp;tabs=visual-studio&lt;/a&gt;
+&lt;a href="https://softchris.github.io/pages/dotnet-core.html"&gt;https://softchris.github.io/pages/dotnet-core.html&lt;/a&gt;&lt;/p&gt;
 </content>
 		<summary>&lt;p&gt;Já a algum tempo eu queria estudar .Net Core e venho postergando. Confesso que a primeira experiência (a cerca de dois anos) não foi lá das melhores.&lt;/p&gt;</summary>
 	</entry>
