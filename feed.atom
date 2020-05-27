@@ -4,7 +4,7 @@
 	<title>[da]nilo.dev</title>
 	<link rel="self" href="http://nilo.dev/" />
 	<rights>2020</rights>
-	<updated>2020-05-27T01:51:54Z</updated>
+	<updated>2020-05-27T01:59:45Z</updated>
 	<logo>http://nilo.dev/images/bg/desert-alone.jpg</logo>
 	<subtitle>Blog Posts</subtitle>
 	<entry>
@@ -142,6 +142,9 @@ choco install dotnetcore -y
   }
 }
 &lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote class="blockquote"&gt;
+&lt;p&gt;Não esqueça de substituir &lt;code&gt;&amp;lt;your_api_key&amp;gt;&lt;/code&gt; pela sua chave de API!&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;Com isso, precisamos extrair os dados da API do arquivo &lt;strong&gt;appsettings.json&lt;/strong&gt; e fazer uma chamada HTTP para o endpoint, o que pode ser feito de algumas formas, dependendo do refinamento que você quer para seu código.&lt;/p&gt;
 &lt;h3 id="via-dependency-injection-ou-di"&gt;Via Dependency Injection (ou DI)&lt;/h3&gt;
 &lt;p&gt;Você pode recuperar os dados passando um parâmetro &lt;strong&gt;IConfiguration config&lt;/strong&gt; no construtor &lt;em&gt;IndexModel&lt;/em&gt; da sua página &lt;strong&gt;Index.cshtml.cs&lt;/strong&gt;, o que vai produzir uma variável de saída &lt;code&gt;&amp;quot;https://api.nasa.gov/planetary/apod&amp;quot;&lt;/code&gt;. A classe deve ficar mais ou menos assim (este é só o código dentro de public class &lt;code&gt;IndexModel : PageModel&lt;/code&gt;):&lt;/p&gt;

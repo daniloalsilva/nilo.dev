@@ -225,6 +225,9 @@ choco install dotnetcore -y
   }
 }
 </code></pre>
+<blockquote class="blockquote">
+<p>Não esqueça de substituir <code>&lt;your_api_key&gt;</code> pela sua chave de API!</p>
+</blockquote>
 <p>Com isso, precisamos extrair os dados da API do arquivo <strong>appsettings.json</strong> e fazer uma chamada HTTP para o endpoint, o que pode ser feito de algumas formas, dependendo do refinamento que você quer para seu código.</p>
 <h3 id="via-dependency-injection-ou-di">Via Dependency Injection (ou DI)</h3>
 <p>Você pode recuperar os dados passando um parâmetro <strong>IConfiguration config</strong> no construtor <em>IndexModel</em> da sua página <strong>Index.cshtml.cs</strong>, o que vai produzir uma variável de saída <code>&quot;https://api.nasa.gov/planetary/apod&quot;</code>. A classe deve ficar mais ou menos assim (este é só o código dentro de public class <code>IndexModel : PageModel</code>):</p>
