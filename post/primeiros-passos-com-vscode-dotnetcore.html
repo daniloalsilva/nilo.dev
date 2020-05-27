@@ -115,15 +115,15 @@ choco install dotnetcore -y
 <li>Se você pretende criar uma aplicação modular, criar no mesmo projeto (não na mesma <a href="https://docs.microsoft.com/en-us/visualstudio/extensibility/internals/solution-dot-sln-file">solução</a>) a API e a parte Web pode não ser uma boa prática;</li>
 </ul>
 <p>Dito isso, neste post vamos falar sobre 3 tipos de projeto: mvc, webapi e razor. Caso queira consultar, a lista de tipos de projeto completa está disponível <a href="https://docs.microsoft.com/pt-br/dotnet/core/tools/dotnet-new">neste link</a> e também através da commandline <code>dotnet new --help</code>.</p>
-<h2 id="mvc-e-razor-principais-diferencas">MVC e Razor - Principais diferenças</h2>
+<h2 id="mvc-razor-e-api-principais-diferencas">MVC, Razor e API - Principais diferenças</h2>
 <p>Em suma, páginas Razor lembram muito mais o formato Windows Forms que páginas MVC. Páginas MVC te forçam a utilizar o padrão da arquitetura, o que por algumas vezes pode trazer uma complexidade desnecessária para um projeto, enquanto páginas Razor possuem estrutura mais simples. Ambos, Razor e MVC tem suas vantagens e desvantagem e a decisão vai depender do tipo/tamanho/complexidade do projeto que você quer desenvolver. Se tiver tempo disponível, estude sobre as duas.</p>
+<p>Já sobre WebApi, este tipo de projeto utiliza os controllers do MVC - apenas descartando a utilização de models e views. É um abordagem simples, e utiliza o <a href="https://docs.microsoft.com/pt-br/aspnet/core/fundamentals/routing">modelo de roteamento e verbos</a> para direcionar as requisições. E aproveitando, páginas Razor utilizam a <a href="https://www.learnrazorpages.com/razor-pages/routing">diretiva <strong>&#64;page</strong></a> para tratar o roteamento.</p>
 <p>Artigos sobre o assunto:</p>
-<p>[ASP.NET Core Razor Pages Vs MVC: Which Will Create Better Web Apps in 2018?][hackernoon]
-[Comparing Startup.cs between the ASP.NET Core 3.0 templates][andrewlock]
-[Difference between ASP.NET MVC and ASP.NET Web API][dotnettricks]
-[hackernoon]: https://hackernoon.com/asp-net-core-razor-pages-vs-mvc-which-will-create-better-web-apps-in-2018-bd137ae0acaa
-[andrewlock]: https://andrewlock.net/comparing-startup-between-the-asp-net-core-3-templates/
-[dotnettricks]: https://www.dotnettricks.com/learn/webapi/difference-between-aspnet-mvc-and-aspnet-web-api</p>
+<ul>
+<li><a href="https://hackernoon.com/asp-net-core-razor-pages-vs-mvc-which-will-create-better-web-apps-in-2018-bd137ae0acaa">ASP.NET Core Razor Pages Vs MVC: Which Will Create Better Web Apps in 2018?</a></li>
+<li><a href="https://andrewlock.net/comparing-startup-between-the-asp-net-core-3-templates/">Comparing Startup.cs between the ASP.NET Core 3.0 templates</a></li>
+<li><a href="https://www.dotnettricks.com/learn/webapi/difference-between-aspnet-mvc-and-aspnet-web-api">Difference between ASP.NET MVC and ASP.NET Web API</a></li>
+</ul>
 <h1 id="criando-uma-aplicacao-razor">Criando uma aplicação Razor</h1>
 <p>Eu tento normalmente evitar o mouse enquanto programo, então vamos tentar centralizar todo o trabalho no VSCode utilizando commandlines.</p>
 <ul>
@@ -272,7 +272,7 @@ public class IndexModel : PageModel
     }
 }
 </code></pre>
-<p>Este modo de uso cobre essencialmente o que precisamos e você pode pular para [a proxima parte][consumindo-a-api picture-of-the-day] se não tiver interesse nos demais modos de carregar dados do arquivo de configuração.</p>
+<p>Este modo de uso cobre essencialmente o que precisamos e você pode pular para <a href="#consumindo-a-api-picture-of-the-day">a proxima parte</a> se não tiver interesse nos demais modos de carregar dados do arquivo de configuração.</p>
 <h2 id="via-configurationbuilder">Via ConfigurationBuilder</h2>
 <p>Com o exemplo anterior, utilizar Dependency Injection não parece tão ruim. O problema fica evidente mesmo quando precisamos usar uma configuração numa classe que passa por algumas funções até chegar no ponto que é feito o Injection. Imagine a seguinte chamada das funções:</p>
 <pre><code>IndexModel(IConfiguration config) &gt; 
