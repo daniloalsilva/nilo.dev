@@ -1,0 +1,358 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+
+        <title>[da]nilo.dev - Minha caixa de ferramentas</title>
+        <meta name="description" content="Blog Posts" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">        
+
+        <link type="application/rss+xml" rel="alternate" title="[da]nilo.dev" href="/feed.rss" />
+                <link type="application/atom+xml" rel="alternate" title="[da]nilo.dev" href="/feed.atom" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+        <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="/assets/css/highlight.css" rel="stylesheet">
+        <link href="/assets/css/clean-blog.css" rel="stylesheet" />
+        <link href="/assets/css/master.css" rel="stylesheet" />
+        <link href="/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+        <link href="/assets/css/override.css" rel="stylesheet" />
+
+
+        <meta name="application-name" content="[da]nilo.dev" />
+        <meta name="msapplication-tooltip" content="[da]nilo.dev" />
+        <meta name="msapplication-starturl" content="/" />
+
+        <meta property="og:title" content="[da]nilo.dev - Minha caixa de ferramentas" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://nilo.dev/post/minha-caixa-de-ferramentas-windows" />
+        <!-- TODO: More social graph meta tags -->
+
+        
+
+
+        </head>
+        <body>
+                
+                <!-- Navigation -->
+                <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+                        <div class="container-fluid">
+                                <!-- Brand and toggle get grouped for better mobile display -->
+                                <div class="navbar-header page-scroll">
+                                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        </button>
+                                        <a class="navbar-brand" href="/">[da]nilo.dev</a>
+                                </div>
+                        
+                                <!-- Collect the nav links, forms, and other content for toggling -->
+                                <div class="collapse navbar-collapse" id="navbar-collapse">
+                                        <ul class="nav navbar-nav navbar-right">
+                                                        <li><a href="/post">Archive</a></li>
+        <li><a href="/tags">Tags</a></li>
+        <li><a href="/about">About me</a></li>
+        <li><a href="/txt">TXT</a></li>
+ 
+                                        </ul>
+                                </div>
+                                <!-- /.navbar-collapse -->
+                        </div>
+                        <!-- /.container -->
+                </nav>
+                
+                <!-- Page Header -->
+                <header class="intro-header" id="intro-header" style="background-image: url(&quot;/images/bg/monitors.jpg&quot;)">
+                        <div class="container">
+                                <div class="row">
+                                        <div class="col-md-12">
+
+    
+<div class="post-heading">
+    <h1>Minha caixa de ferramentas</h1>
+    <div class="meta">        
+Published on Monday, June 8, 2020<br>    </div>
+        <div class="tags">
+                    <a role="button" href="/tags/toolbox" class="btn btn-default btn-xs">toolbox</a>
+        </div>     
+</div>
+
+                                        </div>
+                                </div>
+                        </div>
+                </header>
+                
+                <!-- Main Content -->
+                <div class="container">
+                        <div class="row">
+                                <div id="content" class="col-md-12">
+                                        
+
+<p>Quando falamos sobre uma &quot;caixa de ferramentas&quot; (e só para ficar bem claro, estamos falando de software), usuários de Linux normalmente tem seus setups muito bem definidos, o que acaba acontecendo meio que por osmose durante o uso de distros diferentes... Mas no fundo todos os usuários avançados de algum sistema operacional tem sua lista de ferramentas favoritas, que são utilizadas com propósitos diversos para otimizar sua experiência. Com Windows não é diferente, e esta é a minha lista.</p>
+<h1 id="top-5-ferramentas">Top 5 ferramentas</h1>
+<p>Essas são as principais ferramentas que eu uso no meu dia a dia. Não há um critério definido para as ferramentas listadas aqui além do meu próprio capricho.
+Em maioria, as ferramentas listadas devem ser utilizadas em Windows, mas atualmente meu uso está bem dividido entre um Manjaro (linux, arch-based) e Windows, de forma que a lista pode conter ferramentas utilizadas em mais de um sistema operacional.</p>
+<ul>
+<li><p><strong><a href="https://www.chocolatey.org/">Chocolatey</a></strong>: Uma opção para instalar softwares em Windows via commandline, semelhante ao apt/yum/pamac para Linux. Apesar da controvérsia sobre o modelo de gerenciamento de pacotes (já que softwares proprietários não são empacotados diretamente, então o chocolatey não pode ser chamado de &quot;gerenciador de pacotes&quot;, o que para o usuário final dá na mesma), o Chocolatey quebra tanto o galho que eu acabo utilizando ele até para pesquisar softwares (antes mesmo de pesquisar no Google, já que os resultados são baseados na disponibilidade e rating dos softwares upados para a ferramenta e não de quem paga mais ads pro Google...). E se não bastasse, o chocolatey é a ferramenta mais utilizada em conjunto com configuration managers como Ansible/Puppet/Chef, então não precisa ter medo...</p>
+</li>
+<li><p><strong><a href="https://www.nakka.com/soft/clcl/index_eng.html">CLCL</a></strong>: Sendo o software mais simples e mais utilizado dessa lista, o CLCL permite fazer um cache dos últimos itens no seu clipboard e evitar que você perca aquele texto/imagem/arquivo que você copiou a pouco por N motivos. Em algum momento a Microsoft introduziu essa mesma funcionalidade no Windows, que pod ser acessada através do shortcut &quot;win + v&quot;, então utilizar ou não um software que não updates a um bom tempo mas é tão simples que você realmente não precisa se preocupar sobre updates, fica a seu critério. o CLCL também é útil para colar texto sem formatação em editores WYSIWYG.</p>
+</li>
+<li><p><strong><a href="https://justgetflux.com/">F.lux</a></strong>: Controla a luminosidade do seu monitor, regulando a temperatura das cores de acordo com o horário do dia. Parece uma besteira a princípio, mas desde que eu comecei a usar o F.lux, meus problemas com vista cansada ou falta de sono a noite diminuíram bastante. Se quiser entender mais sobre o assunto, pesquise sobre <a href="https://www.google.com/search?q=led+and+circadian+rhythm">&quot;<em>led and circadian rhythm</em>&quot;</a>.</p>
+</li>
+<li><p><strong><a href="https://www.enpass.io/">Enpass</a></strong>: Se você ainda não usa um gerenciador de senhas, já passou da hora de começar. Das várias opções do mercado, o Enpass na minha opinião é o melhor custo/beneficio, com uma interface muito parecia com o 1Password (que seria a minha primeira opção, não fosse a necessidade de assinatura para utilizar), ele armazena suas senhas no seu serviço de armazenamento de arquivos favorito (OneDrive, Google Drive, etc). Multi-plataforma, funciona muito bem em Windows e Android, estou tendo alguns problemas com a versão de Linux que não está carregando corretamente códigos TOTP (time-based one-time password), mas parece que já tem um fix disponível.</p>
+</li>
+<li><p><strong><a href="https://code.visualstudio.com/">Vscode</a></strong>: Minha IDE padrão, utilizada tanto para programar quanto para edição de texto. Possui um vasto eco-sistema de plugins, alguns deles listados abaixo.</p>
+</li>
+</ul>
+<h1 id="ferramentas-uteis-por-categoria">Ferramentas úteis por categoria</h1>
+<p>Não segui nenhuma regra aqui e as ferramentas listadas podem ser softwares que precisam ser instalados, plugins de outros softwares ou softwares apenas utilizadas via Web.
+Antes de começar a lista, apesar dos softwares citados aqui não serem focados em um tipo de uso específico, é bom citar que existe uma lista curada sobre ferramentas para DevOps em <a href="http://www.devopsbookmarks.com/">http://www.devopsbookmarks.com/</a>.</p>
+<h2 id="organizacao-de-tarefas-documentacao">Organização de tarefas / Documentação</h2>
+<ul>
+<li><p><strong><a href="https://trello.com/">Trello</a></strong>: Talvez o principal software para gerenciamento de tarefas/projetos atualmente. Melhor opção para sair usando sem precisar fazer grandes mudanças.</p>
+</li>
+<li><p><strong><a href="https://www.notion.so/">Notion</a></strong>: O Notion é uma ferramenta extremamente completa e flexível, não só pode ser utilizada para gerenciamento de tarefas e projetos como o Trello, mas também como uma ferramenta para documentação, criação de tabelas dinâmicas e muito mais. Em contra partida, o Notion tem tantas funcionalidades que é fácil perder o foco do que voê realmente precisa enquanto utilizando ele. Uma ótima opção ao OneNote para usuários de Linux.</p>
+</li>
+<li><p><strong><a href="https://leankit.com/">Leankit / Planview</a></strong>: O Leankit veio parar nessa lista por um capricho meu, não é a melhor ferramenta no que se propõe e continua gratuíta somente para usuários antigos que possuem uma conta antiga, da época que era grátis. Contudo, após varias pesquisas, ainda não encontrei um substituto ao Leankit se tratando do layout de organização de tarefas, que se aproxima bastante de um quadro de kanban físico. É possível fazer algumas integrações para automatizar a criação de cards com <a href="https://zapier.com/apps/planview-leankit/integrations/schedule/2803/add-a-weekly-card-to-leankit">softwares terceiros</a>.</p>
+</li>
+<li><p><strong><a href="https://todoist.com/">Todoist</a></strong>: Um Trello basado em listas. Tão poderoso como o Trello, pode se encaixar melhor ao seu tipo de organização, ou não.</p>
+</li>
+</ul>
+<h2 id="static-site-generators">Static site generators</h2>
+<p>A lista de softwares utilizados para geração de sites estáticos é grande e só vem aumentando com o passar do tempo. Como este artigo não deve receber atualizações tão cedo, os sites de referencia para pesquisar geradores de conteúdo estático são estes:</p>
+<p><a href="https://www.staticgen.com/">https://www.staticgen.com/</a>
+<a href="https://staticsitegenerators.net/">https://staticsitegenerators.net/</a>
+<a href="https://daveaglick.com/posts/a-survey-of-dotnet-static-site-generators">https://daveaglick.com/posts/a-survey-of-dotnet-static-site-generators</a></p>
+<ul>
+<li><p><strong><a href="https://wyam.io/">Wyam</a></strong>: O gerador utilizado neste blog. Leve, de fácil instalação e customização, utiliza .NET Core e pode ser instalado via choco ou pela cli do dotnet.</p>
+</li>
+<li><p><strong><a href="https://jekyllrb.com/">Jekyll</a></strong>: A ferramenta que popularizou novamente o uso de sites estáticos.</p>
+</li>
+<li><p><strong><a href="https://statiq.dev/">Statiq</a></strong>: Desenvolvido pelo mesmo criador do Wyam, o projeto está em desenvolvimento e já pode ser testado.</p>
+</li>
+</ul>
+<h2 id="vscode-extension">Vscode Extension:</h2>
+<ul>
+<li><p><strong><a href="https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker-portuguese-brazilian">Brazilian Portuguese - Code Spell Checker</a></strong>: Verificador de gramática para o VsCode. Permite escrever os posts do blog diretamente do editor, sem ter que passar num spell checker do Word por exemplo, além de ajudar com documentação de projetos.</p>
+</li>
+<li><p><strong><a href="https://marketplace.visualstudio.com/items?itemName=humao.rest-client">REST Client</a></strong>: Permite executar chamadas REST diretamente do VsCode. Depois de utiliza-lo, vai ser difícil voltar para o Postman...</p>
+</li>
+</ul>
+<h2 id="chrome-extensions">Chrome Extensions</h2>
+<ul>
+<li><p><strong><a href="https://chrome.google.com/webstore/detail/grammarly-for-chrome/kbfnbcaeplbcioakkpcpgfkobkghlhen">Grammarly</a></strong>
+O Grammarly é um verificador de gramática para browsers, checa em tempo real quando você escreve numa caixa de texto, como por exemplo no Gmail. Mais do que apontar erros de gramatíca, essa ferramenta analisa a estrutura do seu texto e indica correções que ajudam a deixa-lo mais conciso.</p>
+</li>
+<li><p><strong><a href="https://chrome.google.com/webstore/detail/the-great-suspender/klbibkeccnjlkjkiokjodocebajanakg">The Great Suspender</a></strong>
+Todos sabemos se tem algo que o navegador Chrome gosta é da sua RAM. Essa extensão &quot;hiberna&quot; as guias abertas após determinado tempo sem atividade, economizando um pouco de memória durante o uso.</p>
+</li>
+<li><p><strong><a href="https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm">uBlock Origin</a></strong></p>
+</li>
+</ul>
+<h2 id="debugging">Debugging</h2>
+<ul>
+<li><p><strong><a href="https://docs.microsoft.com/en-us/sysinternals/">Sysinternals</a></strong> e <strong><a href="https://docs.microsoft.com/en-us/sysinternals/downloads/pstools">PsTools</a></strong>: Conjunto de ferramentas para analise e debugging do Windows.</p>
+</li>
+<li><p><strong><a href="https://processhacker.sourceforge.io/">Process Hacker</a></strong>: Semelhante ao Process Explorer do SysInternals, ajuda a identificar consumo de recursos e impersonar processos no Windows.</p>
+</li>
+<li><p><strong><a href="https://www.telerik.com/products/decompiler.aspx">JustDecompile</a></strong>: Um Descompiler grátis, para .NET e afins.</p>
+</li>
+<li><p><strong><a href="https://www.telerik.com/fiddler">Fiddler</a></strong>: Ferramenta para debugging de chamadas HTTP.</p>
+</li>
+</ul>
+<h3 id="network">Network</h3>
+<ul>
+<li><p><strong><a href="http://www.microolap.com/products/network/tcpdump/">Tcpdump for Windows</a></strong>: A versão para Windows do famoso TCPDump. Utiliza mesma syntax de comandos.</p>
+</li>
+<li><p><strong><a href="https://www.wireshark.org/">Wireshark</a></strong>: Ferramenta para debugging de rede, possui spec semelhante ao Tcpdump, mas inteiramente gráfica.</p>
+</li>
+</ul>
+<h2 id="ferramentas-nativas-windows">Ferramentas nativas Windows:</h2>
+<ul>
+<li><strong>netsh</strong>:</li>
+</ul>
+<h2 id="http-load-tests">HTTP load tests</h2>
+<ul>
+<li><p><strong><a href="https://www.paessler.com/tools/webstress">WebStress</a></strong></p>
+</li>
+<li><p><strong><a href="https://www.iis.net/downloads/community/2007/05/wcat-63-x86">WCat</a></strong></p>
+</li>
+</ul>
+<h2 id="charts-and-diagrams">Charts and Diagrams</h2>
+<ul>
+<li><strong><a href="https://lucid.app/">Lucidchart</a></strong></li>
+</ul>
+<h2 id="surveys">Surveys</h2>
+<ul>
+<li><strong><a href="https://www.typeform.com/">Typeform</a></strong></li>
+</ul>
+<h2 id="ssh-clients">SSH Clients</h2>
+<ul>
+<li><a href="https://mobaxterm.mobatek.net/">MobaXterm</a></li>
+</ul>
+<h2 id="package-management">Package Management</h2>
+<ul>
+<li><a href="https://emcosoftware.com/msi-package-builder">EMCO MSI Package Builder</a></li>
+</ul>
+<h2 id="monitoring">Monitoring</h2>
+<ul>
+<li><p><strong><a href="https://www.nagios.org/">Nagios</a></strong></p>
+</li>
+<li><p><strong><a href="https://sensu.io/">Sensu</a></strong></p>
+</li>
+<li><p><strong><a href="https://prometheus.io/">Prometheus</a></strong></p>
+</li>
+<li><p><strong><a href="https://www.zabbix.com/">Zabbix</a></strong></p>
+</li>
+</ul>
+<h2 id="images">Images</h2>
+<ul>
+<li><strong><a href="https://unsplash.com/">Unsplash</a>: Galeria de fotos de uso aberto</strong></li>
+</ul>
+<h2 id="security">Security</h2>
+<ul>
+<li><p><strong><a href="http://www.arachni-scanner.com/download/">Arachni</a></strong></p>
+</li>
+<li><p><strong><a href="https://pwpush.com/">Pwpusher</a></strong></p>
+</li>
+</ul>
+<h2 id="logging">Logging</h2>
+<ul>
+<li><strong><a href="https://nxlog.co/">nxlog</a></strong></li>
+</ul>
+<h2 id="ui-ux">UI / UX</h2>
+<p>Create static prototypes</p>
+<ul>
+<li><strong><a href="https://www.figma.com/login">figma</a></strong></li>
+</ul>
+<h2 id="architecture">Architecture</h2>
+<ul>
+<li><strong><a href="https://www.unrealengine.com/en-US/twinmotion">Twinmotion</a></strong></li>
+</ul>
+<h2 id="general">General</h2>
+<ul>
+<li><strong><a href="https://sandstorm.io/">Sandstorm</a></strong>
+Open Source Google Apps like (contains kanban, chat, git-repos, etc)</li>
+</ul>
+<h2 id="music">Music</h2>
+<ul>
+<li><strong><a href="https://www.elyrics.net/">elyrics</a></strong>: Mais um de uso não profissional, esse foi o único site onde eu consegui encontrar uma música específica, utilizando palavras-chave mais ou menos erradas dos fragmentos que eu lembrava da letra... Então já vale guardar!</li>
+</ul>
+
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'nilo-dev';
+    var disqus_identifier = 'minha-caixa-de-ferramentas-windows';
+    var disqus_title = 'Minha caixa de ferramentas';
+    var disqus_url = 'http://nilo.dev/post/minha-caixa-de-ferramentas-windows';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                                </div>
+                        </div>
+                </div>
+                
+                <hr>
+                
+                <!-- Footer -->
+                <footer>
+                        <div class="container">
+        <div class="row">
+                <div class="col-md-12">
+                <ul class="list-inline text-center">
+                        <li>
+                        <a href="https://twitter.com/_sdanilo">
+                                <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="https://github.com/daniloalsilva">
+                                <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="https://www.linkedin.com/in/sdanilo">
+                                <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                                </span>
+                        </a>
+                        </li>
+                </ul>
+                <p class="copyright text-muted">
+                        Copyright © 2021 by Danilo Silva. All rights reserved. 
+                        <br />
+                        <a href="/feed.rss"><i class="fa fa-rss"></i> RSS Feed</a> | <a href="/feed.atom"><i class="fa fa-rss"></i> Atom Feed</a>
+                        <br />
+                        <a href="https://github.com/daniloalsilva/nilo.dev"><i class="fa fa-github"></i> This Site on GitHub</a>
+                        <br />
+                        <strong><a href="https://wyam.io">Generated by Wyam</a></strong>
+                        <br />
+                        <img src="https://sdanilo.visualstudio.com/nilo.dev/_apis/build/status/daniloalsilva.nilo.dev-inputs?branchName=master" />
+                </p>
+                </div>
+        </div>
+</div>
+                </footer> 
+
+                <script src="/assets/js/jquery.min.js"></script>
+                <script src="/assets/js/bootstrap.min.js"></script>     
+                <script src="/assets/js/highlight.pack.js"></script>   
+                <script src="/assets/js/clean-blog.js"></script>
+                <script src="/assets/js/d3.v3.min.js"></script>
+                <script src="/assets/js/trianglify.min.js"></script>
+                <script src="/assets/js/Please-compressed.js"></script>
+                <script src="/assets/js/background-check.min.js"></script>
+
+                <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+                <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+                <!--[if lt IE 9]>
+                        <script src="/assets/js/html5shiv.js"></script>
+                        <script src="/assets/js/respond.min.js"></script>
+                <![endif]-->
+                
+                
+                <script>hljs.initHighlightingOnLoad();</script>
+
+
+                <script>
+                        BackgroundCheck.init({
+                                targets: '.intro-header,.navbar',
+                                images: '.intro-header'
+                        });
+                </script>
+        </body>
+</html>
+
