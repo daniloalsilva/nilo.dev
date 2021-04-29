@@ -4,7 +4,7 @@
 	<title>[da]nilo.dev</title>
 	<link rel="self" href="http://nilo.dev/" />
 	<rights>2021</rights>
-	<updated>2021-04-29T02:34:25Z</updated>
+	<updated>2021-04-29T02:39:03Z</updated>
 	<logo>http://nilo.dev/images/bg/desert-alone.jpg</logo>
 	<subtitle>Blog Posts</subtitle>
 	<entry>
@@ -62,9 +62,11 @@
 &lt;p&gt;.
 .
 .&lt;/p&gt;
-&lt;p&gt;Em 5/2005, comecei a trabalhar numa papelaria no Itaim, como office-boy.
-Em 9/2007, comecei a trabalhar numa empresa que fazia o balanço (ou contagem de produtos para fechamento do mês) de super-mercados e como auxiliar de vendas, numa loja de roupas.
-Em 2007 prestei o Enem enquanto trabalhando na RGIS&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Em 5/2005, comecei a trabalhar numa papelaria no Itaim, como office-boy.&lt;/li&gt;
+&lt;li&gt;Em 9/2007, comecei a trabalhar numa empresa que fazia o balanço (ou contagem de produtos para fechamento do mês) de super-mercados e como auxiliar de vendas, numa loja de roupas.&lt;/li&gt;
+&lt;li&gt;Em 2007 prestei o Enem enquanto trabalhando na RGIS&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;.
 .
 .&lt;/p&gt;
@@ -78,13 +80,15 @@ Em 2007 prestei o Enem enquanto trabalhando na RGIS&lt;/p&gt;
 &lt;p&gt;.
 .
 .&lt;/p&gt;
-&lt;p&gt;Em 4/2008, comecei a trabalhar na Teletech;
-Em 1/2009, comecei a trabalhar na Locaweb;
-Em 1/2015, passei a morar sozinho;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Em 4/2008, comecei a trabalhar na Teletech;&lt;/li&gt;
+&lt;li&gt;Em 1/2009, comecei a trabalhar na Locaweb;&lt;/li&gt;
+&lt;li&gt;Em 1/2015, passei a morar sozinho;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;.
 .
 .&lt;/p&gt;
-&lt;p&gt;Essa história ainda tem muitas lacunas que eu pretendo terminar de escrever em algum momento.&lt;/p&gt;
+&lt;p&gt;E chegamos a 2021. Essa história ainda possui várias lacunas - as quais eu pretendo preencher, mas o intuito principal era&lt;/p&gt;
 </content>
 		<summary>&lt;p&gt;No dia 19/4/2021 eu comecei a trabalhar na &lt;strong&gt;ThoughtWorks&lt;/strong&gt;, e essa foi muito mais que uma mudança de emprego. Durante o Onboarding (os primeiros dias na empresa, onde há o entendimento sobre o que você precisa saber antes de começar a trabalhar), num dos muitos papos sobre cultura, eu acabei voltando num assunto que, eu achava que tinha muito bem resolvido e, eu simplesmente travei.&lt;/p&gt;</summary>
 	</entry>

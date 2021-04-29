@@ -5,8 +5,8 @@
 		<link>http://nilo.dev/</link>
 		<description>Blog Posts</description>
 		<copyright>2021</copyright>
-		<pubDate>Thu, 29 Apr 2021 02:34:25 GMT</pubDate>
-		<lastBuildDate>Thu, 29 Apr 2021 02:34:25 GMT</lastBuildDate>
+		<pubDate>Thu, 29 Apr 2021 02:39:03 GMT</pubDate>
+		<lastBuildDate>Thu, 29 Apr 2021 02:39:03 GMT</lastBuildDate>
 		<item>
 			<title>Um pouco sobre a minha história</title>
 			<link>http://nilo.dev/post/minha-historia</link>
@@ -63,9 +63,11 @@
 &lt;p&gt;.
 .
 .&lt;/p&gt;
-&lt;p&gt;Em 5/2005, comecei a trabalhar numa papelaria no Itaim, como office-boy.
-Em 9/2007, comecei a trabalhar numa empresa que fazia o balanço (ou contagem de produtos para fechamento do mês) de super-mercados e como auxiliar de vendas, numa loja de roupas.
-Em 2007 prestei o Enem enquanto trabalhando na RGIS&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Em 5/2005, comecei a trabalhar numa papelaria no Itaim, como office-boy.&lt;/li&gt;
+&lt;li&gt;Em 9/2007, comecei a trabalhar numa empresa que fazia o balanço (ou contagem de produtos para fechamento do mês) de super-mercados e como auxiliar de vendas, numa loja de roupas.&lt;/li&gt;
+&lt;li&gt;Em 2007 prestei o Enem enquanto trabalhando na RGIS&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;.
 .
 .&lt;/p&gt;
@@ -79,13 +81,15 @@ Em 2007 prestei o Enem enquanto trabalhando na RGIS&lt;/p&gt;
 &lt;p&gt;.
 .
 .&lt;/p&gt;
-&lt;p&gt;Em 4/2008, comecei a trabalhar na Teletech;
-Em 1/2009, comecei a trabalhar na Locaweb;
-Em 1/2015, passei a morar sozinho;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Em 4/2008, comecei a trabalhar na Teletech;&lt;/li&gt;
+&lt;li&gt;Em 1/2009, comecei a trabalhar na Locaweb;&lt;/li&gt;
+&lt;li&gt;Em 1/2015, passei a morar sozinho;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;.
 .
 .&lt;/p&gt;
-&lt;p&gt;Essa história ainda tem muitas lacunas que eu pretendo terminar de escrever em algum momento.&lt;/p&gt;
+&lt;p&gt;E chegamos a 2021. Essa história ainda possui várias lacunas - as quais eu pretendo preencher, mas o intuito principal era&lt;/p&gt;
 </content:encoded>
 		</item>
 		<item>
