@@ -1,0 +1,155 @@
+{
+  "main": {
+    "id": "fd61be7bbf7d2753",
+    "type": "split",
+    "children": [
+      {
+        "id": "951785ac446202e7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "73e82b0819c72234",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "post/2020/comprando-novo-monitor.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "3463da4c385eaad7",
+    "type": "split",
+    "children": [
+      {
+        "id": "0148dab6c2fb3d5b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "facf47bdf8d2b5ab",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "edf48b895b89c2ce",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "e2cfd8119f2f7dec",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "861512f5df4ff632",
+    "type": "split",
+    "children": [
+      {
+        "id": "c3a3f015c0bbab58",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c12a72286c9c5edb",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "post/2020/comprando-novo-monitor.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "d782214e2a4cc678",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "post/2020/comprando-novo-monitor.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "443f43b7a706ede2",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "72da6dc8f97acdca",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "post/2020/comprando-novo-monitor.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "73e82b0819c72234",
+  "lastOpenFiles": [
+    "post/2021/minha-historia.md",
+    "post/2024",
+    "art-reference.md"
+  ]
+}

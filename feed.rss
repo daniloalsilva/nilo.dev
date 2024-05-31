@@ -5,8 +5,8 @@
 		<link>http://nilo.dev/</link>
 		<description>Blog Posts</description>
 		<copyright>2024</copyright>
-		<pubDate>Wed, 29 May 2024 02:05:14 GMT</pubDate>
-		<lastBuildDate>Wed, 29 May 2024 02:05:14 GMT</lastBuildDate>
+		<pubDate>Fri, 31 May 2024 21:03:51 GMT</pubDate>
+		<lastBuildDate>Fri, 31 May 2024 21:03:51 GMT</lastBuildDate>
 		<item>
 			<title>Um pouco sobre a minha história</title>
 			<link>http://nilo.dev/post/minha-historia</link>
@@ -35,7 +35,7 @@
 &lt;blockquote class="blockquote"&gt;
 &lt;p&gt;Mercedes, minha madrinha, veio a falecer este ano (2021).&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Quando eu tinha mais ou menos 10 anos (então próximo a 1998), meus pais decidiram se mudar para um bairro chamado &lt;a href="https://goo.gl/maps/XKgy5qtoPsk2UZF68"&gt;Jardim Kika&lt;/a&gt;, onde tinham conseguido comprar um terreno e construído uma casa - mas principalmente porque o Jardim Primavera estava perigoso demais. Em algum momento durante este período, minha tia mais velha e responsável pela criação da minha mãe (algo muito comum em famílias muito grandes) veio de Pernambuco para São Paulo ajudar sua irmã com a criação dos filhos, já que cuidar de um comércio com trabalho pesado e de dois filhos era em si um trabalho provavelmente insano. Estávamos só tentando sobreviver. O nome da minha tia é Maria Antonia, mais carinhosamente chamada de tia Tonha na família.&lt;/p&gt;
+&lt;p&gt;Quando eu tinha mais ou menos 10 anos (então próximo a 1998), meus pais decidiram se mudar para um bairro chamado &lt;a href="https://goo.gl/maps/XKgy5qtoPsk2UZF68"&gt;Jardim Kika&lt;/a&gt;, onde tinham conseguido comprar um terreno e construído uma casa - mas principalmente porque o Jardim Primavera estava perigoso demais. Em algum momento durante este período, minha tia mais velha e responsável pela criação da minha mãe (algo muito comum em famílias muito grandes) veio de Pernambuco para São Paulo ajudar sua irmã com a criação dos filhos, já que cuidar de um comércio com trabalho pesado e de dois filhos era em si um trabalho provavelmente insano. Estávamos só tentando sobreviver. O nome da minha tia é Maria Antonia, mais carinhosamente chamada de tia Tônha na família.&lt;/p&gt;
 &lt;p&gt;E sim, eu tenho duas irmãs, Daniela - 5 anos mais velha que eu e a Camila, 12 anos mais nova (e nesse ponto da história ainda não tinha nascido).&lt;/p&gt;
 &lt;h1 id="a-vida-no-jardim-kika"&gt;A vida no Jardim Kika&lt;/h1&gt;
 &lt;p&gt;Eu morei no Jardim Kika entre uns 10 anos de idade até a minha saída de casa até janeiro de 2015, quando eu saí de casa para dividir um apartamento com colegas, num local próximo do trabalho - então morei no Jardim Kika mais ou menos durante uns 17 anos, nos quais como é de se imaginar, muita coisa aconteceu.&lt;/p&gt;
@@ -500,10 +500,10 @@ namespace RazorProject.Pages
 &lt;p&gt;00:49 04/05/2020: Após 3 dias e mais de 40 horas estudando que monitor comprar, acho que cheguei num consenso... Acho.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Depois de um pouco mais de um mês de quarentena por conta do COVID-19 decidir trocar meu monitor. Eu atualmente uso um monitor &lt;a href="https://www.soubarato.com.br/produto/124284017/monitor-led-21-5-samsung-wide-s22e310-full-hd-hdmi-preto"&gt;21.5' da Samsung&lt;/a&gt; que comprei numa pechincha por R$299 em 2018. Não é o melhor monitor para meu uso atual, mas funciona bem e eu não tinha tido a real necessidade de um monitor melhor que esse.&lt;/p&gt;
-&lt;p&gt;Estava de olho em monitores a alguns meses atrás e acabei perdendo uma promoção excelente em dezembro de 2019, onde um ultrawide de 29 estava entre &lt;a href="https://www.lg.com/br/monitores/lg-29WK500-P"&gt;R$850&lt;/a&gt; e &lt;a href="https://www.lg.com/br/monitores/lg-29WK600-W"&gt;R$1.050&lt;/a&gt;. Na época não pesquisei tanto assim sobre o quão seria útil esses monitores específicamente e provavelmente teria comprado no impulso um monitor que não serviria tão bem assim. Neste momento, com a quarentena que estamos passando, esses mesmo monitores hoje estão R$1.300 e R$1.600 respectivamente - e esse último disponível somente em market places. Lei da oferta e procura...&lt;/p&gt;
+&lt;p&gt;Estava de olho em monitores a alguns meses atrás e acabei perdendo uma promoção excelente em dezembro de 2019, onde um ultra-wide de 29 estava entre &lt;a href="https://www.lg.com/br/monitores/lg-29WK500-P"&gt;R$850&lt;/a&gt; e &lt;a href="https://www.lg.com/br/monitores/lg-29WK600-W"&gt;R$1.050&lt;/a&gt;. Na época não pesquisei tanto assim sobre o quão seria útil esses monitores especificamente e provavelmente teria comprado no impulso um monitor que não serviria tão bem assim. Neste momento, com a quarentena que estamos passando, esses mesmo monitores hoje estão R$1.300 e R$1.600 respectivamente - e esse último disponível somente em market places. Lei da oferta e procura...&lt;/p&gt;
 &lt;p&gt;Voltando as buscas após 5 meses, eu tinha a esperança que fosse ter menos trabalho para escolher um monitor decente, afinal, os monitores para uso misto não podem ter tantas diferenças assim um do outro, certo?&lt;/p&gt;
 &lt;p&gt;&lt;img src="/images/posts/2020/achou-errado.gif" class="img-fluid" alt="achou-errado" /&gt;&lt;/p&gt;
-&lt;p&gt;Comecei minhas pesquisas com as resoluções dos monitores ultrawide disponíveis no mercado, que não fossem extremamente caros.&lt;/p&gt;
+&lt;p&gt;Comecei minhas pesquisas com as resoluções dos monitores ultra-wide disponíveis no mercado, que não fossem extremamente caros.&lt;/p&gt;
 &lt;h1 id="entendendo-sobre-diferentes-tipos-de-monitores-lcd"&gt;Entendendo sobre diferentes tipos de monitores LCD&lt;/h1&gt;
 &lt;h2 id="tipos-de-tela"&gt;Tipos de tela&lt;/h2&gt;
 &lt;p&gt;Os principais monitores LCD (liquid crystal display) são os TN, VA e IPS e apesar de usar a mesma tecnologia, eles diferem bastante em suas características e, antes de falar sobre as opções de monitores disponíveis, é interessante entender o que muda de um pra outro, e eu utilizei essa comparação mais de uma vez enquanto decidia que monitor comprar (e se quiser saber como o LCD funciona &lt;a href="https://www.google.pt/search?q=how+lcd+works"&gt;clique aqui&lt;/a&gt;). Em resumo:&lt;/p&gt;
@@ -724,10 +724,10 @@ namespace RazorProject.Pages
 &lt;p&gt;&lt;a href="https://www.displayspecifications.com/en/comparison/862375528"&gt;&lt;img src="/images/posts/2020/32-monitors-comparison.png" class="img-fluid" alt="32-monitors-comparison" /&gt;&lt;/a&gt;&lt;/p&gt;
   &lt;/p&gt;
 &lt;/details&gt;
-&lt;p&gt;O display parece ser um problema, mas as opiniões sobre esse monitor estão bem divididas e aparentemente apesar do painel VA, a qualidade de imagem é muito boa. A opção para fugir de paineis VA seria comprar um monitor 27&amp;quot; 4k (27UL500 ou 27UL650), por mais ou menos o mesmo preço destes de 32&amp;quot;.&lt;/p&gt;
+&lt;p&gt;O display parece ser um problema, mas as opiniões sobre esse monitor estão bem divididas e aparentemente apesar do painel VA, a qualidade de imagem é muito boa. A opção para fugir de painéis VA seria comprar um monitor 27&amp;quot; 4k (27UL500 ou 27UL650), por mais ou menos o mesmo preço destes de 32&amp;quot;.&lt;/p&gt;
 &lt;h2 id="ou-32"&gt;27 ou 32?&lt;/h2&gt;
 &lt;p&gt;E aí vem a questão: o monitor 27UL650 é um baita equipamento! Painel IPS que, só deixa a desejar no contraste quando utilizado em ambientes mais escuros, mas em todo resto ele aparenta ser melhor que os demais. Será que é mesmo?&lt;/p&gt;
-&lt;p&gt;Estou omitindo neste post uma boa quantidade de fontes que eu usei, mas alguns videos foram particularmente úteis, quando não existe a possibilidade de se deslocar para testar alguns monitoress por conta do isolamento.&lt;/p&gt;
+&lt;p&gt;Estou omitindo neste post uma boa quantidade de fontes que eu usei, mas alguns videos foram particularmente úteis, quando não existe a possibilidade de se deslocar para testar alguns monitores por conta do isolamento.&lt;/p&gt;
 &lt;p&gt;Estes foram os videos de referencia que mais me ajudaram:&lt;/p&gt;
 &lt;table class="table"&gt;
 &lt;thead&gt;
