@@ -4,7 +4,7 @@
 	<title>[da]nilo.dev</title>
 	<link rel="self" href="http://nilo.dev/" />
 	<rights>2024</rights>
-	<updated>2024-06-01T03:29:33Z</updated>
+	<updated>2024-06-01T03:31:09Z</updated>
 	<logo>http://nilo.dev/images/bg/desert-alone.jpg</logo>
 	<subtitle>Blog Posts</subtitle>
 	<entry>
@@ -27,7 +27,7 @@
 		<id>http://nilo.dev/post/minha-historia</id>
 		<title>Um pouco sobre a minha história</title>
 		<link href="http://nilo.dev/post/minha-historia" />
-		<link rel="enclosure" type="image" href="http://nilo.dev/images/bg/monitors.jpg" />
+		<link rel="enclosure" type="image" href="http://nilo.dev/images/bg/keyboard-coffee.jpg" />
 		<updated>2021-04-24T00:00:00Z</updated>
 		<content>&lt;p&gt;No dia 19/4/2021 eu comecei a trabalhar na &lt;strong&gt;ThoughtWorks&lt;/strong&gt;, e essa foi muito mais que uma mudança de emprego. Durante o Onboarding (os primeiros dias na empresa, onde há o entendimento sobre o que você precisa saber antes de começar a trabalhar), num dos muitos papos sobre cultura, eu acabei voltando num assunto que, eu achava que tinha muito bem resolvido e, eu simplesmente travei.&lt;/p&gt;
 &lt;h1 id="la-e-de-volta-outra-vez"&gt;Lá e de volta outra vez&lt;/h1&gt;
