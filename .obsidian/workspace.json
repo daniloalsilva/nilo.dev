@@ -11,9 +11,11 @@
             "id": "73e82b0819c72234",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "post/2024/media/Pasted image 20240602232635.png"
+                "file": "post/2024/why-we-sleep.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -83,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "post/2024/media/Pasted image 20240602232635.png",
+                "file": "post/2024/why-we-sleep.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "post/2024/media/Pasted image 20240602232635.png",
+                "file": "post/2024/why-we-sleep.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "post/2024/media/Pasted image 20240602232635.png"
+                "file": "post/2024/why-we-sleep.md"
               }
             }
           }
@@ -146,10 +148,10 @@
   },
   "active": "73e82b0819c72234",
   "lastOpenFiles": [
-    "post/2024/why-we-sleep.md",
-    "post/2024/media/Pasted image 20240602232635.png",
-    "post/2021/minha-historia.md",
     "post/2024/media/why-we-sleep-book-cover.png",
+    "post/2024/media/test-simple-image.png",
+    "post/2024/why-we-sleep.md",
+    "post/2021/minha-historia.md",
     "post/2024/media",
     "flow.md",
     "404.md",
