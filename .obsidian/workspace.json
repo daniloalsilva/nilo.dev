@@ -11,11 +11,9 @@
             "id": "73e82b0819c72234",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "post/2024/why-we-sleep.md",
-                "mode": "source",
-                "source": false
+                "file": "post/2024/media/why-we-sleep-book-cover.png"
               }
             }
           }
@@ -85,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "post/2024/why-we-sleep.md",
+                "file": "post/2024/media/why-we-sleep-book-cover.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "post/2024/why-we-sleep.md",
+                "file": "post/2024/media/why-we-sleep-book-cover.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "post/2024/why-we-sleep.md"
+                "file": "post/2024/media/why-we-sleep-book-cover.png"
               }
             }
           }
@@ -146,12 +144,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "73e82b0819c72234",
+  "active": "facf47bdf8d2b5ab",
   "lastOpenFiles": [
-    "post/2024/media/Pasted image 20240602224755.png",
+    "post/2024/why-we-sleep.md",
+    "post/2024/media/why-we-sleep-book-cover.png",
     "post/2024/media",
     "flow.md",
-    "post/2024/why-we-sleep.md",
     "404.md",
     "post/2021/minha-historia.md",
     "images/bg/keyboard-coffee.jpg",
