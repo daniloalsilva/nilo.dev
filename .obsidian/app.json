@@ -1,5 +1,5 @@
 {
-  "promptDelete": true,
+  "promptDelete": false,
   "attachmentFolderPath": "./media",
   "alwaysUpdateLinks": true,
   "newLinkFormat": "absolute",

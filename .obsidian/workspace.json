@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "post/2024/why-we-sleep.md",
+                "file": "404.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "post/2024/why-we-sleep.md",
+                "file": "404.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "post/2024/why-we-sleep.md",
+                "file": "404.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "post/2024/why-we-sleep.md"
+                "file": "404.md"
               }
             }
           }
@@ -148,13 +148,18 @@
   },
   "active": "73e82b0819c72234",
   "lastOpenFiles": [
+    "podcasts.md",
+    "now.md",
+    "computer-config.md",
+    "art-reference.md",
+    "about.md",
+    "404.md",
+    "post/2024/why-we-sleep.md",
     "post/2024/media/why-we-sleep-book-cover.png",
     "post/2024/media/test-simple-image.png",
-    "post/2024/why-we-sleep.md",
     "post/2021/minha-historia.md",
     "post/2024/media",
     "flow.md",
-    "404.md",
     "images/bg/keyboard-coffee.jpg",
     "post/2020/criando-cicd-do-blog-com-wyam-azure-devops-e-github-pages.md",
     "post/2020/criando-um-blog-com-wyam-github-pages.md",
@@ -164,7 +169,6 @@
     "images/bg/monitors.jpg",
     "images/bg/desert-alone.jpg",
     "post/2020/comprando-novo-monitor.md",
-    "post/2024",
-    "art-reference.md"
+    "post/2024"
   ]
 }
