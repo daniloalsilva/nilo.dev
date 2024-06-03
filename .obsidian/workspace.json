@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "now.md",
+                "file": "post/2021/minha-historia.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "now.md",
+                "file": "post/2021/minha-historia.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "now.md",
+                "file": "post/2021/minha-historia.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "now.md"
+                "file": "post/2021/minha-historia.md"
               }
             }
           }
@@ -148,6 +148,7 @@
   },
   "active": "73e82b0819c72234",
   "lastOpenFiles": [
+    "now.md",
     "flow.md",
     "computer-config.md",
     "404.md",
@@ -163,7 +164,6 @@
     "post/2021/minha-historia.md",
     "post/2024/media/why-we-sleep-book-cover.png",
     "post/2024/why-we-sleep.md",
-    "now.md",
     "podcasts.md",
     "txt.md",
     "about.md",
