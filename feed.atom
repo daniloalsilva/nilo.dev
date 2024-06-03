@@ -4,7 +4,7 @@
 	<title>[da]nilo.dev</title>
 	<link rel="self" href="http://nilo.dev/" />
 	<rights>2024</rights>
-	<updated>2024-06-03T14:33:01Z</updated>
+	<updated>2024-06-03T14:34:22Z</updated>
 	<logo>http://nilo.dev/images/bg/desert-alone.jpg</logo>
 	<subtitle>Blog Posts</subtitle>
 	<entry>
@@ -124,10 +124,10 @@
 		<content>&lt;p&gt;Já a algum tempo eu queria estudar .Net Core e venho postergando. Confesso que a primeira experiência (a cerca de dois anos) não foi lá das melhores.&lt;/p&gt;
 &lt;h1 id="first-things-first"&gt;First things first&lt;/h1&gt;
 &lt;p&gt;Antes de começar, precisamos das ferramentas que são a &lt;a href="https://pt.wikipedia.org/wiki/Ambiente_de_desenvolvimento_integrado"&gt;IDE&lt;/a&gt; &lt;strong&gt;Visual Studio Code&lt;/strong&gt; e o Framework &lt;strong&gt;.Net Core&lt;/strong&gt; (atualmente na versão 3.1).&lt;/p&gt;
-&lt;p&gt;A escolha do &lt;em&gt;Visual Studio Code&lt;/em&gt; para uso com .Net Core foi um pouco dificil... Hoje, praticamente qualquer curso/livro que você encontra sobre o framework, utiliza o Visual Studio Community, que realmente tem seus prós. O Visual Studio Community tem à distância de um click os &lt;a href="https://en.wikipedia.org/wiki/Scaffold_(programming)"&gt;scaffoldings&lt;/a&gt; que no VSCode vai lhe custar escrever os métodos manualmente ou lembrar uma commandline como &lt;code&gt;dotnet aspnet-codegenerator &amp;lt;model&amp;gt; &amp;lt;namespace&amp;gt; &amp;lt;etc&amp;gt;&lt;/code&gt;. Mas como tudo na vida, melhor ou pior, isso depende do ponto de vista e, escrever as classes manualmente (ou quase) vai lhe fazer entender melhor a estrutura do framework e depender menos das coisas criadas automáticamente.&lt;/p&gt;
+&lt;p&gt;A escolha do &lt;em&gt;Visual Studio Code&lt;/em&gt; para uso com .Net Core foi um pouco difícil... Hoje, praticamente qualquer curso/livro que você encontra sobre o framework, utiliza o Visual Studio Community, que realmente tem seus prós. O Visual Studio Community tem à distância de um click os &lt;a href="https://en.wikipedia.org/wiki/Scaffold_(programming)"&gt;scaffoldings&lt;/a&gt; que no VSCode vai lhe custar escrever os métodos manualmente ou lembrar uma commandline como &lt;code&gt;dotnet aspnet-codegenerator &amp;lt;model&amp;gt; &amp;lt;namespace&amp;gt; &amp;lt;etc&amp;gt;&lt;/code&gt;. Mas como tudo na vida, melhor ou pior, isso depende do ponto de vista e, escrever as classes manualmente (ou quase) vai lhe fazer entender melhor a estrutura do framework e depender menos das coisas criadas automaticamente.&lt;/p&gt;
 &lt;p&gt;Deixando de lado que algumas tarefas &amp;quot;podem&amp;quot; ser ligeiramente mais trabalhosas, o VSCode é uma IDE extremamente mais leve que sua parente, o que permite ter seu ambiente de desenvolvimento funcionando em praticamente apenas um minuto. A comunidade de desenvolvimento (normalmente mais focada em front-end) vem elogiando bastante a ferramenta e eu acho que vale dar o braço a torcer também para o backend.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Então, mãos a massa!&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Precisamos do VSCode e do .Net Core instalados para começcar. Você pode optar por baixar as ferramentas dos respectivos sites ou poupar algum tempo e instalar tudo via commandline:&lt;/p&gt;
+&lt;p&gt;Precisamos do VSCode e do .Net Core instalados para começar. Você pode optar por baixar as ferramentas dos respectivos sites ou poupar algum tempo e instalar tudo via commandline:&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-powershell"&gt;Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 choco install vscode -y
 choco install dotnetcore -y
