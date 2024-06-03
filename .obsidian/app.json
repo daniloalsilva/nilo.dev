@@ -3,5 +3,7 @@
   "attachmentFolderPath": "./media",
   "alwaysUpdateLinks": true,
   "newLinkFormat": "absolute",
-  "useMarkdownLinks": true
+  "useMarkdownLinks": true,
+  "showLineNumber": false,
+  "showIndentGuide": true
 }
