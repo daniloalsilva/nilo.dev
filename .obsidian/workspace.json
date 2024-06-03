@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "post/2021/minha-historia.md",
+                "file": "post/2020/comprando-novo-monitor.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "post/2021/minha-historia.md",
+                "file": "post/2020/comprando-novo-monitor.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "post/2021/minha-historia.md",
+                "file": "post/2020/comprando-novo-monitor.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "post/2021/minha-historia.md"
+                "file": "post/2020/comprando-novo-monitor.md"
               }
             }
           }
@@ -149,6 +149,8 @@
   "active": "73e82b0819c72234",
   "lastOpenFiles": [
     "now.md",
+    "podcasts.md",
+    "post/2021/minha-historia.md",
     "flow.md",
     "computer-config.md",
     "404.md",
@@ -161,10 +163,8 @@
     "post/2020/criando-um-blog-com-wyam-github-pages.md",
     "post/2020/emails-personalizados-gmail-google-domains.md",
     "post/2020/primeiros-passos-com-vscode-dotnetcore.md",
-    "post/2021/minha-historia.md",
     "post/2024/media/why-we-sleep-book-cover.png",
     "post/2024/why-we-sleep.md",
-    "podcasts.md",
     "txt.md",
     "about.md",
     "images/bg/book-shelf.jpg",
