@@ -137,7 +137,7 @@ choco install dotnetcore -y
 <li>Abra o terminal novamente (<code>CTRL + '</code>) e execute o projeto com o comando <code>dotnet run</code></li>
 <li>Leia a mensagem do console, se algo como <code>Now listening on: https://localhost:5001</code> apareceu, teste o acesso a url https://localhost:5001 no seu navegador, e voilà! Sua aplicação está rodando!</li>
 </ul>
-<p><img src="/images/posts/2020/razor-page.png" class="img-fluid" alt="default-razor-page" /></p>
+<p><img src="/post/2020/media/razor-page.png" class="img-fluid" alt="default-razor-page" /></p>
 <p>Bom, quase... Talvez o <a href="https://code.visualstudio.com/docs/editor/intellisense">intelisense</a> ainda não esteja funcionando e nem o debugging, mas já vamos dar uma olhada nesses caveats.</p>
 <blockquote class="blockquote">
 <p>Em ambiente Windows é normal utilizar um backslash <code>&quot;\&quot;</code> enquanto que Linux um slash <code>&quot;/&quot;</code> para o caminho de pastas, mas o exemplo acima vai funcionar da mesma forma em Windows se o seu terminal for um console de Powershell - que é o padrão no VSCode.</p>
@@ -450,7 +450,7 @@ namespace RazorProject.Pages
 </code></pre>
 <p>No exemplo acima, estamos convertendo implicitamente a variavel <code>TempData</code> para <code>dynamic</code> e utilizando os dados retornados pela API. Esta parte é bem auto-explicativa e, repare que além dos atributos <strong>url</strong> e <strong>date</strong>, estamos deixando que todos os atributos coletados sejam exibidos, enquanto percorremos os atributos da variável <code>(dynamic)TempData[&quot;NasaData&quot;]</code>.</p>
 <p>Tecle <code>F5</code> e, se tudo funcionou, uma pagina semelhante a abaixo deve ser o resultado do projeto:</p>
-<p><img src="/images/posts/2020/apod.png" class="img-fluid" alt="picture-of-the-day" /></p>
+<p><img src="/post/2020/media/apod.png" class="img-fluid" alt="picture-of-the-day" /></p>
 <p>Por enquanto é isso, num próximo post devemos falar sobre testes.</p>
 <p>Link do projeto no Github: <a href="https://github.com/daniloalsilva/NasaApod">https://github.com/daniloalsilva/NasaApod</a></p>
 <h1 id="fontes">Fontes:</h1>

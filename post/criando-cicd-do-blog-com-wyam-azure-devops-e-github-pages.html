@@ -143,12 +143,12 @@ nuget.exe
 <p>Com o CI configurado, precisamos configurar o CD.</p>
 <h2 id="criacao-da-chave-de-deployment">Criação da chave de deployment</h2>
 <p>Como agora temos mais componentes, é interessante ter uma ideia do desenho que queremos como estado final quando terminarmos a configuração (e desculpem os garranchos):
-<img src="/images/posts/2020/nilodev-cicd.jpg" class="img-fluid" alt="nilodev-cicd" /></p>
+<img src="/post/2020/media/nilodev-cicd.jpg" class="img-fluid" alt="nilodev-cicd" /></p>
 <p>O projeto atual no Azure Devops possui acesso somente ao repositório <strong>nilo.dev-inputs</strong> e precisamos habilitar um acesso com permissão de escrita no repositório <strong>nilo.dev</strong>. Para isso, vamos criar uma chave de deployment no projeto. Na página do projeto no Github, em Settings, acesse Deploy Keys &gt; Add deploy key:
-<img src="/images/posts/2020/github-deploykey.jpg" class="img-fluid" alt="github-deploykey" /></p>
+<img src="/post/2020/media/github-deploykey.jpg" class="img-fluid" alt="github-deploykey" /></p>
 <p>Gere uma chave <a href="https://help.github.com/pt/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">executando um ssh-keygen</a> (desde 2018 o Windows possui OpenSSH nativo, não precisa baixar nada se não estiver usando linux), nomeie a chave como &quot;deploy_key&quot;, copie o conteúdo da chave publica (deploy_key.pub) e cole no Github.</p>
 <p>De volta na página do projeto no Azure Devops, em Pipelines &gt; Library &gt; Secure Files &gt; &quot;+ Secure File&quot; e faça o upload da sua chave privada gerada anteriormente - pode deletar a chave de seu computador local após o upload.
-<img src="/images/posts/2020/azuredevops-securefile.jpg" class="img-fluid" alt="azuredevops-securefile" /></p>
+<img src="/post/2020/media/azuredevops-securefile.jpg" class="img-fluid" alt="azuredevops-securefile" /></p>
 <blockquote class="blockquote">
 <p>Iremos utilizar o nome da chave no script de build, se por acaso mudar o nome dela no Secure Files, lembre-se de alterar o script de build utilizando o novo nome;</p>
 </blockquote>
@@ -207,9 +207,9 @@ steps:
 <h2 id="extras">Extras</h2>
 <p>Para deixar o projeto no Azure Devops mais &quot;limpo&quot;, eu prefiro desativar os itens do projeto que não são utilizados, como Boards, Repos, Test Plans e Artifacts. Basta nas configurações do projeto (UX está horrível pra isso no azure devops e eu tive que pesquisar no Google pra achar o botão... A opção está no canto lateral esquerdo, na página do projeto) e desativar os itens não utilizados.</p>
 <p>E você pode tambêm adicionar uma badge da pipeline no seu repositório do Github ou no seu Blog informando se a ultima build do blog funcionou ou falhou, basta pegar o link da badge nas opções da pipeline:
-<img src="/images/posts/2020/azuredevops-badge.jpg" class="img-fluid" alt="azuredevops-badge" /></p>
+<img src="/post/2020/media/azuredevops-badge.jpg" class="img-fluid" alt="azuredevops-badge" /></p>
 <p>E ativar a visualização de badges se seu projeto for privado:
-<img src="/images/posts/2020/azuredevops-badgesettings.jpg" class="img-fluid" alt="azuredevops-badgesettings" /></p>
+<img src="/post/2020/media/azuredevops-badgesettings.jpg" class="img-fluid" alt="azuredevops-badgesettings" /></p>
 <h2 id="preocupacoes">Preocupações</h2>
 <p>Ainda não sei se, quando o repositório crescer em quantidade de conteúdo, vai haver perda de performance no push ou erros no build. O Github limita cada repositório individualmente à 100GB e recomenda o uso inferior a 1GB para que haja boa performance.</p>
 <p>Vamos descobrir se/quando chegarmos lá!</p>

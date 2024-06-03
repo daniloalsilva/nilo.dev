@@ -5,8 +5,8 @@
 		<link>http://nilo.dev/</link>
 		<description>Blog Posts</description>
 		<copyright>2024</copyright>
-		<pubDate>Mon, 03 Jun 2024 14:14:02 GMT</pubDate>
-		<lastBuildDate>Mon, 03 Jun 2024 14:14:02 GMT</lastBuildDate>
+		<pubDate>Mon, 03 Jun 2024 14:16:21 GMT</pubDate>
+		<lastBuildDate>Mon, 03 Jun 2024 14:16:21 GMT</lastBuildDate>
 		<item>
 			<title>Book review - Why we sleep</title>
 			<link>http://nilo.dev/post/why-we-sleep</link>
@@ -161,7 +161,7 @@ choco install dotnetcore -y
 &lt;li&gt;Abra o terminal novamente (&lt;code&gt;CTRL + '&lt;/code&gt;) e execute o projeto com o comando &lt;code&gt;dotnet run&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Leia a mensagem do console, se algo como &lt;code&gt;Now listening on: https://localhost:5001&lt;/code&gt; apareceu, teste o acesso a url https://localhost:5001 no seu navegador, e voilà! Sua aplicação está rodando!&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src="/images/posts/2020/razor-page.png" class="img-fluid" alt="default-razor-page" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/post/2020/media/razor-page.png" class="img-fluid" alt="default-razor-page" /&gt;&lt;/p&gt;
 &lt;p&gt;Bom, quase... Talvez o &lt;a href="https://code.visualstudio.com/docs/editor/intellisense"&gt;intelisense&lt;/a&gt; ainda não esteja funcionando e nem o debugging, mas já vamos dar uma olhada nesses caveats.&lt;/p&gt;
 &lt;blockquote class="blockquote"&gt;
 &lt;p&gt;Em ambiente Windows é normal utilizar um backslash &lt;code&gt;&amp;quot;\&amp;quot;&lt;/code&gt; enquanto que Linux um slash &lt;code&gt;&amp;quot;/&amp;quot;&lt;/code&gt; para o caminho de pastas, mas o exemplo acima vai funcionar da mesma forma em Windows se o seu terminal for um console de Powershell - que é o padrão no VSCode.&lt;/p&gt;
@@ -474,7 +474,7 @@ namespace RazorProject.Pages
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;No exemplo acima, estamos convertendo implicitamente a variavel &lt;code&gt;TempData&lt;/code&gt; para &lt;code&gt;dynamic&lt;/code&gt; e utilizando os dados retornados pela API. Esta parte é bem auto-explicativa e, repare que além dos atributos &lt;strong&gt;url&lt;/strong&gt; e &lt;strong&gt;date&lt;/strong&gt;, estamos deixando que todos os atributos coletados sejam exibidos, enquanto percorremos os atributos da variável &lt;code&gt;(dynamic)TempData[&amp;quot;NasaData&amp;quot;]&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Tecle &lt;code&gt;F5&lt;/code&gt; e, se tudo funcionou, uma pagina semelhante a abaixo deve ser o resultado do projeto:&lt;/p&gt;
-&lt;p&gt;&lt;img src="/images/posts/2020/apod.png" class="img-fluid" alt="picture-of-the-day" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/post/2020/media/apod.png" class="img-fluid" alt="picture-of-the-day" /&gt;&lt;/p&gt;
 &lt;p&gt;Por enquanto é isso, num próximo post devemos falar sobre testes.&lt;/p&gt;
 &lt;p&gt;Link do projeto no Github: &lt;a href="https://github.com/daniloalsilva/NasaApod"&gt;https://github.com/daniloalsilva/NasaApod&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id="fontes"&gt;Fontes:&lt;/h1&gt;
@@ -521,7 +521,7 @@ namespace RazorProject.Pages
 &lt;p&gt;Depois de um pouco mais de um mês de quarentena por conta do COVID-19 decidir trocar meu monitor. Eu atualmente uso um monitor &lt;a href="https://www.soubarato.com.br/produto/124284017/monitor-led-21-5-samsung-wide-s22e310-full-hd-hdmi-preto"&gt;21.5' da Samsung&lt;/a&gt; que comprei numa pechincha por R$299 em 2018. Não é o melhor monitor para meu uso atual, mas funciona bem e eu não tinha tido a real necessidade de um monitor melhor que esse.&lt;/p&gt;
 &lt;p&gt;Estava de olho em monitores a alguns meses atrás e acabei perdendo uma promoção excelente em dezembro de 2019, onde um ultra-wide de 29 estava entre &lt;a href="https://www.lg.com/br/monitores/lg-29WK500-P"&gt;R$850&lt;/a&gt; e &lt;a href="https://www.lg.com/br/monitores/lg-29WK600-W"&gt;R$1.050&lt;/a&gt;. Na época não pesquisei tanto assim sobre o quão seria útil esses monitores especificamente e provavelmente teria comprado no impulso um monitor que não serviria tão bem assim. Neste momento, com a quarentena que estamos passando, esses mesmo monitores hoje estão R$1.300 e R$1.600 respectivamente - e esse último disponível somente em market places. Lei da oferta e procura...&lt;/p&gt;
 &lt;p&gt;Voltando as buscas após 5 meses, eu tinha a esperança que fosse ter menos trabalho para escolher um monitor decente, afinal, os monitores para uso misto não podem ter tantas diferenças assim um do outro, certo?&lt;/p&gt;
-&lt;p&gt;&lt;img src="/images/posts/2020/achou-errado.gif" class="img-fluid" alt="achou-errado" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/post/2020/media/achou-errado.gif" class="img-fluid" alt="achou-errado" /&gt;&lt;/p&gt;
 &lt;p&gt;Comecei minhas pesquisas com as resoluções dos monitores ultra-wide disponíveis no mercado, que não fossem extremamente caros.&lt;/p&gt;
 &lt;h1 id="entendendo-sobre-diferentes-tipos-de-monitores-lcd"&gt;Entendendo sobre diferentes tipos de monitores LCD&lt;/h1&gt;
 &lt;h2 id="tipos-de-tela"&gt;Tipos de tela&lt;/h2&gt;
@@ -602,7 +602,7 @@ namespace RazorProject.Pages
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;img src="/images/posts/2020/screen-resolutions.png" class="img-fluid" alt="screen-resolutions" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/post/2020/media/screen-resolutions.png" class="img-fluid" alt="screen-resolutions" /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.displaywars.com/22-inch-16x9-vs-32-inch-16x9"&gt;22 inch 16x9 display vs 32 inch 16x9 display&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id="monitores-ultrawide-valem-a-pena"&gt;Monitores Ultrawide valem a pena?&lt;/h1&gt;
 &lt;p&gt;Essa pergunta tem várias respostas. Há pessoas que após utilizar um ultrawide, não o trocam por nada. O monitor dá um angulo de visão excelente para jogos devido ao espaço extra nas laterais e é especialmente útil em FPS's como &lt;a href="https://store.steampowered.com/app/730/CounterStrike_Global_Offensive/"&gt;CS&lt;/a&gt; ou &lt;a href="https://www.pubg.com/"&gt;PUBG&lt;/a&gt; - com o sacrifício de um pouco da taixa de atualização para os que acham essencial 144hz. A questão é que, a resolução extra que você terá no ultrawide pode ser uma área &amp;quot;morta&amp;quot;, com janelas que você não usa a troco de uma melhor resolução.&lt;/p&gt;
@@ -1208,12 +1208,12 @@ nuget.exe
 &lt;p&gt;Com o CI configurado, precisamos configurar o CD.&lt;/p&gt;
 &lt;h2 id="criacao-da-chave-de-deployment"&gt;Criação da chave de deployment&lt;/h2&gt;
 &lt;p&gt;Como agora temos mais componentes, é interessante ter uma ideia do desenho que queremos como estado final quando terminarmos a configuração (e desculpem os garranchos):
-&lt;img src="/images/posts/2020/nilodev-cicd.jpg" class="img-fluid" alt="nilodev-cicd" /&gt;&lt;/p&gt;
+&lt;img src="/post/2020/media/nilodev-cicd.jpg" class="img-fluid" alt="nilodev-cicd" /&gt;&lt;/p&gt;
 &lt;p&gt;O projeto atual no Azure Devops possui acesso somente ao repositório &lt;strong&gt;nilo.dev-inputs&lt;/strong&gt; e precisamos habilitar um acesso com permissão de escrita no repositório &lt;strong&gt;nilo.dev&lt;/strong&gt;. Para isso, vamos criar uma chave de deployment no projeto. Na página do projeto no Github, em Settings, acesse Deploy Keys &amp;gt; Add deploy key:
-&lt;img src="/images/posts/2020/github-deploykey.jpg" class="img-fluid" alt="github-deploykey" /&gt;&lt;/p&gt;
+&lt;img src="/post/2020/media/github-deploykey.jpg" class="img-fluid" alt="github-deploykey" /&gt;&lt;/p&gt;
 &lt;p&gt;Gere uma chave &lt;a href="https://help.github.com/pt/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent"&gt;executando um ssh-keygen&lt;/a&gt; (desde 2018 o Windows possui OpenSSH nativo, não precisa baixar nada se não estiver usando linux), nomeie a chave como &amp;quot;deploy_key&amp;quot;, copie o conteúdo da chave publica (deploy_key.pub) e cole no Github.&lt;/p&gt;
 &lt;p&gt;De volta na página do projeto no Azure Devops, em Pipelines &amp;gt; Library &amp;gt; Secure Files &amp;gt; &amp;quot;+ Secure File&amp;quot; e faça o upload da sua chave privada gerada anteriormente - pode deletar a chave de seu computador local após o upload.
-&lt;img src="/images/posts/2020/azuredevops-securefile.jpg" class="img-fluid" alt="azuredevops-securefile" /&gt;&lt;/p&gt;
+&lt;img src="/post/2020/media/azuredevops-securefile.jpg" class="img-fluid" alt="azuredevops-securefile" /&gt;&lt;/p&gt;
 &lt;blockquote class="blockquote"&gt;
 &lt;p&gt;Iremos utilizar o nome da chave no script de build, se por acaso mudar o nome dela no Secure Files, lembre-se de alterar o script de build utilizando o novo nome;&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1272,9 +1272,9 @@ steps:
 &lt;h2 id="extras"&gt;Extras&lt;/h2&gt;
 &lt;p&gt;Para deixar o projeto no Azure Devops mais &amp;quot;limpo&amp;quot;, eu prefiro desativar os itens do projeto que não são utilizados, como Boards, Repos, Test Plans e Artifacts. Basta nas configurações do projeto (UX está horrível pra isso no azure devops e eu tive que pesquisar no Google pra achar o botão... A opção está no canto lateral esquerdo, na página do projeto) e desativar os itens não utilizados.&lt;/p&gt;
 &lt;p&gt;E você pode tambêm adicionar uma badge da pipeline no seu repositório do Github ou no seu Blog informando se a ultima build do blog funcionou ou falhou, basta pegar o link da badge nas opções da pipeline:
-&lt;img src="/images/posts/2020/azuredevops-badge.jpg" class="img-fluid" alt="azuredevops-badge" /&gt;&lt;/p&gt;
+&lt;img src="/post/2020/media/azuredevops-badge.jpg" class="img-fluid" alt="azuredevops-badge" /&gt;&lt;/p&gt;
 &lt;p&gt;E ativar a visualização de badges se seu projeto for privado:
-&lt;img src="/images/posts/2020/azuredevops-badgesettings.jpg" class="img-fluid" alt="azuredevops-badgesettings" /&gt;&lt;/p&gt;
+&lt;img src="/post/2020/media/azuredevops-badgesettings.jpg" class="img-fluid" alt="azuredevops-badgesettings" /&gt;&lt;/p&gt;
 &lt;h2 id="preocupacoes"&gt;Preocupações&lt;/h2&gt;
 &lt;p&gt;Ainda não sei se, quando o repositório crescer em quantidade de conteúdo, vai haver perda de performance no push ou erros no build. O Github limita cada repositório individualmente à 100GB e recomenda o uso inferior a 1GB para que haja boa performance.&lt;/p&gt;
 &lt;p&gt;Vamos descobrir se/quando chegarmos lá!&lt;/p&gt;
@@ -1297,16 +1297,16 @@ steps:
 			<pubDate>Thu, 02 Apr 2020 00:00:00 GMT</pubDate>
 			<content:encoded>&lt;p&gt;Continuando o assunto do &lt;a href="https://nilo.dev/post/criando-um-blog-com-wyam-github-pages"&gt;post anterior&lt;/a&gt;, hora de criar emails para o domínio &lt;strong&gt;nilo.dev&lt;/strong&gt;. Logo após a contratação do domínio, um box no painel de controle do Google já oferece o uso do GSuite, com um período de gratuidade de 14 dias, mas sabemos como isso funciona. Passado este período, R$24.30/mês por conta de email criada - claro que o GSuite possui outros serviços, mas já uso serviços semelhantes em outras plataformas e as premissas de não ter custos neste projeto continuam valendo.&lt;/p&gt;
 &lt;p&gt;Oferta no painel de controle do Google Domains:&lt;/p&gt;
-&lt;p&gt;&lt;img src="/images/posts/2020/google-gsuite.jpg" class="img-fluid" alt="google-gsuite" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/post/2020/media/google-gsuite.jpg" class="img-fluid" alt="google-gsuite" /&gt;&lt;/p&gt;
 &lt;p&gt;Eu não tenho necessidade de uma conta nova de email então vou apenas utilizar minha conta atual, mas para que o processo funcione é necessário ter uma conta de email criada previamente - e neste caso específicamente uma conta do Gmail. Não passaremos pelos passos de criação da conta aqui.&lt;/p&gt;
 &lt;h1 id="configurando-alias-e-encaminhamento-de-emails"&gt;Configurando alias e encaminhamento de emails&lt;/h1&gt;
 &lt;p&gt;Com a conta no gmail previamente criada, vamos criar um redirecionamento de emails no painel do Google Domains para esta conta. Após clicar na guia &amp;quot;E-mail&amp;quot;, configure os alias de email que deseja utilizar - no meu caso configurei o endereçco &lt;em&gt;d&amp;#64;nilo.dev&lt;/em&gt; explicitamente e um wildcard &amp;quot;*&amp;quot; para receber qualquer email enviado para contas do domínio &amp;quot;&amp;#64;nilo.dev&amp;quot;.&lt;/p&gt;
-&lt;p&gt;&lt;img src="/images/posts/2020/google-mail-forward.jpg" class="img-fluid" alt="google-mail-forward" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/post/2020/media/google-mail-forward.jpg" class="img-fluid" alt="google-mail-forward" /&gt;&lt;/p&gt;
 &lt;p&gt;Com a configuração de encaminhamento de emails, já é possível fazer um teste de recebimento, o teste precisa ser feito de uma segunda caixa postal - testar o funcionamento utilizando para enviar a própria conta que recebe o encaminhamento fará com que a mensagem não seja recebida, conforme a &lt;a href="https://support.google.com/domains/answer/6328726?hl=en"&gt;FAQ do Google Domains&lt;/a&gt;. Enviando um email de outra conta do gmail que não seja a daniloalsilva&amp;#64;gmail.com, para d&amp;#64;nilo.dev foi suficiente para testar o funcionamento.&lt;/p&gt;
 &lt;h1 id="habilitando-o-envio-de-emails"&gt;Habilitando o envio de emails&lt;/h1&gt;
 &lt;p&gt;Após realizado o teste, é necessário habilitar o endereço de email para envio através do Gmail.&lt;/p&gt;
 &lt;p&gt;Não configuramos diretamente os servidores MX do domínio para utilizar o serviço de emails do Google pois ele já possui configuração inicial padrão com os endereços MX de DNS do Google. É possível checar essa informação através das guias DNS &amp;gt; Registros sintéticos &amp;gt; Encaminhamento de e-mail:&lt;/p&gt;
-&lt;p&gt;&lt;img src="/images/posts/2020/google-mail-dns.jpg" class="img-fluid" alt="google-mail-forward" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/post/2020/media/google-mail-dns.jpg" class="img-fluid" alt="google-mail-forward" /&gt;&lt;/p&gt;
 &lt;p&gt;Também é possível checar essa informação com um nslookup da sua maquina local:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;C:\&amp;gt;nslookup -q=mx nilo.dev 8.8.8.8
 Servidor:  dns.google
@@ -1321,10 +1321,10 @@ nilo.dev        MX preference = 40, mail exchanger = alt4.gmr-smtp-in.l.google.c
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Aqui os passos podem ser ligeiramente diferentes, dependendo das configurações de segurança da conta de email em questão. Tenho habilitado para minha conta a &amp;quot;Verificação em duas etapas&amp;quot; e os passos a seguir descrevem a configuração com essa opção já habilitada. Nas configurações da conta do Google (não do Gmail) já com a verificação em duas etapas habilitada, na guia Segurança, clique em &amp;quot;Senhas de app&amp;quot; e crie uma nova senha - para ter uma identificação de onde a senha é utilizada eu utilizei a opção &amp;quot;Outro (nome personalizado)&amp;quot; em Selecionar app e adicionei o nome d&amp;#64;nilo.dev. Uma senha com 16 caracteres deve ser gerada - anote por enquanto.&lt;/p&gt;
 &lt;p&gt;Nas configurações do Gmail, em Contas e Importação &amp;gt; Enviar mensagens como, clique em &amp;quot;Adicionar outro endereço de e-mail&amp;quot;&lt;/p&gt;
-&lt;p&gt;&lt;img src="/images/posts/2020/google-mail-import0.jpg" class="img-fluid" alt="google-mail-forward" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/post/2020/media/google-mail-import0.jpg" class="img-fluid" alt="google-mail-forward" /&gt;&lt;/p&gt;
 &lt;p&gt;Neste ponto, adicionamos o alias criado no Google Domains &amp;quot;d&amp;#64;nilo.dev&amp;quot; e em seguida o endereço do gmail e a senha recém gerada para autenticar a conta:&lt;/p&gt;
-&lt;p&gt;&lt;img src="/images/posts/2020/google-mail-import1.jpg" class="img-fluid" alt="google-mail-forward" /&gt;
-&lt;img src="/images/posts/2020/google-mail-import2.jpg" class="img-fluid" alt="google-mail-forward" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/post/2020/media/google-mail-import1.jpg" class="img-fluid" alt="google-mail-forward" /&gt;
+&lt;img src="/post/2020/media/google-mail-import2.jpg" class="img-fluid" alt="google-mail-forward" /&gt;&lt;/p&gt;
 &lt;p&gt;Feito isso, um email é enviado para a conta d&amp;#64;nilo.dev e recebido na minha conta do gmail devido ao encaminhamento configurado no Google Domains, com conteúdo semelhante ao abaixo:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;Você solicitou que d&amp;#64;nilo.dev fosse adicionado à sua conta do Gmail.
 Código de confirmação: *********
@@ -1384,7 +1384,7 @@ Claro que dependo do conteúdo e a necessidade de uso de plugins em alguns casos
 &lt;p&gt;Registrei o domínio utilizando o &lt;a href="https://domains.google/"&gt;Google Domains&lt;/a&gt; e a experiência não poderia ter sido melhor. Interface fluída, configurações apresentadas de forma clara, everything works like a charm.&lt;/p&gt;
 &lt;p&gt;Configurar o domínio com o Github Pages é uma tarefa fácil, basta em &amp;quot;Registros de recurso personalizados&amp;quot; apontar as entradas padrão de dns para os ips &lt;em&gt;185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153&lt;/em&gt; e, a entrada www como cname para o root domain, no meu caso nilo.dev.&lt;/p&gt;
 &lt;p&gt;Painel de configuração do Google Domains
-&lt;img src="/images/posts/2020/google-dns.jpg" class="img-fluid" alt="google-dns" /&gt;&lt;/p&gt;
+&lt;img src="/post/2020/media/google-dns.jpg" class="img-fluid" alt="google-dns" /&gt;&lt;/p&gt;
 &lt;h1 id="criando-o-conteudo-estatico-com-wyam"&gt;Criando o conteúdo estático com Wyam&lt;/h1&gt;
 &lt;p&gt;O Wyam é uma ferramenta extremamente simples, tanto referente sua instalação quanto customização para o blog. Os exemplos abaixo foram feitos na minha maquina Windows mas o Wyam foi desenvolvido em dotnetcore 2.1.0, que deve rodar tranquilamente em Linux também com algumas adaptações nos comandos executados. Estou executando eles de uma maquina recém instalada, o que me forçou a instalar o dotnetcore e a IDE.&lt;/p&gt;
 &lt;p&gt;Instalando o instalador de pacotes (chocolatey):&lt;/p&gt;
@@ -1394,7 +1394,7 @@ Claro que dependo do conteúdo e a necessidade de uso de plugins em alguns casos
 &lt;pre&gt;&lt;code class="language-powershell"&gt;choco install vscode -y
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;O vscode é bem opcional dentre os itens abordados aqui, mas foi ele o utilizado durante todo o processo para escrever este post, sendo possível sem instalar nenhum addon visualizar o conteúdo (mídia inclusive) escrito utilizando markdown com code highlighting e um preview side-by-side.&lt;/p&gt;
-&lt;p&gt;&lt;img src="/images/posts/2020/nilodev-vscode.jpg" class="img-fluid" alt="nilodev-vscode" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/post/2020/media/nilodev-vscode.jpg" class="img-fluid" alt="nilodev-vscode" /&gt;&lt;/p&gt;
 &lt;p&gt;Instalando o dotnetcore, versões &amp;quot;lastest&amp;quot; e &amp;quot;2.1.0&amp;quot;, esta última utilizada no Wyam.&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-powershell"&gt;choco install dotnetcore -y
 choco install dotnetcore-sdk -y
@@ -1421,7 +1421,7 @@ Hit Ctrl-C to exit
 &lt;li&gt;Crie um novo repositório - inicie ele com um README;&lt;/li&gt;
 &lt;li&gt;Na aba &amp;quot;settings&amp;quot; na seção &amp;quot;Github Pages&amp;quot;, em &lt;strong&gt;source&lt;/strong&gt; selecione &amp;quot;master branch&amp;quot; e em custom domain adicione o endereço de seu domínio&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src="/images/posts/2020/github-pages.jpg" class="img-fluid" alt="github-pages" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/post/2020/media/github-pages.jpg" class="img-fluid" alt="github-pages" /&gt;&lt;/p&gt;
 &lt;blockquote class="blockquote"&gt;
 &lt;p&gt;Devido domínios .dev possuírem utilização restrita a HTTPS, o Github pode demorar um pouco para gerar o certificado com Lets Encrypt, no meu caso demorou uns 5~10 minutos - sim a geração de certificado acontece de forma automatica!&lt;/p&gt;
 &lt;/blockquote&gt;

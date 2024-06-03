@@ -102,16 +102,16 @@ Published on Thursday, April 2, 2020    </div>
 
 <p>Continuando o assunto do <a href="https://nilo.dev/post/criando-um-blog-com-wyam-github-pages">post anterior</a>, hora de criar emails para o domínio <strong>nilo.dev</strong>. Logo após a contratação do domínio, um box no painel de controle do Google já oferece o uso do GSuite, com um período de gratuidade de 14 dias, mas sabemos como isso funciona. Passado este período, R$24.30/mês por conta de email criada - claro que o GSuite possui outros serviços, mas já uso serviços semelhantes em outras plataformas e as premissas de não ter custos neste projeto continuam valendo.</p>
 <p>Oferta no painel de controle do Google Domains:</p>
-<p><img src="/images/posts/2020/google-gsuite.jpg" class="img-fluid" alt="google-gsuite" /></p>
+<p><img src="/post/2020/media/google-gsuite.jpg" class="img-fluid" alt="google-gsuite" /></p>
 <p>Eu não tenho necessidade de uma conta nova de email então vou apenas utilizar minha conta atual, mas para que o processo funcione é necessário ter uma conta de email criada previamente - e neste caso específicamente uma conta do Gmail. Não passaremos pelos passos de criação da conta aqui.</p>
 <h1 id="configurando-alias-e-encaminhamento-de-emails">Configurando alias e encaminhamento de emails</h1>
 <p>Com a conta no gmail previamente criada, vamos criar um redirecionamento de emails no painel do Google Domains para esta conta. Após clicar na guia &quot;E-mail&quot;, configure os alias de email que deseja utilizar - no meu caso configurei o endereçco <em>d&#64;nilo.dev</em> explicitamente e um wildcard &quot;*&quot; para receber qualquer email enviado para contas do domínio &quot;&#64;nilo.dev&quot;.</p>
-<p><img src="/images/posts/2020/google-mail-forward.jpg" class="img-fluid" alt="google-mail-forward" /></p>
+<p><img src="/post/2020/media/google-mail-forward.jpg" class="img-fluid" alt="google-mail-forward" /></p>
 <p>Com a configuração de encaminhamento de emails, já é possível fazer um teste de recebimento, o teste precisa ser feito de uma segunda caixa postal - testar o funcionamento utilizando para enviar a própria conta que recebe o encaminhamento fará com que a mensagem não seja recebida, conforme a <a href="https://support.google.com/domains/answer/6328726?hl=en">FAQ do Google Domains</a>. Enviando um email de outra conta do gmail que não seja a daniloalsilva&#64;gmail.com, para d&#64;nilo.dev foi suficiente para testar o funcionamento.</p>
 <h1 id="habilitando-o-envio-de-emails">Habilitando o envio de emails</h1>
 <p>Após realizado o teste, é necessário habilitar o endereço de email para envio através do Gmail.</p>
 <p>Não configuramos diretamente os servidores MX do domínio para utilizar o serviço de emails do Google pois ele já possui configuração inicial padrão com os endereços MX de DNS do Google. É possível checar essa informação através das guias DNS &gt; Registros sintéticos &gt; Encaminhamento de e-mail:</p>
-<p><img src="/images/posts/2020/google-mail-dns.jpg" class="img-fluid" alt="google-mail-forward" /></p>
+<p><img src="/post/2020/media/google-mail-dns.jpg" class="img-fluid" alt="google-mail-forward" /></p>
 <p>Também é possível checar essa informação com um nslookup da sua maquina local:</p>
 <pre><code>C:\&gt;nslookup -q=mx nilo.dev 8.8.8.8
 Servidor:  dns.google
@@ -126,10 +126,10 @@ nilo.dev        MX preference = 40, mail exchanger = alt4.gmr-smtp-in.l.google.c
 </code></pre>
 <p>Aqui os passos podem ser ligeiramente diferentes, dependendo das configurações de segurança da conta de email em questão. Tenho habilitado para minha conta a &quot;Verificação em duas etapas&quot; e os passos a seguir descrevem a configuração com essa opção já habilitada. Nas configurações da conta do Google (não do Gmail) já com a verificação em duas etapas habilitada, na guia Segurança, clique em &quot;Senhas de app&quot; e crie uma nova senha - para ter uma identificação de onde a senha é utilizada eu utilizei a opção &quot;Outro (nome personalizado)&quot; em Selecionar app e adicionei o nome d&#64;nilo.dev. Uma senha com 16 caracteres deve ser gerada - anote por enquanto.</p>
 <p>Nas configurações do Gmail, em Contas e Importação &gt; Enviar mensagens como, clique em &quot;Adicionar outro endereço de e-mail&quot;</p>
-<p><img src="/images/posts/2020/google-mail-import0.jpg" class="img-fluid" alt="google-mail-forward" /></p>
+<p><img src="/post/2020/media/google-mail-import0.jpg" class="img-fluid" alt="google-mail-forward" /></p>
 <p>Neste ponto, adicionamos o alias criado no Google Domains &quot;d&#64;nilo.dev&quot; e em seguida o endereço do gmail e a senha recém gerada para autenticar a conta:</p>
-<p><img src="/images/posts/2020/google-mail-import1.jpg" class="img-fluid" alt="google-mail-forward" />
-<img src="/images/posts/2020/google-mail-import2.jpg" class="img-fluid" alt="google-mail-forward" /></p>
+<p><img src="/post/2020/media/google-mail-import1.jpg" class="img-fluid" alt="google-mail-forward" />
+<img src="/post/2020/media/google-mail-import2.jpg" class="img-fluid" alt="google-mail-forward" /></p>
 <p>Feito isso, um email é enviado para a conta d&#64;nilo.dev e recebido na minha conta do gmail devido ao encaminhamento configurado no Google Domains, com conteúdo semelhante ao abaixo:</p>
 <pre><code>Você solicitou que d&#64;nilo.dev fosse adicionado à sua conta do Gmail.
 Código de confirmação: *********

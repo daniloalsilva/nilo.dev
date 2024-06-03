@@ -140,7 +140,7 @@ Claro que dependo do conteúdo e a necessidade de uso de plugins em alguns casos
 <p>Registrei o domínio utilizando o <a href="https://domains.google/">Google Domains</a> e a experiência não poderia ter sido melhor. Interface fluída, configurações apresentadas de forma clara, everything works like a charm.</p>
 <p>Configurar o domínio com o Github Pages é uma tarefa fácil, basta em &quot;Registros de recurso personalizados&quot; apontar as entradas padrão de dns para os ips <em>185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153</em> e, a entrada www como cname para o root domain, no meu caso nilo.dev.</p>
 <p>Painel de configuração do Google Domains
-<img src="/images/posts/2020/google-dns.jpg" class="img-fluid" alt="google-dns" /></p>
+<img src="/post/2020/media/google-dns.jpg" class="img-fluid" alt="google-dns" /></p>
 <h1 id="criando-o-conteudo-estatico-com-wyam">Criando o conteúdo estático com Wyam</h1>
 <p>O Wyam é uma ferramenta extremamente simples, tanto referente sua instalação quanto customização para o blog. Os exemplos abaixo foram feitos na minha maquina Windows mas o Wyam foi desenvolvido em dotnetcore 2.1.0, que deve rodar tranquilamente em Linux também com algumas adaptações nos comandos executados. Estou executando eles de uma maquina recém instalada, o que me forçou a instalar o dotnetcore e a IDE.</p>
 <p>Instalando o instalador de pacotes (chocolatey):</p>
@@ -150,7 +150,7 @@ Claro que dependo do conteúdo e a necessidade de uso de plugins em alguns casos
 <pre><code class="language-powershell">choco install vscode -y
 </code></pre>
 <p>O vscode é bem opcional dentre os itens abordados aqui, mas foi ele o utilizado durante todo o processo para escrever este post, sendo possível sem instalar nenhum addon visualizar o conteúdo (mídia inclusive) escrito utilizando markdown com code highlighting e um preview side-by-side.</p>
-<p><img src="/images/posts/2020/nilodev-vscode.jpg" class="img-fluid" alt="nilodev-vscode" /></p>
+<p><img src="/post/2020/media/nilodev-vscode.jpg" class="img-fluid" alt="nilodev-vscode" /></p>
 <p>Instalando o dotnetcore, versões &quot;lastest&quot; e &quot;2.1.0&quot;, esta última utilizada no Wyam.</p>
 <pre><code class="language-powershell">choco install dotnetcore -y
 choco install dotnetcore-sdk -y
@@ -177,7 +177,7 @@ Hit Ctrl-C to exit
 <li>Crie um novo repositório - inicie ele com um README;</li>
 <li>Na aba &quot;settings&quot; na seção &quot;Github Pages&quot;, em <strong>source</strong> selecione &quot;master branch&quot; e em custom domain adicione o endereço de seu domínio</li>
 </ul>
-<p><img src="/images/posts/2020/github-pages.jpg" class="img-fluid" alt="github-pages" /></p>
+<p><img src="/post/2020/media/github-pages.jpg" class="img-fluid" alt="github-pages" /></p>
 <blockquote class="blockquote">
 <p>Devido domínios .dev possuírem utilização restrita a HTTPS, o Github pode demorar um pouco para gerar o certificado com Lets Encrypt, no meu caso demorou uns 5~10 minutos - sim a geração de certificado acontece de forma automatica!</p>
 </blockquote>

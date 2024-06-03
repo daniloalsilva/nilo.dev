@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "post/2024/why-we-sleep.md",
+                "file": "post/2020/primeiros-passos-com-vscode-dotnetcore.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "post/2020/media/",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,7 +65,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "post/2024/why-we-sleep.md",
+                "file": "post/2020/primeiros-passos-com-vscode-dotnetcore.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "post/2024/why-we-sleep.md",
+                "file": "post/2020/primeiros-passos-com-vscode-dotnetcore.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "post/2024/why-we-sleep.md"
+                "file": "post/2020/primeiros-passos-com-vscode-dotnetcore.md"
               }
             }
           }
@@ -148,14 +149,14 @@
   },
   "active": "73e82b0819c72234",
   "lastOpenFiles": [
-    "post/2021/minha-historia.md",
-    "post/2020/versionando-curriculo-github-pandoc.md",
-    "post/2020/primeiros-passos-com-vscode-dotnetcore.md",
     "post/2020/emails-personalizados-gmail-google-domains.md",
     "post/2020/criando-um-blog-com-wyam-github-pages.md",
     "post/2020/criando-cicd-do-blog-com-wyam-azure-devops-e-github-pages.md",
     "post/2020/comprando-novo-monitor.md",
     "post/2024/why-we-sleep.md",
+    "post/2021/minha-historia.md",
+    "post/2020/versionando-curriculo-github-pandoc.md",
+    "post/2020/primeiros-passos-com-vscode-dotnetcore.md",
     "images/posts/2021/enem-2007.jpg",
     "images/dead_link.png",
     "images/lightbulb.jpg",
