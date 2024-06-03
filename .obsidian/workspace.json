@@ -11,9 +11,11 @@
             "id": "73e82b0819c72234",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "images/bg/book-shelf.jpg"
+                "file": "404.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -83,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "images/bg/book-shelf.jpg",
+                "file": "404.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "images/bg/book-shelf.jpg",
+                "file": "404.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "images/bg/book-shelf.jpg"
+                "file": "404.md"
               }
             }
           }
@@ -146,19 +148,20 @@
   },
   "active": "73e82b0819c72234",
   "lastOpenFiles": [
-    "404.md",
-    "images/bg/book-shelf.jpg",
-    "podcasts.md",
-    "now.md",
-    "computer-config.md",
     "art-reference.md",
+    "flow.md",
+    "computer-config.md",
+    "txt.md",
+    "now.md",
+    "podcasts.md",
+    "images/bg/book-shelf.jpg",
+    "404.md",
     "about.md",
     "post/2024/why-we-sleep.md",
     "post/2024/media/why-we-sleep-book-cover.png",
     "post/2024/media/test-simple-image.png",
     "post/2021/minha-historia.md",
     "post/2024/media",
-    "flow.md",
     "images/bg/keyboard-coffee.jpg",
     "post/2020/criando-cicd-do-blog-com-wyam-azure-devops-e-github-pages.md",
     "post/2020/criando-um-blog-com-wyam-github-pages.md",
