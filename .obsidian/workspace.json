@@ -11,11 +11,9 @@
             "id": "73e82b0819c72234",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "404.md",
-                "mode": "source",
-                "source": false
+                "file": "images/bg/book-shelf.jpg"
               }
             }
           }
@@ -85,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "404.md",
+                "file": "images/bg/book-shelf.jpg",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "404.md",
+                "file": "images/bg/book-shelf.jpg",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "404.md"
+                "file": "images/bg/book-shelf.jpg"
               }
             }
           }
@@ -148,12 +146,13 @@
   },
   "active": "73e82b0819c72234",
   "lastOpenFiles": [
+    "404.md",
+    "images/bg/book-shelf.jpg",
     "podcasts.md",
     "now.md",
     "computer-config.md",
     "art-reference.md",
     "about.md",
-    "404.md",
     "post/2024/why-we-sleep.md",
     "post/2024/media/why-we-sleep-book-cover.png",
     "post/2024/media/test-simple-image.png",
