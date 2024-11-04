@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "flow.md",
+                "file": "post/2024/why-we-sleep.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "flow"
+              "title": "why-we-sleep"
             }
           }
         ]
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "flow.md",
+                "file": "post/2024/why-we-sleep.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for flow"
+              "title": "Backlinks for why-we-sleep"
             }
           },
           {
@@ -112,12 +112,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "flow.md",
+                "file": "post/2024/why-we-sleep.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from flow"
+              "title": "Outgoing links from why-we-sleep"
             }
           },
           {
@@ -139,10 +139,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "flow.md"
+                "file": "post/2024/why-we-sleep.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of flow"
+              "title": "Outline of why-we-sleep"
             }
           }
         ]
@@ -165,16 +165,16 @@
   },
   "active": "73e82b0819c72234",
   "lastOpenFiles": [
+    "post/2024/comprando-novo-monitor-v2.md",
+    "flow.md",
     "post/2020/versionando-curriculo-github-pandoc.md",
     "post/2024/why-we-sleep.md",
     "post/2021/media/enem-2007.jpg",
     "post/2021/media/bala-assassina.jpg",
     "post/2021/minha-historia.md",
-    "post/2024/comprando-novo-monitor-v2.md",
     "404.md",
     "art-reference.md",
     "computer-config.md",
-    "flow.md",
     "now.md",
     "podcasts.md",
     "txt.md",
