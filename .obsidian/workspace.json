@@ -11,10 +11,14 @@
             "id": "73e82b0819c72234",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "images/lightbulb.jpg"
-              }
+                "file": "flow.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "flow"
             }
           }
         ]
@@ -37,7 +41,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
           },
           {
@@ -52,7 +58,9 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Search"
             }
           },
           {
@@ -60,7 +68,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
             }
           }
         ]
@@ -83,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "images/lightbulb.jpg",
+                "file": "flow.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -91,7 +101,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for flow"
             }
           },
           {
@@ -100,10 +112,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "images/lightbulb.jpg",
+                "file": "flow.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from flow"
             }
           },
           {
@@ -114,7 +128,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
             }
           },
           {
@@ -123,8 +139,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "images/lightbulb.jpg"
-              }
+                "file": "flow.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of flow"
             }
           }
         ]
@@ -147,25 +165,27 @@
   },
   "active": "73e82b0819c72234",
   "lastOpenFiles": [
-    "images/dead_link.png",
-    "images/lightbulb.jpg",
-    "post/2021/minha-historia.md",
-    "post/2020/primeiros-passos-com-vscode-dotnetcore.md",
-    "post/2020/emails-personalizados-gmail-google-domains.md",
-    "post/2020/criando-um-blog-com-wyam-github-pages.md",
-    "post/2020/criando-cicd-do-blog-com-wyam-azure-devops-e-github-pages.md",
-    "post/2020/comprando-novo-monitor.md",
-    "post/2024/why-we-sleep.md",
     "post/2020/versionando-curriculo-github-pandoc.md",
+    "post/2024/why-we-sleep.md",
     "post/2021/media/enem-2007.jpg",
-    "post/2024/media/why-we-sleep-book-cover.png",
-    "now.md",
-    "podcasts.md",
-    "flow.md",
-    "computer-config.md",
+    "post/2021/media/bala-assassina.jpg",
+    "post/2021/minha-historia.md",
+    "post/2024/comprando-novo-monitor-v2.md",
     "404.md",
     "art-reference.md",
+    "computer-config.md",
+    "flow.md",
+    "now.md",
+    "podcasts.md",
     "txt.md",
+    "post/2020/comprando-novo-monitor.md",
+    "post/2020/criando-cicd-do-blog-com-wyam-azure-devops-e-github-pages.md",
+    "post/2020/criando-um-blog-com-wyam-github-pages.md",
+    "post/2020/emails-personalizados-gmail-google-domains.md",
+    "images/lightbulb.jpg",
+    "images/dead_link.png",
+    "post/2020/primeiros-passos-com-vscode-dotnetcore.md",
+    "post/2024/media/why-we-sleep-book-cover.png",
     "about.md",
     "images/bg/book-shelf.jpg",
     "post/2024/media/test-simple-image.png",
@@ -173,7 +193,6 @@
     "images/bg/keyboard-coffee.jpg",
     "images/bg/bed-pillows.jpg",
     "post/2024/media/Pasted image 20240531235206.png",
-    "Pasted image 20240531234849.png",
     "post/2024"
   ]
 }
