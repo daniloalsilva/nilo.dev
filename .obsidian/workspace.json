@@ -40,7 +40,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -166,12 +167,12 @@
   "active": "73e82b0819c72234",
   "lastOpenFiles": [
     "post/2024/comprando-novo-monitor-v2.md",
+    "post/2021/minha-historia.md",
     "flow.md",
-    "post/2020/versionando-curriculo-github-pandoc.md",
     "post/2024/why-we-sleep.md",
+    "post/2020/versionando-curriculo-github-pandoc.md",
     "post/2021/media/enem-2007.jpg",
     "post/2021/media/bala-assassina.jpg",
-    "post/2021/minha-historia.md",
     "404.md",
     "art-reference.md",
     "computer-config.md",
